@@ -1,0 +1,24 @@
+<include file="common:header" />
+<div class="main">
+   <div class="phone_left">
+       <div class="zidian_bor">
+           <h1>
+               新华字典
+           </h1>
+           <include file="Xinhua:zidian" />
+           <div class="zidian_py">
+           	<span>拼音首字母：</span><a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#a" class="on">A</a><a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#b">B</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#c">C</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#d">D</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#e">E</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#f">F</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#g">G</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#h">H</a><a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#j">J</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#k">K</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#l">L</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#m">M</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#n">N</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#o">O</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#p">P</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#q">Q</a><a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#r">R</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#s">S</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#t">T</a><a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#w">W</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#x">X</a> <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#y">Y</a><a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/#z">Z</a>
+           </div>
+           <div class="zidian_c2">
+           	<volist name="resultInfo" id="list">
+           		<dl>
+           			<dt>{$list[0]['bihua']}画</dt>
+           			<volist name="list" id="vo"><dd><a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/show/?search={$vo.zi}">{$vo.zi}</a></dd></volist>
+           		</dl>
+           	</volist>
+           </div>
+       </div>
+   </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

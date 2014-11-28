@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>火车票查询</title>
+</head>
+<body>
+	<form action="__ROOT__/{$Think.config.TrainTicketSearch}/index" method="post">
+	出发城市：
+		<input type="text" value="起始城市" name="startCity" />
+	到达城市：
+		<input type="text" value="到达城市" name="aimCity" /><br/>
+		<input type="submit" value="查询" name="sub" /><input type="reset" value="重置" name="res" />
+	</form><br/>
+	<form action="__ROOT__/{$Think.config.TrainTicketSearch}/index" method="post">
+		列车车次：
+		<input type="text" value="列车车次" name="trainName" /><br/>
+		<input type="submit" value="查询" name="sub" /><input type="reset" value="重置" name="res" />
+	</form><br/>
+	<if condition="$resultInfo neq ''">
+		<div>{$resultInfo}</div>
+	</if>
+	<if condition="$postcodeInfo neq '' ">
+		地址:&nbsp;&nbsp;{$postcodeInfo:product:location} &nbsp;&nbsp;区号:&nbsp;&nbsp;{$postcodeInfo:product:phone}&nbsp;&nbsp;邮编:&nbsp;&nbsp;{$postcodeInfo:product:zipcode}
+	</if>
+</body>
+</html>

@@ -1,0 +1,58 @@
+/**********食谱大全*********/
+.caipu_bor{border:1px solid #E6E6E6; margin-top:10px; padding:36px 0px 0px; overflow:hidden;}
+.caipu_bor h1{height:42px; font-size:30px; font-family:΢���ź�; background:url(../images/caipu_bg.gif) no-repeat 225px 0px; text-indent:280px; color:#338ace; line-height:42px;}
+.caipu_p1{margin:24px auto 34px; height:1px; width:438px; background:url(../images/chengyu_bg_line.gif) -50px top no-repeat;}
+.caipu_shur{height:90px; padding-left: 104px;}
+.caipu_sousuotxt{ width:338px; height:29px; border:2px solid #FD9F19; line-height:29px; float:left; color:#999; padding-left:13px; font-family: ΢���ź�; display:inline;}
+.caipu_but{ float:left;width:84px; height:33px;cursor:pointer; border:none;background:url(../images/caipu_bg.gif) 0px -50px no-repeat;}
+.caipu_shur p{clear:both; padding-top:11px; color:#000;}
+.caipu_shur p a{color:#1b81cd; margin-right:12px;}
+.caipu_c{margin:0 auto; padding:14px 0 72px 40px; width:497px; height:455px; background:url(../images/caipu_bg2.gif) left top no-repeat;}
+.caipu_c h6{ line-height:28px; font-weight:bold; font-size:14px; color:#2286d1;}
+.caipu_c p{ line-height:18px; width:475px;}
+.caipu_c p a{ margin-right:12px;color:#888; display:inline-block;}
+.caipu_c2{margin:0 auto; width:604px;}
+.caipu_s{margin-top:20px; height:26px; border-bottom:1px solid #e9e9e9; padding-left:12px; background:url(../images/caipu_bg.gif) 2px -140px no-repeat; font-size:16px; color:#848484; font-weight:bold;}
+.caipu_s span{color:#1e84cf;}
+.caipu_c2 ul li{ height:134px; border-bottom:1px solid #e9e9e9;}
+.caipu_s_img{float:left; margin:19px 19px 0 12px; display:inline; padding:2px; width:120px; height:90px; border:1px solid #e9e9e9}
+.caipu_s_txt{float:left; width:440px;}
+.caipu_s_txt h4{margin:20px 0 10px; height:16px; line-height:16px;}
+.caipu_s_txt h4 a{ color:#2a7ec6; font-size:14px;}
+.caipu_s_txt p{line-height:18px; color:#999;}
+.caipu_s_txt p span{color:#2a7ec6;}
+.caipu_c3{margin:0 auto; padding:30px 0 0 147px; width:446px; height:46px; background:#f9f9f9; border:1px solid #efefef;}
+.caipu_c3_p1{padding-left:20px; height:16px; line-height:16px; font-size:14px; color:#686868; background:url(../images/caipu_bg.gif) 0px -90px no-repeat;}
+.caipu_c3_p1 span{color:#2b6bb3; font-weight:bold;}
+.caipu_c3_p2{margin:13px 0 0 348px; padding-left:14px; height:14px; line-height:14px; color:#bcbcbc;background:url(../images/caipu_bg.gif) 0px -118px no-repeat;}
+.caipu_bor h3{margin:30px 0 0 24px; padding-left:10px; width:602px; height:21px; background:url(../images/caipu_bg.gif) 0px -139px no-repeat; border-bottom:1px solid #ebebeb; color:#8b8b8b; font-size:14px; font-weight:bold;}
+.caipu_love{padding:19px 0 30px;}
+.caipu_love li{float:left; margin:0 12px 0 22px; display:inline; width:126px; height:135px;}
+.caipu_love_img{padding:2px; width:120px; height:90px; border:1px solid #eae4ee;}
+.caipu_love li p{line-height:30px; text-align:center;}
+.caipu_love li p a{font-size:14px; color:#1379cd;}
+.caipu_c4{margin:0 auto; padding:45px 0 0 46px; width:537px; height:210px; border:1px solid #e2e2e2;}
+.caipu_c4_img{float:left; width:284px; margin-right:35px; display:inline;}
+.caipu_c4 p{line-height:26px; color:#979797;}
+.caipu_c4 p a{color:#257ab1; margin-right:7px;}
+.caipu_c4_txt{float:left;}
+.caipu_c4_txt h2{font-size:30px; color:#257ab1;font-family: ΢���ź�; width:180px; height:57px; line-height:30px;}
+.caipu_c4_txt p{line-height:32px; color:#8e8e8e;font-size:14px;}
+.caipu_c4_txt p span{color:#000;}
+.caipu_biao1{margin:20px auto 10px; width:584px; border-top:1px solid  border-left:1px solid #cfcfcf;}
+.caipu_biao1 li{float:left; padding:0 20px; height:35px; line-height:35px; width:251px; border-right:1px solid #cfcfcf; border-bottom:1px solid #cfcfcf; font-size:14px; font-size:14px;color:#257ab1; font-weight:bold;}
+.caipu_biao1 li span{float:right; font-weight:normal; color:#5f5f5f;}
+.caipu_buzou{margin:0 auto 35px; width:585px;}
+.caipu_buzou li{padding:25px 0 29px; height:101px; border-bottom:1px solid #f3f3f3;}
+.caipu_buzou_img{float:left; width:180px; margin-right:12px; display:inline;}
+.caipu_buzou li p{/*float:left;*/ color:#444; font-size:14px;}
+.caipu_buzou li p.last{ width:390px; height:120px; position:relative;}
+.caipu_buzou li p span{font-size:28px; font-family: ΢���ź�; color:#9e9791;}
+.caipu_dayin{width:244px; height:30px; position:absolute; right:-190px; _right:0px; +right:0px; bottom:0;}
+.caipu_dayin a{display:inline-block; width:105px; height:0px; padding-top:30px; overflow:hidden; margin-left:17px; background:url(../images/caipu_bg3.gif) left top no-repeat;}
+.caipu_dayin a.dayin{background-position:0px -30px;}
+.caipu_h{margin:10px auto 0; padding:0 12px 0 23px; width:574px; height:29px; line-height:29px; font-size:14px; font-weight:bold; color:#767676; background:#f4f4f4 url(../images/caipu_bg.gif) 12px -180px no-repeat;}
+.caipu_h a{float:right; font-size:12px; color:#c0c0c0; font-weight:normal;}
+.caipu_love.caipu_love2 li p a{font-size:12px; color:#212121;}
+.caipu_hover{background-color:#f8f8f8;}
+#printfrom { width:650px; overflow:hidden;}

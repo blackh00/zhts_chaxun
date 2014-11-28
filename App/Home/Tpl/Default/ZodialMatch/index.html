@@ -1,0 +1,204 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="sxpd">
+		<h1>十二生肖配对</h1>
+		<div class="sxpd_ts">十二生肖配对是依据古籍中的生肖五行理论衍生而来,属相又都是由五行来区分的，生肖五行之间相生相克。</div>
+		<div class="sx_head">
+        	<ul>
+           		<li class="sx1"><img src="STATIC_URL/images/shengxiaopeidui/shu.png" /></li>
+				<li class="sx2"><img src="STATIC_URL/images/shengxiaopeidui/niu.png" /></li>
+				<li class="sx3"><img src="STATIC_URL/images/shengxiaopeidui/hu.png" /></li>
+				<li class="sx4"><img src="STATIC_URL/images/shengxiaopeidui/tu.png" /></li>
+				<li class="sx5"><img src="STATIC_URL/images/shengxiaopeidui/long.png" /></li>
+				<li class="sx6"><img src="STATIC_URL/images/shengxiaopeidui/she.png" /></li>
+				<li class="sx7"><img src="STATIC_URL/images/shengxiaopeidui/ma.png" /></li>
+				<li class="sx8"><img src="STATIC_URL/images/shengxiaopeidui/yang.png" /></li>
+				<li class="sx9"><img src="STATIC_URL/images/shengxiaopeidui/hou.png" /></li>
+				<li class="sx10"><img src="STATIC_URL/images/shengxiaopeidui/ji.png" /></li>
+				<li class="sx11"><img src="STATIC_URL/images/shengxiaopeidui/gou.png" /></li>
+				<li class="sx12"><img src="STATIC_URL/images/shengxiaopeidui/zhu.png" /></li>
+           </ul>
+         </div>
+         <form action="SITE_DYNAMIC_URL/zodialmatch/result/" method="post" id="form">
+         <div class="sxse">
+         * 请选择两个生肖属相
+         <select name="sx1">
+         	<option value="shu">鼠</option>
+			<option value="niu">牛</option>
+			<option value="hu">虎</option>
+			<option value="tu">兔</option>
+			<option value="long">龙</option>
+			<option value="she">蛇</option>
+			<option value="ma">马</option>
+			<option value="yang">羊</option>
+			<option value="hou">猴</option>
+			<option value="ji">鸡</option>
+			<option value="gou">狗</option>
+			<option value="zhu">猪</option>               
+         </select>
+         vs
+         <select name="sx2">
+         	<option value="shu">鼠</option>
+			<option value="niu">牛</option>
+			<option value="hu">虎</option>
+			<option value="tu">兔</option>
+			<option value="long">龙</option>
+			<option value="she">蛇</option>
+			<option value="ma">马</option>
+			<option value="yang">羊</option>
+			<option value="hou">猴</option>
+			<option value="ji">鸡</option>
+			<option value="gou">狗</option>
+			<option value="zhu">猪</option>                  
+		</select>
+		</div>
+		<div class="center"><input type="submit" class="sxpd_sub" value=""/></div>
+		</form>
+           <div class="sxnianfen">
+           	<h2>您可以通过以下生肖属相年份对照表进行查询</h2>
+           	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <th><span  class="color1">属相</span></th>
+			    <th colspan="8"><span  class="color1">出生年份（起止：1924~2019）</span></th>
+			    </tr>
+			  <tr>
+			    <th>鼠</th>
+			    <td>1924</td>
+			    <td>1936</td>
+			    <td>1948</td>
+			    <td>1960</td>
+			    <td>1972</td>
+			    <td>1983</td>
+			    <td>1995</td>
+			    <td>2007</td>
+			  </tr>
+			  <tr>
+			    <th>牛</th>
+			    <td>1925</td>
+			    <td>1937</td>
+			    <td>1949</td>
+			    <td>1961</td>
+			    <td>1973</td>
+			    <td>1984</td>
+			    <td>1996</td>
+			    <td>2008</td>
+			  </tr>
+			  <tr>
+			    <th>虎</th>
+			    <td>1926</td>
+			    <td>1938</td>
+			    <td>1950</td>
+			    <td>1962</td>
+			    <td>1974</td>
+			    <td>1985</td>
+			    <td>1997</td>
+			    <td>2009</td>
+			  </tr>
+			  <tr>
+			    <th>兔</th>
+			    <td>1927</td>
+			    <td>1939</td>
+			    <td>1951</td>
+			    <td>1963</td>
+			    <td>1975</td>
+			    <td>1986</td>
+			    <td>1998</td>
+			    <td>2010</td>
+			  </tr>
+			  <tr>
+			    <th>龙</th>
+			    <td>1928</td>
+			    <td>1940</td>
+			    <td>1952</td>
+			    <td>1964</td>
+			    <td>1976</td>
+			    <td>1987</td>
+			    <td>1999</td>
+			    <td>2011</td>
+			  </tr>
+			  <tr>
+			    <th>蛇</th>
+			    <td>1929</td>
+			    <td>1941</td>
+			    <td>1953</td>
+			    <td>1965</td>
+			    <td>1977</td>
+			    <td>1988</td>
+			    <td>2000</td>
+			    <td>2012</td>
+			  </tr>
+			  <tr>
+			    <th>马</th>
+			    <td>1930</td>
+			    <td>1942</td>
+			    <td>1954</td>
+			    <td>1966</td>
+			    <td>1978</td>
+			    <td>1989</td>
+			    <td>2001</td>
+			    <td>2013</td>
+			  </tr>
+			  <tr>
+			    <th>羊</th>
+			    <td>1931</td>
+			    <td>1943</td>
+			    <td>1955</td>
+			    <td>1967</td>
+			    <td>1979</td>
+			    <td>1990</td>
+			    <td>2002</td>
+			    <td>2014</td>
+			  </tr>
+			  <tr>
+			    <th>猴</th>
+			    <td>1932</td>
+			    <td>1944</td>
+			    <td>1956</td>
+			    <td>1968</td>
+			    <td>1980</td>
+			    <td>1991</td>
+			    <td>2003</td>
+			    <td>2015</td>
+			  </tr>
+			  <tr>
+			    <th>鸡</th>
+			    <td>1933</td>
+			    <td>1945</td>
+			    <td>1957</td>
+			    <td>1969</td>
+			    <td>1980</td>
+			    <td>1992</td>
+		    <td>2004</td>
+		    <td>2016</td>
+		  </tr>
+		  <tr>
+		    <th>狗</th>
+		    <td>1934</td>
+		    <td>1946</td>
+		    <td>1958</td>
+		    <td>1970</td>
+		    <td>1981</td>
+		    <td>1993</td>
+		    <td>2005</td>
+		    <td>2017</td>
+		  </tr>
+		  <tr>
+		    <th>猪</th>
+		    <td>1935</td>
+		    <td>1947</td>
+		    <td>1959</td>
+		    <td>1971</td>
+		    <td>1982</td>
+		    <td>1994</td>
+		    <td>2006</td>
+		    <td>2018</td>
+		  </tr>
+		</table>
+	</div>
+	<div class="center"><img src="STATIC_URL/images/shengxiaopeidui/bg1.gif" width="639" height="39" /></div>           
+	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

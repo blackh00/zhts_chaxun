@@ -1,0 +1,19 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="youbian2_bor">
+		<h1>邮编查询</h1>
+		<p class="youbian2_p1">提供全国最全最新的邮政编码查询，可查询全国33个省、市、乡镇, 总共100多万个乡镇及街道的邮政编码。</p>
+           <div class="youbian2_shur">
+           	<input type="text" value="请输入地址或邮编号码" onfocus="if(this.value=='请输入地址或邮编号码') {this.value='';this.style.color='#343235';}"
+                       onblur="if(this.value=='') {this.value='请输入地址或邮编号码';this.style.color='#343235';}"
+                       class="youbian2_sousuotxt" id="inputPostCode" />
+			<input type="button" value="" class="youbian2_but" onclick="searchCode();" />
+		</div>
+		<div id="resultInfo"></div>
+		<div class="youbian2_fenye" id="youbian2_fenye"></div>
+	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

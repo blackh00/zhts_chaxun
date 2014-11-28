@@ -1,0 +1,46 @@
+﻿	<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="pl_bor">
+                <h1>
+                    手机号码归属地
+                </h1>
+                <div class="shur">
+                   <input type="text" value="请输入前7位或者完整号码" onfocus="if(this.value=='请输入前7位或者完整号码') {this.value='';this.style.color='#343235';}"
+                        onblur="if(this.value=='') {this.value='请输入前7位或者完整号码';this.style.color='#343235';}"
+                        class="pl_sousuotxt"  id="pl_sousuotxt" />
+                    <input id="Button1" type="button" value="" class="pl_but" />
+                </div>
+				<div id="resultInfo">
+				<if condition="$mobileInfo neq ''">
+				<div class="pl_jieguo"> 
+					<ul class="pl_jieguoc"> 
+						<li>手机号码：<span>{$mobileInfo['MobileNumber']}</span> <a target="_blank" href="#">（查吉凶）</a></li><li>手机号码归属地：<span>{$mobileInfo['MobileArea']}</span></li> <li>手机卡类型：<span>{$mobileInfo['MobileType']}</span></li><li>电话区号：<span>{$mobileInfo['AreaCode']}</span></li><li>城市邮编：<span>{$mobileInfo['PostCode']}</span>
+						</li>
+					</ul>
+				</div>
+				<elseif condition="$errorInfo neq ''">
+					<p><font color="red">{$errorInfo}</font></p>
+				<else/>
+					<p>
+						手机号码归属地查询网 - 主要提供移动、联通、电信手机号码归属地查询、归属地的区号,以及卡号类型等相关手机号码查询服务!
+					</p>
+					<p>
+						移动号码归属地查询支持号段：<br />
+						134 135 136 137 138 139 150 151 152 157 158 159 182 183 187 188 147
+					</p>
+					<p>
+						联通号码归属地查询支持号段：<br />
+						130 131 132 155 156 186 145
+					</p>
+					<p>
+						电信号码归属地查询支持号段：<br />
+						133 153 189
+					</p>
+				</if>
+				</div>
+            </div>
+        </div>
+        <include file="common:rightSideInc" />
+		<include file="common:relatedTools" />
+        <include file="common:footer" />

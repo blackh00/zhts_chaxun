@@ -1,0 +1,35 @@
+<include file="common:header" />
+<div class="main">
+ <div class="phone_left">
+     <div class="renpin_bor">
+         <h1>
+             人品计算器
+         </h1>
+         <div class="renpin_shur">
+            <input type="text" value="请输入您的尊姓大名" onfocus="if(this.value=='请输入您的尊姓大名') {this.value='';}this.style.color='#343235';"
+                 onblur="if(this.value=='') {this.value='请输入您的尊姓大名';this.style.color='#e2e2e2';}"
+                 class="renpin_sousuotxt" id="name"/>
+             <input type="button" value="" class="renpin_but" onclick="calculate()"/>
+         </div>
+         <div class="renpin_c">
+         	<div class="renpin_bg">
+             	<div class="renpin_p">
+             		<p class="renpin_p1"><strong id="renpin_p1">张三</strong>的得分是:</p>
+                     <div class="renpin_num">
+                     	<div class="renpin_num_bg1">
+                         	<div class="renpin_num_bg2">
+                             	<p class="renpin_p2" id="renpin_p2">89</p>
+                             </div>
+                         </div>
+                     </div>
+                 	<p class="renpin_p3" id="renpin_p3">你的人品真好..做好事应该是你的爱好吧..</p>
+                 </div>
+                 <div class="renpin_img" id="renpin_img"><img src="STATIC_URL/images/renpin/80-90.gif" alt="" /></div>
+             </div>
+             <p class="renpin_link"><a href="SITE_URL/yanyuceshi/" target="_blank">去测试下艳遇吧</a></p>
+         </div>
+     </div>
+ </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

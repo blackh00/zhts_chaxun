@@ -1,0 +1,22 @@
+<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="hz_py_box huoxing_box">
+            	<h1>
+                    火星文转换
+                </h1>
+                <p class="huoxing_p1">提供火星文，简体，繁体相互转换。</p>
+                <textarea id="txt_convert" class="huoxing_text" value="请在这里输入您要转换的文字" onfocus="if(this.value=='请在这里输入您要转换的文字') {this.value='';this.style.color='#343235';}" onblur="if(this.value=='') {this.value='请在这里输入您要转换的文字';this.style.color='#343235';}">请在这里输入您要转换的文字</textarea>
+                <div class="huoxing_bt">
+                	<input onclick=h1.value=2;convert() type=button />
+                	<input class="huoxing_bt2" onclick=h1.value=1;convert() type=button />
+                	<input class="huoxing_bt3" onclick=h1.value=0;convert() type=button />
+                	<input class="huoxing_bt4" onclick="copy('txt')" type=button name=Button />
+                	<input value=0 type=hidden name=h1 >
+                </div>
+                <textarea id="txt" name="txt" cols="" rows="" class="huoxing_text"></textarea>
+            </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

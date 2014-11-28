@@ -1,0 +1,37 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="car_bor">
+		<h1> 汽车标志大全</h1>
+		<div class="car_line"></div>
+		<div class="car_shur">
+			<form method="post" action="SITE_DYNAMIC_URL/qichebiaozhi/search/">
+	            <input type="submit" value="" class="car_but" />
+	            <input type="text" value="宝马" onfocus="if(this.value=='宝马') {this.value='';this.style.color='#343235';}"
+	    onblur="if(this.value=='') {this.value='宝马';this.style.color='#343235';}"
+	    class="car_sousuotxt"  name="searchKey" />
+   			</form>
+      		<a class="car_fanhui" href="SITE_URL/qichebiaozhi/">返回车标大全</a>
+  		</div>
+  		<div class="car_box2">
+  			<dl>
+      			<dt>
+          			<img src="ATTACHMENT_URL/carSign/{$carDetails.pic}" alt=""  width="102px" />
+              {$carDetails.name}
+          		</dt>
+          		<dd>{$carDetails.simpleDetails}<a href="javascript:void(0)" onclick="showid('car_xiangxi');">[详细]</a></dd>
+      		</dl>
+      		<div class="car_line2"></div>
+      		<div id="car_xiangxi" style="display:none;">
+            	<div class="car_xiangxi_up">
+                	<div class="car_close"></div>
+                	<h3>{$carDetails.name}</h3>
+                    <p>{$carDetails.details}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

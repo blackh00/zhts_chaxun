@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="STATIC_URL/images/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="STATIC_URL/images/favicon.ico" type="image/x-icon" />
+<link rel="bookmark" type="image/x-icon" href="STATIC_URL/images/favicon.ico" />
+<title>{$headInfo.title}</title>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<meta name="keywords" content="{$headInfo.keywords}" />
+<meta name="description" content="{$headInfo.description} " />
+<link href="STATIC_URL/css/index.css" rel="stylesheet" type="text/css" />
+<link href="STATIC_URL/css/common.css" rel="stylesheet" type="text/css" />
+<!--[if lte IE 6 ]>
+	<link href="STATIC_URL/css/index_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<if condition="$headerFlag eq 1">
+	<include file="header_css.inc" />
+</if>
+</head>
+<body>
+<if condition="$flagIndex eq 1" >
+	<include file="common:headerSlide" />
+<else />
+	<include file="common:headerClick" />
+</if>

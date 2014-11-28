@@ -1,0 +1,64 @@
+<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="phone_left">
+            <div class="baziSm_bor baziSm2">
+                <h1>
+                    八字算命
+                </h1>
+                <p class="baziSm_p1">八字算命的是占卜的一种，它的意义是为了帮助人们对未来可能遇到的事件<br />作出事前的准备和参考。不是起决定作用。而是起辅助作用。</p>
+                <p class="baziSm_p2"><a href="SITE_URL/shengchengbazi/">重新测算</a></p>
+                <div class="baziSm_c2">
+                	<div class="baziSm_c2_box">
+                        <div class="baziSm_c2_txt">
+                        	<p>姓名:<strong>{$b_xing}{$b_ming}</strong>&nbsp;&nbsp;&nbsp;性别：<strong>{$xingbie}</strong><br />出生时间:公历 <strong>{$nian1}年 {$yue1}月 {$ri1}日{$hh1}点</strong>&nbsp;&nbsp;&nbsp;农历 <strong>{$ygz}年 {$nongYDate} {$nongRDate} 日 {$nongSDate}时</strong><br /><br />根据分析，您的生肖为"{$shengXiao}"<br />{$sxgx}<br /><br /><strong>性格分析</strong><br />{$rgxx}<br /><br /><strong>宜从事行业与方位</strong><br />{$hyhw}</p>
+                            <h3><span></span>八字五行 四季用神 穷通宝鉴</h3>
+                            <p>八字五行个数 : {$wnum1}个金{$wnum2}个木{$wnum3}个水{$wnum4}个火{$wnum5}个土<br />四季用神参考 : {$sjrs}<br />穷通宝鉴调候用神参考 : {$qtbj}</p>
+                            
+                            <h3><span></span>五行分析</h3>
+                            <p>本命属 {$shengXiao}命。五行{$wuXing}日主天干为{$rZhuTian}，生于{$sYuSiJi}季。（同类 {$tnwh}，异类{$ynwh}。）</p>
+                            
+                            <h3><span></span>日干支层次</h3>
+                            <p>{$rgcz}</p>
+                            
+                            <h3><span></span>日干支分析</h3>
+                            <p>{$rgzfx}</p>
+                            
+                            <h3><span></span>五行生克制化宜忌</h3>
+                            <p>{$skzhyj}</p>
+                            
+                            <h3><span></span>五行之性</h3>
+                            <p>{$whzx}</p>
+                            
+                            <h3><span></span>四柱五行生克中对应需补的脏腑和部位</h3>
+                            <p>{$szwh}</p>
+                            
+                            <h3><span></span>八字      五行     纳音</h3>
+                            <p>
+                            	八字 : {$ygz}&nbsp;&nbsp;{$mgz}&nbsp;&nbsp;{$dgz}&nbsp;&nbsp;{$tgz}&nbsp;&nbsp;<br />
+                            	五行 : {$wuXingNian}&nbsp;&nbsp;{$wuXingYue}&nbsp;&nbsp;{$wuXingR}&nbsp;&nbsp;{$wuXingShi}&nbsp;&nbsp;<br />
+                            	纳音 :  {$layinNian}&nbsp;&nbsp;{$layinYue}&nbsp;&nbsp;{$layinR}&nbsp;&nbsp;{$layinShi}&nbsp;&nbsp;</p>
+                            	
+                            <h3><span></span>三命通会</h3>
+                            <p>{$sanMingTong}</p>
+                            
+                            <h3><span></span>月日时命理</h3>
+                            <p>{$mingLiSh}生<br />{$mingmi1}</p>
+                            
+                            <h3><span></span>{$mingLiR}日生</h3>
+                            <p>{$mingmi2}</p>
+                            
+                            <h3><span></span>{$mingLiShiS}时时生</h3>
+                            <p>{$mingmi3}</p>
+                            	
+                         </div>
+                    	<i class="flag_tl_t3"></i><i class="flag_tr_t3"></i><i class="flag_bl_t3"></i><i class="flag_br_t3"></i>
+                	</div>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+        <include file="common:rightSideInc" />	
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />

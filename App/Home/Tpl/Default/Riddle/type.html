@@ -1,0 +1,19 @@
+<include file="common:header" />
+<div class="main">
+	<div class="phone_left">
+            <div class="miyu_bor">
+              	<include file="searchBox" />
+                <div class="miyu_box">
+                	<h3><strong>{$type}</strong></h3>
+                    <ul class="miyu_ul2">
+                    	<volist name="resultInfo" id="vo" key="k">
+                    		<li <if condition ="($k eq 10) or (($k eq $count)and($nowPage eq 0)) or (($nowPage neq 0)and($k eq $count%($nowPage*10)))">class="last"</if>><a href="javascript:void(0);" onclick="pop_show(event,'{$vo.answer}','{$vo.name}');">查看答案</a>{$vo.name}</li>
+                    	</volist>
+                    </ul>
+                    <div class="page">{$page} <if condition="$count gt 50"><span>跳转到 </span><input type="text" id="i_page" size="2" class="txt" value="" /><input type="hidden" value="{$typeid}" id="typeid" /><span class="go" onclick="get_type_page();">go</span></if></div>
+                </div>
+            </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

@@ -1,0 +1,37 @@
+﻿	<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="pl_bor">
+                <h1 class="iph1">
+                    IP地址查询
+                </h1>
+                <div class="txt">快速查询IP，提供最精准的IP地址所在地,解析域名IP地址等查询服务</div>
+                <div class="shurip">
+                   <input type="text" value="IP地址或者域名" onfocus="if(this.value=='IP地址或者域名') {this.value='';this.style.color='#343235';}"
+                        onblur="if(this.value=='') {this.value='IP地址或者域名';this.style.color='#343235';}"
+                        class="ip_sousuotxt" id="ip_sousuotxt"/>
+					<input type="hidden" value="{$returnInfo['ip']}" id="clientIp" />
+					<input type="hidden" value="{$submitFlag}" id="submitFlag" />
+                    <input id="Button1" type="button" value="" class="ip_but" onclick="cha_ip();"/>
+                	<div class="ipxinxi">
+                    	<ul>
+               	    	  <li class="text1"><strong>尊敬的用户，下面是您的具体信息：</strong></li>
+                            <li>您的IP是: <strong id="searchIp"></strong></li>
+                            <li>所在地址: <strong id="searchAddress"></strong></li>
+                            <li>参考数据：<strong id="searchData"></strong></li>
+                            <li class="earr">如果您发现查询结果不详细或不正确，请到官网<span><a href="http://www.apnic.net/" target="_blank">http://www.apnic.net</a></span>查询,以apnic为准</li>
+                        </ul>
+                  </div>
+                  	<div class="line1"></div>
+                </div>
+              <div class="ip_map">
+               	<h2>IP地址归属地查询定位:</h2>
+				<div id="map_canvas"  style="width:580px;height:450px;position:relative">
+                <img src="STATIC_URL/images/ip_map.gif" width="580" height="450" />
+				</div>
+			  </div>
+            </div>
+        </div>
+		<include file="common:rightSideInc" />
+        <include file="common:relatedTools" />
+		<include file="common:footer" />

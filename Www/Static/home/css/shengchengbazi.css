@@ -1,0 +1,83 @@
+@CHARSET "UTF-8";
+/**
+ * 生辰八字
+ * 
+ * @copyright (C)2013 ZHTS Inc.
+ * @project CHAXUNLE.COM
+ * @author Xieyihong <305095253@qq.com>
+ * @CreateDate: 2013-7-5 上午11:06:21
+ * @version 1.0
+ */
+.baziSm_bor{border:1px solid #E6E6E6; margin-top:10px; padding-top:37px; overflow:hidden;}
+.baziSm_bor h1{height:42px; font-size:30px; font-family:微软雅黑; background:url(../images/baziSm_bg1.gif) no-repeat 234px 0px; text-indent:292px; color:#338ace; line-height:42px; margin-bottom:21px;}
+.baziSm_p1{line-height:21px; text-align:center; color:#444;}
+.baziSm_c1{padding:32px 0 63px 37px;width:574px; height:211px;}
+.mod_box_t3{width:572px; height:209px; border:1px solid #e4e9ef; position:relative; background:url(../images/baziSm_bg2.gif) right top no-repeat;}
+.mod_box_t3 .box_con {padding: 0 28px 15px;}
+.flag_tl_t3,.flag_tr_t3,.flag_bl_t3,.flag_br_t3 {
+    background: url(../images/baziSm_bg1.gif) no-repeat scroll 0 -200px transparent;
+    height: 24px;
+    overflow: hidden;
+    position: absolute;
+    width: 24px;}
+.flag_tl_t3 {
+    left: 2px;
+    top: 2px;}
+.flag_tr_t3 {
+    background-position: -30px -200px;
+    right: 2px;
+    top: 2px;
+}
+.flag_bl_t3 {
+    background-position: 0px -230px;
+    bottom: 2px;
+    left: 2px;
+}
+.flag_br_t3 {
+    background-position: -30px -230px;
+    bottom: 2px;
+    right: 2px;
+}
+.mod_form_bazi{margin:39px 0 0 40px;}
+.mod_form_bazi .form_item_bazi {
+    line-height: 22px;
+    margin-bottom: 22px;
+}
+.mod_form_bazi .form_item select{border:1px solid #829db2;}
+.ipt_text {
+    background-color: #FFFFFF;
+    border: 1px solid #a7abae;
+    font-family: "宋体";
+    font-size: 14px;
+    height: 18px;
+    line-height: 18px;
+    padding: 1px 0 1px 5px;
+    vertical-align: middle;
+    width: 65px;
+}
+.ipt_radio {
+    height: 13px;
+    margin: -3px 5px 0 0;
+    overflow: hidden;
+    vertical-align: middle;
+    width: 13px;
+}
+.mod_form_bazi .btn_item {
+    padding-top: 11px;
+    text-align: center;
+}
+.btn_orange {
+    height: 37px;
+    width: 123px; background:url(../images/baziSm_bg1.gif) left -50px no-repeat; border:0 none; cursor:pointer;
+}
+.baziSm_bor.baziSm2{padding-bottom:82px;}
+.baziSm_p2{margin:13px 0 6px 536px; padding-left:19px; width:60px; height:14px; line-height:14px; background:url(../images/baziSm_bg1.gif) left -90px no-repeat;}
+.baziSm_p2 a{color:#288db9;}
+.baziSm_c2{padding-left:28px;width:593px;}
+.baziSm_c2_box{width:591px; padding-bottom:20px; border:1px solid #e4e9ef; position:relative;}
+.baziSm_c2_txt{padding:42px 0 0 14px;}
+.baziSm_c2_txt h3{padding:0 25px 0 27px; margin-bottom:10px; height:29px; line-height:29px; width:510px; border:1px solid #dbe9f4; background:#f1f8ff url(../images/baziSm_bg1.gif) 11px -106px no-repeat; font-size:14px; font-weight:bold; color:#288db9;}
+.baziSm_c2_txt h3 span{float:right; margin-top:5px; width:19px; height:19px; display:block; background:url(../images/baziSm_bg1.gif) 0px -140px no-repeat;}
+.baziSm_c2_txt h3 span.close{background:url(../images/baziSm_bg1.gif) 0px -170px no-repeat;}
+.baziSm_c2_txt p{padding:5px 0 25px 17px; width:535px; line-height:24px; font-size:14px;}
+.baziSm_c2_txt p strong{color:#288db9;}

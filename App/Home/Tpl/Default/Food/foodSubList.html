@@ -1,0 +1,58 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+            <div class="goods">
+               <include file="searchBox" />
+               <div class="food_left">
+               <div class="l_hove current" id="shiwu_tab">常见食物分类</div>
+               <div style="display: block; " class="tab-panel" id="tab0">
+	               <ul class="food-sort">
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/1/">谷类</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/2/">薯类淀粉</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/3/">豆类</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/4/">蔬菜</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/5/">菌藻</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/6/">水果</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/7/">坚果种子</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/8/">畜肉</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/9/">禽肉</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/10/">乳类</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/11/">蛋类</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/12/">鱼虾蟹贝</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/13/">婴幼儿食品</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/14/">小吃甜饼</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/15/">速食食品</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/16/">软饮料</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/17/">酒精饮料</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/18/">糖蜜饯</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/19/">油脂</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/20/">调味品</a></li>    
+	                  <li><a href="SITE_DYNAMIC_URL/food/foodList/type/21/">药食及其它</a></li>    
+	               </ul>
+               </div>
+           </div>
+           <div class="food_right">
+           <div class="fenlei_tit">
+				<span>{$type}</span>
+				<volist name='sub_type' id='ft'>
+          			<a href="SITE_DYNAMIC_URL/food/subType/{$ft.sub_type}/">{$ft.sub_type}</a>
+          		</volist>
+           </div>
+           <volist name='result' id='vo'>
+           <div class="food_c480c1">
+      	   		<div class="illus"><a href="SITE_DYNAMIC_URL/food/detail/id/{$vo.id}/"><img src="ATTACHMENT_URL/food/{$vo.image}" width="43" height="32" /></a></div>
+				<div class="intr">
+   					<h2><a target="_blank" title="{$vo.name}<if condition = '$vo.alias neq ""'>，又叫{$vo.alias}</if>" href="SITE_DYNAMIC_URL/food/detail/id/{$vo.id}/">{$vo.name}<if condition = '$vo.alias neq ""'>，又叫{$vo.alias}</if></a></h2>
+         			<p class="font666"><b>热量</b>: {$vo.value}大卡(每100克)<span class="fontbold"><a href="SITE_DYNAMIC_URL/food/detail/id/{$vo.id}/">详细 &gt;&gt;</a></span></p>
+				</div>
+			</div>
+			</volist>
+         <div class="clear"></div>
+         <div class="page_food">{$page}</div>
+       </div>
+      <div class="clear"></div>
+     </div>
+   </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

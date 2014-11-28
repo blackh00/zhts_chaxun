@@ -1,0 +1,172 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+        <div class="jisuanqi_bor">
+            <h1>
+                科学计算器
+            </h1>
+            <div class="jisuanqi_c">
+                <div class="jisuanqi_box">
+                	<div id="calculator_base" class="jisuanqi_biaozhun">
+						<div id="calculator_base_cup">
+						<div id="calculator_base_container">
+                    	<div id="base_table_top" class="jisuanqi_txt">
+                        	<input id="resultIpt"  type="text" value="0" />
+							<div style="display:none;">
+								<div id="baseEprsPanel"></div>
+							</div>
+                        </div>
+                        <ul id="base_table_main" class="jisuanqi_num clearfix">
+                        	<li><input class="bt1" type="button" value="存储" onclick="calculator.memory(this,0);"></li>
+                        	<li><input type="button" value="取存" onclick="calculator.memory(this,1);" class="bt1"></li>
+                        	<li><input type="button" id="simpleDel" value="退格" onclick="calculator.remove();" class="bt1"></li>
+                        	<li><input type="button" id="simpleClearAllBtn" value="清屏" onclick="calculator.clearAll();" class="bt1"></li>
+                        	<li><input type="button" value="累存" onclick="calculator.memory(this,-1);" class="bt1"></li>
+                        	<li><input type="button" value="积存" onclick="calculator.memory(this,-2);" class="bt1"></li>
+                        	<li><input type="button" value="清存" onclick="calculator.memory(this,2);" class="bt2">
+							</li>
+                        	<li><input type="button" id="simpleDivi" value="÷" onclick="calculator.input(this,3);" class="bt4"></li>
+                        	<li><input type="button" id="simple7" value="7" onclick="calculator.input(this,-1);" class="bt3"></li>
+                        	<li><input type="button" id="simple8" value="8" onclick="calculator.input(this,-1);" class="bt3"></li>
+                        	<li><input type="button" id="simple9" value="9" onclick="calculator.input(this,-1);" class="bt3"></li>
+                        	<li><input type="button" id="simpleMulti" value="×" onclick="calculator.input(this,2);" class="bt4"></li>
+                        	<li><input type="button" id="simple4" value="4" onclick="calculator.input(this,-1);" class="bt3"></li>
+                        	<li><input type="button" id="simple5" value="5" onclick="calculator.input(this,-1);" class="bt3"></li>
+                        	<li><input type="button" id="simple6" value="6" onclick="calculator.input(this,-1);" class="bt3"></li>
+                        	<li><input type="button" id="simpleSubtr" value="-" onclick="calculator.input(this,1);" class="bt4"></li>
+                        	<li><input type="button" id="simple1" value="1" onclick="calculator.input(this,-1);" class="bt3"></li>
+                        	<li><input type="button" id="simple2" value="2" onclick="calculator.input(this,-1);" class="bt3"></li>
+                        	<li><input type="button" id="simple3" value="3" onclick="calculator.input(this,-1);" class="bt3"></li>
+                        	<li><input type="button" id="simpleAdd" value="+" onclick="calculator.input(this,0);" class="bt4"></li>
+                        	<li><input type="button" id="simple0" value="0" onclick="calculator.input(this,-1);" class="bt3"></li>
+                        	<li><input type="button" id="simpleDot" value="." onclick="calculator.input(this,-1);" class="bt3"></li>
+                        	<li><input type="button" value="+/-" onclick="calculator.input(this,-3);" class="bt3"></li>
+                        	<li><input type="button" id="simpleEqual" value="=" onclick="calculator.input(this,-2);" class="bt2"></li>
+                        </ul>
+						</div>
+						</div>
+                    </div>
+					
+                	<div id="calculator_complete" class="jisuanqi_gaoji" style="display:none;">
+						<div id="calculator_complete_container" style="height: 578px; ">
+						<form id="completeFrm" name="calc" style="margin:0px;padding:0px;">
+						<div id="complete_button_panel">
+							<div id="complete_table_top" class="jisuanqi_txt">
+								<input type="text" name="display" readonly="readonly" value="0" class="displayCss" size="17" maxlength="17"/>
+								<div class="topRowCss" style="display:none;">
+								<div id="completeEprsPanel"></div>
+								</div>
+							</div>
+							<div id="complete_table_rdo" class="jsq_gaoji_c1">
+								<div class="right">
+									<input type="radio" value="d" checked="checked" id="angleid" name="angle">
+									<label for="angleid">角度制</label>
+									<input type="radio" value="r" id="angleid2" name="angle">
+									<label for="angleid2">弧度制</label>
+								</div>
+								<input type="radio" id="carry2" name="carry"onclick="inputChangCarry(2);">
+								<label for="carry2">2进制</label>
+								<input type="radio" id="carry8" name="carry"onclick="inputChangCarry(8);">
+								<label for="carry8">8进制</label>
+								<input type="radio" id="carry10" checked="checked" name="carry" onclick="inputChangCarry(10);">
+								<label for="carry10">10进制</label>
+								<input type="radio" id="carry16" name="carry"onclick="inputChangCarry(16);">
+								<label for="carry16">16进制</label>
+							</div>
+							
+							<div id="complete_table_chk" class="jsq_gaoji_c2">
+								<div class="jsq_gongneng">
+									<input type="checkbox" id="shiftid" name="shiftf" onclick="inputshift();">
+									<label for="shiftid">上档功能</label>
+									<input type="checkbox" id="hypfid" name="hypf" onclick="inputshift();">
+									<label for="hypfid">双曲函数</label>
+								</div>
+								<div class="jsq_gongneng2">
+									<div class="left"><input type="text" class="helperBox" name="bracket"></div>
+									<div class="left"><input type="text" class="helperBox" name="memory"></div>
+									<div class="left"><input type="text" class="helperBox" name="operator" id="operatorIpt"></div>
+								</div>
+								<div class="jsq_gongneng3">
+									<input class="bt5"  type="button" value="退格" id="completeDel" onclick="backspace();"/>
+									<input class="bt5"  type="button" value="清屏" onclick="document.calc.display.value=0;document.getElementById('completeEprsPanel').innerHTML = '';this.blur();"/>
+								</div>
+							</div>
+							
+							<ul id="complete_table_main" class="jisuanqi_num2 clearfix">
+								<li><input class="bt5"  type="button" value="存储" onclick="putmemory();"/></li>
+								<li><input class="bt5"  type="button" value="取存" onclick="getmemory();"/></li>
+								<li><input class="bt5"  type="button" value="累存" onclick="addmemory();"/></li>
+								<li><input class="bt5"  type="button" value="积存" onclick="multimemory();"/></li>
+								<li><input class="bt6"  type="button" value="清存" onclick="clearmemory();"/></li>
+								<li><input class="bt6"  type="button" value="全清" onclick="clearall();"/></li>
+								<li><input class="bt5 fs1" name="k7" type="button" value="7" onclick="inputkey('7');" id="complete7"/></li>
+								<li><input class="bt5 fs1" name="k8" type="button" value="8" onclick="inputkey('8');" id="complete8"/></li>
+								<li><input class="bt5 fs1" name="k9" type="button" value="9" onclick="inputkey('9');" id="complete9"/></li>
+								<li><input id="completeDivi" class="bt7"  type="button" value="÷" onclick="operation('/',6);"/></li>
+								<li><input class="bt5"  type="button" value="取余" onclick="operation('%',6);"/></li>
+								<li><input class="bt5"  type="button" value="与" onclick="operation('&amp;',3);"/></li>
+								<li><input id="complete4" class="bt5 fs1" name="k4" type="button" value="4" onclick="inputkey('4');"/></li>
+								<li><input id="complete5" class="bt5 fs1" name="k5" type="button" value="5" onclick="inputkey('5');"/></li>
+								<li><input id="complete6" class="bt5 fs1" name="k6" type="button" value="6" onclick="inputkey('6');"/></li>
+								<li><input id="completeMulti"  class="bt7" type="button" value="×" onclick="operation('*',6);"/></li>
+								<li><input class="bt5" name="floor" type="button" value="取整" onclick="inputfunction('floor','deci');"/></li>
+								<li><input class="bt5"  type="button" value="或" onclick="operation('|',1);"/></li>
+								<li><input class="bt5 fs1" name="k1" type="button" value="1" id="complete1" onclick="inputkey('1');"/></li>
+								<li><input class="bt5 fs1" name="k2" type="button" value="2" id="complete2" onclick="inputkey('2');"/></li>
+								<li><input class="bt5 fs1" name="k3" type="button" value="3" id="complete3" onclick="inputkey('3');"/></li>
+								<li><input class="bt7"  type="button" value="-" id="completeSubtr" onclick="operation('-',5);"/></li>
+								<li><input class="bt5"  type="button" value="左移" onclick="operation('&lt;',4);"/></li>
+								<li><input class="bt5"  type="button" value="非" onclick="inputfunction('~','~');"/></li>
+								<li><input class="bt5" name="k0" type="button" value="0" id="complete0" onclick="inputkey('0');"/></li>
+								<li><input class="bt5"  type="button" value="+/-"  onclick="changeSign();"/></li>
+								<li><input class="bt5" name="kp" type="button" value="." id="completeDot" onclick="inputkey('.');"/></li>
+								<li><input class="bt7"  type="button" value="+" id="completeAdd" onclick="operation('+',5);"/></li>
+								<li><input class="bt6"  type="button" value="=" id="completeEqual" onclick="result();"/></li>
+								<li><input class="bt5"  type="button" value="异或" onclick="operation('x',2);"/></li>
+								<li><input class="bt8" name="ka" type="button" value="A" onclick="inputkey('a');"/></li>
+								<li><input class="bt8" name="kb" type="button" value="B" onclick="inputkey('b');"/></li>
+								<li><input class="bt8" name="kc" type="button" value="C" onclick="inputkey('c');"/></li>
+								<li><input class="bt8" name="kd" type="button" value="D" onclick="inputkey('d');"/></li>
+								<li><input class="bt8" name="ke" type="button" value="E" onclick="inputkey('e');"/></li>
+								<li><input class="bt8" name="kf" type="button" value="F" onclick="inputkey('f');"/></li>
+							</ul>
+						</div>
+						
+						<div id="complete_table_more">
+							<ul  id="moreFn" class="jisuanqi_num2 jisuanqi_num3 clearfix">
+								<li><input type="button" name="pi" value="PI" onclick="inputfunction('pi','pi');" class="bt7" ></li>
+								<li><input type="button" name="e" value="E" onclick="inputfunction('e','e');" class="bt7" ></li>
+								<li><input type="button" name="bt" value="d.ms" onclick="inputfunction('dms','deg');" class="bt7" ></li>
+								<li><input type="button" value="(" onclick="addbracket(this);" class="bt7"></li>
+								<li><input type="button" value=")" onclick="disbracket(this);" class="bt7"></li>
+								<li><input type="button" name="ln" value="ln" onclick="inputfunction('ln','exp');" class="bt7"></li>
+								<li><input type="button" name="log" value="log" onclick="inputfunction('log','expdec');" class="bt7"></li>
+								<li><input type="button" name="sin" value="sin" onclick="inputtrig('sin','arcsin','hypsin','ahypsin');" class="bt7" ></li>
+								<li><input type="button" name="cos" value="cos" onclick="inputtrig('cos','arccos','hypcos','ahypcos');" class="bt7" ></li>
+								<li><input type="button" name="tan" value="tan" onclick="inputtrig('tan','arctan','hyptan','ahyptan');" class="bt7" ></li>
+								<li><input type="button" value="n!" onclick="inputfunction('!','!');" class="bt7"></li>
+								<li><input type="button" value="1/x" onclick="inputfunction('recip','recip');" class="bt7"></li>
+								<li><input type="button" name="sqr" value="x^2" onclick="inputfunction('sqr','sqrt');" class="bt7"></li>
+								<li><input type="button" name="cube" value="x^3" onclick="inputfunction('cube','cubt');" class="bt7"></li>
+								<li><input type="button" value="x^y" onclick="operation('^',7);" class="bt7"></li>
+							</ul>
+						</div>
+					</form>	
+					</div>
+						
+                    </div>
+                </div>
+            	<ul class="jisuanqi_qiehuan">
+                	<li class="on">标准</li>
+                    <li>高级</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+var CONFIG = {};
+CONFIG['imgPath'] = 'http://s.chaxun.me/images/';
+</script>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

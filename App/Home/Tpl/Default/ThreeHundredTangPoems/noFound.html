@@ -1,0 +1,42 @@
+﻿<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="miyu_bor tangshi">
+                <h1>
+                    唐诗三百首
+                </h1>
+                <p class="miyu_p1">提供唐诗三百首在线查阅，包括作者，诗名，内容等信息查询。</p>
+                <div class="miyu_shur">
+                <form name="form1" id="form1" action="SITE_DYNAMIC_URL/tangshisanbaishou/search/" method="get" onsubmit="return checkForm()">
+                   	<input type="text" value="" name="word" id="word" class="miyu_sousuotxt" />
+                    <input type="submit" value="" class="miyu_but" />
+                    <div class="miyu_lab">
+                    <if condition="($key_t eq 1) or ($key_t eq '')"><input name="key_t" id="mimian"  checked="checked" type="radio" value="1" /><label for="mimian">按作者</label>
+                    <else/><input name="key_t" id="mimian"  type="radio" value="1" /><label for="mimian">按作者</label>
+                    </if>	
+                    	<eq name="key_t" value='2'><input name="key_t" id="midi" type="radio" checked="checked" value="2" /><label for="midi">按诗名</label><else/><input name="key_t" id="midi" type="radio"  value="2" /><label for="midi">按诗名</label></eq>
+                    	<eq name="key_t" value='3'><input name="key_t" id="miyufl" checked="checked" type="radio" value="3" /><label for="miyufl">按内容</label><else/><input name="key_t" id="miyufl" type="radio" value="3" /><label for="miyufl">按内容</label></eq>
+                    </div>
+                 </form>
+                </div>
+                <script>
+                	function checkForm(){
+                		var str=$('#word').val();
+                		if(str == ''){
+                			alert('关键词不能为空。');
+                			return false;
+                		}
+                		return true;
+                	}
+                </script>
+                <div class="tangshi_box">
+                	<div class="miyu_none">
+                    	<div class="xiehouyu_none"><present name='word'>对不起，没有找到<span>“{$word}”</span>相关的信息<else/>对不起，没有找到<span>“啊啊啊”</span>相关的信息</present></div>
+                    	<div class="xiehouyu_fanhui"><a href="SITE_DYNAMIC_URL/tangshisanbaishou/">返回首页</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       <include file="common:rightSideInc" />	
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />

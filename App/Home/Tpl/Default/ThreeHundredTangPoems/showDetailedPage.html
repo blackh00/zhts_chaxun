@@ -1,0 +1,59 @@
+﻿<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="miyu_bor tangshi">
+                <h1>
+                    唐诗三百首
+                </h1>
+                <p class="miyu_p1">提供唐诗三百首在线查阅，包括作者，诗名，内容等信息查询。</p>
+                <div class="miyu_shur">
+                <form name="form1" id="form1" action="SITE_DYNAMIC_URL/tangshisanbaishou/search/" method="get" onsubmit="return checkForm()">
+                   	<input type="text" value="" name="word" id="word" class="miyu_sousuotxt" />
+                    <input type="submit" value="" class="miyu_but" />
+                    <div class="miyu_lab">
+                    <if condition="($key_t eq 1) or ($key_t eq '')"><input name="key_t" id="mimian"  checked="checked" type="radio" value="1" /><label for="mimian">按作者</label>
+                    <else/><input name="key_t" id="mimian"  type="radio" value="1" /><label for="mimian">按作者</label>
+                    </if>	
+                    	<eq name="key_t" value='2'><input name="key_t" id="midi" type="radio" checked="checked" value="2" /><label for="midi">按诗名</label><else/><input name="key_t" id="midi" type="radio"  value="2" /><label for="midi">按诗名</label></eq>
+                    	<eq name="key_t" value='3'><input name="key_t" id="miyufl" checked="checked" type="radio" value="3" /><label for="miyufl">按内容</label><else/><input name="key_t" id="miyufl" type="radio" value="3" /><label for="miyufl">按内容</label></eq>
+                    </div>
+                 </form>
+                </div>
+                <script>
+                	function checkForm(){
+                		var str=$('#word').val();
+                		if(str == ''){
+                			alert('关键词不能为空。');
+                			return false;
+                		}
+                		return true;
+                	}
+                </script>
+                <div class="tangshi_box">
+                	<div class="tangshi_c2">
+                    	<h2>{$record.title}</h2>
+                        <p>作者：{$record.author}</p>
+                        <div class="tangshi_c2_L">【原文赏析】</div>
+                        <div class="tangshi_c2_R">
+                       {$record.content}
+                        </div>
+                        <div style="clear:both; height:0; overflow:hidden;"></div>
+                    </div>
+                    <div class="tangshi_c3">
+                    	<h5>注解</h5>
+                        <p>{$record.zhu_jie}</p>
+                    </div>
+                    <div class="tangshi_c3">
+                    	<h5>韵译</h5>
+                        <p>{$record.yun_yi}</p>
+                    </div>
+                    <div class="tangshi_c3 last">
+                    	<h5>评析</h5>
+                        <p>{$record.ping_xi}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <include file="common:rightSideInc" />	
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />

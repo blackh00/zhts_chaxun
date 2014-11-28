@@ -1,0 +1,427 @@
+<include file="common:header" />
+   <div class="main">
+       <div class="content">
+       <!--<div id="doc">
+       <div id="bd" class="home">
+           <div class="q-tools">           
+               <div class="q-list">
+                   <div class="q-item clearfix" id="query">
+                       <span class="item" style="width:485px;">
+                           <form id="train" method="GET" action="http://train.qunar.com/stationToStation.htm"
+                           target="_blank" exaction="#" accept-charset="utf-8"
+                           status="on">
+                           <a href="http://lvyou.hao123.com/huoche" class="icon" target="_blank" track="link">
+                               <img src="STATIC_URL/images/jiaotong/jiaotong_11.png" />
+                            </a>
+                               <p class="q-details city-sug">
+                                   <span class="item-title">火车票查询</span>
+                                   <span class="query"><span class="q-word">
+                                   <input type="text" class="q-key key-l" tipstxt="出发地点" name="fromStation" maxlength="10"autocomplete="off" />
+                                   <span class="q-access"></span>
+                                    </span><i>-</i><span class="q-word">
+                                    <input type="text" class="q-key key-r" tipstxt="到达地点" name="toStation" maxlength="10" autocomplete="off" />
+                                    <span class="q-access pstl76"></span></span>
+                                 <input type="submit" class="q-submit" value="查询" track="link" /></span>
+                             </p>
+                       <input name="ex_track" type="hidden" /><input type="hidden" maxlength="10" name="date" /></form>
+                       </span>
+                       <span class="item" style="width:385px;">
+                           <form id="plane" class="des_content fl" action="http://affiliate.qunar.com/affiliate/ext/gb2utf.jsp"
+                           target="_blank" mehtod="get" exaction="#" accept-charset="gbk"
+                           status="on">
+                           <a href="SITE_URL/feiji/" class="icon" target="_blank"><img src="STATIC_URL/images/jiaotong/jiaotong_12.png" /></a>
+                           <p class="q-details city-sug">
+                               <span class="item-title">飞机票查询</span>
+                                   <span class="query"><span class="q-word">
+                                  <input type="text" class="q-key key-l" tipstxt="出发地点" name="fromCity" autocomplete="off" id="startCity" />
+                                  <span class="q-access"></span>
+                                  </span><i>-</i><span class="q-word">
+                                  <input type="text" class="q-key key-r" tipstxt="到达地点" name="toCity" autocomplete="off"  id="endCity"/>
+                                  <span class="q-access pstl76"></span></span><input type="submit" class="q-submit" value="查询" track="link" />
+                                  <input type="hidden" value="auto_4e1d4aff" name="ex_track">
+                                 </span>
+                             </p>
+                           </form>
+                       </span>
+                       <span class="item" style="width:485px;">
+                           <form id="dianziditu" method="GET" action="SITE_URL/{$Think.config.MapSearch}/"
+                           target="_blank" exaction="#" accept-charset="utf-8"
+                           status="on"  onsubmit="return tijiao();" >
+                           <a href="SITE_URL/{$Think.config.MapSearch}/" class="icon" target="_blank" track="link">
+                               <img src="STATIC_URL/images/jiaotong/jiaotong_09.png" />
+                            </a>
+                               <p class="q-details city-sug">
+                                   <span class="item-title">地图查询</span>
+                                   <span class="query">
+                                   <input type="text" value="请输入要查找的地址" onfocus="if(this.value=='请输入要查找的地址') {this.value='';}this.style.color='#a8a8a8';"
+                       onblur="if(this.value=='') {this.value='请输入要查找的地址';this.style.color='#999999';}"
+                       class="mapbox" name="dizhi" id="dizhi" />
+                                <input type="image" src="STATIC_URL/images/jiaotong/cxan.gif"  />
+                                </span>
+                                </p>
+                          </form>
+                       </span>
+                       <span class="item" style="width:385px;">
+                           <form id="train" method="GET" action="http://train.qunar.com/stationToStation.htm"
+                           target="_blank" exaction="#" accept-charset="utf-8"
+                           status="on">
+                           <a href="http://go.360.cn/hotel?src=channel" class="icon" target="_blank" track="link">
+                               <img src="STATIC_URL/images/jiaotong/jiaotong_10.png" />
+                            </a>
+                               <p class="q-details city-sug">
+                                   <span class="item-title">酒店查询</span>
+                                   <span class="query"><span class="q-word" style="z-index:9">
+                                   <input type="text" class="q-key key-l" tipstxt="深圳" name="fromStation" maxlength="10"autocomplete="off" />
+                                   <span class="q-access"></span>
+                                    </span><i>-</i>
+                                    <input type="text" value="请输入关键字" onfocus="if(this.value=='请输入关键字') {this.value='';}this.style.color='#a8a8a8';"
+                       onblur="if(this.value=='') {this.value='请输入关键字';this.style.color='#999999';}"
+                       class="mapbox1" />
+                                 <input type="submit" class="q-submit" value="查询" track="link" /></span>
+                             </p>
+                       <input name="ex_track" type="hidden" /><input type="hidden" maxlength="10" name="date" /></form>
+                       </span>
+                   </div>
+                   
+               </div>
+           </div>
+           
+           <div id="hotcity-sug-train" class="hotcity-sug">
+               <span class="tips"><span><em>热门城市</em>(可直接输入城市或城市拼音)</span><i></i></span><div class="cities">
+                   <ul class="city clearfix"
+                       tab="热门">
+                       <li><span>北京</span></li><li><span>郑州</span></li><li><span>广州</span></li><li><span>南京</span></li><li>
+                           <span>西安</span></li><li><span>上海</span></li><li><span>深圳</span></li><li><span>贵阳</span></li><li>
+                               <span>重庆</span></li><li><span>天津</span></li><li><span>武汉</span></li><li><span>成都</span></li><li>
+                                   <span>哈尔滨</span></li><li><span>合肥</span></li><li><span>海口</span></li><li><span>沈阳</span></li><li>
+                                       <span>石家庄</span></li><li><span>济南</span></li><li><span>昆明</span></li><li><span>乌鲁木齐</span></li><li>
+                                           <span>南宁</span></li><li><span>杭州</span></li><li><span>长春</span></li><li><span>兰州</span></li><li>
+                                               <span>呼和浩特</span></li><li><span>南昌</span></li><li><span>长沙</span></li><li><span>太原</span></li><li>
+                                                   <span>西宁</span></li><li><span>银川</span></li></ul>
+               </div>
+           </div>
+           <div id="hotcity-sug-plane" class="hotcity-sug" style="width:360px;">
+               <span class="tips" style="width:350px;"><span>相关城市(可直接输入城市或城市拼音)</span><i></i></span><div class="cities">
+                   <span class="sorttab" style="width:360px; "><a class="cur" tab="热门">热门</a><a tab="A-G">A-G</a><a tab="H-L">H-L</a><a
+                       tab="M-T">M-T</a><a tab="W-Z">W-Z</a><a tab="国际港澳台">国际港澳台</a></span><ul class="city clearfix" tab="热门" style="width:348px; padding-left:12px;">
+                           <li><span>上海</span></li><li><span>北京</span></li><li><span>广州</span></li><li><span>昆明</span></li><li>
+                               <span>西安</span></li><li><span>成都</span></li><li><span>深圳</span></li><li><span>厦门</span></li><li>
+                                   <span>乌鲁木齐</span></li><li><span>南京</span></li><li><span>重庆</span></li><li><span>杭州</span></li><li>
+                                       <span>大连</span></li><li><span>长沙</span></li><li><span>海口</span></li><li><span>哈尔滨</span></li><li>
+                                           <span>青岛</span></li><li><span>沈阳</span></li><li><span>三亚</span></li><li><span>济南</span></li><li>
+                                               <span>武汉</span></li><li><span>郑州</span></li><li><span>贵阳</span></li><li><span>南宁</span></li><li>
+                                                   <span>福州</span></li><li><span>天津</span></li><li><span>长春</span></li><li><span>石家庄</span></li><li>
+                                                       <span>太原</span></li><li><span>兰州</span></li></ul>
+                   <ul class="city clearfix hidden" tab="A-G" style="width:348px; padding-left:12px;">
+                       <li><span>安庆</span></li><li><span>阿勒泰</span></li><li><span>安康</span></li><li><span>鞍山</span></li><li>
+                           <span>安顺</span></li><li><span>安阳</span></li><li><span>阿克苏</span></li><li><span>包头</span></li><li>
+                               <span>蚌埠</span></li><li><span>北海</span></li><li><span>北京</span></li><li><span>百色</span></li><li>
+                                   <span>保山</span></li><li><span>博乐</span></li><li><span>长治</span></li><li><span>长春</span></li><li>
+                                       <span>长海</span></li><li><span>常州</span></li><li><span>昌都</span></li><li><span>朝阳</span></li><li>
+                                           <span>潮州</span></li><li><span>常德</span></li><li><span>长白山</span></li><li><span>成都</span></li><li>
+                                               <span>重庆</span></li><li><span>长沙</span></li><li><span>赤峰</span></li><li><span>大同</span></li><li>
+                                                   <span>大连</span></li><li><span>达县</span></li><li><span>大足</span></li><li><span>东营</span></li><li>
+                                                       <span>大庆</span></li><li><span>丹东</span></li><li><span>大理</span></li><li><span>敦煌</span></li><li>
+                                                           <span>鄂尔多斯</span></li><li><span>恩施</span></li><li><span>二连浩特</span></li><li><span>佛山</span></li><li>
+                                                               <span>福州</span></li><li><span>阜阳</span></li><li><span>富蕴</span></li><li><span>贵阳</span></li><li>
+                                                                   <span>桂林</span></li><li><span>广州</span></li><li><span>广元</span></li><li><span>赣州</span></li><li>
+                                                                       <span>格尔木</span></li><li><span>广汉</span></li><li><span>固原</span></li></ul>
+                   <ul class="city clearfix hidden" tab="H-L" style="width:348px; padding-left:12px;">
+                       <li><span>呼和浩特</span></li><li><span>哈密</span></li><li><span>黑河</span></li><li><span>
+                           海拉尔</span></li><li><span>哈尔滨</span></li><li><span>海口</span></li><li><span>衡阳</span></li><li>
+                               <span>黄山</span></li><li><span>杭州</span></li><li><span>邯郸</span></li><li><span>合肥</span></li><li>
+                                   <span>黄龙</span></li><li><span>汉中</span></li><li><span>和田</span></li><li><span>惠州</span></li><li>
+                                       <span>吉安</span></li><li><span>吉林</span></li><li><span>酒泉</span></li><li><span>鸡西</span></li><li>
+                                           <span>晋江</span></li><li><span>锦州</span></li><li><span>景德镇</span></li><li><span>嘉峪关</span></li><li>
+                                               <span>井冈山</span></li><li><span>济宁</span></li><li><span>九江</span></li><li><span>佳木斯</span></li><li>
+                                                   <span>济南</span></li><li><span>喀什</span></li><li><span>昆明</span></li><li><span>康定</span></li><li>
+                                                       <span>克拉玛依</span></li><li><span>库尔勒</span></li><li><span>喀纳斯</span></li><li><span>库车</span></li><li>
+                                                           <span>兰州</span></li><li><span>洛阳</span></li><li><span>丽江</span></li><li><span>梁平</span></li><li>
+                                                               <span>荔波</span></li><li><span>庐山</span></li><li><span>林芝</span></li><li><span>柳州</span></li><li>
+                                                                   <span>泸州</span></li><li><span>连云港</span></li><li><span>黎平</span></li><li><span>连城</span></li><li>
+                                                                       <span>拉萨</span></li><li><span>临沧</span></li><li><span>临沂</span></li></ul>
+                   <ul class="city clearfix hidden" tab="M-T" style="width:348px; padding-left:12px;">
+                       <li><span>牡丹江</span></li><li><span>芒市</span></li><li><span>满洲里</span></li><li><span>
+                           绵阳</span></li><li><span>梅县</span></li><li><span>漠河</span></li><li><span>南京</span></li><li>
+                               <span>南充</span></li><li><span>南宁</span></li><li><span>南阳</span></li><li><span>南通</span></li><li>
+                                   <span>那拉提</span></li><li><span>南昌</span></li><li><span>宁波</span></li><li><span>攀枝花</span></li><li>
+                                       <span>衢州</span></li><li><span>秦皇岛</span></li><li><span>庆阳</span></li><li><span>且末</span></li><li>
+                                           <span>齐齐哈尔</span></li><li><span>青岛</span></li><li><span>汕头</span></li><li><span>深圳</span></li><li>
+                                               <span>石家庄</span></li><li><span>三亚</span></li><li><span>沈阳</span></li><li><span>上海</span></li><li>
+                                                   <span>思茅</span></li><li><span>鄯善</span></li><li><span>韶关</span></li><li><span>沙市</span></li><li>
+                                                       <span>苏州</span></li><li><span>唐山</span></li><li><span>铜仁</span></li><li><span>通化</span></li><li>
+                                                           <span>塔城</span></li><li><span>腾冲</span></li><li><span>台州</span></li><li><span>天水</span></li><li>
+                                                               <span>天津</span></li><li><span>通辽</span></li><li><span>太原</span></li><li><span>吐鲁番</span></li></ul>
+                   <ul class="city clearfix hidden" tab="W-Z" style="width:348px; padding-left:12px;">
+                       <li><span>威海</span></li><li><span>武汉</span></li><li><span>梧州</span></li><li><span>文山</span></li><li>
+                           <span>无锡</span></li><li><span>潍坊</span></li><li><span>武夷山</span></li><li><span>乌兰浩特</span></li><li>
+                               <span>温州</span></li><li><span>乌鲁木齐</span></li><li><span>芜湖</span></li><li><span>万州</span></li><li>
+                                   <span>乌海</span></li><li><span>兴义</span></li><li><span>西昌</span></li><li><span>厦门</span></li><li>
+                                       <span>香格里拉</span></li><li><span>西安</span></li><li><span>襄阳</span></li><li><span>西宁</span></li><li>
+                                           <span>锡林浩特</span></li><li><span>西双版纳</span></li><li><span>徐州</span></li><li><span>兴城</span></li><li>
+                                               <span>兴宁</span></li><li><span>邢台</span></li><li><span>义乌</span></li><li><span>永州</span></li><li>
+                                                   <span>榆林</span></li><li><span>延安</span></li><li><span>运城</span></li><li><span>烟台</span></li><li>
+                                                       <span>银川</span></li><li><span>宜昌</span></li><li><span>宜宾</span></li><li><span>盐城</span></li><li>
+                                                           <span>延吉</span></li><li><span>玉树</span></li><li><span>伊宁</span></li><li><span>宜春</span></li><li>
+                                                               <span>珠海</span></li><li><span>昭通</span></li><li><span>张家界</span></li><li><span>舟山</span></li><li>
+                                                                   <span>郑州</span></li><li><span>中卫</span></li><li><span>芷江</span></li><li><span>湛江</span></li><li>
+                                                                       <span>中甸</span></li><li><span>遵义</span></li></ul>
+                   <ul class="city clearfix hidden" tab="国际港澳台" style="width:348px; padding-left:12px;">
+                       <li><span>香港</span></li><li><span>新加坡</span></li><li><span>吉隆坡</span></li><li><span>
+                           首尔</span></li><li><span>澳门</span></li><li><span>曼谷</span></li><li><span>台北</span></li><li>
+                               <span>东京</span></li><li><span>悉尼</span></li><li><span>巴黎</span></li><li><span>伦敦</span></li><li>
+                                   <span>纽约</span></li><li><span>洛杉矶</span></li><li><span>墨尔本</span></li><li><span>胡志明市</span></li><li>
+                                       <span>大阪</span></li><li><span>温哥华</span></li><li><span>法兰克福</span></li><li><span>迪拜</span></li><li>
+                                           <span>多伦多</span></li><li><span>马尼拉</span></li><li><span>河内</span></li><li><span>旧金山</span></li><li>
+                                               <span>加德满都</span></li><li><span>金边</span></li><li><span>釜山</span></li><li><span>莫斯科</span></li><li>
+                                                   <span>雅加达</span></li><li><span>马累</span></li><li><span>名古屋</span></li></ul>
+               </div>
+           </div>
+           <div id="city-sug">
+           </div>
+           
+       </div>
+   </div>-->
+           <ul>
+               <li><a href="http://lvyou.hao123.com/huoche" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jiaotong_11.png" />
+                   <div class="link_txt">
+                       <p>
+                           火车票查询
+                       </p>
+                       <span>各地火车票查询</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/feiji/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jiaotong_12.png" />
+                   <div class="link_txt">
+                       <p>
+                          飞机票查询
+                       </p>
+                       <span>各地飞机票查询</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/ditu/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jiaotong_09.png" />
+                   <div class="link_txt">
+                       <p>
+                          地图查询
+                       </p>
+                       <span>各地地图查询</span>
+                   </div>
+               </a></li>
+               <li><a href="http://go.360.cn/hotel?src=channel/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jiaotong_10.png" />
+                   <div class="link_txt">
+                       <p>
+                           酒店查询
+                       </p>
+                       <span>各地酒店查询</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/express/" target="_blank">
+                   <img src="STATIC_URL/images/link_1.png" />
+                   <div class="link_txt">
+                       <p>
+                           快递查询
+                       </p>
+                       <span>快递物流单号跟踪查询</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/tianqi/" target="_blank">
+           <img src="STATIC_URL/images/link_7.png" />
+                   <div class="link_txt">
+                       <p>
+                           全国城市天气
+                   </p>
+                       <span>全国城市一周天气详情</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/rili/" target="_blank">
+                   <img src="STATIC_URL/images/link_5.png" />
+                   <div class="link_txt">
+                       <p>
+                           万年历
+                   </p>
+                       <span>农历、公历、各种节日</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/zone/" target="_blank">
+                   <img src="STATIC_URL/images/link_16.png" />
+                   <div class="link_txt">
+                       <p>
+                           电话区号
+                       </p>
+                       <span>全国各地电话区号查询</span>
+                   </div>
+               </a></li>
+       <li><a href="SITE_URL/commontelphone/" target="_blank">
+                   <img src="STATIC_URL/images/link_13.png" />
+                   <div class="link_txt">
+                       <p>
+                           常用电话号码
+                   </p>
+                       <span>常用报警、公共紧急电话</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_DYNAMIC_URL/Lottery/" target="_blank">
+                   <img src="STATIC_URL/images/link_12.png" />
+                   <div class="link_txt">
+                       <p>
+                           彩票查询
+                   </p>
+                       <span>各类彩票开奖情况查询</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/bjtime/" target="_blank">
+                   <img src="STATIC_URL/images/link_15.png" />
+                   <div class="link_txt">
+                       <p>
+                           标准北京时间
+                       </p>
+                       <span>标准北京时间、精确校时</span>
+                   </div>
+               </a></li>
+               <li><a href="http://i.yeepay.com/shtml/mobile_01.jsp" target="_blank">
+                   <img src="STATIC_URL/images/link_17.png" />
+                   <div class="link_txt">
+                       <p>
+                           话费充值/查询
+                       </p>
+                       <span>移动联通话费充值/查询</span>
+                   </div>
+               </a></li>
+               <li><a href="http://search.114chn.com/" target="_blank">
+              	<img src="STATIC_URL/images/jiaotong/shenghuo_05.png"/>
+                 <div class="link_txt">
+                     <p>
+                       114黄页
+               </p>
+                       <span>更精准的找到企业资料</span>
+               </div>
+             </a></li>
+       <li><a href="SITE_DYNAMIC_URL/caipu/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/shenghuo_06.png"/>
+                   <div class="link_txt">
+                       <p>
+                           菜谱大全
+                   </p>
+                       <span>各类家常菜、私房菜菜谱</span>
+                   </div>
+               </a></li>
+               <li><a href="http://www.gewara.com/movie/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/shenghuo_07.png"/>
+                   <div class="link_txt">
+                       <p>
+                           电影票查询
+                   </p>
+                       <span>全国院线排片购票查询</span>
+                   </div>
+               </a></li>
+               <li><a href="http://epg.tvsou.com/programys/TV_1/Channel_1/W6.htm" target="_blank">
+                   <img src="STATIC_URL/images/link_18.png" />
+                   <div class="link_txt">
+                       <p>
+                           电视节目预告
+                       </p>
+                       <span>全国各地电视台节目预告</span>
+                   </div>
+               </a></li>
+         </ul>
+     	</div>
+       <div class="linkline">
+       </div>
+<div class="dange">
+   <div class="dange_title">长途出行</div>
+   <ul class="txtlinks">
+   	   <!--  
+       <li><a href="SITE_URL/huochepiao/" target="_blank">订火车票</a></li>
+       <li><a href="SITE_URL/feiji/" target="_blank">订机票</a></li>
+       <li><a href="#" target="_blank">订汽车票</a></li>
+       <li><a href="#" target="_blank">酒店预定</a><div class="txt_new"> </div></li>
+       <li><a href="#" target="_blank">全国轮船时刻</a></li>
+	   <li><a href="#" target="_blank">火车站电话</a><div class="txt_hot"> </div></li>
+       <li><a href="#" target="_blank">航空公司电话</a></li>
+       <li><a href="#" target="_blank">汽车站电话</a></li>
+       <li><a href="#" target="_blank">租车查询</a></li>
+       <li><a href="#" target="_blank">船舶航运查询</a></li>
+       <li><a href="#" target="_blank">铁路运费查询</a></li>
+       <li><a href="#" target="_blank">机场大巴查询</a></li>
+       <li><a href="#" target="_blank">高速公路查询</a></li>
+       <li><a href="#" target="_blank">自驾线路查询</a></li>
+       <li><a href="#" target="_blank">世界港口查询</a></li>
+	   <li class="no_border"><a href="#" target="_blank">国道查询</a></li>
+       <li class="no_border"><a href="#" target="_blank">机场三字代码</a></li>
+       <li class="no_border"><a href="#" target="_blank">高速服务热线</a></li>
+       <li class="no_border"><a href="#" target="_blank">全国油价查询</a></li>
+       -->
+       <li class="no_border"><a href="SITE_URL/feiji/" target="_blank">订机票</a></li>
+   </ul>
+</div>
+<div class="dange">
+   <div class="dange_title">城市交通</div>
+   <ul class="txtlinks">
+   	   <!--
+       <li><a href="SITE_URL/ditu/" target="_blank">电子地图</a></li>
+       <li><a href="#" target="_blank">公交查询</a><div class="txt_hot"></div></li>
+       <li><a href="#" target="_blank">地铁线路查询</a></li>
+       <li><a href="#" target="_blank">出租车电话</a></li>
+       <li><a href="#" target="_blank">实时路况</a></li>
+       <li class="no_border"><a href="#" target="_blank">拼车搭车</a></li>
+       <li class="no_border"><a href="#" target="_blank">免费停车查询</a></li>
+       <li class="no_border"><a href="#" target="_blank">北京尾号银行</a></li>
+       -->
+       <li class="no_border"><a href="SITE_URL/ditu/" target="_blank">电子地图</a></li>
+   </ul>
+</div>
+<div class="dange">
+   <div class="dange_title">交通安全</div>
+   <ul class="txtlinks">
+   	   <!--
+       <li><a href="SITE_URL/{$Think.config.TrafficViolateSearch}/" target="_blank">交通违章</a></li>
+       <li><a href="#" target="_blank">驾驶证扣分查询</a></li>
+       <li><a href="#" target="_blank">违章代码查询</a></li>
+       <li><a href="SITE_URL/{$Think.config.CarNumberSearch}/" target="_blank">车牌号码查询</a><div class="txt_new"></div></li>
+       <li><a href="#" target="_blank">机废车辆查询</a></li>
+       <li class="no_border"><a href="#" target="_blank">全国车管所查询</a></li>
+       <li class="no_border"><a href="#" target="_blank">事故查询</a></li>
+       <li class="no_border"><a href="#" target="_blank">驾驶证真假核实</a></li>
+	   <li class="no_border"><a href="#" target="_blank">车辆信息核实</a></li>
+	   -->
+	   <li class="no_border"><a href="SITE_URL/jiaotongweigui/" target="_blank">交通违章</a></li>
+       <li class="no_border"><a href="SITE_URL/chepaihao/" target="_blank">车牌号码查询</a><div class="txt_new_6"></div></li>
+   </ul>
+</div>
+<div class="dange">
+   <div class="dange_title">驾照考试</div>
+   <ul class="txtlinks">
+   	   <!--
+       <li><a href="#" target="_blank">驾校查询</a></li>
+       <li><a href="#" target="_blank">驾驶员考试</a></li>
+       <li><a href="SITE_URL/jiaotongbiaozhi/" target="_blank">交通标志大全</a></li>
+       <li><a href="SITE_URL/qichebiaozhi/" target="_blank">汽车标志大全</a></li>
+       <li><a href="#" target="_blank">汽车油耗查询</a></li>
+       <li class="no_border"><a href="#" target="_blank">车管所分局电话</a></li>
+       <li class="no_border"><a href="#" target="_blank">学员学籍查询</a></li>
+       <li class="no_border"><a href="#" target="_blank">教练员查询</a></li>
+	   -->
+       <li class="no_border"><a href="SITE_URL/qichebiaozhi/" target="_blank">汽车标志大全</a></li>
+   </ul>
+</div>
+<!-- 
+<div class="dange">
+   <div class="dange_title">旅游指南</div>
+   <ul class="txtlinks">
+       <li><a href="#" target="_blank">旅游景点大全</a></li>
+       <li><a href="#" target="_blank">当季旅游指南</a></li>
+       <li><a href="#" target="_blank">全国各地特产</a></li>
+       <li><a href="#" target="_blank">景点门票</a></li>
+       <li><a href="#" target="_blank">汽车油耗查询</a></li>
+       <li class="no_border"><a href="#" target="_blank">故宫票务预定</a></li>
+       <li class="no_border"><a href="#" target="_blank">城市旅游推算</a></li>
+       <li class="no_border"><a href="#" target="_blank">组团旅游</a></li>
+	   <li class="no_border"><a href="SITE_URL/snacks/" target="_blank">全国各地小吃</a></li>
+   </ul>
+</div>
+-->
+<include file="common:footer" />

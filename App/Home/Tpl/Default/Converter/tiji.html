@@ -1,0 +1,287 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>单位换算器</title>
+<link type="text/css" rel="stylesheet" href="STATIC_URL/css/converterPublic.css" />
+<link type="text/css" rel="stylesheet" href="STATIC_URL/css/converter.css" />
+<script type='text/javascript' src='STATIC_URL/js/converter_tiji.js' ></script>
+</head>
+<body>
+<div class="wrapper">
+  <!-- main -->
+  <div class="main">
+    <div class="container">
+      <div class="htitle">
+        <h1 class="tiji">体积单位换算</h1>
+      </div>
+      <div class="col_a">
+        <div class="navbar">
+          <ul>
+            <li class="nav1"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/index/">长度</a></li>
+            <li class="nav8"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/wendu/">温度</a></li>
+            <li class="nav6"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/reliang/">热量</a></li>
+            <li class="nav7"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/gonglv/">功率</a></li>
+            <li class="nav5"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/yali/">压力</a></li>
+            <li class="nav3"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/zhongliang/">重量</a></li>
+            <li class="nav2"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/mianji/">面积</a></li>
+            <li class="nav4"><a class="current" href="SITE_DYNAMIC_URL/{$Think.config.Converter}/tiji/">体积</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col_b">
+        <div class="mod_a">
+          <div class="th_a"><strong>公制</strong></div>
+          <div class="td_a">
+            <div class="td120">立方米(m3)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mCubic_meter" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">公石(hl)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mHectoliter" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">十升(dal)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mDekaliter" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120"><div class="pt10 lh16">立方分米(dm3)=升(l)</div></div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mLiter" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">分升(dl)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mDeciliter" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">厘升(cl)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mCentiliter" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120"><div class="pt10 lh16">立方厘米(cm3)=毫升(ml)</div></div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mMilliliter" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">立方毫米(mm3)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mCubic_millimeter" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+          </div>
+        </div>
+        <div class="mod_a">
+          <div class="th_a"><strong>美制干量</strong></div>
+          <div class="td_a">
+            <div class="td120">桶</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA"  id="usdBarrel"/>
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">蒲式耳(bu)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="usdBushel" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">加仑(bal)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="briGallon" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">夸脱(pt)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="usdQuart" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">品脱(pt)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="usdPint" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+          </div>
+        </div>
+        <div class="mod_a">
+          <div class="th_a"><strong>英制液量和干量</strong></div>
+          <div class="td_a">
+            <div class="td120">桶</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="briBarrel" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">蒲式耳(bu)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="briBushel" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">加仑(bal)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="briGallon" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">品脱(pt)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA"  id="briPint"/>
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">液量盎司(fl oz)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="briFluid_ounce" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+          </div>
+        </div>
+        <div class="mod_a">
+          <div class="th_a"><strong>公制烹调制式</strong></div>
+          <div class="td_a">
+            <div class="td120">汤勺(Tbs)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mcTable_spoon" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">调羹(tsp)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mcTea_spoon" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+          </div>
+        </div>
+        <div class="mod_a">
+          <div class="th_a"><strong>美制烹调制式</strong></div>
+          <div class="td_a">
+            <div class="td120">汤勺(Tbs)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uscTable_spoon" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">调羹(tsp)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uscTea_spoon" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">杯(fl oz)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uscCup" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            
+          </div>
+        </div>
+        <div class="mod_a">
+          <div class="th_a"><strong>美制液量</strong></div>
+          <div class="td_a">
+            <div class="td120">桶[42加仑]</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uslBarrel" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">加仑(gal)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uslGallon" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">夸脱(qt)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uslQuart" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">品脱(pt)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA"  id="uslPint"/>
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">及耳(gi)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uslGill" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">液量盎司(fl oz)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uslFluid_ounce" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">液量打兰(fl dr)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uslFluid_dram" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">量滴(min)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uslMinim" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+          </div>
+        </div>
+        <div class="mod_a">
+          <div class="th_a"><strong>美英同制体积计量</strong></div>
+          <div class="td_a">
+            <div class="td120">亩英尺</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uscAcre_foot" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">立方码</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uscCubic_yard" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">立方英尺</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA"  id="uscCubic_foot"/>
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">立方英寸</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="uscCubic_inch" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+           
+          </div>
+        </div>
+        <input type="submit" class="submitB" value="数据重置" onclick="data_reset()"/>
+        <p class="gray">可实现在线立方米(Cubic meter)、公石(hectoliter)、十升(dekaliter)、立方分米(Cubic dm)、升(liter)、分升(deciliter)、厘升(centiliter)、立方厘米(Cubic cm)、毫升(milliliter)、立方毫米(Cubic millimeter)、桶(Barrel)、蒲式耳(Bushel)、配克(Peck)、夸脱(Quart)、品脱(Pint)、加仑(Gallon)、盎司(Ounce)、打兰(dram)、量滴(Minim)、立方码(Cubic yard)、立方英尺(Cubic foot)、立方英寸(Cubic inch)间的互转互换。</p>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!-- main end --> 
+  <!-- footer -->
+  <script type='text/javascript' src='js/footer201208_easy.js' ></script>
+  <!-- footer end --> 
+   <script type='text/javascript'>
+		var inputs = document.getElementsByTagName("input");
+		for(var i=0;i<inputs.length;i++) {
+			if(inputs[i].nodeType== 1 &&  inputs[i].className=='submitA' && inputs[i].nodeName.toUpperCase() == 'INPUT') {
+				inputs[i].onclick = function() {
+					//验证数字是否正确
+					var parent = this.parentNode;
+					var childs = parent.childNodes;
+					var id;
+					var value ;
+			
+					for(var i=0;i<childs.length;i++) {
+						if(childs[i].nodeType==1 &&  childs[i].className=='inputTxtA' && childs[i].nodeName.toUpperCase() == 'INPUT') {
+							var val = childs[i].value;
+							val = val.replace(/(^\s+)|(\s+$)/g,'');
+
+							if(!checkNum(val)) {
+								return false;
+							}
+							id = childs[i].id;
+							value = val;
+							break;
+						}
+					}
+					conv_length(id,value);
+
+				}
+			}
+		}
+  </script>
+</div>
+</body>
+</html>

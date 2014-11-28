@@ -1,0 +1,95 @@
+﻿<include file="common:header" />
+<div class="main">
+	<div class="mod_2d_2 cl" style="padding:0px;">
+            <h1>彩票查询</h1>
+            <div class="description clearfix">提供彩票查询服务，包括彩票开奖号码 ,开奖日期,开奖金额等信息。</div>
+    		 <div class="caipiao clearfix">
+                <div class="cp_con clearfix">
+                	<div class="caiz">
+                 		<div class="caiz_tit cl">
+                        	<select class="sel_cz" id="lottery_type">
+                            	<option value="shuangseqiu">双色球</option>
+                                <option value="fucai3d">福彩3D</option>
+                                <option selected="selected" value="qilecai">七乐彩</option>
+                                <option value="pailie3">排列三</option>
+                                <option value="qixingcai">七星彩</option>
+                                <option value="eexuan5">22选5</option>
+                                <option value="daletou">大乐透</option>
+                            </select>
+                            <select class="sel_cz qishu" id="lottery_qihao">
+                            <Volist name="data.history" id="vo">
+                            	<option value="{$vo}">{$vo}</option>
+                            </Volist>
+                            </select>
+                        </div>
+                        <div class="kaijiang">
+                        	<div class="kaijiang_l">
+                            	<div class="kaijiang_r">
+                                	<div class="kaijiang_tit">{$data.name}<span> 第{$data.qihao}期</span> 开奖结果</div>
+                                    <div class="kaijiang_time">
+                                    	开奖时间：{$data.notice}<br />
+                                        本期销量：<span class="red">{$data.xiaoliang}元</span><br />
+                                        奖池奖金：<span class="red">{$data.jiangchiguncun}元</span>
+                                  </div>
+                                  <div class="kaijiang_num">
+                                  	  <h3>
+                                          <i>红球号码：</i>
+                                          <em class="hongqiu">{$data.redballs.0}</em>
+                                          <em class="hongqiu">{$data.redballs.1}</em>
+                                          <em class="hongqiu">{$data.redballs.2}</em>
+                                          <em class="hongqiu">{$data.redballs.3}</em>
+                                          <em class="hongqiu">{$data.redballs.4}</em>
+                                          <em class="hongqiu">{$data.redballs.5}</em>
+                                          <em class="hongqiu">{$data.redballs.6}</em>
+                                      </h3>
+                                      <h3>
+                                          <i>蓝球号码：</i><em class="lanqiu">{$data.blueball}</em>
+                                       </h3>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kaijiang kjxq">
+                        	<div class="kaijiang_l">
+                            	<div class="kaijiang_r">
+                                	<div class="kjxq_tit">开奖详情</div>
+                                    <table cellpadding="0" cellspacing="0" class="draw_tab" id="jq_draw_detail">
+                                        <tbody>
+                                            <tr class="tit">
+                                                <th width="20%" height="41">
+                                                    奖项
+                                                </th>
+                                                <th width="30%">
+                                                    中奖条件
+                                          </th>
+                                                <th width="20%">
+                                                    中奖注数
+                                                </th>
+                                                <th width="30%">
+                                                    单注奖金(元)
+                                                </th>
+                                            </tr>
+                                            
+                                            <Volist name="data['prize']" id="vo">
+                                            <tr>
+                                                <td>{$vo.0}</td>
+                                                <td>{$vo.3}</td>
+                                                <td>{$vo.1}</td>
+                                                <td>{$vo.2}</td>
+                                            </tr>
+                                            </Volist>
+                                        </tbody>
+                                    </table>
+                                </div>
+                             </div>
+                         </div>
+                         <div class="clearfix"></div>
+                         <div class="fq">
+                           <<<a href="SITE_DYNAMIC_URL/lottery/qilecai/qishu/{$data['qihaoCut']}"> {$data.name}{$data['qihaoCut']}期</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SITE_DYNAMIC_URL/lottery/qilecai/qishu/{$data['qihaoAdd']}">{$data.name}{$data['qihaoAdd']}期</a> >>
+                         </div>
+                    </div>
+                </div>
+             </div>
+           </div>
+<include file="common:relatedTools" />
+<include file="common:footer" />

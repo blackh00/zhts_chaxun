@@ -1,0 +1,19 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+            <div class="cy_bor">
+                <include file='Phrase:phraseSearch' />
+                <div class="cy_c3">
+                	<h3>{$type}</h3>
+                    <ul class="cate_list">
+                    	<volist name='result' id='vo'>
+	                    	<li>·<a target="_blank" title="{$vo.name}" href="SITE_DYNAMIC_URL/{$Think.config.Phrase}/show/?search={$vo.id}">{$vo.name}</a></li>
+                    	</volist>
+                    </ul>
+                    <div style="clear:both; height:0; overflow:hidden;"></div>
+                </div>
+            </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

@@ -1,0 +1,95 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="yaopin">
+		<h1>国家药品查询</h1>
+			<div class="cp_ts">提供药品药性、成分、使用说明查询。</div>
+			<div class="yaopin_con">
+            	<div><img src="STATIC_URL/images/yaopin/bg_4.gif" width="616" height="41" /></div>
+                <div class="yp_con">
+                	<volist id="vo" name="info">
+					<table width="100%" border="0" cellpadding="0" cellspacing="0">
+					  <tr>
+					    <td width="126" align="center" bgcolor="#eaeaea">批准文号</td>
+					    <td bgcolor="#eaeaea" class="p25">{$vo.appnum}</td>
+					  </tr>
+					  <tr>
+					    <td align="center">产品名称</td>
+					    <td class="p25">{$vo.pname}</td>
+					  </tr>
+					  <tr>
+					    <td align="center" bgcolor="#eaeaea">英文名称</td>
+					    <td bgcolor="#eaeaea" class="p25">{$vo.ename}</td>
+					  </tr>
+					  <tr>
+					    <td align="center">商品名</td>
+					    <td class="p25">{$vo.name}</td>
+					  </tr>
+					  <tr>
+					    <td align="center" bgcolor="#eaeaea">剂型</td>
+					    <td bgcolor="#eaeaea" class="p25">{$vo.forms}</td>
+					  </tr>
+					  <tr>
+					    <td align="center">规格</td>
+					    <td class="p25">{$vo.size}</td>
+					  </tr>
+					  <tr>
+					    <td align="center">生产单位</td>
+					    <td class="p25">{$vo.unit}</td>
+					  </tr>
+					  <tr>
+					    <td align="center">生产地址</td>
+					    <td class="p25">{$vo.address}</td>
+					  </tr>
+					  <tr>
+					    <td align="center" bgcolor="#eaeaea">产品类别</td>
+					    <td bgcolor="#eaeaea" class="p25">{$vo.category}</td>
+					  </tr>
+					  <tr>
+					    <td align="center">原批准文号</td>
+					    <td class="p25">{$vo.appnum2}</td>
+					  </tr>
+					  <tr>
+					    <td align="center" bgcolor="#eaeaea">批准日期</td>
+					    <td bgcolor="#eaeaea" class="p25">{$vo.appdate}</td>
+					  </tr>
+					  <tr>
+					    <td align="center">药品本位码</td>
+					    <td class="p25">{$vo.code}</td>
+					  </tr>
+					  <tr>
+					    <td align="center" bgcolor="#eaeaea">药品本位码备注</td>
+					    <td bgcolor="#eaeaea" class="p25">{$vo.remark}</td>
+					  </tr>
+					  <tr>
+					    <td align="center">相关数据库查询</td>
+					    <td class="p25">&nbsp;</td>
+					  </tr>
+					  <tr>
+					    <td align="center" bgcolor="#eaeaea" class="red">* 注</td>
+					    <td height="400" bgcolor="#eaeaea" class="p25 red"><p>说明 ： <br />
+					      按照《关于实施国家药品编码管理的通知》（国食药监办[2009]315号）<br />
+					      的要求，国家食品药品监督管理局对批准上市的药品实行编码管理，现在国<br />
+					      家食品药品监督管理局政府网站上予以发布。</p><br />
+					      <p>　　企业可在本网站数据查询栏目中的国产和进口药品数据库通过输入药品<br />
+					        名称、批准文号、企业名称等关键信息查询药品本位码。</p><br />
+					      <p>　　由于企业变更情况较多，发布的药品本位码、相关注册信息可能有与企<br />
+					        业所持批件不一致的情况，请相关企业拨打电话：010-63923253（基本数据）<br />
+					        63923255（本位码）；010-63923254（传真）。 </p><br />
+					      <p>　　国家食品药品监督管理局行政受理服务中心 地址：北京市海淀区莲花池<br />
+					        东路39号西金大厦七层 邮政编码：100036 受理服务时间：上午：9：00—11:30<br />
+					        下午：13:00—16:00（周三、五下午不对外受理） 电话：每日上午8：30－11：30<br />
+					        下午13：00-16：00 010—63923260（受理与送达）010—63923297（行政许可事<br />
+					        项缴费） 传真：010—63923295（受理与送达）010—63923299（行政许可事项缴<br />
+					        费） 电子邮箱：slzx@sfda.gov.cn</p></td>
+					  </tr>
+				</table>
+				</volist>
+			</div>
+		</div>
+		<div class="back_drug"><a href="javascript:history.go(-1);"><img src="STATIC_URL/images/yaopin/back.gif" alt="返回"/></a></div>            
+	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

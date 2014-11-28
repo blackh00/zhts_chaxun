@@ -1,0 +1,30 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+            <div class="name_online_bor">
+                <include file="search" />
+                <div class="name_ming">
+                	<ul class="name_ming_hd">
+                    	<li <if condition="$setsex eq 0">class="current"</if>><a href="SITE_DYNAMIC_URL/freename/show/type/{$xing}/sex/0/">{$xing}姓名字大全</a></li>
+                    	<li <if condition="$setsex eq 1">class="current"</if>><a href="SITE_DYNAMIC_URL/freename/show/type/{$xing}/sex/1/">{$xing}姓男孩名字大全</a></li>
+                    	<li <if condition="$setsex eq 2">class="current"</if>><a href="SITE_DYNAMIC_URL/freename/show/type/{$xing}/sex/2/">{$xing}姓女孩名字大全</a></li>
+                    </ul>
+                    <div class="name_ming_bd">
+                    	<ul class="name_ming_num">
+                        	<li <if condition="$length eq null">class="current"</if>><a href="SITE_DYNAMIC_URL/freename/show/type/{$xing}/sex/0/">不限</a></li>
+                        	<li <if condition="$length eq 2">class="current"</if>><a href="SITE_DYNAMIC_URL/freename/show/type/{$xing}/sex/0/len/2/">二字</a></li>
+                        	<li <if condition="$length eq 3">class="current"</if>><a href="SITE_DYNAMIC_URL/freename/show/type/{$xing}/sex/0/len/3/">三字</a></li>
+                        </ul>
+                        <ul class="name_ming_c clearfix">
+                        	<volist name="list" id="list">
+                        		<li>·<a href="SITE_DYNAMIC_URL/xingmingces/testName/xing/{$xing}/ming/{$list.ming}/" target="_blank">{$list.name}</a></li>
+                        	</volist>
+                        </ul>
+                        <div class="page">{$page}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

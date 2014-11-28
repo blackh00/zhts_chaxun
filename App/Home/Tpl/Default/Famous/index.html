@@ -1,0 +1,50 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+            <div class="mr">
+                <include file="searchBox" />
+                <div class="say_cate_detail">
+					<p class="clearfix"><strong class="sp">热门专题：</strong></p>
+					<ul class="spe clearfix">
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/1/" target="_blank">关于自由的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/2/" target="_blank">关于勇气的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/3/" target="_blank">关于君子的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/4/" target="_blank">关于知识的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/5/" target="_blank">关于愿望的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/6/" target="_blank">关于国家的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/7/" target="_blank">关于尊严的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/8/" target="_blank">关于教育的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/9/" target="_blank">关于诚实的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/10/" target="_blank">关于努力的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/11/" target="_blank">关于懒惰的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/12/" target="_blank">关于生命的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/13/" target="_blank">关于心理的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/14/" target="_blank">关于积极的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/15/" target="_blank">关于健康的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/16/" target="_blank">关于历史的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/17/" target="_blank">关于妇女的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/18/" target="_blank">关于勤奋的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/19/" target="_blank">关于希望的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/20/" target="_blank">关于诚信的语录</a></li>
+						<li><a href="SITE_DYNAMIC_URL/famous/searchList/type/21/" target="_blank">关于信仰的语录</a></li>
+					</ul>
+                     <div class="clear"></div>                                           
+				</div>
+    <div class="mod">
+						  <div class="msg_list_cate">经典名人语录</div>
+							<div class="msg_list_detail">
+								<ul>
+									<volist name="list" id="vo" key="k">
+										<li <if condition="$k eq 10">class="noneborder"</if>>
+											<p>{$vo.content}</p>
+											<div class="reference">————{$vo.name}</div>
+										</li>
+									</volist>
+								</ul>
+						  </div>
+			  </div>
+          </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

@@ -1,0 +1,93 @@
+<include file="common:header" />
+   <div class="main">
+       <div class="kuaidi_bor padding_top30">
+           <h1>
+               快递查询
+           </h1>
+           <div class="kuaid_bg">
+               <div class="lefttxt">
+                   选择快递公司</div>
+               <div class="righttxt">
+                   输入快递单号</div>
+           </div>
+           <div class="demok">
+               <ul>
+                   <li>
+                       <div class="k_changyong">
+                       </div>
+					<volist name="expressNameCode" id="item" key="k">
+                      <if condition="$k eq 1">
+                       <a href="javascript:void(0)"  class="k_hover" onclick="ExpressClick({$k-1},this)">{$item.name}</a>
+					<else />
+					<a href="javascript:void(0)"  onclick="ExpressClick({$k-1},this)">{$item.name}</a>
+					</if>
+					</volist>
+                   </li>
+				<volist name="expressNameByCode" id="item" key="keytab">
+                   <li>
+                       <div class="k_word">
+                           {$item[0]['charSort']}
+                       </div>
+					<volist name="item" id="xitem">
+                       <a href="javascript:void(0)" onclick="ExpressClick({$xitem.sort},this)">{$xitem.name}</a>
+					</volist>
+				</li>
+				</volist>
+                 
+               </ul>
+               <div class="kuai_dq">
+                   <a href="http://www.kuaidi100.com/all/" target="_blank">快递大全</a>
+               </div>
+           </div>
+           <div class="kuaidi_right">
+               <p class="kuaidi_name">
+                   <span id="ym_kuaidiming">申通快递</span> 查询电话：<span id="kuaidi1_name">{$codeDefault['phone']}</span>
+               </p>
+               <div class="k_sosuo">
+                   <input type="text" value="请输入您要查询的单号" onfocus="if(this.value=='请输入您要查询的单号') {this.value='';this.style.color='#343235';}"
+			            onblur="if(this.value=='') {this.value='请输入您要查询的单号';this.style.color='#343235';}"
+                       class="k_sousuotxt" id="expressNum" flag="express" />
+				<input type="hidden" name="key" value="0" id="expressKey" />
+                   <input id="Button1" type="button" value="" class="k_sousuo_but" onclick="ajaxSubmit(this)" />
+               </div>
+               <div class="kuaidi_ru"  id="kuaidi_ru">
+                   例如，您可以输入：<span id="testExample">{$codeDefault['testExample']}</span>
+               </div>
+               <ul class="jieguo_bor" id="jieguo_bor">
+				<if condition="$expressInfo neq ''">
+				<volist name="expressInfo" id="vo" key="key">
+                   <li <if condition="$key eq $expressInfoLength"> class="k_end"</if>>
+                       <div class="time">
+                          {$vo:time}
+                       </div>
+					<if condition="$key eq 1">
+                       <div class="weizhi_top">
+                           <p>
+                              {$vo:context}
+						 </p>
+                       </div>
+					<else />
+					<div class="k_weizhi">
+                           <p>
+                               {$vo:context}
+                           </p>
+                       </div>
+					</if>
+                   </li>
+				</volist>
+				<else />
+				</if> 
+               </ul>
+               <!--<div class="kd_ad_box">
+               		<div class="kd_ad">
+               			<script type="text/javascript">
+						/*kcl_468_60_img_内容页_快递查询，创建于2013-9-27*/
+						var cpro_id = "u1376886";
+						</script>
+						<script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+               		</div>
+               </div>-->
+           </div>
+       </div>
+<include file="common:relatedTools" />
+<include file="common:footer" />

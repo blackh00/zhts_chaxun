@@ -1,0 +1,1501 @@
+<include file="common:header" />
+<div class="main">
+	<div class="phone_left">
+		<div class="danwei">
+			<h1>单位换算</h1>
+			<div class="cp_ts">提供单位换算查询，包括长度，温度，热量，功率，压力，重量，体积，面积的等信息查询。</div>
+			<div class="danwei_con">
+				<div class="danwe_nav">
+					<ul>
+						<li id="cd" class="def">
+							<a href="javascript:void(0);">长度</a>
+						</li>
+						<li id="wd">
+							<a href="javascript:void(0);">温度</a>
+						</li>
+						<li id="rd">
+							<a href="javascript:void(0);">热度</a>
+						</li>
+						<li id="gl">
+							<a href="javascript:void(0);">功率</a>
+						</li>
+						<li id="yl">
+							<a href="javascript:void(0);">压力</a>
+						</li>
+						<li id="zl">
+							<a href="javascript:void(0);">重量</a>
+						</li>
+						<li id="mj">
+							<a href="javascript:void(0);">面积</a>
+						</li>
+						<li id="tj">
+							<a href="javascript:void(0);">体积</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 长度转换开始 -->
+				<div id="changdu">
+					<div class="dw_zhuanhuan">
+						<input type="text" class="dw_text1" value="1.0000" id="cd_txt"
+							onfocus="if(this.value=='1.0000') {this.value='';}"
+							onblur="if(this.value=='') {this.value='1.0000';}" />
+						<div class="select_box4">
+							<input id="myselect_cd_from" type="text" value="公里(km)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>公里(km)</li>
+									<li>米(m)</li>
+									<li>分米(dm)</li>
+									<li>厘米(cm)</li>
+									<li>毫米(mm)</li>
+									<li>微米(um)</li>
+									<li>海里(nmi)</li>
+									<li>英里(mi)</li>
+									<li>码(yd)</li>
+									<li>英尺(ft)</li>
+									<li>英寸(in)</li>
+									<li>里</li>
+									<li>丈</li>
+									<li>尺</li>
+									<li>寸</li>
+									<li>分</li>
+									<li>厘</li>
+								</ul>
+							</div>
+						</div>
+						<div class="dw_tu">
+							<img src="STATIC_URL/images/danwei/danwei_4.gif" />
+						</div>
+						<div class="select_box4">
+							<input id="myselect_cd_to" type="text" value="米(m)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>公里(km)</li>
+									<li>米(m)</li>
+									<li>分米(dm)</li>
+									<li>厘米(cm)</li>
+									<li>毫米(mm)</li>
+									<li>微米(um)</li>
+									<li>海里(nmi)</li>
+									<li>英里(mi)</li>
+									<li>码(yd)</li>
+									<li>英尺(ft)</li>
+									<li>英寸(in)</li>
+									<li>里</li>
+									<li>丈</li>
+									<li>尺</li>
+									<li>寸</li>
+									<li>分</li>
+									<li>厘</li>
+								</ul>
+							</div>
+						</div>
+						<input type="submit" class="dw_but" onclick="checkCD();"
+							value="转换" />
+						<div class="clearfix"></div>
+						<h3>
+							<span id="cd_h3">1000.0000</span>
+							<span id="cd_span">米(m)</span>
+						</h3>
+					</div>
+					<div class="col_b">
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>公制</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">公里(km)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mKilometer">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">米(m)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mMeter">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">分米(dm)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mDecimeter">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">厘米(cm)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mCentimeter">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">毫米(mm)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mMillimeter">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">微米(um)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mMicronmeter">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>市制</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">里</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mLimeter">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">丈</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mZhangmeter">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">尺</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mChimeter">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">寸</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mCunmeter">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">分</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mFenmeter">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">厘</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mmLimeter">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>英制</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">海里(nmi)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="nautMile">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">英里(mi)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engMile">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">码(yd)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engYard">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">英尺(ft)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engFoot">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+								<div class="td120">英寸(in)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engInch">
+									<input type="submit" class="submitCD" value="转 换">
+								</div>
+							</div>
+						</div>
+						<input type="button" class="submitB" value="数据重置"
+							onclick="data_reset()">
+						<p class="gray">可实现在线公里(km)、米(m)、分米(dm)、厘米(cm)、里、丈、尺、寸、分、厘、海里(nmi)、英寻、英里、弗隆(fur)、码(yd)、英尺(ft)、英寸(in)、毫米(mm)、微米(um)间的互转互换。</p>
+					</div>
+				</div>
+				<!-- 长度转换结束 -->
+				<!-- 温度转换开始 -->
+				<div id="wendu" style="display: none;">
+					<div class="dw_zhuanhuan">
+						<input type="text" class="dw_text1" value="1.0000" id="wd_txt"
+							onfocus="if(this.value=='1.0000') {this.value='';}"
+							onblur="if(this.value=='') {this.value='1.0000';}" />
+						<div class="select_box4">
+							<input id="myselect_wd_from" type="text" value="摄氏度(C)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>摄氏度(C)</li>
+									<li>华氏度(F)</li>
+									<li>开氏度(K)</li>
+									<li>兰氏度(Ra)</li>
+									<li>列氏度(Re)</li>
+								</ul>
+							</div>
+						</div>
+						<div class="dw_tu">
+							<img src="STATIC_URL/images/danwei/danwei_4.gif" />
+						</div>
+						<div class="select_box4">
+							<input id="myselect_wd_to" type="text" value="华氏度(F)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>摄氏度(C)</li>
+									<li>华氏度(F)</li>
+									<li>开氏度(K)</li>
+									<li>兰氏度(Ra)</li>
+									<li>列氏度(Re)</li>
+								</ul>
+							</div>
+						</div>
+						<input type="submit" class="dw_but" onclick="checkWD();"
+							value="转换" />
+						<div class="clearfix"></div>
+						<h3>
+							<span id="wd_h3">33.8000</span>
+							<span id="wd_span">华氏度(F)</span>
+						</h3>
+					</div>
+					<div class="col_b">
+						<div class="mod_a">
+							<div class="td_a bdtop">
+								<div class="td120">摄氏度(C)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="tempCelsius">
+									<input type="submit" class="submitWD" value="转 换">
+								</div>
+								<div class="td120">华氏度(F)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="tempFahr">
+									<input type="submit" class="submitWD" value="转 换">
+								</div>
+								<div class="td120">开氏度(K)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="tempKelvin">
+									<input type="submit" class="submitWD" value="转 换">
+								</div>
+								<div class="td120">兰氏度(Ra)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="tempRankine">
+									<input type="submit" class="submitWD" value="转 换">
+								</div>
+								<div class="td120">列氏度(Re)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="tempReaumur">
+									<input type="submit" class="submitWD" value="转 换">
+								</div>
+							</div>
+						</div>
+						<input type="button" class="submitB" value="数据重置"
+							onclick="data_reset()">
+						<p class="gray">可实现在线摄氏度(CELSIUS EQUALS)、华氏度(FAHENHEIT
+							EQUALS)、开氏度(KELVIN EQUALS)、兰氏度(RANKINE EQUALS)、列氏度(REAUMUR
+							EQUALS)五种温度计量单位间的互转互换。</p>
+					</div>
+				</div>
+				<!-- 温度转换结束 -->
+				<!-- 热度转换开始 -->
+				<div id="redu" style="display: none;">
+					<div class="dw_zhuanhuan">
+						<input type="text" class="dw_text1" id="rd_txt" value="1.0000"
+							onfocus="if(this.value=='1.0000') {this.value='';}"
+							onblur="if(this.value=='') {this.value='1.0000';}" />
+						<div class="select_box4">
+							<input id="myselect_rd_from" type="text" value="焦耳(J)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>焦耳(J)</li>
+									<li>公斤·米</li>
+									<li>米制马力·时</li>
+									<li>英制马力·时</li>
+									<li>千瓦·时</li>
+									<li>千卡</li>
+									<li>英热单位</li>
+									<li>英尺·磅</li>
+								</ul>
+							</div>
+						</div>
+						<div class="dw_tu">
+							<img src="STATIC_URL/images/danwei/danwei_4.gif" />
+						</div>
+						<div class="select_box4">
+							<input id="myselect_rd_to" type="text" value="公斤·米"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>焦耳(J)</li>
+									<li>公斤·米</li>
+									<li>米制马力·时</li>
+									<li>英制马力·时</li>
+									<li>千瓦·时</li>
+									<li>千卡</li>
+									<li>英热单位</li>
+									<li>英尺·磅</li>
+								</ul>
+							</div>
+						</div>
+						<input type="submit" class="dw_but" onclick="checkRD();"
+							value="转换" />
+						<div class="clearfix"></div>
+						<h3>
+							<span id="rd_h3">0.1020</span>
+							<span id="rd_span">公斤·米(kg·m)</span>
+						</h3>
+					</div>
+					<div class="col_b">
+						<div class="mod_a">
+							<div class="td_a bdtop">
+								<div class="td120">焦耳(J)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="jiao">
+									<input type="submit" class="submitRL" value="转 换">
+								</div>
+								<div class="td120">公斤·米</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="kilogramM">
+									<input type="submit" class="submitRL" value="转 换">
+								</div>
+								<div class="td120">米制马力·时</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="miHorsepowerH">
+									<input type="submit" class="submitRL" value="转 换">
+								</div>
+								<div class="td120">英制马力·时</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="enHorsepowerH">
+									<input type="submit" class="submitRL" value="转 换">
+								</div>
+								<div class="td120">千瓦·时</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="KWH">
+									<input type="submit" class="submitRL" value="转 换">
+								</div>
+								<div class="td120">千卡</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="kK">
+									<input type="submit" class="submitRL" value="转 换">
+								</div>
+								<div class="td120">英热单位</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="enHot">
+									<input type="submit" class="submitRL" value="转 换">
+								</div>
+								<div class="td120">英尺·磅</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="enChiBangeS">
+									<input type="submit" class="submitRL" value="转 换">
+								</div>
+							</div>
+						</div>
+						<input type="button" class="submitB" value="数据重置"
+							onclick="data_reset()">
+						<p class="gray">可实现在线焦耳(J)、公斤·米(kg·m)、米制马力·时(PS·h)、英制马力·时(HP·h)、千瓦·时(kW·h)、千卡(kcal)、英热单位(Btu)、英尺·磅(ft·lb)间的互转互换。</p>
+					</div>
+				</div>
+				<!-- 热度转换结束 -->
+				<!-- 功率转换开始 -->
+				<div id="gonglv" style="display: none;">
+					<div class="dw_zhuanhuan">
+						<input type="text" class="dw_text1" id="gl_txt" value="1.0000"
+							onfocus="if(this.value=='1.0000') {this.value='';}"
+							onblur="if(this.value=='') {this.value='1.0000';}" />
+						<div class="select_box4">
+							<input id="myselect_gl_from" type="text" value="瓦(W)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>瓦(W)</li>
+									<li>千瓦(kW)</li>
+									<li>英制马力</li>
+									<li>米制马力</li>
+									<li>公斤·米/秒</li>
+									<li>千卡/秒</li>
+									<li>英热单位/秒</li>
+									<li>英尺·磅/秒</li>
+									<li>焦耳/秒</li>
+									<li>牛顿·米/秒</li>
+								</ul>
+							</div>
+						</div>
+						<div class="dw_tu">
+							<img src="STATIC_URL/images/danwei/danwei_4.gif" />
+						</div>
+						<div class="select_box4">
+							<input id="myselect_gl_to" type="text" value="千瓦(kW)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>瓦(W)</li>
+									<li>千瓦(kW)</li>
+									<li>英制马力</li>
+									<li>米制马力</li>
+									<li>公斤·米/秒</li>
+									<li>千卡/秒</li>
+									<li>英热单位/秒</li>
+									<li>英尺·磅/秒</li>
+									<li>焦耳/秒</li>
+									<li>牛顿·米/秒</li>
+								</ul>
+							</div>
+						</div>
+						<input type="submit" class="dw_but" onclick="checkGL();"
+							value="转换" />
+						<div class="clearfix"></div>
+						<h3>
+							<span id="gl_h3">0.0010</span>
+							<span id="gl_span">千瓦(kW)</span>
+						</h3>
+					</div>
+					<div class="col_b">
+						<div class="mod_a">
+							<div class="td_a bdtop">
+								<div class="td120">瓦(W)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="watt">
+									<input type="submit" class="submitGL" value="转 换">
+								</div>
+								<div class="td120">千瓦(kW)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="kiloWatt">
+									<input type="submit" class="submitGL" value="转 换">
+								</div>
+								<div class="td120">英制马力</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="enHorsepower">
+									<input type="submit" class="submitGL" value="转 换">
+								</div>
+								<div class="td120">米制马力</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="miHorsepower">
+									<input type="submit" class="submitGL" value="转 换">
+								</div>
+								<div class="td120">公斤·米/秒</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="kgMeS">
+									<input type="submit" class="submitGL" value="转 换">
+								</div>
+								<div class="td120">千卡/秒</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="kkeS">
+									<input type="submit" class="submitGL" value="转 换">
+								</div>
+								<div class="td120">英热单位/秒</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="enHoteS">
+									<input type="submit" class="submitGL" value="转 换">
+								</div>
+								<div class="td120">英尺·磅/秒</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="enChiBangeS">
+									<input type="submit" class="submitGL" value="转 换">
+								</div>
+								<div class="td120">焦耳/秒</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="jiaoereS">
+									<input type="submit" class="submitGL" value="转 换">
+								</div>
+								<div class="td120">牛顿·米/秒</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="nS">
+									<input type="submit" class="submitGL" value="转 换">
+								</div>
+							</div>
+						</div>
+						<input type="button" class="submitB" value="数据重置"
+							onclick="data_reset()">
+						<p class="gray">可实现在线瓦(W)、千瓦(kW)、英制马力(HP)、米制马力(PS)、公斤·米/秒(kg·m/s)、千卡/秒(kcal/s)、英热单位/秒(Btu/s)、英尺·磅/秒(ft·lb/s)、焦耳/秒(J/s)、牛顿·米/秒(N·m/s)间的互转互换。</p>
+					</div>
+				</div>
+				<!-- 功率转换结束 -->
+				<!-- 压力转换开始 -->
+				<div id="yali" style="display: none;">
+					<div class="dw_zhuanhuan">
+						<input type="text" class="dw_text1" id="yl_txt" value="1.0000"
+							onfocus="if(this.value=='1.0000') {this.value='';}"
+							onblur="if(this.value=='') {this.value='1.0000';}" />
+						<div class="select_box4">
+							<input id="myselect_yl_from" type="text" value="巴(bar)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>巴(bar)</li>
+									<li>千帕(kPa)</li>
+									<li>百帕(hPa)</li>
+									<li>毫巴(mbar)</li>
+									<li>帕斯卡</li>
+									<li>标准大气压</li>
+									<li>毫米汞柱(托)</li>
+									<li>磅力/英尺2</li>
+									<li>磅力/英寸2</li>
+									<li>英吋汞柱</li>
+									<li>公斤力/厘米2</li>
+									<li>公斤力/米2</li>
+									<li>毫米水柱</li>
+								</ul>
+							</div>
+						</div>
+						<div class="dw_tu">
+							<img src="STATIC_URL/images/danwei/danwei_4.gif" />
+						</div>
+						<div class="select_box4">
+							<input id="myselect_yl_to" type="text" value="千帕(kPa)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>巴(bar)</li>
+									<li>千帕(kPa)</li>
+									<li>百帕(hPa)</li>
+									<li>毫巴(mbar)</li>
+									<li>帕斯卡</li>
+									<li>标准大气压</li>
+									<li>毫米汞柱(托)</li>
+									<li>磅力/英尺2</li>
+									<li>磅力/英寸2</li>
+									<li>英吋汞柱</li>
+									<li>公斤力/厘米2</li>
+									<li>公斤力/米2</li>
+									<li>毫米水柱</li>
+								</ul>
+							</div>
+						</div>
+						<input type="submit" class="dw_but" onclick="checkYL();"
+							value="转换" />
+						<div class="clearfix"></div>
+						<h3>
+							<span id="yl_h3">100.0000</span>
+							<span id="yl_span">千帕(kPa)</span>
+						</h3>
+					</div>
+					<div class="col_b">
+						<div class="mod_a">
+							<div class="td_a bdtop">
+								<div class="td120">巴(bar)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mBar">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">千帕(kPa)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mKilopascal">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">百帕(hPa)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mHectopascal">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">毫巴(mbar)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mMillibar">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">帕斯卡</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mPascal">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">标准大气压</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mAtm">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">毫米汞柱(托)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mMillimeter_Hg">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">磅力/英尺2</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engPound_sq_foot">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">磅力/英寸2</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engPound_sq_inch">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">英吋汞柱</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engInch_Hg">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">公斤力/厘米2</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="xpressKg_sq_cm">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">公斤力/米2</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="xpressKg_sq_m">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+								<div class="td120">毫米水柱</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mmmH2O">
+									<input type="submit" class="submitYL" value="转 换">
+								</div>
+							</div>
+						</div>
+						<input type="button" class="submitB" value="数据重置"
+							onclick="data_reset()">
+						<p class="gray">可实现巴(bar)、华氏度千帕(kPa)、百帕(hPa)、毫巴(mbar)、帕斯卡、标准大气压(atm)、毫米汞柱(mmHg)、磅力平米英尺英寸、毫米水柱、公斤力平方厘米等压力计量单位间的互转互换。</p>
+					</div>
+				</div>
+				<!-- 压力转换结束 -->
+				<!-- 重量转换开始 -->
+				<div id="zhongliang" style="display: none;">
+					<div class="dw_zhuanhuan">
+						<input type="text" class="dw_text1" id="zl_txt" value="1.0000"
+							onfocus="if(this.value=='1.0000') {this.value='';}"
+							onblur="if(this.value=='') {this.value='1.0000';}" />
+						<div class="select_box4">
+							<input id="myselect_zl_from" type="text" value="吨"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>吨</li>
+									<li>公斤(kg)</li>
+									<li>克(g)</li>
+									<li>毫克(mg)</li>
+									<li>市斤</li>
+									<li>担</li>
+									<li>两</li>
+									<li>钱</li>
+									<li>金衡磅</li>
+									<li>金衡盎司</li>
+									<li>金衡格令</li>
+									<li>英钱(dwt)</li>
+									<li>长吨(英制)</li>
+									<li>短吨(美制)</li>
+									<li>英担</li>
+									<li>美担</li>
+									<li>英石</li>
+									<li>磅(lb)</li>
+									<li>盎司(oz)</li>
+									<li>打兰(dr)</li>
+									<li>格令</li>
+								</ul>
+							</div>
+						</div>
+						<div class="dw_tu">
+							<img src="STATIC_URL/images/danwei/danwei_4.gif" />
+						</div>
+						<div class="select_box4">
+							<input id="myselect_zl_to" type="text" value="公斤(kg)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>吨</li>
+									<li>公斤(kg)</li>
+									<li>克(g)</li>
+									<li>毫克(mg)</li>
+									<li>市斤</li>
+									<li>担</li>
+									<li>两</li>
+									<li>钱</li>
+									<li>金衡磅</li>
+									<li>金衡盎司</li>
+									<li>金衡格令</li>
+									<li>英钱(dwt)</li>
+									<li>长吨(英制)</li>
+									<li>短吨(美制)</li>
+									<li>英担</li>
+									<li>美担</li>
+									<li>英石</li>
+									<li>磅(lb)</li>
+									<li>盎司(oz)</li>
+									<li>打兰(dr)</li>
+									<li>格令</li>
+								</ul>
+							</div>
+						</div>
+						<input type="submit" class="dw_but" onclick="checkZL();"
+							value="转换" />
+						<div class="clearfix"></div>
+						<h3>
+							<span id="zl_h3">1000.0000</span>
+							<span id="zl_span">公斤(kg)</span>
+						</h3>
+					</div>
+					<div class="col_b">
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>公制</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">吨</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mTon">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">公斤(kg)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mKilogram">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">克(g)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mGram">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">毫克(mg)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mMilligram">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>市制</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">市斤</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="cJin">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">担</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="cDan">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">两</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="cLiang">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">钱</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="cQian">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>金衡制</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">金衡磅</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="troyPound">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">金衡盎司</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="troyOunce">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">金衡格令</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="troyGrain">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">英钱(dwt)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="troyDWT">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>常衡制</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">长吨(英制)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="briTon">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">短吨(美制)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="usTon">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">英担</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="briCWT">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">美担</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="usCWT">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">英石</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="briStone">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">磅(lb)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="avdpPound">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">盎司(oz)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="avdpOunce">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">打兰(dr)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="avdpDram">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+								<div class="td120">格令</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="avdpGrain">
+									<input type="submit" class="submitZL" value="转 换">
+								</div>
+							</div>
+						</div>
+						<input type="button" class="submitB" value="数据重置"
+							onclick="data_reset()">
+						<p class="gray">可实现在线吨(Tonne)、公斤(Kilogram)、克(Gram)、毫克(Milligram)、市斤、担、两、钱、磅(Pound)、盎司(Ounce)、英钱(PennyWeight)、格令(Grain)、长吨(British
+							long ton)、短吨(US short ton)、英担(British long hundredweight)、美担(US
+							short hundredweight)、英石(Stone)、打兰(Dram)间的互转互换。</p>
+					</div>
+				</div>
+				<!-- 重量转换结束 -->
+				<!-- 面积转换开始 -->
+				<div id="mianji" style="display: none;">
+					<div class="dw_zhuanhuan">
+						<input type="text" class="dw_text1" id="mj_txt" value="1.0000"
+							onfocus="if(this.value=='1.0000') {this.value='';}"
+							onblur="if(this.value=='') {this.value='1.0000';}" />
+						<div class="select_box4">
+							<input id="myselect_mj_from" type="text" value="平方千米(km2)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>平方千米(km2)</li>
+									<li>公顷(ha)</li>
+									<li>公亩(are)</li>
+									<li>平方米(m2)</li>
+									<li>平方分米(dm2)</li>
+									<li>平方厘米(cm2)</li>
+									<li>平方毫米(mm2)</li>
+									<li>平方英里(mi2)</li>
+									<li>英亩</li>
+									<li>平方竿(rd2)</li>
+									<li>平方码(yd2)</li>
+									<li>平方英尺(ft2)</li>
+									<li>平方英寸(in2)</li>
+									<li>顷</li>
+									<li>亩</li>
+									<li>平方尺</li>
+									<li>平方寸</li>
+									<li>坪</li>
+								</ul>
+							</div>
+						</div>
+						<div class="dw_tu">
+							<img src="STATIC_URL/images/danwei/danwei_4.gif" />
+						</div>
+						<div class="select_box4">
+							<input id="myselect_mj_to" type="text" value="公顷(ha)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>平方千米(km2)</li>
+									<li>公顷(ha)</li>
+									<li>公亩(are)</li>
+									<li>平方米(m2)</li>
+									<li>平方分米(dm2)</li>
+									<li>平方厘米(cm2)</li>
+									<li>平方毫米(mm2)</li>
+									<li>平方英里(mi2)</li>
+									<li>英亩</li>
+									<li>平方竿(rd2)</li>
+									<li>平方码(yd2)</li>
+									<li>平方英尺(ft2)</li>
+									<li>平方英寸(in2)</li>
+									<li>顷</li>
+									<li>亩</li>
+									<li>平方尺</li>
+									<li>平方寸</li>
+									<li>坪</li>
+								</ul>
+							</div>
+						</div>
+						<input type="submit" class="dw_but" onclick="checkMJ();"
+							value="转换" />
+						<div class="clearfix"></div>
+						<h3>
+							<span id="mj_h3">100.0000</span>
+							<span id="mj_span">公顷(ha)</span>
+						</h3>
+					</div>
+					<div class="col_b">
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>公制</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">
+									<div class="pt10 lh16">平方千米(km2)</div>
+								</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mSquare_kilometer">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">公顷(ha)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mHectare">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">公亩(are)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mAre">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">平方米(m2)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mSquare_meter">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">
+									<div class="pt10 lh16">平方分米(dm2)</div>
+								</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mSquare_decimeter">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">
+									<div class="pt10 lh16">平方厘米(cm2)</div>
+								</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mSquare_centimeter">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">
+									<div class="pt10 lh16">平方毫米(mm2)</div>
+								</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mSquare_millimeter">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>市制</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">
+									<div class="pt10 lh16">平方英里(mi2)</div>
+								</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engSquare_mile">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">英亩</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engAcre">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">平方竿(rd2)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="usSquare_rod">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">平方码(yd2)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engSquare_yard">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">平方英尺(ft2)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engSquare_foot">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">平方英寸(in2)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="engSquare_inch">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>英制</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">顷</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="hetc">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">亩</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="acre">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">平方尺</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="squareChi">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">平方寸</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="squareCun">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+								<div class="td120">坪</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="ping">
+									<input type="submit" class="submitMJ" value="转 换">
+								</div>
+							</div>
+						</div>
+						<input type="button" class="submitB" value="数据重置"
+							onclick="data_reset()">
+						<p class="gray">可实现在线平方公里(km2)、公顷(ha)、市亩、平方米(m2)、平方分米(dm2)、平方厘米(cm2)、平方毫米(mm2)、平方英里(sq
+							mi)、英亩、平方竿(sq rd)、平方码(sq yd)、平方英尺(sq ft)、平方英寸(sq in)间的互转互换。</p>
+					</div>
+				</div>
+				<!-- 面积转换结束 -->
+				<!-- 体积转换开始 -->
+				<div id="tiji" style="display: none;">
+					<div class="dw_zhuanhuan">
+						<input type="text" class="dw_text1" id="tj_txt" value="1.0000"
+							onfocus="if(this.value=='1.0000') {this.value='';}"
+							onblur="if(this.value=='') {this.value='1.0000';}" />
+						<div class="select_box4">
+							<input id="myselect_tj_from" type="text" value="立方米(m3)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>立方米(m3)</li>
+									<li>公石(hl)</li>
+									<li>十升(dal)</li>
+									<li>立方分米</li>
+									<li>分升(dl)</li>
+									<li>厘升(cl)</li>
+									<li>立方厘米(cm3)</li>
+									<li>立方毫米(mm3)</li>
+									<li>桶</li>
+									<li>蒲式耳(bu)</li>
+									<li>加仑(bal)</li>
+									<li>夸脱(pt)</li>
+									<li>品脱(pt)</li>
+									<li>液量盎司(fl oz)</li>
+									<li>汤勺(Tbs)</li>
+									<li>调羹(tsp)</li>
+									<li>杯(fl oz)</li>
+									<li>桶[42加仑]</li>
+									<li>加仑(gal)</li>
+									<li>夸脱(qt)</li>
+									<li>品脱(pt)</li>
+									<li>及耳(gi)</li>
+									<li>液量盎司(fl oz)</li>
+									<li>液量打兰(fl dr)</li>
+									<li>量滴(min)</li>
+									<li>亩英尺</li>
+									<li>立方码</li>
+									<li>立方英尺</li>
+									<li>立方英寸</li>
+								</ul>
+							</div>
+						</div>
+						<div class="dw_tu">
+							<img src="STATIC_URL/images/danwei/danwei_4.gif" />
+						</div>
+						<div class="select_box4">
+							<input id="myselect_tj_to" type="text" value="公石(hl)"
+								readonly="readonly">
+							<div class="changdu">
+								<h2>
+									<span class="guanbi">
+										<img src="STATIC_URL/images/danwei/danwei_6.gif" />
+									</span>
+									请选择相关转换单位
+								</h2>
+								<ul>
+									<li>立方米(m3)</li>
+									<li>公石(hl)</li>
+									<li>十升(dal)</li>
+									<li>立方分米</li>
+									<li>分升(dl)</li>
+									<li>厘升(cl)</li>
+									<li>立方厘米(cm3)</li>
+									<li>立方毫米(mm3)</li>
+									<li>桶</li>
+									<li>蒲式耳(bu)</li>
+									<li>加仑(bal)</li>
+									<li>夸脱(pt)</li>
+									<li>品脱(pt)</li>
+									<li>液量盎司(fl oz)</li>
+									<li>汤勺(Tbs)</li>
+									<li>调羹(tsp)</li>
+									<li>杯(fl oz)</li>
+									<li>桶[42加仑]</li>
+									<li>加仑(gal)</li>
+									<li>夸脱(qt)</li>
+									<li>品脱(pt)</li>
+									<li>及耳(gi)</li>
+									<li>液量盎司(fl oz)</li>
+									<li>液量打兰(fl dr)</li>
+									<li>量滴(min)</li>
+									<li>亩英尺</li>
+									<li>立方码</li>
+									<li>立方英尺</li>
+									<li>立方英寸</li>
+								</ul>
+							</div>
+						</div>
+						<input type="submit" class="dw_but" onclick="checkTJ();"
+							value="转换" />
+						<div class="clearfix"></div>
+						<h3>
+							<span id="tj_h3">10.0000</span>
+							<span id="tj_span">公石(hl)</span>
+						</h3>
+					</div>
+					<div class="col_b">
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>公制</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">立方米(m3)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mCubic_meter">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">公石(hl)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mHectoliter">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">十升(dal)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mDekaliter">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">
+									<div class="pt10 lh16">立方分米(dm3)=升(l)</div>
+								</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mLiter">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">分升(dl)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mDeciliter">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">厘升(cl)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mCentiliter">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">
+									<div class="pt10 lh16">立方厘米=毫升(ml)</div>
+								</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mMilliliter">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">
+									<div class="pt10 lh16">立方毫米(mm3)</div>
+								</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mCubic_millimeter">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>美制干量</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">桶</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="usdBarrel">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">蒲式耳(bu)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="usdBushel">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">加仑(bal)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="briGallon">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">夸脱(pt)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="usdQuart">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">品脱(pt)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="usdPint">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>英制液量和干量</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">桶</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="briBarrel">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">蒲式耳(bu)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="briBushel">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">加仑(bal)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="briGallon">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">品脱(pt)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="briPint">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">
+									<div class="pt10 lh16">液量盎司(fl oz)</div>
+								</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="briFluid_ounce">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>公制烹调制式</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">汤勺(Tbs)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mcTable_spoon">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">调羹(tsp)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="mcTea_spoon">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>美制烹调制式</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">汤勺(Tbs)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uscTable_spoon">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">调羹(tsp)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uscTea_spoon">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">杯(fl oz)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uscCup">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>美制液量</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">桶[42加仑]</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uslBarrel">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">加仑(gal)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uslGallon">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">夸脱(qt)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uslQuart">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">品脱(pt)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uslPint">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">及耳(gi)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uslGill">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">
+									<div class="pt10 lh16">液量盎司(fl oz)</div>
+								</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uslFluid_ounce">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">
+									<div class="pt10 lh16">液量打兰(fl dr)</div>
+								</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uslFluid_dram">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">量滴(min)</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uslMinim">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+							</div>
+						</div>
+						<div class="mod_a">
+							<div class="th_a">
+								<strong>美英同制体积计量</strong>
+							</div>
+							<div class="td_a">
+								<div class="td120">亩英尺</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uscAcre_foot">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">立方码</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uscCubic_yard">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">立方英尺</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uscCubic_foot">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+								<div class="td120">立方英寸</div>
+								<div class="td262">
+									<input type="text" class="inputTxtA" id="uscCubic_inch">
+									<input type="submit" class="submitTJ" value="转 换">
+								</div>
+							</div>
+						</div>
+						<input type="submit" class="submitB" value="数据重置"
+							onclick="data_reset()">
+						<p class="gray">可实现在线立方米(Cubic
+							meter)、公石(hectoliter)、十升(dekaliter)、立方分米(Cubic
+							dm)、升(liter)、分升(deciliter)、厘升(centiliter)、立方厘米(Cubic
+							cm)、毫升(milliliter)、立方毫米(Cubic
+							millimeter)、桶(Barrel)、蒲式耳(Bushel)、配克(Peck)、夸脱(Quart)、品脱(Pint)、加仑(Gallon)、盎司(Ounce)、打兰(dram)、量滴(Minim)、立方码(Cubic
+							yard)、立方英尺(Cubic foot)、立方英寸(Cubic inch)间的互转互换。</p>
+					</div>
+				</div>
+				<!-- 体积转换结束 -->
+			</div>
+		</div>
+	</div>
+	<include file="common:rightSideInc" />
+	<include file="common:relatedTools" />
+	<include file="common:footer" />

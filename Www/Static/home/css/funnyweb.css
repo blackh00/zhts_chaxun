@@ -1,0 +1,398 @@
+@CHARSET "UTF-8";
+/*网络搞笑证件*/
+.mod_2d{
+border: 1px solid gainsboro;
+border-top: 0 none;
+background-color: white;
+}
+.mod_2d h2 {
+height: 52px;
+padding: 25px 0 10px;
+line-height: 52px;
+text-align: center;
+color: #348BCF;
+font-size: 30px;
+font-family: 微软雅黑;
+overflow: hidden;
+background:url(../images/funnyweb/zj_h1.gif) no-repeat 300px 23px;
+}
+.description {
+margin: -8px 20px 20px;
+text-align: center;
+font-size: 12px;
+color: #333;
+border-bottom:1px solid #e8e8e8;
+padding:15px 0;
+}
+.container {
+padding: 0 20px 30px;
+}
+.category {
+height:150px;
+padding: 15px 0;
+background:url(../images/funnyweb/bg1.gif) no-repeat -10px 50px;
+border-bottom:1px dashed #e4e4e4;
+}
+.bd_wrap {
+	
+}
+
+.category .category_dl {
+width: 150px;
+padding-left: 20px;
+float: left;
+font-size: 14px;
+line-height: 150%;
+}
+.category .first {
+border-left: none;
+padding-left:35px;
+}
+.category .category_dl dt {
+background:url(../images/funnyweb/bg2.gif) no-repeat 60px 8px;
+font-size:22px;
+font-family:"微软雅黑";
+margin-bottom: 10px;
+}
+.category .category_dl dd a {
+background-position: -96px -16px;
+display: block;
+color: #333;
+padding-left: 60px;
+height: 29px;
+line-height: 29px;
+}
+.credentialsWrap {
+padding: 20px 28px 28px 20px;
+height:380px;
+}
+.credentials_preview {
+float: left;
+width: 500px;
+}
+.diyPicForm {
+position: relative;
+overflow: hidden;
+width: 500px;
+}
+.diyPicForm .zjName, .diyPicForm .orgName {
+display: block;
+text-align: center;
+width: 200px;
+left: 33px;
+top: 205px;
+font: 36px/36px 微软雅黑E\8F6F\96C5\9ED1;
+color: white;
+}
+.diyPicForm .orgName {
+font-size: 14px;
+line-height: normal;
+top: 255px;
+}
+.diyPicForm .iName {
+top: 37px;
+}
+.diyPicForm .iGender {
+top: 66px;
+}
+.diyPicForm .iAge {
+top: 94px;
+}
+.diyPicForm #iCont {
+height: 107px;
+top: 131px;
+font-family: 微软雅黑E\8F6F\96C5\9ED1;
+font-size: 12px;
+color: #333;
+}
+.diyPicForm .iDate {
+left: 354px;
+top: 257px;
+color: #333;
+}
+.diyPicForm .iSerial {
+left: 381px;
+top: 273px;
+color: #333;
+width: 60px;
+display: block;
+text-align: center;
+}
+.credentials_preview .preview_btn_wrap {
+float: left;
+padding-left: 13px;
+overflow: hidden;
+margin-top: -5px;
+}
+.credentials_preview .preview_btn_wrap .orange_btn123 {
+float: left;
+margin-left: 12px;
+}
+.orange_btn123 {
+background: url(../images/funnyweb/orange_btn123.png) no-repeat 0px 0px;
+display: inline-block;
+width: 123px;
+height: 37px;
+line-height: 37px;
+text-align: center;
+color: white;
+font-size: 14px;
+font-weight: bold;
+border: none;
+cursor: pointer;
+}
+.orange_btn123:hover{
+background: url(../images/funnyweb/orange_btn123.png) no-repeat 0px bottom;
+color:#fff; text-decoration:none;
+}
+.credentials_diy {
+float: left;
+width: 305px;
+padding-left:30px;
+}
+.credentials_diy h3 {
+font-size: 30px;
+color: #348BCF;
+font-family: 微软雅黑;
+padding-left: 65px;
+height: 30px;
+line-height: 30px;
+padding-bottom: 10px;
+}
+.credentials_form {
+font-size: 14px;
+padding-top:10px;
+}
+.credentials_form li {
+padding-top:10px;
+}
+.credentials_form li label {
+width: 56px;
+display: inline-block;
+text-align: right;
+margin-right: 10px;
+float: left;
+padding-top: 2px;
+}
+.customInput {
+position: relative;
+display: inline-block;
+float: left;
+}
+.credentials_form li .txt {
+height: 24px;
+line-height: 24px;
+padding: 0 5px;
+border: 1px solid #D5D5D5;
+color: #666;
+text-align:left;
+}
+.w224 {
+width: 224px;
+}
+.w126 {
+width: 126px;
+}
+.customInput .dropdown_a {
+position: absolute;
+right: 4px;
+top: 4px;
+width: 17px;
+height: 18px;
+display: inline-block;
+background-position: 0 -83px;
+}
+.credentials_form li .select_outer {
+float: left;
+width:200px;
+}
+.select_gender {
+width: 66px;
+}
+.select_outer {
+background: white;
+}
+.select_gender select {
+width: 66px;
+}
+.select_outer select {
+border: 1px solid #D5D5D5;
+font-size: 14px;
+height:26px;
+}
+.w93 {
+width: 93px;
+}
+.file_t {
+position: relative;
+display: inline-block;
+width: 101px;
+height: 26px;
+overflow: hidden;
+float: left;
+}
+.credentials_form li .upload_btn {
+width: 101px;
+height: 26px;
+border: none;
+background-position: 0 -55px;
+cursor: pointer;
+}
+.file_t .file_b {
+cursor: pointer;
+position: absolute;
+top: 0;
+right: 0px;
+font-size: 35px;
+-moz-opacity: 0;
+opacity: 0;
+filter: alpha(opacity=0);
+}
+.credentials_form li .textarea {
+border: 1px solid #D5D5D5;
+padding: 5px;
+height: 64px;
+float: left;
+}
+.blue_btn123 {
+background: url(../images/funnyweb/blue_btn123.png) no-repeat 0px 0px;
+display: inline-block;
+width: 123px;
+height: 37px;
+line-height: 37px;
+text-align: center;
+color: white;
+font-size: 14px;
+font-weight: bold;
+border: none;
+cursor: pointer;
+}
+.blue_btn123:hover{background: url(../images/funnyweb/blue_btn123.png) no-repeat 0px bottom;}
+.nv{ color:#8a2c2c;}
+.nan{ color:#1f6a97;}
+.aiqing{ color:#457261;}
+.zhiye{ color:#735438}
+.zh{ color:#783f80;}
+.credentials_preview .shareWrap {
+padding-top: 20px;
+padding-left: 10px;
+}
+.cl{ zoom:1; clear:both;}
+.diyPicForm{position:relative;overflow:hidden;width:500px;}
+.logoImage,.avatarImage,.zjName,.orgName,.iName,.iGender,.iName2,.iAge,.iDate,.iSerial,.diyPicForm #iCont,.diyPicForm .iCont_normal,.diyPicForm .iContLine0,.diyPicForm .iContLine1,.diyPicForm .iContLine2,.diyPicForm .iContLine3,.diyPicForm .iContLine4,.avatarImageB,.avatarImageG,.bName,.bName2,.gName,.gName2,.bAge,.gAge{position:absolute;}
+.diyPicForm .logoImage{left:53px;top:34px;}
+.diyPicForm .avatarImage{right:36px;top:34px;}
+.diyPicForm .zjName,.diyPicForm .orgName{display:block;text-align:center;width:200px;left:33px;top:205px;font:36px/36px \5FAE\8F6F\96C5\9ED1;color:#fff;}
+.diyPicForm .orgName{font-size:14px;line-height:normal;top:255px;}
+.diyPicForm .iName,.diyPicForm .iGender,.diyPicForm .iName2,.diyPicForm .iAge,.bName,.bName2,.bAge,.gName,.gName2,.gAge{font-size:14px;font-weight:bold;color:#333;left:321px;}
+.diyPicForm .iName{top:37px;}
+.diyPicForm .iGender{top:66px;}
+.diyPicForm .iName2{left:50px;width:90px;text-align:center;display:block;top:-3px;}
+.diyPicForm .iAge{top:94px;}
+.diyPicForm .iDate{left:354px;top:257px;color:#333;}
+.diyPicForm .iSerial{left:381px;top:273px;color:#333;width:60px;display:block;text-align:center;}
+.diyPicForm #iCont{height:107px;top:131px;font-family:\5FAE\8F6F\96C5\9ED1;font-size:12px;color:#333;}
+.diyPicForm .normal{border:1px solid #c8c8c8;left:278px;width:195px;}
+.diyPicForm .normal .iCont_normal{background:url(../../img/yule/diy/normal_cont.png) no-repeat;width:104px;height:14px;display:block;left:51px;top:50px;}
+.diyPicForm .normal .iContLine0{display:none;}
+.diyPicForm .enter{left:288px;width:178px;}
+.diyPicForm .enter .iContLine0{top:0;left:0; text-indent:1em;display:inline-block;}
+.diyPicForm .enter .iContLine1{top:20px;left:0;line-height:170%;word-wrap: break-word;word-break:break-all;}
+.diyPicForm .enter .iContLine0 i{margin-right:95px;font-style:normal;}
+
+.existing .iName2{left:347px;top:138px;}
+.existingForm1{padding:30px 0 10px;}
+
+.existingForm2{padding:70px 0 10px;}
+.existingForm3{padding-bottom:10px;}
+.credentials_form .btn_p {
+padding: 10px 0 0 66px;
+}
+.award_btn_p{
+padding: 14px 0 0 66px;	
+}
+.credentialsMenu {
+border-width: 0 1px 1px 1px;
+border-color: #ECECEC;
+border-style: solid;
+position: absolute;
+background: white;
+top: 25px;
+right: -1px;
+}
+.credentialsMenu .credentialsMenu-inner {
+border: 1px solid #D5D5D5;
+width: 293px;
+height: 298px;
+padding: 0 10px;
+position: relative;
+z-index: 1;
+clear:both;
+}
+.credentialsMenu_dl {border-bottom:1px solid #e7e7e7; padding:8px 0;}
+.credentialsMenu_dl dt {
+background-position: -81px 1px;
+padding-left: 25px;
+color: #348BCF;
+font-weight: bold;
+margin-bottom: 10px;
+_zoom: 1;
+
+}
+.credentialsMenu_dl dd {
+padding-left: 8px;
+font-size:12px;
+}
+.credentialsMenu_dl dd a{ color:#333;}
+.credentials_form li .select_outer {
+float: left;
+border:none;
+padding:0px;
+margin:0px;
+}
+.credentials_form li .select_inner {
+height: 26px;
+line-height: 26px;
+overflow: hidden;
+width: 66px;
+margin-bottom:5px;
+}
+.logoImage, .avatarImage, .zjName, .orgName, .iName, .iGender, .iName2, .iAge, .iDate, .iSerial, .diyPicForm #iCont, .diyPicForm .iCont_normal, .diyPicForm .iContLine0, .diyPicForm .iContLine1, .diyPicForm .iContLine2, .diyPicForm .iContLine3, .diyPicForm .iContLine4, .avatarImageB, .avatarImageG, .bName, .bName2, .gName, .gName2, .bAge, .gAge {
+position: absolute;
+font-family:"微软雅黑";
+}
+.diyPicForm .iName, .diyPicForm .iGender, .diyPicForm .iAge, .bName, .bAge, .gName, .gName2, .gAge {
+font-size: 14px;
+font-weight: bold;
+color: #333;
+left: 321px;
+}
+ .credentials_form li .upload_btn, .credentialsMenu_dl dt ,.dropdown_a{
+background-image: url(../images/funnyweb/credentials_sprite.png);
+background-repeat: no-repeat;
+}
+.w81 {
+width: 81px;
+}
+.wd39 {
+width: 39px !important;
+}
+/* 结婚证定位 */
+.marry .avatarImageB{left:268px;top:107px;}
+.marry .avatarImageG{left:340px;top:107px;}
+.marry .bName{left:141px;top:102px;}
+.marry .bName2{left:54px;top:205px;}
+.marry .bAge{left:141px;top:123px;}
+.marry .gName{left:141px;top:149px;}
+.marry .gName2{left:142px;top:205px;}
+.marry .gAge{left:141px;top:170px;}
+.marry .iDate{left:361px;top:254px;}
+.marry .iSerial{left:392px;top:268px;}
+/* 奖状定位 */
+.awards .iName{left:182px;top:134px;}
+.awards .iDate{left:322px;top:217px;}
+.awards .iSerial{left:352px;top:233px;}
+/*thxyh99*/
+.mb20{
+	margin-bottom:20px;
+}

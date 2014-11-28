@@ -1,0 +1,236 @@
+﻿<include file="common:header" />
+   <div class="main">
+       <div class="content">
+  	    <div class="jtbox">
+           	<div class="jthc"> <a href="SITE_URL/fanyi/" target="_blank"><img src="STATIC_URL/images/jiaotong/jiaoyu_01.png" /></a>
+			<form id="form1" name="form_translation" action="SITE_DYNAMIC_URL/fanyi/fanyiSearch" method="POST">
+                   <div class="jttxt">
+          	      <p>在线翻译</p>
+                       <div class="select_box">
+                       <input id="myselect" type="text" value="检测语言" readonly="readonly">
+                           <ul class="select_ul">
+                           	<li>检测语言</li>
+                           	<li>中 → 英</li>
+                               <li>英 → 中</li>
+                               <li>中 → 日</li>
+                               <li>日 → 中</li>
+                           </ul>
+                       </div>
+                       <input type="text" value="请输入姓名" name="content" id="text_search" onfocus="if(this.value=='请输入姓名') {this.value='';}this.style.color='#a8a8a8';"
+                       onblur="if(this.value=='') {this.value='请输入姓名';this.style.color='#999999';}"
+                       class="mapbox2" />
+                     <input type="image" src="STATIC_URL/images/jiaotong/cxan.gif" />
+                  	<input name="form_check" id="form_check" type="hidden" value="submit" />	
+                   </div>
+                  </form> 
+         		</div>
+               <div class="jthb"> <a href="SITE_URL/{$Think.config.Xinhua}/" target="_blank"><img src="STATIC_URL/images/jiaotong/jiaoyu_02.png" /></a>
+                 <div class="jttxt">
+                   <p>新华字典</p>
+                   <form action='SITE_DYNAMIC_URL/{$Think.config.Xinhua}/show/' method='post' id="form">
+                   	<input type="text" value="请输入要查询的汉字或拼音" onfocus="if(this.value=='请输入要查询的汉字或拼音') {this.value='';}this.style.color='#a8a8a8';"
+                       onblur="if(this.value=='') {this.value='请输入要查询的汉字或拼音';this.style.color='#999999';}"
+                       class="mapbox" name='search' id="search"/>
+                       <input type="submit" value="" class="xinhuaChaxun" onclick="check();return false;"/>
+                   </form>
+                 </div>
+     </div>
+           </div>
+           <div class="jtbox">
+           	<div class="jthc"><a href="SITE_URL/{$Think.config.Phrase}/" target="_blank"><img src="STATIC_URL/images/jiaotong/jiaoyu_03.png" /></a>
+           	  <div class="jttxt">
+  			<p>成语大全 </p>
+  						<form action='SITE_DYNAMIC_URL/{$Think.config.Phrase}/search/' method='get' id="phraseForm">
+                       <input type="text" value="请输入关键字" onfocus="if(this.value=='请输入关键字') {this.value='';}this.style.color='#a8a8a8';"
+                       onblur="if(this.value=='') {this.value='请输入关键字';this.style.color='#999999';}"
+                       class="mapbox" name='search' id="phraseSearch"/>
+                       <input type="submit" value="" class="xinhuaChaxun" onclick="phraseCheck();return false;"/>
+                       </form>
+                   </div>
+         		</div>
+               
+               <div class="jthb"> <a href="SITE_URL/{$Think.config.HanZiToPinYin}/" target="_blank"><img src="STATIC_URL/images/jiaotong/jiaoyu_04.png" /></a>
+                   <div class="jttxt">
+                  	  <form name="form2" method="POST" action="SITE_DYNAMIC_URL/hanzizhuanpinyin/">
+                  	  <p>汉字转拼音</p>
+                     <input type="text" id="text_search1" value="请输入您要转换的汉字" name="text_ch" onfocus="if(this.value=='请输入您要转换的汉字') {this.value='';}this.style.color='#a8a8a8';"
+                       onblur="if(this.value=='') {this.value='请输入您要转换的汉字';this.style.color='#999999';}"
+                       class="mapbox" />
+                     <input type="image" src="STATIC_URL/images/jiaotong/cxan.gif" />
+                     <input type="hidden" name="form_check" value="submit" />
+                     </form>
+                 </div>
+               </div>
+           </div>
+           <ul>
+               <li><a href="SITE_DYNAMIC_URL/falvfagui/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jiaoyu_05.png" />
+                   <div class="link_txt">
+                       <p>
+                           法律法规
+                       </p>
+                       <span>您最贴心的法律顾问</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/converter/" target="_blank">
+           			<img src="STATIC_URL/images/jiaotong/jiaoyu_06.png" />
+                   <div class="link_txt">
+                       <p>
+                           单位换算
+                   	</p>
+                       <span>汇集各种单位换算工具</span>
+                   </div>
+               </a></li>
+               <li><a href="http://tools.2345.com/jianfanzh.htm" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jiaoyu_07.png" />
+                   <div class="link_txt">
+                       <p>
+                           繁体转换
+                   	</p>
+                       <span>繁体字/简体字一键转换</span>
+                   </div>
+               </a></li>
+               <li><a href="http://tools.2345.com/jyc/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jiaoyu_08.png" />
+                   <div class="link_txt">
+                       <p>
+                           近义词反义词
+                       </p>
+                       <span>词汇也有很多兄弟姐妹</span>
+                   </div>
+               </a></li>
+       <li><a href="http://tools.2345.com/cidian/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jiaoyu_09.png" />
+                   <div class="link_txt">
+                       <p>
+                           汉语词典
+                   	</p>
+                       <span>全国住房公积金查询</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/tangshisanbaishou/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jiaoyu_10.png" />
+                   <div class="link_txt">
+                       <p>
+                           唐诗三百首
+                   	</p>
+                       <span>唐诗三百首在线查阅</span>
+                   </div>
+               </a></li>
+               <li><a href="https://account.chsi.com.cn/passport/login" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jiaoyu_11.png" />
+                   <div class="link_txt">
+                       <p>
+                           学历查询
+                       </p>
+                       <span>学历证书真伪在线辨别</span>
+                   </div>
+               </a></li>
+               <li><a href="http://cet.99sushe.com/?0" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jiaoyu_12.png" />
+                   <div class="link_txt">
+                       <p>
+                           英语四六级查分
+                       </p>
+                       <span>英语4/6级考试在线查询</span>
+                   </div>
+               </a></li>
+         </ul>
+     	</div>
+       <div class="linkline">
+       </div>
+<div class="dange">
+   <div class="dange_title">学习工具</div>
+   <ul class="txtlinks">
+   	   <!-- 
+       <li><a href="SITE_URL/fanyi/" target="_blank">在线翻译</a><div class="txt_hot"> </div></li>
+       <li><a href="SITE_URL/{$Think.config.Xinhua}/" target="_blank">新华字典</a></li>
+       <li><a href="SITE_URL/{$Think.config.Phrase}/" target="_blank">成语大全</a></li>
+       <li><a href="#" target="_blank">汉语词典</a></li>
+       <li><a href="#" target="_blank">五笔编码查询</a></li>
+	   <li><a href="SITE_URL/{$Think.config.Dynasty}/" target="_blank">朝代顺序表</a></li>
+       <li class="no_border"><a href="SITE_URL/{$Think.config.HanZiToPinYin}/" target="_blank">汉字转拼音</a></li>
+       <li class="no_border"><a href="#" target="_blank">汽车站电话</a></li>
+       <li class="no_border"><a href="#" target="_blank">成语接龙</a></li>
+       <li class="no_border"><a href="#" target="_blank">近义词反义词</a></li>
+       -->
+       <li><a href="SITE_URL/fanyi/" target="_blank">在线翻译</a><div class="txt_hot"> </div></li>
+       <li><a href="SITE_URL/xinhua/" target="_blank">新华字典</a></li>
+       <li><a href="SITE_URL/phrase/" target="_blank">成语大全</a></li>
+	   <li><a href="SITE_URL/dynasty/" target="_blank">朝代顺序表</a></li>
+       <li><a href="SITE_URL/hanzizhuanpinyin/" target="_blank">汉字转拼音</a></li>
+       <li class="no_border"><a href="SITE_DYNAMIC_URL/idiom/" target="_blank">成语接龙</a></li>
+   </ul>
+</div>
+<div class="dange">
+   <div class="dange_title">考试证书</div>
+   <ul class="txtlinks">
+	   <!--  
+		<li><a href="http://cet.99sushe.com/?0" target="_blank">英语四六级查分</a></li>
+		<li><a href="#" target="_blank">2013考试日历</a></li>
+		<li><a href="https://account.chsi.com.cn/passport/login" target="_blank">学历查询</a><div class="txt_new"></div></li>
+		<li><a href="#" target="_blank">职业资格证查询</a></li>
+		<li><a href="#" target="_blank">记者证查询</a></li>
+		<li><a href="#" target="_blank">国家证书查询</a></li>
+		<li><a href="http://www.hao123.com/eduhtm/rsks.htm" target="_blank">各地人事考试网</a></li>
+		<li><a href="http://xjxl.chsi.com.cn/index.do" target="_blank">学籍查询</a></li>
+		<li><a href="#" target="_blank">计算机证书查询</a></li>
+		<li><a href="#" target="_blank">运动员等级查询</a></li>
+		<li class="no_border"><a href="#" target="_blank">国外学历真伪</a></li>
+		<li class="no_border"><a href="#" target="_blank">教育部成绩</a></li>
+		-->
+		<li class="no_border"><a href="http://cet.99sushe.com/?0" target="_blank">英语四六级查分</a></li>
+		<li class="no_border"><a href="https://account.chsi.com.cn/passport/login" target="_blank">学历查询</a><div class="txt_new"></div></li>
+		<li class="no_border"><a href="http://www.hao123.com/eduhtm/rsks.htm" target="_blank">各地人事考试网</a></li>
+		<li class="no_border"><a href="http://xjxl.chsi.com.cn/index.do" target="_blank">学籍查询</a></li>
+   </ul>
+</div>
+<div class="dange">
+   <div class="dange_title">国学经典</div>
+   <ul class="txtlinks">
+   		<!--
+		<li><a href="SITE_URL/tangshisanbaishou/" target="_blank">唐诗三百首</a></li>
+		<li><a href="#" target="_blank">三字经</a></li>
+		<li><a href="#" target="_blank">千字文</a></li>
+		<li><a href="SITE_URL/{$Think.config.Famous}/" target="_blank">名人语录</a><div class="txt_new"></div></li>
+		<li><a href="SITE_URL/xiehouyu" target="_blank">歇后语</a></li>
+		<li class="no_border"><a href="#" target="_blank">全宋词</a></li>
+		<li class="no_border"><a href="#" target="_blank">国学大全</a></li>
+		<li class="no_border"><a href="#" target="_blank">弟子规</a></li>
+		<li class="no_border"><a href="#" target="_blank">佛教辞典</a></li>
+		-->
+		<li class="no_border"><a href="SITE_URL/xiehouyu" target="_blank">歇后语</a></li>
+		<li class="no_border"><a href="SITE_URL/tangshisanbaishou/" target="_blank">唐诗三百首</a></li>
+		<li class="no_border"><a href="SITE_URL/famous/" target="_blank">名人语录</a><div class="txt_new"></div></li>
+   </ul>
+</div>
+<div class="dange">
+   <div class="dange_title">知识宝库</div>
+   <ul class="txtlinks">
+   		<!--  
+       <li><a href="#" target="_blank">法律法规</a><div class="txt_hot"> </div></li>
+       <li><a href="SITE_URL/{$Think.config.Dynasty}/" target="_blank">朝代顺序表</a></li>
+       <li><a href="#" target="_blank">元素周期表</a></li>
+       <li><a href="#" target="_blank">各国国旗国徽</a></li>
+       <li><a href="#" target="_blank">国内专利检索</a></li>
+       <li class="no_border"><a href="#" target="_blank">百科全书</a></li>
+       <li class="no_border"><a href="#" target="_blank">国内专利查询</a></li>
+       <li class="no_border"><a href="#" target="_blank">危险化学品名录</a></li>
+		-->
+       <li class="no_border"><a href="SITE_URL/dynasty/" target="_blank">朝代顺序表</a></li>
+   </ul>
+</div>
+<div class="dange">
+   <div class="dange_title">单位换算</div>
+   <ul class="txtlinks">
+       <li><a href="SITE_URL/converter/" target="_blank">长度单位换算</a></li>
+       <li><a href="SITE_URL/converter/" target="_blank">温度单位换算</a></li>
+       <li><a href="SITE_URL/converter/" target="_blank">热量单位换算</a></li>
+       <li><a href="SITE_URL/converter/" target="_blank">功率单位换算</a></li>
+       <li><a href="SITE_URL/converter/" target="_blank">压力单位换算</a></li>
+       <li class="no_border"><a href="SITE_URL/converter/" target="_blank">重量单位换算</a></li>
+       <li class="no_border"><a href="SITE_URL/converter/" target="_blank">面积单位换算</a></li>
+       <li class="no_border"><a href="SITE_URL/converter/" target="_blank">体积单位换算</a></li>
+   </ul>
+</div>
+<include file="common:footer" />

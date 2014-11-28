@@ -1,0 +1,27 @@
+﻿<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="caipu_bor">
+                <h1>
+                    菜谱大全
+                </h1>
+                <p class="caipu_p1"></p>
+                <include file="CookBook:search" />
+                <div class="caipu_c3">
+                	<p class="caipu_c3_p1"><strong>温馨提示：</strong>未找到任何关于<span>“{$search}”</span>的菜谱！</p>
+                    <a href="SITE_DYNAMIC_URL/caipu/"><p class="caipu_c3_p2">返回菜谱大全</p></a>
+                </div>
+                <h3>猜你喜欢</h3>
+                <ul class="caipu_love clearfix">
+                	<Volist name="guess" id="vo">
+                		<li>
+	                    	<div class="caipu_love_img"><a href="SITE_DYNAMIC_URL/caipu/dish/id/{$vo.id}" target="_blank"><img src="ATTACHMENT_URL/cookbook/{$vo.cookbook_pic}" alt="{$vo.cookbook_name}" width="120" height="90" /></a></div>
+	                        <p><a href="SITE_DYNAMIC_URL/caipu/dish/id/{$vo1.id}" target="_blank">{$vo.cookbook_name}</a></p>
+	                    </li>
+                	</Volist>
+                </ul>
+            </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

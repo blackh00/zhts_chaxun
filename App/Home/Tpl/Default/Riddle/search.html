@@ -1,0 +1,28 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+    <div class="miyu_bor">
+        <include file="searchBox" />
+        <if condition="$count eq 0">
+        <div class="miyu_box">
+            <div class="miyu_none">
+            	<div class="xiehouyu_none">对不起，没有找到<span>“{$search}”</span>相关的信息</div>
+            	<div class="xiehouyu_fanhui"><a href="SITE_DYNAMIC_URL/riddle/">重新查询</a></div>
+            </div>
+        </div>
+        <else />
+        <div class="miyu_box">
+        	<h3>与<span>“{$search}”</span>相关的查询{$count}个</h3>
+            <ul class="miyu_ul2">
+            	<volist name="resultInfo" id="vo" key="k">
+            		<li <if condition ="($k eq 10) or (($k eq $count)and($nowPage eq 0)) or (($nowPage neq 0)and($k eq $count%($nowPage*10)))">class="last"</if>><a href="javascript:void(0);" onclick="pop_show(event,'{$vo.answer}','{$vo.name}');">查看答案</a>{$vo.name}</li>
+            	</volist>
+            </ul>
+          	<div class="page">{$page} <if condition="$count gt 50"><span>跳转到 </span><input type="text" id="i_page" size="2" class="txt" value="" /><input type="hidden" value="{$search}" id="search" /><input type="hidden" value="{$miyu_rad}" id="miyu_radio" /><span class="go" onclick="get_search_page();">go</span></if></div>
+        </div>
+        </if>
+    </div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

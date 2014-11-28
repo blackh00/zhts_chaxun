@@ -1,0 +1,215 @@
+<include file="common:header" />
+<div id="mask" style="display:block"></div>
+<div class="main">
+<div class="phone_left">
+	<div class="nianling" id="start" >
+		<h1>心理年龄测试</h1>
+		<div class="cp_ts">为您提供心理年龄测试服务，让您更加了解您自己。</div>
+		<div class="nl_bg1">
+			<p> 一个人是否成熟，不能简单地以年龄来划分，因为个人的年岁并不能与他们行为感情全然相符。有些人在生理上已经成熟，可是在行为表现上却像个孩子一样幼稚。而另有一些人虽然还是年轻的孩子，却已谙熟这个世界的许多道理，所谓"少年老成"便是这个意思。</p>
+			<p>相对于真实年龄，每个人都有一个心理年龄，它是标明你的心灵、精神成熟的尺度。在某些方面"年轻的心灵"是很好的，但是以儿童的态度去处理成人问题却并不总是件令人愉快的事。下面的测验将探究你的态度、情绪以及其它行为模式，评估你的心理年龄是多大，从而知道你是否足够成熟以面对生活中遇到的各种问题？这二十个问题可以直接回答。</p>
+			<h3><a href=javascript:void(0); onclick="start();"><img src="STATIC_URL/images/anlian/nl_but1.gif" width="115" height="33" /></a></h3>
+		</div>
+	</div>
+	<div class="nianling" id="test" style="display:none;">
+		<h1>心理年龄测试</h1>
+		<div class="cp_ts">为您提供心理年龄测试服务，让您更加了解您自己。</div>
+		<div class="nl_bg2">
+			<div class="topicInc"><div class="se"></div><div class="sl"></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="sd"></div><div class="sl" ></div><div class="hq"></div></div>
+			<div id="topic_1" class="nl_wt">
+				<h2>问题 1：哪种情况最与你相符? </h2>
+                <p id="topic_1_1"  onclick="select(1,1);"><span></span>A    我常被那些比自己强的人吸引</p>
+                <p id="topic_1_3"  onclick="select(1,3);"><span></span>B    我比较喜欢接近那些看上去喜欢和尊敬我的人</p>
+                <p id="topic_1_5"  onclick="select(1,5);"><span></span>C    我喜欢那些看来需要我的人</p>
+            </div>
+			<div id="topic_2" class="nl_wt" style="display:none;">
+				<h2>问题 2：你正试图向一位朋友解释一个重要问题，他不赞成或是不理解。你会：</h2>
+                <p id="topic_2_5" onclick="select(2,5);"><span></span>A    继续解释</p>
+                <p id="topic_2_1" onclick="select(2,1);"><span></span>B    觉得受伤害或生气，不再说话</p>
+                <p id="topic_2_3" onclick="select(2,3);"><span></span>C    回避这个问题</p>
+            </div>
+            <div class="nl_but1" id="but2" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(2);">上一题</a></div>
+            <div id="topic_3" class="nl_wt" style="display:none;">
+				<h2>问题 3：假如你和朋友们夜间聚会，你开始觉得情绪低落了。你会：</h2>
+                <p id="topic_3_3" onclick="select(3,3);"><span></span>A    请求原谅并且尽快回家</p>
+                <p id="topic_3_1" onclick="select(3,1);"><span></span>B    宁可痛苦也要作陪，直到最后</p>
+                <p id="topic_3_5" onclick="select(3,5);"><span></span>C    强作欢颜，不让人注意到你的情绪</p>
+            </div>
+            <div class="nl_but1" id="but3" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(3);">上一题</a></div>
+            <div id="topic_4" class="nl_wt" style="display:none;">
+				<h2>问题 4：当你病倒在床时，你：</h2>
+                <p id="topic_4_1" onclick="select(4,1);"><span></span>A    喜欢被人们忙着伺候</p>
+                <p id="topic_4_5" onclick="select(4,5);"><span></span>B    喜欢独自呆着</p>
+                <p id="topic_4_3" onclick="select(4,3);"><span></span>C    不喜欢被人注意、照顾，宁愿看看书和搞点别的消遣</p>
+            </div>
+            <div class="nl_but1" id="but4" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(4);">上一题</a></div>
+            <div id="topic_5" class="nl_wt" style="display:none;">
+				<h2>问题 5：哪种情况最与你相符? </h2>
+                <p id="topic_5_1" onclick="select(5,1);"><span></span>A    我喜欢妈妈一直为我做的那种食物</p>
+                <p id="topic_5_3" onclick="select(5,3);"><span></span>B    只要是好吃的，我全都爱吃</p>
+                <p id="topic_5_5" onclick="select(5,5);"><span></span>C    我最喜欢自己做的菜饭</p>
+            </div>
+            <div class="nl_but1" id="but5" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(5);">上一题</a></div>
+            <div id="topic_6" class="nl_wt" style="display:none;">
+				<h2>问题 6：工作上遇到烦恼了，下班后你会：  </h2>
+                <p id="topic_6_5" onclick="select(6,5);"><span></span>A    出去散心，忘掉烦恼</p>
+                <p id="topic_6_1" onclick="select(6,1);"><span></span>B    希望回家得到安慰</p>
+                <p id="topic_6_3" onclick="select(6,3);"><span></span>C    去找个朋友倾吐一下自己的不快</p>
+            </div>
+            <div class="nl_but1" id="but6" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(6);">上一题</a></div>
+            <div id="topic_7" class="nl_wt" style="display:none;">
+				<h2>问题 7：你一直在取笑一个好脾气的朋友，而他或她突然同你吵起来。你会： </h2>
+                <p id="topic_7_1" onclick="select(7,1);"><span></span>A    觉得难堪</p>
+                <p id="topic_7_3" onclick="select(7,3);"><span></span>B    和他(她)吵</p>
+                <p id="topic_7_5" onclick="select(7,5);"><span></span>C    把这归罪于自己，并力图弥补过失</p>
+            </div>
+            <div class="nl_but1" id="but7" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(7);">上一题</a></div>
+            <div id="topic_8" class="nl_wt" style="display:none;">
+				<h2>问题 8：某个你刚认识的人，吃力地想教导你某件你很清楚的事。你会：</h2>
+                <p id="topic_8_3" onclick="select(8,3);"><span></span>A    告诉他你早就知道</p>
+                <p id="topic_8_1" onclick="select(8,1);"><span></span>B    不说什么，但也不听</p>
+                <p id="topic_8_5" onclick="select(8,5);"><span></span>C    等他讲完，再显示你对此道十分精通</p>
+            </div>
+            <div class="nl_but1" id="but8" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(8);">上一题</a></div>
+            <div id="topic_9" class="nl_wt" style="display:none;">
+				<h2>问题 9：如果你得了一笔奖金(比你的工资高)，你会:</h2>
+                <p id="topic_9_3" onclick="select(9,3);"><span></span>A    存起来</p>
+                <p id="topic_9_1" onclick="select(9,1);"><span></span>B    用来买你一直想要但并非必需的东西</p>
+                <p id="topic_9_5" onclick="select(9,5);"><span></span>C    用来买日常用品</p>
+            </div>
+            <div class="nl_but1" id="but9" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(9);">上一题</a></div>
+            <div id="topic_10" class="nl_wt" style="display:none;">
+				<h2>问题 10：哪种活动使你最感兴趣?</h2>
+                <p id="topic_10_3" onclick="select(10,3);"><span></span>A    能使你与别人接触的任何活动</p>
+                <p id="topic_10_1" onclick="select(10,1);"><span></span>B    摆脱工作压力，进入纯粹愉快的活动</p>
+                <p id="topic_10_5" onclick="select(10,5);"><span></span>C    组织运动会或其它有益活动，象种花，做木工活等等</p>
+            </div>
+            <div class="nl_but1" id="but10" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(10);">上一题</a></div>
+            <div id="topic_11" class="nl_wt" style="display:none;">
+				<h2>问题 11：如果一个朋友说了有辱于你的话，你会怎样? </h2>
+                <p id="topic_11_5" onclick="select(11,5);"><span></span>A    愤恨地与他绝交</p>
+                <p id="topic_11_1" onclick="select(11,1);"><span></span>B    不管这话多么可笑，心里很难过</p>
+                <p id="topic_11_3" onclick="select(11,3);"><span></span>C    不知道该怎么说</p>
+            </div>
+            <div class="nl_but1" id="but11" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(11);">上一题</a></div>
+            <div id="topic_12" class="nl_wt" style="display:none;">
+				<h2>问题 12：你最关心的那个人是不是：</h2>
+                <p id="topic_12_5" onclick="select(12,5);"><span></span>A    与你相比，他更需要你</p>
+                <p id="topic_12_3" onclick="select(12,3);"><span></span>B    与你相比，他或她同等地需要你</p>
+                <p id="topic_12_1" onclick="select(12,1);"><span></span>C    与你相比，你更需要他或她</p>
+            </div>
+            <div class="nl_but1" id="but12" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(12);">上一题</a></div>
+            <div id="topic_13" class="nl_wt" style="display:none;">
+				<h2>问题 13：你正与某个人搞得火热，你的一位老朋友对此人早有了解，他关心你并对你提出警告。你会怎样?</h2>
+                <p id="topic_13_5" onclick="select(13,5);"><span></span>A    反感地听他讲</p>
+                <p id="topic_13_3" onclick="select(13,3);"><span></span>B    叫他别管闲事</p>
+                <p id="topic_13_1" onclick="select(13,1);"><span></span>C    反对他说的任何事</p>
+            </div>
+            <div class="nl_but1" id="but13" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(13);">上一题</a></div>
+            <div id="topic_14" class="nl_wt" style="display:none;">
+				<h2>问题 14：收到意外的礼物，你会如何?</h2>
+                <p id="topic_14_5" onclick="select(14,5);"><span></span>A    想一想该回敬些什么</p>
+                <p id="topic_14_1" onclick="select(14,1);"><span></span>B    感到高兴</p>
+                <p id="topic_14_3" onclick="select(14,3);"><span></span>C    想想送礼者要些什么</p>
+            </div>
+            <div class="nl_but1" id="but14" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(14);">上一题</a></div>
+            <div id="topic_15" class="nl_wt" style="display:none;">
+				<h2>问题 15：你已经安排好了假日的日程，但离假日还有一个月。你会不会：</h2>
+                <p id="topic_15_1" onclick="select(15,1);"><span></span>A    感到如此激动，以至这期间的日子看起来那么烦人而漫长</p>
+                <p id="topic_15_3" onclick="select(15,3);"><span></span>B    花很多时间去想象你将要做的事</p>
+                <p id="topic_15_5" onclick="select(15,5);"><span></span>C    在此期间仍然象往常那样过日子</p>
+            </div>
+            <div class="nl_but1" id="but15" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(15);">上一题</a></div>
+            <div id="topic_16" class="nl_wt" style="display:none;">
+				<h2>问题 16：一个朋友在最后一分钟取消了与你的约会，而且毫无正当的理由，你会怎么想? </h2>
+                <p id="topic_16_1" onclick="select(16,1);"><span></span>A    他或她找到了更好的事情</p>
+                <p id="topic_16_5" onclick="select(16,5);"><span></span>B    他或她遇到了什么麻烦</p>
+                <p id="topic_16_3" onclick="select(16,3);"><span></span>C    他或她有点没头脑，但你并不会为此十分烦恼</p>
+            </div>
+            <div class="nl_but1" id="but16" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(16);">上一题</a></div>
+            <div id="topic_17" class="nl_wt" style="display:none;">
+				<h2>问题 17：当你对某事发生兴趣时，你会怎样?</h2>
+                <p id="topic_17_5" onclick="select(17,5);"><span></span>A    努力做这件事，长时间紧追不舍</p>
+                <p id="topic_17_1" onclick="select(17,1);"><span></span>B    投入进去，但很快失去了热情</p>
+                <p id="topic_17_3" onclick="select(17,3);"><span></span>C    有时A，有时B，——要看是什么兴趣</p>
+            </div>
+            <div class="nl_but1" id="but17" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(17);">上一题</a></div>
+            <div id="topic_18" class="nl_wt" style="display:none;">
+				<h2>问题 18：哪种情况最与你相符?</h2>
+                <p id="topic_18_1" onclick="select(18,1);"><span></span>A    可惜没遇上机会，不然我会做出很大的成绩来，而不是像现在这样</p>
+                <p id="topic_18_5" onclick="select(18,5);"><span></span>B    我取得的一切都与我长期的努力相符</p>
+                <p id="topic_18_3" onclick="select(18,3);"><span></span>C    我花费大量时间做着我不想做的事</p>
+            </div>
+            <div class="nl_but1" id="but18" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(18);">上一题</a></div>
+            <div id="topic_19" class="nl_wt" style="display:none;">
+				<h2>问题 19：一位朋友指出你的某种令人讨厌的缺点，你会怎样?</h2>
+                <p id="topic_19_5" onclick="select(19,5);"><span></span>A    感到愤恨</p>
+                <p id="topic_19_1" onclick="select(19,1);"><span></span>B    烦恼并一度感到羞愧</p>
+                <p id="topic_19_3" onclick="select(19,3);"><span></span>C    去问问另一个朋友这是否真实</p>
+            </div>
+            <div class="nl_but1" id="but19" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(19);">上一题</a></div>
+            <div id="topic_20" class="nl_wt" style="display:none;">
+				<h2>问题 20：你很想与某人成为好朋友，后来你邀他或她去参加舞会，可他或她拒绝了，你会怎样?</h2>
+                <p id="topic_20_1" onclick="select(20,1);"><span></span>A    觉得自己真傻</p>
+                <p id="topic_20_3" onclick="select(20,3);"><span></span>B    不知自己做了什么事使他或她反感，但对此并不特别难过</p>
+                <p id="topic_20_5" onclick="select(20,5);"><span></span>C    耸耸肩膀对自己说，世界上又不是只有他或她一个人</p>
+            </div>
+			<div class="nl_but1" id="but20" style="display:none;"><img src="STATIC_URL/images/anlian/nl_but3.gif" width="14" height="12" /> <a href="javascript:void(0);" onclick="uptopic(20);">上一题</a></div>
+		</div>          	
+	</div>
+	<div class="nianling" id="result" style="display:none;">
+		<h1>心理年龄测试</h1>
+		<div class="cp_ts">为您提供心理年龄测试服务，让您更加了解您自己。</div>
+		<div class="nl_bg3">
+			<h2 id="state">你的心理年龄：<span>青少年状态</span></h2>
+			<div class="nl_jg">你的内心世界是青少年状态，既需要独立自主，又需要抚慰、爱护，这种矛盾心理正是青少年状态的特点。他们希望从家庭 生活的管束中摆脱出来，但同时对外部世界的严酷怀有一种潜在的担心。</div>
+			<div class="nl_da">
+	       		<h3>您的测试答案：</h3>
+				<h4>问题 1：哪种情况最与你相符? </h4>
+            	<h5 id="result_1">您的选项： <strong></strong></h5>
+				<h4>问题 2：你正试图向一位朋友解释一个重要问题，他不赞成或是不理解。你会：</h4>
+                <h5 id="result_2">您的选项： <strong></strong></h5>
+				<h4>问题 3：假如你和朋友们夜间聚会，你开始觉得情绪低落了。你会：</h4>
+           		<h5 id="result_3">您的选项： <strong></strong></h5>
+				<h4>问题 4：当你病倒在床时，你：</h4>
+        		<h5 id="result_4">您的选项： <strong></strong></h5>
+				<h4>问题 5：哪种情况最与你相符? </h4>
+            	<h5 id="result_5">您的选项： <strong></strong></h5>
+				<h4>问题 6：工作上遇到烦恼了，下班后你会：  </h4>
+               	<h5 id="result_6">您的选项： <strong></strong></h5>
+				<h4>问题 7：你一直在取笑一个好脾气的朋友，而他或她突然同你吵起来。你会： </h4>
+       			<h5 id="result_7">您的选项： <strong></strong></h5>
+				<h4>问题 8：某个你刚认识的人，吃力地想教导你某件你很清楚的事。你会：</h4>
+             	<h5 id="result_8">您的选项： <strong></strong></h5>
+				<h4>问题 9：如果你得了一笔奖金(比你的工资高)，你会:</h4>
+            	<h5 id="result_9">您的选项： <strong></strong></h5>
+				<h4>问题 10：哪种活动使你最感兴趣?</h4>
+              	<h5 id="result_10">您的选项： <strong></strong></h5>
+				<h4>问题 11：如果一个朋友说了有辱于你的话，你会怎样? </h4>
+           		<h5 id="result_11">您的选项： <strong></strong></h5>
+				<h4>问题 12：你最关心的那个人是不是：</h4>
+         		<h5 id="result_12">您的选项： <strong></strong></h5>
+				<h4>问题 13：你正与某个人搞得火热，你的一位老朋友对此人早有了解，他关心你并对你提出警告。你会怎样?</h4>
+        		<h5 id="result_13">您的选项： <strong></strong></h5>
+				<h4>问题 14：收到意外的礼物，你会如何?</h4>
+            	<h5 id="result_14">您的选项： <strong></strong></h5>
+				<h4>问题 15：你已经安排好了假日的日程，但离假日还有一个月。你会不会：</h4>
+          		<h5 id="result_15">您的选项： <strong></strong></h5>
+				<h4>问题 16：一个朋友在最后一分钟取消了与你的约会，而且毫无正当的理由，你会怎么想? </h4>
+         		<h5 id="result_16">您的选项： <strong></strong></h5>
+				<h4>问题 17：当你对某事发生兴趣时，你会怎样?</h4>
+          		<h5 id="result_17">您的选项： <strong></strong></h5>
+				<h4>问题 18：哪种情况最与你相符?</h4>
+           		<h5 id="result_18">您的选项： <strong></strong></h5>
+				<h4>问题 19：一位朋友指出你的某种令人讨厌的缺点，你会怎样?</h4>
+          		<h5 id="result_19">您的选项： <strong></strong></h5>
+				<h4>问题 20：你很想与某人成为好朋友，后来你邀他或她去参加舞会，可他或她拒绝了，你会怎样?</h4>
+            	<h5 id="result_20">您的选项： <strong></strong></h5>
+			</div>
+			<div class="nl_but"><a onclick="restart();" href="javascript:void(0);"><img src="STATIC_URL/images/anlian/nl_but2.gif" width="115" height="33" /></a></div>
+		</div>          	
+	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

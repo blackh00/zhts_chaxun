@@ -1,0 +1,56 @@
+<tagLib name="fanwe" />
+<include file="Public:header" />
+<script type="text/javascript" src="__STATIC__/Admin/Js/adv.js"></script>
+<div class="handle-btns">
+	<fanwe:linkBtn text="{$Think.lang.RETURN_LIST}" href="{:Cookie::get('returnUrl')}" />
+</div>
+<form method='post' id="form" name="form" action="{:U(MODULE_NAME.'/update')}" enctype="multipart/form-data">
+<table cellpadding="4" cellspacing="0" border="0" class="table-form">
+	<tr>
+		<th width="150">{$Think.lang.NAME}</th>
+		<td><input type="text" class="textinput requireinput" name="name" size="60" value="{$vo.name}" /></td>
+	</tr>
+	<tr>
+		<th>{$Think.lang.POSITION_ID}</th>
+		<td>
+			<fanwe:select options="ap_list" name="position_id" textfield="name" valuefield="id" selected="vo['position_id']"/>
+		</td>
+	</tr>
+	<tr>
+		<th><span class="font_bold">{$Think.lang.REGION}</span></th>
+		<td><span class="font_bold">{$Think.lang.URL}</span> &nbsp;&nbsp;&nbsp;&nbsp;<input name="moreRegion" type="button" onclick="ltp_showOrHideDiv('showSelectRegionList')" value="添加广告地区" /></td>		
+	</tr>
+	<tr id="showSelectRegionList">
+		<td colspan="2" align="left">
+		<ul id="selectRegionList">
+		<foreach name="regionList.all" item="item">			
+		<li><input type="checkbox" id="select_region_{$item.id}" onclick="ltp_addOrDelProvince('{$item.id}', '{$item.name}', 'code[{$item.id}]')" <compare name="item.isSelect" value="1" type="eq">checked="checked"</compare>>	
+        <span><label>{$item.name}</label></span>
+		</li>		
+		</foreach>
+		</ul>				
+		</td>
+	</tr>
+	<foreach name="regionList.default" item="item">
+	<tr id="show_region_{$item.id}">
+		<th>{$item.name}</th>
+		<td>
+			<input type="text" class="textinput" name="code[{$item.id}]" size="60" value="{$item.url}" />&nbsp; <compare name="item.url" value="" type="neq"><a href="{$item.url}" target="_blank">查看广告</a></compare></td>
+	</tr>
+    </foreach>			
+	<tr class="act">
+		<th>&nbsp;</th>
+		<td>
+			<if condition="$vo['type'] eq 3">
+			<input type="hidden" value="{$vo.code}" id="textarea_code" />
+			<else/>
+			<input type="hidden" value='<a href="__ROOT__/{$vo.code}" target="_blank" >{$Think.lang.VIEW}</a>' id="file_code" />
+			</if>
+			<input type="hidden" value="{$vo.id}" name="id" />
+			<input type="submit" class="submit_btn" value="{$Think.lang.SUBMIT}" />&nbsp;&nbsp;
+			<input type="reset" class="reset_btn" value="{$Think.lang.RESET}" />
+		</td>
+	</tr>
+</table>
+</form>
+<include file="Public:footer" />

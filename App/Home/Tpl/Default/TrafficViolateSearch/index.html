@@ -1,0 +1,546 @@
+<include file="common:header" />
+    <div class="main">
+        <div style="clear: both;">
+        </div>
+        <div class="mod_2b">
+<h2><img src="STATIC_URL/images/weizhang/weizhang_logo.gif" />交通违章查询</h2>
+<div class="description">为您提供全国三百多个城市的交通违章信息。注：如所查城市不在该表内，可在其所属省份的违章网站进行查询。</div>
+<div class="traffic_main clearfix">
+<div class="traf_search">
+<div class="traf_form clearfix">
+<div class="select_outer select_outer2">
+<div class="select_inner select_inner2">
+<select id="sel_p" onchange="showCity(this.value)">
+<option value="北京市">北京市</option>
+<option value="上海市">上海市</option>
+<option value="天津市">天津市</option>
+<option value="重庆市">重庆市</option>
+<option value="香港">香港</option>
+<option value="澳门">澳门</option>
+<option value="安徽省">安徽省</option>
+<option value="福建省">福建省</option>
+<option value="甘肃省">甘肃省</option>
+<option value="广东省">广东省</option>
+<option value="广西省">广西省</option>
+<option value="贵州省">贵州省</option>
+<option value="海南省">海南省</option>
+<option value="河北省">河北省</option>
+<option value="河南省">河南省</option>
+<option value="黑龙江省">黑龙江省 </option>
+<option value="湖北省">湖北省</option>
+<option value="湖南省">湖南省</option>
+<option value="吉林省">吉林省</option>
+<option value="江苏省">江苏省</option>
+<option value="江西省">江西省</option>
+<option value="辽宁省">辽宁省</option>
+<option value="内蒙古">内蒙古</option>
+<option value="宁夏">宁夏</option>
+<option value="青海省">青海省</option>
+<option value="四川省">四川省</option>
+<option value="山东省">山东省</option>
+<option value="陕西省">陕西省</option>
+<option value="山西省">山西省</option>
+<option value="新疆自治区">新疆自治区</option>
+<option value="云南省">云南省</option>
+<option value="浙江省">浙江省</option>
+</select>
+</div>
+</div>
+<div class="select_outer select_outer2">
+<div class="select_inner select_inner2">
+<select id="sel_c">
+</select>
+</div>
+</div>
+<input type="button" value="" class="btn85x33" onmouseover="this.className='btn85x33 btn85x33_hover'" onmouseout="this.className='btn85x33'" onclick="btnsubmit()">
+</div>
+<div class="city_list">
+<dl class="clearfix"><dt>直辖市/特区</dt>
+<dd><a href="#m_zhixia">北京</a><a href="#m_zhixia">上海</a><a href="#m_zhixia">天津</a><a href="#m_zhixia">重庆</a></dd>
+</dl>
+<dl class="clearfix"><dt>省份(按拼音)</dt><dd>
+<a href="#m_anhui">安徽</a><a href="#m_fujian">福建</a><a href="#m_gansu">甘肃</a><a href="#m_guangdong">广东</a><a href="#m_guangxi">广西</a><a href="#m_guizhou">贵州</a><a href="#m_hainan">海南</a><a href="#m_hebei">河北</a><a href="#m_henan">河南</a><a href="#m_heilongjiang">黑龙江</a><a href="#m_hubei">湖北</a><a href="#m_hunan">湖南</a><a href="#m_jilin">吉林</a><a href="#m_jiangsu">江苏</a><a href="#m_jiangxi">江西</a><a href="#m_liaoning"> 辽宁</a><a href="#m_neimenggu">内蒙古</a><a href="#m_ningxia">宁夏</a><a href="#m_qinghai">青海</a><a href="#m_sichuan">四川</a><a href="#m_shandong">山东</a><a href="#m_shan3xi">陕西</a><a href="#m_shan1xi">山西</a><a href="#m_xinjiang">新疆</a><a href="#m_yunnan">云南</a><a href="#m_zhejiang">浙江</a></dd></dl>
+</div>
+</div>
+<div class="traf_box mt10" style="margin-top:13px"><a class="clear" name="m_zhixia" id="m_zhixia">&nbsp;</a>
+<div class="t_b_hd">直辖市/特区交通违章查询</div>
+<div class="t_b_bd zhixiashi clearfix">
+<dl><dt>北京市</dt><dd><a target="_blank" href="http://www.bjjtgl.gov.cn/publish/portal0/tab72/">驾驶员积分查询</a><a target="_blank" href="http://cgs.bjjtgl.gov.cn/chgs/Main.jsp">车辆违章查询</a><a target="_blank" href="http://wwxh.bjjtgl.gov.cn/wwxh/">网上选号</a></dd></dl>
+<dl><dt>上海市</dt><dd><a target="_blank" href="http://www.shjtaq.com/zwfg/dzjc_new.asp">电子监控查询</a><a target="_blank" href="http://www.shjtaq.com/zwfg/chafen.asp">违法记分查询</a><a target="_blank" href="http://www.shjtaq.com/zwfg/bk_chaxun.asp">报废和未年检车辆查询</a><a target="_blank" href="http://www.shjtaq.com/zwfg/sgcx.asp">沪牌机动车交通事故查询</a></dd></dl>
+<dl><dt>天津市</dt><dd><a target="_blank" href="http://www.tjits.cn/wfcx/index.asp">机动车违法查询</a><a target="_blank" href="http://www.tjcgs.gov.cn/index.aspx">驾驶员违法记分查询</a><a target="_blank" href="http://wsxh.tjcgs.gov.cn/">网上选号</a></dd></dl>
+<dl><dt>重庆市</dt><dd><a target="_blank" href="http://www.cqjg.gov.cn/DriverFind.html">机动车违查询</a><a target="_blank" href="http://www.cqjg.gov.cn/DriverFind.html">驾驶证记分查询</a><a target="_blank" href="http://www.cqjg.gov.cn/DriverFind.html">重大同等责任以上事故查询</a><a target="_blank" href="http://61.186.254.4/cgszzxhweb/index.jsp">网上选号</a></dd></dl>
+<dl><dt>香港</dt><dd><a target="_blank" href="http://www.td.gov.hk/sc/road_safety/safe_motoring_guides/driving_offence_points_system/">违例驾驶记分制度</a></dd></dl>
+<dl><dt>澳门</dt><dd><a target="_blank" href="https://www.fsm.gov.mo/webticket/default.aspx">交通违例记录查询</a></dd></dl>
+</div>
+</div>
+
+<!-- 安徽 -->
+<div class="traf_box mt10"><a class="clear" name="m_anhui" id="m_anhui">&nbsp;</a>
+<div class="t_b_hd">安徽省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.ahjtxx.com/query/">安徽全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.ahjtxx.com/query/" class="fblue">安徽省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://218.22.160.93/shpweb/SelfHelpPreasign/Index.aspx?Param=12" class="fblue">网上选号</a></p>
+<dl><dt>合肥市</dt><dd><a target="_blank" href="http://www.hfjjzd.gov.cn/hfwebquery/frmViolation.aspx">机动车电子监控信息查询</a><a target="_blank" href="http://www.hfjjzd.gov.cn/hfwebquery/frmViolation.aspx">驾驶证违章查询</a><a target="_blank" href="http://www.hfjjzd.gov.cn/hfwebquery/frmVehViolation.aspx">机动车违法查询</a><a target="_blank" href="http://www.hfjjzd.gov.cn/hfwebquery/frmJFSearch.aspx">驾驶人累计记分查询</a></dd></dl>
+<dl><dt>芜湖市</dt><dd><a target="_blank" href="http://cha.chelink.com/weizhang/wuhu.htm">机动车违法信息查询</a><a target="_blank" href="http://61.191.211.19/whcf/Main.aspx?fzjg=B">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>蚌埠市</dt><dd><a target="_blank" href="http://218.22.100.130/wfcx/Main.aspx?fzjg=C">机动车违法信息查询</a><a target="_blank" href="http://218.22.100.130/wfcx/Main.aspx?fzjg=C">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>淮南市</dt><dd><a target="_blank" href="http://www.ahhnjj.net/">机动车违法信息查询</a><a target="_blank" href="http://www.ahhnjj.net/">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>马鞍山市</dt><dd><a target="_blank" href="http://220.178.252.54:8090/frmVehViolition.aspx">机动车违法信息查询</a><a target="_blank" href="http://220.178.252.54:8090/frmViolation.aspx">驾驶人违法信息查询</a><a target="_blank" href="http://220.178.252.54:8090/frmVehVio.aspx">机动车电子监控查询</a><a target="_blank" href="http://220.178.252.54:8090/frmJFSearch.aspx">驾驶人记分信息查询</a></dd></dl>
+<dl><dt>淮北市</dt><dd><a target="_blank" href="http://www.hbjjzd.cn/hbwfcx/Main.aspx?fzjg=F">机动车违法信息查询</a><a target="_blank" href="http://www.hbjjzd.cn/hbwfcx/Main.aspx?fzjg=F">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>安庆市</dt><dd><a target="_blank" href="http://www.aqjj.gov.cn/AQWebQuery/Default.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.aqjj.gov.cn/AQWebQuery/frmViolation.aspx">驾驶人违法信息查询</a><a target="_blank" href="http://www.aqjj.gov.cn/AQWebQuery/frmJFSearch.aspx">驾驶人累计记分查询</a></dd></dl>
+<dl><dt>黄山市</dt><dd><a target="_blank" href="http://www.huangshan.gov.cn/HsDriver/HomePage/MotoPecc.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.huangshan.gov.cn/HsDriver/HomePage/MotoPecc.aspx">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>阜阳市</dt><dd><a target="_blank" href="http://www.wzcx.fy.cn/ydwfcx/">机动车违法信息查询</a><a target="_blank" href="http://www.wzcx.fy.cn/ydwfcx/">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>宿州市</dt><dd><a target="_blank" href="http://220.179.62.50:8080/zhcx/main.aspx?fzjg=L">机动车违法信息查询</a><a target="_blank" href="http://220.179.62.50:8080/zhcx/main.aspx?fzjg=L">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>滁州市</dt><dd><a target="_blank" href="http://www.ahczjj.gov.cn/cx.asp">车辆违章查询</a><a target="_blank" href="http://www.ahczjj.gov.cn/cx1.asp">驾驶证扣分查询</a></dd></dl>
+<dl><dt>六安市</dt><dd><a target="_blank" href="http://www.lajjzd.gov.cn/frmVehVio.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.lajjzd.gov.cn/frmViolation.aspx">驾驶人违法信息查询</a><a target="_blank" href="http://www.lajjzd.gov.cn/frmJFSearch.aspx">驾驶人累计记分查询</a></dd></dl>
+<dl><dt>宣城市</dt><dd><a target="_blank" href="http://www.xcjjzd.gov.cn:802/Main.aspx?FZJG=P">机动车违法信息查询</a><a target="_blank" href="http://www.xcjjzd.gov.cn:802/Main.aspx?FZJG=P">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>亳州市</dt><dd><a target="_blank" href="http://www.ahbzjj.cn/JdcWfcx.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.ahbzjj.cn/JsrWfcx.aspx">驾驶人违法信息查询</a></dd></dl>
+
+</div>
+</div>
+<!-- 福建 -->
+<div class="traf_box mt10" style="display:"><a class="clear" name="m_fujian" id="m_fujian">&nbsp;</a>
+<div class="t_b_hd">福建省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://jjcx.fjgat.gov.cn:800/jdcwfcx.aspx">福建全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://jjcx.fjgat.gov.cn:800/jdcwfcx.aspx" class="fblue">福建省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://www.fjgat.gov.cn/zzxh.html" class="fblue">网上选号</a></p>
+<dl><dt>福州市</dt><dd><a target="_blank" href="http://218.85.72.214:8887/xxcx_wfxx.html">机动车违章信息查询</a><a target="_blank" href="http://218.85.72.214:8887/xxcx_wfjf.html">驾驶人违法记分查询</a><a target="_blank" href="http://218.85.72.214:8887/penalty2.html">违法罚款缴纳</a></dd></dl>
+<dl><dt>厦门市</dt><dd><a target="_blank" href="http://www.xmjj.gov.cn/xxfw/shouye.action">机动车违法信息查询</a><a target="_blank" href="http://www.xmjj.gov.cn/xxfw/shouye.action">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>泉州市</dt><dd><a target="_blank" href="http://www.qzjxj.gov.cn/">交通违章查询</a></dd></dl>
+<dl><dt>漳州市</dt><dd><a target="_blank" href="http://zzjjzd.zhangzhou.gov.cn/">交通违章查询</a></dd></dl>
+<dl><dt>龙岩市</dt><dd><a target="_blank" href="http://www.fjlyga.gov.cn/">交通违章查询</a></dd></dl>
+<dl><dt>莆田市</dt><dd><a target="_blank" href="http://www.weizhangwang.com/jiashizheng/putian/">驾驶人记分查询</a><a target="_blank" href="http://www.ptga.gov.cn/wscx.asp">车辆违章查询</a></dd></dl>
+<dl><dt>宁德市</dt><dd><a target="_blank" href="http://ndjj.ndwww.cn/">交通违章查询</a></dd></dl>
+<dl><dt>三明市</dt><dd><a target="_blank" href="http://www.fjsmjj.com/">交通违章查询</a></dd></dl>
+<dl><dt>南平市</dt><dd><a target="_blank" href="http://npjjzd.net/wfcx/index.asp">交通违章查询</a></dd></dl>
+</div>
+</div>
+<!-- 甘肃 -->
+<div class="traf_box mt10"><a class="clear" name="m_gansu" id="m_gansu">&nbsp;</a>
+<div class="t_b_hd">甘肃省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.gsgajt.gov.cn/ljList.aspx?id=245">甘肃全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.gsgajt.gov.cn/ljList.aspx?id=245" class="fblue">甘肃省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://www.gsgajt.gov.cn:9080/trafficnet/zbxh/zbxhNext.aspx?method=next0"></a></p>
+<dl><dt>兰州市</dt><dd><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/ShowViocodelst.aspx">违法行为信息查询</a><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Vehvioinfo.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Drvvioinfo.aspx">驾驶证违法信息查询</a></dd></dl>
+<dl><dt>嘉峪关市</dt><dd><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Vehvioinfo.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Drvvioinfo.aspx">驾驶证违法信息查询</a></dd></dl>
+<dl><dt>金昌市</dt><dd><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Vehvioinfo.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Drvvioinfo.aspx">驾驶证违法信息查询</a></dd></dl>
+<dl><dt>白银市</dt><dd><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Vehvioinfo.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Drvvioinfo.aspx">驾驶证违法信息查询</a></dd></dl>
+<dl><dt>天水市</dt><dd><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Vehvioinfo.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Drvvioinfo.aspx">驾驶证违法信息查询</a></dd></dl>
+<dl><dt>武威市</dt><dd><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Vehvioinfo.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Drvvioinfo.aspx">驾驶证违法信息查询</a></dd></dl>
+<dl><dt>张掖市</dt><dd><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Vehvioinfo.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Drvvioinfo.aspx">驾驶证违法信息查询</a></dd></dl>
+<dl><dt>酒泉市</dt><dd><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Vehvioinfo.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.gsgajt.gov.cn:9999/InfoSerchs/Drvvioinfo.aspx">驾驶证违法信息查询</a></dd></dl>
+
+</div>
+</div>
+<!-- 广东 -->
+<div class="traf_box mt10"><a class="clear" name="m_guangdong" id="m_guangdong">&nbsp;</a>
+<div class="t_b_hd">广东省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://jj.gdga.gov.cn/wzss/searchwzss.jsp">广东全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://jj.gdga.gov.cn/wzss/searchwzss.jsp" class="fblue">广东省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://jj.gdga.gov.cn/zxhpw/index.htm" class="fblue">网上选号</a>&nbsp;&nbsp;<a target="_blank" href="http://www.gdga.gov.cn/service/dzy/" class="fblue">广东省全省电子眼查询</a></p>
+<dl><dt>广州市</dt><dd><a target="_blank" href="http://020.weizhangwang.com/">交通违法信息查询</a></dd></dl>
+<dl><dt>韶关市</dt><dd><a target="_blank" href="http://219.129.94.123:9080/sgjj/">机动车违法信息查询</a><a target="_blank" href="http://219.129.94.123:9080/sgjj/">驾驶人违法信息查询</a><a target="_blank" href="http://219.129.94.123:9080/sgjj/">驾驶证综合信息查询</a></dd></dl>
+<dl><dt>深圳市</dt><dd><a target="_blank" href="http://www.stc.gov.cn/search/vehicle_peccacy.asp">机动车电子监控信息查询</a><a target="_blank" href="http://www.stc.gov.cn/search/driver_peccacy.asp">驾驶员违法信息查询</a><a target="_blank" href="http://www.stc.gov.cn/search/JSZ_JFK.asp">驾驶员满分情况查询</a></dd></dl>
+<dl><dt>珠海市</dt><dd><a target="_blank" href="http://202.105.183.61/tvis/">交通违章信息查询</a></dd></dl>
+<dl><dt>佛山市</dt><dd><a target="_blank" href="http://www.fsgajj.cn/fsjj/wsfwdt/wzxx/sel_transgress.aspx">交通违法网上查询</a><a target="_blank" href="http://www.fsgajj.cn/fsjj/wsfwdt/Jsyjfcx.aspx">驾驶证累计记分查询</a></dd></dl>
+<dl><dt>江门市</dt><dd><a target="_blank" href="http://weizhang.jmjgj.gov.cn/">机动车违法信息查询</a><a target="_blank" href="http://weizhang.jmjgj.gov.cn/duoci.asp">超5次违法查询</a></dd></dl>
+<dl><dt>湛江市</dt><dd><a target="_blank" href="http://0759.weizhangwang.com/">机动车违章记录信息查询</a><a target="_blank" href="http://www.weizhangwang.com/jiashizheng/zhanjiang/">驾驶人违法查询</a><a target="_blank" href="http://www.weizhangwang.com/jiashizheng/zhanjiang/">驾驶证信息查询</a></dd></dl>
+<dl><dt>茂名市</dt><dd><a target="_blank" href="http://jj.gdga.gov.cn/wzss/searchwzss.jsp">机动车违法信息查询</a></dd></dl>
+<dl><dt>肇庆市</dt><dd><a target="_blank" href="http://zqga.gov.cn/jdcfwpt.shtml">机动车违法信息查询</a><a target="_blank" href="http://zqga.gov.cn/jdcfwpt.shtml">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>惠州市</dt><dd><a target="_blank" href="http://www.gdhzcgs.com/Illegal.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.gdhzcgs.com/DriverScore.aspx">驾驶人记分查询</a></dd></dl>
+<dl><dt>梅州市</dt><dd><a target="_blank" href="http://www.mzga.gov.cn/wsfw">交通违法信息查询</a></dd></dl>
+<dl><dt>汕尾市</dt><dd><a target="_blank" href="http://jj.gdga.gov.cn/wzss/searchwzss.jsp">交通违法信息查询</a></dd></dl>
+<dl><dt>河源市</dt><dd><a target="_blank" href="http://jj.gdga.gov.cn/wzss/searchwzss.jsp">交通违法信息查询</a></dd></dl>
+<dl><dt>阳江市</dt><dd><a target="_blank" href="http://jj.gdga.gov.cn/wzss/searchwzss.jsp">交通违法信息查询</a></dd></dl>
+<dl><dt>清远市</dt><dd><a target="_blank" href="http://jj.gdga.gov.cn/wzss/searchwzss.jsp">交通违法信息查询</a></dd></dl>
+<dl><dt>东莞市</dt><dd><a target="_blank" href="http://www.gddgcgs.gov.cn/Illegal.aspx">交通违法查询</a><a target="_blank" href="http://www.gddgcgs.gov.cn/DriverInformation.aspx">驾驶证信息查询</a><a target="_blank" href="http://www.gddgcgs.gov.cn/CarInformation.aspx">机动车信息查询</a></dd></dl>
+<dl><dt>中山市</dt><dd><a target="_blank" href="http://jj.gdga.gov.cn/wzss/searchwzss.jsp">交通违法信息查询</a></dd></dl>
+<dl><dt>潮州市</dt><dd><a target="_blank" href="http://jj.gdga.gov.cn/wzss/searchwzss.jsp">交通违法信息查询</a></dd></dl>
+<dl><dt>揭阳市</dt><dd><a target="_blank" href="http://jj.gdga.gov.cn/wzss/searchwzss.jsp">交通违法信息查询</a><a target="_blank" href="http://www.jyjj.gov.cn/jsrjfcx.asp">驾驶人记分查询</a></dd></dl>
+</div>
+</div>
+<!-- 广西 -->
+<div class="traf_box mt10"><a class="clear" name="m_guangxi" id="m_guangxi">&nbsp;</a>
+<div class="t_b_hd">广西省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.gxjtaq.com/portal.php?mod=list&catid=331">广西全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.gxjtaq.com/portal.php?mod=list&catid=331" class="fblue">广西省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://www.gxjtaq.com/portal.php?mod=list&catid=317" class="fblue">网上选号</a>&nbsp;&nbsp;<a target="_blank" href="http://www.gxjtaq.com/portal.php?mod=list&catid=272" class="fblue">全省电子眼查询</a></p>
+<dl><dt>南宁市</dt><dd><a target="_blank" href="http://0771.weizhangwang.com/">交通违法信息查询</a></dd></dl>
+<dl><dt>柳州市</dt><dd><a target="_blank" href="http://www.gxjtaq.com/portal.php?mod=list&catid=331">机动车违法信息查询</a></dd></dl>
+<dl><dt>桂林市</dt><dd><a target="_blank" href="http://www.gxjtaq.com/portal.php?mod=list&catid=331">机动车违法信息查询</a></dd></dl>
+<dl><dt>梧州市</dt><dd><a target="_blank" href="http://www.gxjtaq.com/portal.php?mod=list&catid=331">机动车违法信息查询</a></dd></dl>
+<dl><dt>北海市</dt><dd><a target="_blank" href="http://www.gxjtaq.com/portal.php?mod=list&catid=331">机动车违法信息查询</a></dd></dl>
+<dl><dt>防城港市</dt><dd><a target="_blank" href="http://www.gxjtaq.com/portal.php?mod=list&catid=331">机动车违法信息查询</a></dd></dl>
+<dl><dt>钦州市</dt><dd><a target="_blank" href="http://www.gxjtaq.com/portal.php?mod=list&catid=331">机动车违法信息查询</a></dd></dl>
+<dl><dt>贵港市</dt><dd><a target="_blank" href="http://www.gxjtaq.com/portal.php?mod=list&catid=331">机动车违法信息查询</a></dd></dl>
+</div>
+</div>
+<!-- 贵州 -->
+<div class="traf_box mt10"><a class="clear" name="m_guizhou" id="m_guizhou">&nbsp;</a>
+<div class="t_b_hd">贵州省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.gzjjzd.gov.cn/search.php">贵州全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.gzjjzd.gov.cn/search.php" class="fblue">贵州省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://www.gzjjzd.gov.cn/Autonomous_Announcement.php" class="fblue">网上选号</a>&nbsp;&nbsp;<a target="_blank" href="http://www.gzjjzd.gov.cn/search_jkjlimg.php" class="fblue">全省违法监控图片查询</a></p>
+<dl><dt>贵阳市</dt><dd><a target="_blank" href="http://0851.weizhangwang.com/">机动车违法信息查询</a><a target="_blank" href="http://0851.weizhangwang.com/">驾驶人违法记分查询</a></dd></dl>
+<dl><dt>遵义市</dt><dd><a target="_blank" href="http://www.gzjjzd.gov.cn/Autonomous_Announcement.php">机动车违法信息查询</a></dd></dl>
+<dl><dt>安顺市</dt><dd><a target="_blank" href="http://www.gzjjzd.gov.cn/Autonomous_Announcement.php">机动车违法信息查询</a></dd></dl>
+<dl><dt>铜仁地区</dt><dd><a target="_blank" href="http://www.gzjjzd.gov.cn/Autonomous_Announcement.php">机动车违法信息查询</a></dd></dl>
+<dl><dt>六盘水</dt><dd><a target="_blank" href="http://www.gzjjzd.gov.cn/Autonomous_Announcement.php">机动车违法信息查询</a></dd></dl>
+</div>
+</div>
+<!-- 海南 -->
+<div class="traf_box mt10"><a class="clear" name="m_hainan" id="m_hainan">&nbsp;</a>
+<div class="t_b_hd">海南省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://hainanjj.gov.cn/info5/index.html">海南全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://hainanjj.gov.cn/info5/index.html" class="fblue">海南省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://bmxt.hainanjj.gov.cn/vehweb/download.htm" class="fblue">网上选号</a></p>
+<dl><dt>海口市</dt><dd><a target="_blank" href="http://hainanjj.gov.cn/info5/index.html">交通违法信息查询</a></dd></dl>
+<dl><dt>三亚市</dt><dd><a target="_blank" href="http://hainanjj.gov.cn/info5/index.html">交通违法信息查询</a></dd></dl>
+</div>
+</div>
+
+<!-- 河北 -->
+<div class="traf_box mt10"><a class="clear" name="m_hebei" id="m_hebei">&nbsp;</a>
+<div class="t_b_hd">河北省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.hbgajg.com/service">河北全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.hbgajg.com/service" class="fblue">河北省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://www.hbgajg.com/service/show-46-46.html" class="fblue">电子眼分布</a></p>
+<dl><dt>石家庄市</dt><dd><a target="_blank" href="http://www.hbgajg.com/service">交通违法信息查询</a></dd></dl>
+<dl><dt>唐山市</dt><dd><a target="_blank" href="http://60.2.100.76:8090/tsweb/">交通违法信息查询</a></dd></dl>
+<dl><dt>秦皇岛市</dt><dd><a target="_blank" href="http://www.qhdjtgl.com.cn/ask/chaxun.php">车辆违章信息查询</a></dd></dl>
+<dl><dt>邢台市</dt><dd><a target="_blank" href="http://www.hbgajg.com/service">交通违法信息查询</a></dd></dl>
+<dl><dt>张家口市</dt><dd><a target="_blank" href="http://www.hbgajg.com/service">交通违法信息查询</a></dd></dl>
+<dl><dt>承德市</dt><dd><a target="_blank" href="http://www.cdjj.gov.cn/">交通违法信息查询</a></dd></dl>
+<dl><dt>廊坊市</dt><dd><a target="_blank" href="http://www.lfcgs.gov.cn/">交通违法信息查询</a></dd></dl>
+<dl><dt>保定市</dt><dd><a target="_blank" href="http://www.bdcgs.com/bdcgs/">交通违法信息查询</a></dd></dl>
+<dl><dt>衡水市</dt><dd><a target="_blank" href="http://hsswscgs.jdcjsr.com/Index.aspx">交通违法信息查询</a></dd></dl>
+</div>
+</div>
+
+<!-- 河南 -->
+<div class="traf_box mt10"><a class="clear" name="m_henan" id="m_henan">&nbsp;</a>
+<div class="t_b_hd">河南省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.zzcgs.com.cn/">河南全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.zzcgs.com.cn/" class="fblue">河南省全省机动车违法查询</a></p>
+<dl><dt>郑州市</dt><dd><a target="_blank" href="http://www.zzcgs.com.cn/ywbl-id-839.aspx">机动车违法查询</a><a target="_blank" href="http://www.zzcgs.com.cn/ywbl-id-838.aspx">驾驶人违法查询</a><a target="_blank" href="http://www.zzcgs.com.cn/ywbl-id-840.aspx">驾驶人考试状态查询</a></dd></dl>
+<dl><dt>开封市</dt><dd><a target="_blank" href="http://www.kfpolice.com/web/default.aspx">机动车违法信息查询</a></dd></dl>
+<dl><dt>洛阳市</dt><dd><a target="_blank" href="http://www.lycgs.com/Pages/VioSurveil.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.lycgs.com/Pages/Violation.aspx">驾驶人违法查询</a><a target="_blank" href="http://www.lycgs.com/Pages/VehSearch.aspx">机动车信息查询</a><a target="_blank" href="http://www.lycgs.com/Pages/LicenseSearch.aspx">驾照信息查询</a></dd></dl>
+<dl><dt>平顶山市</dt><dd><a target="_blank" href="http://www.pdsjj.gov.cn/Default.aspx">车辆违法信息查询</a><a target="_blank" href="http://www.pdsjj.gov.cn/Default.aspx">驾驶人记分查询</a></dd></dl>
+<dl><dt>安阳市</dt><dd><a target="_blank" href="http://www.anyangdx.com/Web_cgsAsking.aspx">车辆违法信息查询</a><a target="_blank" href="http://www.anyangdx.com/Web_cgsAsking.aspx">驾驶人记分查询</a></dd></dl>
+<dl><dt>鹤壁市</dt><dd><a target="_blank" href="http://www.hebijj.gov.cn/cxyw.jsp?fid=1">车辆违法信息查询</a><a target="_blank" href="http://www.hebijj.gov.cn/cxyw.jsp?fid=2">驾驶人违法信息查询</a><a target="_blank" href="http://www.hebijj.gov.cn/cxyw.jsp?fid=3">驾驶人违法记分查询</a><a target="_blank" href="http://www.hebijj.gov.cn/cxyw.jsp?fid=4">驾驶人缴费信息查询</a></dd></dl>
+<dl><dt>新乡市</dt><dd><a target="_blank" href="http://www.xxcgs.com/searchs/cheweifa.aspx">车辆违法信息查询</a><a target="_blank" href="http://www.xxcgs.com/searchs/renweifa.aspx">驾驶人记分查询</a><a target="_blank" href="http://www.xxcgs.com/searchs/che.aspx">机动车信息查询</a><a target="_blank" href="http://www.xxcgs.com/searchs/jsr.aspx">驾驶员信息查询</a></dd></dl>
+<dl><dt>焦作市</dt><dd><a target="_blank" href="http://www.jzga.gov.cn/wzcx/lookup.aspx">违章车辆查询系统</a></dd></dl>
+<dl><dt>濮阳市</dt><dd><a target="_blank" href="http://lxjj.pyxww.com:8001/Index.html">交通违法查询</a></dd></dl>
+<dl><dt>许昌市</dt><dd><a target="_blank" href="http://www.xcjjw.gov.cn/">车辆违法信息查询</a></dd></dl>
+<dl><dt>三门峡市</dt><dd><a target="_blank" href="http://www.smxcgs.cn/YW/Query/ForceQuery_Vehicle.aspx">机动车违法查询</a><a target="_blank" href="http://www.smxcgs.cn/YW/Query/ForceQuery_Driver.aspx">驾驶人违法查询</a><a target="_blank" href="http://www.smxcgs.cn/YW/Query/InfoQuery_Vehicle.aspx">机动车信息查询</a><a target="_blank" href="http://www.smxcgs.cn/YW/Query/InfoQuery_Driver.aspx">驾驶人信息查询</a></dd></dl>
+<dl><dt>南阳市</dt><dd><a target="_blank" href="http://www.nycgs.cn/">车辆违法信息查询</a><a target="_blank" href="http://www.nycgs.cn/">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>商丘市</dt><dd><a target="_blank" href="http://sqrb.com.cn/sqjj/sqwzcx.htm">机动车辆/驾驶员违法查询</a></dd></dl>
+<dl><dt>周口市</dt><dd><a target="_blank" href="http://jiaojing.zkga.gov.cn/cx/cx.htm">车辆违法信息查询</a><a target="_blank" href="http://jiaojing.zkga.gov.cn/cx/cx.htm">驾驶人记分查询</a></dd></dl>
+<dl><dt>驻马店市</dt><dd><a target="_blank" href="http://218.29.234.5:8081/">机动车违法信息查询</a><a target="_blank" href="http://218.29.234.5:8081/">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>济源市</dt><dd><a target="_blank" href="http://www.jycgs.com/include/infoSearch.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.jycgs.com/include/infoIndex.aspx">车管所信息查询</a></dd></dl>
+</div>
+</div>
+<!-- 黑龙江 -->
+<div class="traf_box mt10"><a class="clear" name="m_heilongjiang" id="m_heilongjiang">&nbsp;</a>
+<div class="t_b_hd">黑龙江省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.hljjj.gov.cn:8081/Home/Wfcx">黑龙江全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/Wfcx" class="fblue">黑龙江省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://www.hljjj.gov.cn:8082/" class="fblue">网上选号</a></p>
+<dl><dt>哈尔滨市</dt><dd><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/Wfcx">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/Vehcx">机动车信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/Jfcx">驾驶人信息查询</a></dd></dl>
+<dl><dt>齐齐哈尔市</dt><dd><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/Wfcx">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a><a target="_blank" href="http://www.jtaqxx.com/clcx.asp">机动车信息查询</a><a target="_blank" href="http://www.jtaqxx.com/jsrcx.asp">驾驶人信息查询</a></dd></dl>
+<dl><dt>鸡西市</dt><dd><a target="_blank" href="http://www.sysjj.cn/wfcx/?xzqh=G">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>鹤岗市</dt><dd><a target="_blank" href="http://www.sysjj.cn/wfcx/?xzqh=H">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>双鸭山市</dt><dd><a target="_blank" href="http://www.sysjj.cn/wfcx/?xzqh=J">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>大庆市</dt><dd><a target="_blank" href="http://www.sysjj.cn/wfcx/?xzqh=E">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>伊春市</dt><dd><a target="_blank" href="http://www.sysjj.cn/wfcx/?xzqh=F">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>佳木斯市</dt><dd><a target="_blank" href="http://www.sysjj.cn/wfcx/?xzqh=D">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>七台河市</dt><dd><a target="_blank" href="http://www.sysjj.cn/wfcx/?xzqh=K">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>牡丹江市</dt><dd><a target="_blank" href="http://218.10.97.15:91/jdc.aspx">机动车违章查询</a><a target="_blank" href="http://218.10.97.15:91/jdcxx.aspx">机动车信息查询</a><a target="_blank" href="http://218.10.97.15:91/jszxx.aspx">驾驶人信息查询</a></dd></dl>
+<dl><dt>黑河市</dt><dd><a target="_blank" href="http://www.sysjj.cn/wfcx/?xzqh=N">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>绥化市</dt><dd><a target="_blank" href="http://www.sysjj.cn/wfcx/?xzqh=M">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>大兴安岭</dt><dd><a target="_blank" href="http://www.sysjj.cn/wfcx/?xzqh=P">机动车违法信息查询</a><a target="_blank" href="http://www.hljjj.gov.cn:8081/Home/DrvWfcx">驾驶员违法信息查询</a></dd></dl>
+</div>
+</div>
+<!-- 湖北 -->
+<div class="traf_box mt10"><a class="clear" name="m_hubei" id="m_hubei">&nbsp;</a>
+<div class="t_b_hd">湖北省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.hb122.org/main.html">湖北全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.hb122.org/main.html" class="fblue">湖北省全省机动车违法查询</a></p>
+<dl><dt>武汉市</dt><dd><a target="_blank" href="http://www.whjg.gov.cn:8082/wzxxcx/query/carQuery.jsp">机动车违法查询</a><a target="_blank" href="http://www.whjg.gov.cn:8082/wzxxcx/query/drivePersonQuery.jsp">驾驶员违法查询</a><a target="_blank" href="http://user.whjg.gov.cn/user1/select.aspx">违章自助处理</a><a target="_blank" href="http://www.whsjgj.com.cn:9080/vehweb/download.htm">新车网上选号</a><a target="_blank" href="http://user.whjg.gov.cn/user1/clwz_qy_check.aspx">单位车辆违法查询</a></dd></dl>
+<dl><dt>黄石市</dt><dd><a target="_blank" href="http://hsjj.hsdcw.com/">交通违法信息查询</a><a target="_blank" href="http://gaj.huangshi.gov.cn/default.php?mod=c&s=ss2f04252">车管所业务</a><a target="_blank" href="http://58.51.240.101:9081/vehweb/download.htm">机动车选号</a></dd></dl>
+<dl><dt>十堰市</dt><dd><a target="_blank" href="http://www.hbsydx.com/">机动车违法信息查询</a><a target="_blank" href="http://www.syjg.gov.cn/">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>宜昌市</dt><dd><a target="_blank" href="http://ycjj.yichang.gov.cn/traffic/infoquery/illegalSearch">交通违法查询</a><a target="_blank" href="http://ycjj.yichang.gov.cn/traffic/infoquery/vehicleSearch">机动车信息查询</a><a target="_blank" href="http://ycjj.yichang.gov.cn/traffic/infoquery/driverSearch">驾驶证信息查询</a></dd></dl>
+<dl><dt>襄阳市</dt><dd><a target="_blank" href="http://wz.ieche.com/xiangfan-weizhang.html">电子警察查询</a><a target="_blank" href="http://wz.ieche.com/xiangfan-weizhang.html">交通违法信息查询</a><a target="_blank" href="http://wz.ieche.com/xiangfan-weizhang.html">违法行为处理地址</a></dd></dl>
+
+<dl><dt>鄂州市</dt><dd><a target="_blank" href="http://www.jm122.org/ezhou/main.do">车辆违章查询</a><a target="_blank" href="http://www.jm122.org/ezhou/jtcx/searchLocalePunishInfo.jsp">现场处罚查询</a><a target="_blank" href="http://www.jm122.org/ezhou/jtcx/search12scoreInfo.jsp">记满12分查询</a><a target="_blank" href="http://www.jm122.org/ezhou/jtcx/searchElecPoliceInfo.jsp">电子警察查询</a></dd></dl>
+<dl><dt>荆门市</dt><dd><a target="_blank" href="http://219.138.120.237:63150/vehi/query/queryCar.jsp">机动车信息查询</a><a target="_blank" href="http://219.138.120.237:63150/vehi/query/queryDriver.jsp">驾驶证信息查询</a><a target="_blank" href="http://219.138.120.237:63150/vehi/query/queryIllegal_pre.jsp">违法信息查询</a><a target="_blank" href="http://219.138.120.237:63150/vehi/query/queryAccident_pre.jsp">交通事故处理</a></dd></dl>
+<dl><dt>孝感市</dt><dd><a target="_blank" href="http://www.hbxgjj.com/">机动车违法信息查询</a><a target="_blank" href="http://www.hbxgjj.com/">驾驶员违法信息查询</a><a target="_blank" href="http://www.hbxgjj.com/">机动车信息查询</a><a target="_blank" href="http://www.hbxgjj.com/">驾驶证信息查询</a><a target="_blank" href="http://www.hbxgjj.com:9080/vehweb/download.htm">网上选号</a></dd></dl>
+<dl><dt>荆州市</dt><dd><a target="_blank" href="http://www.jzjtgl.com/">车辆违法信息查询（电子眼）</a><a target="_blank" href="http://www.jzjtgl.com/">驾驶人违法信息查询</a><a target="_blank" href="http://www.jzjtgl.com/vehweb/download.htm">网上选号</a></dd></dl>
+<dl><dt>随州市</dt><dd><a target="_blank" href="http://www.sz122.net/query.html">机动车违法信息查询</a><a target="_blank" href="http://www.sz122.net/query.html">驾驶员违法信息查询</a></dd></dl>
+<dl><dt>仙桃市</dt><dd><a target="_blank" href="http://www.ieche.com/weizhang/xiantao.html">交通违法信息查询</a></dd></dl>
+<dl><dt>潜江市</dt><dd><a target="_blank" href="http://www.qjjjzd.com/jdcwfxxzx.asp">机动车违法信息查询</a><a target="_blank" href="http://www.qjjjzd.com/jsywfxxzx.asp">驾驶员违法信息查询</a><a target="_blank" href="http://www.qjjjzd.com/jdcxxzx.asp">车辆信息查询</a><a target="_blank" href="http://www.qjjjzd.com/jsyxxzx.asp">驾驶员信息查询</a></dd></dl>
+
+<dl><dt>恩施州</dt><dd><a target="_blank" href="http://www.es122.com.cn/">违法车辆查询</a><a target="_blank" href="http://www.es122.com.cn/">驾驶员违法信息查询</a></dd></dl>
+</div>
+</div>
+<!-- 湖南 -->
+<div class="traf_box mt10"><a class="clear" name="m_hunan" id="m_hunan">&nbsp;</a>
+<div class="t_b_hd">湖南省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://search.pazx888.com/">湖南全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://search.pazx888.com/" class="fblue">湖南省全省机动车违法查询</a></p>
+<dl><dt>长沙市</dt><dd><a target="_blank" href="http://www.ieche.com/weizhang/changsha.html">机动车违法查询</a><a target="_blank" href="http://www.ieche.com/weizhang/changsha.html">驾驶人记分查询</a></dd></dl>
+<dl><dt>株洲市</dt><dd><a target="_blank" href="http://www.bitauto.com/weizhang/zhuzhou.html">机动车违法信息查询</a><a target="_blank" href="http://www.bitauto.com/weizhang/zhuzhou.html">驾驶人违法信息查询</a><a target="_blank" href="http://www.bitauto.com/weizhang/zhuzhou.html">驾驶人信息查询</a></dd></dl>
+<dl><dt>湘潭市</dt><dd><a target="_blank" href="http://www.bitauto.com/weizhang/xiangtan.html">交通违章信息查询</a></dd></dl>
+<dl><dt>衡阳市</dt><dd><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/index.jsp">机动车违法信息查询</a><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/jsrcx.jsp">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>邵阳市</dt><dd><a target="_blank" href="http://www.bitauto.com/weizhang/shaoyang.html">车辆违法查询</a><a target="_blank" href="http://www.bitauto.com/weizhang/shaoyang.html">驾驶证件查询</a><a target="_blank" href="http://www.bitauto.com/weizhang/shaoyang.html">车辆信息查询</a></dd></dl>
+<dl><dt>岳阳市</dt><dd><a target="_blank" href="http://www.bitauto.com/weizhang/yueyang.html">交通违章信息查询</a></dd></dl>
+<dl><dt>常德市</dt><dd><a target="_blank" href="http://www.changde.gov.cn/art/2008/12/29/art_2511_83281.html">交通违章信息查询</a></dd></dl>
+<dl><dt>张家界市</dt><dd><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/index.jsp">机动车违法信息查询</a><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/jsrcx.jsp">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>益阳市</dt><dd><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/index.jsp">机动车违法信息查询</a><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/jsrcx.jsp">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>郴州市</dt><dd><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/index.jsp">机动车违法信息查询</a><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/jsrcx.jsp">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>永州市</dt><dd><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/index.jsp">机动车违法信息查询</a><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/jsrcx.jsp">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>怀化市</dt><dd><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/index.jsp">机动车违法信息查询</a><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/jsrcx.jsp">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>娄底市</dt><dd><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/index.jsp">机动车违法信息查询</a><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/jsrcx.jsp">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>湘西州</dt><dd><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/index.jsp">机动车违法信息查询</a><a target="_blank" href="http://www.hnhyjj.gov.cn/TrafficQuery/jsrcx.jsp">驾驶人违法信息查询</a></dd></dl>
+</div>
+</div>
+<!-- 吉林 -->
+<div class="traf_box mt10"><a class="clear" name="m_jilin" id="m_jilin">&nbsp;</a>
+<div class="t_b_hd">吉林省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.jljj.cn/">吉林全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.jljj.cn/" class="fblue">吉林省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://www.jljj.cn/hlwxh/index.jhtml" class="fblue">网上选号</a></p>
+<dl><dt>长春市</dt><dd><a target="_blank" href="http://www.ccjg.gov.cn/">车辆信息查询</a><a target="_blank" href="http://www.ccjg.gov.cn/">驾驶员信息查询</a></dd></dl>
+<dl><dt>吉林市</dt><dd><a target="_blank" href="http://125.32.11.12:8000/cgs/jsp/main/index.jsp?cgsId=8aea92bd3474119c013474fddca00de6">车辆违章信息查询</a><a target="_blank" href="http://gafw.jl.gov.cn/jilin/">驾驶员信息查询</a></dd></dl>
+<dl><dt>四平市</dt><dd><a target="_blank" href="http://125.32.11.12:8000/cgs/jsp/main/index.jsp?cgsId=8aea92bd3474119c013474fdf5490dec">车辆违章信息查询</a><a target="_blank" href="http://gafw.jl.gov.cn/siping/">驾驶员信息查询</a></dd></dl>
+<dl><dt>辽源市</dt><dd><a target="_blank" href="http://125.32.11.12:8000/cgs/jsp/main/index.jsp?cgsId=8aea92bd3474119c013474fe27b30df2">车辆违章信息查询</a><a target="_blank" href="http://gafw.jl.gov.cn/liaoyuan/">驾驶员信息查询</a></dd></dl>
+<dl><dt>通化市</dt><dd><a target="_blank" href="http://125.32.11.12:8000/cgs/jsp/main/index.jsp?cgsId=8aea92bd3474119c013474fe481c0df4">车辆信息查询</a><a target="_blank" href="http://gafw.jl.gov.cn/tonghua/">驾驶员信息查询</a></dd></dl>
+<dl><dt>白山市</dt><dd><a target="_blank" href="http://125.32.11.12:8000/cgs/jsp/main/index.jsp?cgsId=8aea92bd3474119c013474fe80140dfc">车辆信息查询</a><a target="_blank" href="http://www.bitauto.com/weizhang/songyuan.html">驾驶员信息查询</a></dd></dl>
+<dl><dt>松原市</dt><dd><a target="_blank" href="http://125.32.11.12:8000/cgs/jsp/main/index.jsp?cgsId=8aea92bd3474119c013474feb4530e04">车辆信息查询</a><a target="_blank" href="http://gafw.jl.gov.cn/songyuan/">驾驶员信息查询</a></dd></dl>
+<dl><dt>白城市</dt><dd><a target="_blank" href="http://125.32.11.12:8000/cgs/jsp/main/index.jsp?cgsId=8aea92bd3474119c013474fe9d7f0e00">车辆信息查询</a><a target="_blank" href="http://gafw.jl.gov.cn/baicheng/">驾驶员信息查询</a></dd></dl>
+<dl><dt>延边州</dt><dd><a target="_blank" href="http://125.32.11.12:8000/cgs/jsp/main/index.jsp?cgsId=8aea92bd3474119c013474fedf3b0e0a">车辆信息查询</a><a target="_blank" href="http://gafw.jl.gov.cn/yanbian/">驾驶员信息查询</a></dd></dl>
+</div>
+</div>
+<!-- 江苏 -->
+<div class="traf_box mt10"><a class="clear" name="m_jiangsu" id="m_jiangsu">&nbsp;</a>
+<div class="t_b_hd">江苏省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.jsga.gov.cn/www/gat/2010/wscgs1.htm">江苏全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.jsga.gov.cn/www/gat/2010/wscgs1.htm" class="fblue">江苏省全省机动车违法查询</a></p>
+<dl><dt>南京市</dt><dd><a target="_blank" href="http://wzcx.njcgs.com/">车辆违章查询</a><a target="_blank" href="http://wzcx.njcgs.com/jfcx/">驾驶人记分查询</a></dd></dl>
+<dl><dt>无锡市</dt><dd><a target="_blank" href="http://www.wxga.gov.cn/default.php?mod=c&s=ssb69ad59">机动车违法查询</a><a target="_blank" href="http://jxj.wuxi.gov.cn/">驾驶人计分查询</a></dd></dl>
+<dl><dt>徐州市</dt><dd><a target="_blank" href="http://www.xzjgw.com/">车辆违章查询</a><a target="_blank" href="http://www.xzjgw.com/">驾驶证扣分查询</a><a target="_blank" href="http://www.xzjxj.gov.cn/Home/InfoSelect">驾驶人信息查询</a><a target="_blank" href="http://www.xzjxj.gov.cn/Home/InfoSelect">机动车信息查询</a></dd></dl>
+<dl><dt>常州市</dt><dd><a target="_blank" href="http://czjxj.czinfo.net/dzjccx.asp">机动车违法信息查询</a><a target="_blank" href="http://czjxj.czinfo.net/jfcx.asp">驾驶人违法记分查询</a></dd></dl>
+<dl><dt>苏州市</dt><dd><a target="_blank" href="http://58.210.126.206:9091/QueryVD/">机动车违法信息查询</a><a target="_blank" href="http://58.210.126.206:9091/QueryVD/">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>南通市</dt><dd><a target="_blank" href="http://www.ntjxj.com/InternetWeb/wzcx.jsp">驾驶员记分查询</a><a target="_blank" href="http://www.ntjxj.com/InternetWeb/wzcx.jsp">机动车违章查询</a></dd></dl>
+<dl><dt>连云港市</dt><dd><a target="_blank" href="http://www.lygjg.net/index.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.lygjg.net/index.aspx">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>淮安市</dt><dd><a target="_blank" href="http://www.hajxj.gov.cn/jtwfcx/clwfsearch.asp">机动车违法信息查询</a><a target="_blank" href="http://www.hajxj.gov.cn/jtwfcx/jsysearch.asp">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>盐城市</dt><dd><a target="_blank" href="http://cgs.ycga.gov.cn/">机动车违法查询</a><a target="_blank" href="http://cgs.ycga.gov.cn/">驾驶人信息查询</a></dd></dl>
+<dl><dt>扬州市</dt><dd><a target="_blank" href="http://www.yzga.gov.cn/default.php?mod=c&s=ssb6cfb06">驾驶人记分查询</a><a target="_blank" href="http://www.yzga.gov.cn/default.php?mod=c&s=ssb6cfb06">机动车违法曝光查询</a><a target="_blank" href="http://www.yzga.gov.cn/default.php?mod=c&s=ssb6cfb06">异地机动车违法曝光查询</a></dd></dl>
+<dl><dt>镇江市</dt><dd><a target="_blank" href="http://www.zjcgs.gov.cn/wfcx.aspx">机动车曝光信息查询</a><a target="_blank" href="http://www.zjcgs.gov.cn/wfcx.aspx">驾驶人违法信息查询</a><a target="_blank" href="http://www.zjcgs.gov.cn/wfcx.aspx">驾驶人累积记分查询</a></dd></dl>
+<dl><dt>泰州市</dt><dd><a target="_blank" href="http://jdc.tzjgw.com:8081/cgsSearch/jdcSearch.aspx">机动车违法信息查询</a><a target="_blank" href="http://jdc.tzjgw.com:8081/cgsSearch/jszSearch.aspx">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>宿迁市</dt><dd><a target="_blank" href="http://www.sqjg.net/Index.html">机动车违法信息查询</a><a target="_blank" href="http://www.sqjg.net/Index.html">驾驶证记分查询</a></dd></dl>
+</div>
+</div>
+<!-- 江西 -->
+<div class="traf_box mt10"><a class="clear" name="m_jiangxi" id="m_jiangxi">&nbsp;</a>
+<div class="t_b_hd">江西省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://jx.jxhld.gov.cn:8088/zhcx/web/Car.html">江西全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/Car.html" class="fblue">江西省全省机动车违法查询</a></p>
+<dl><dt>南昌市</dt><dd><a target="_blank" href="http://www.ncga.gov.cn/jmhd/cx_jj.aspx">交通违法查询</a></dd></dl>
+<dl><dt>景德镇市</dt><dd><a target="_blank" href="http://www.ieche.com/weizhang/jingdezhen.html">交通违章查询</a></dd></dl>
+<dl><dt>萍乡市</dt><dd><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/car_jsp/car_wf.jsp">交通违法查询</a><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/jsz_jsp/jsz_intergral.jsp">驾驶证积分查询</a></dd></dl>
+<dl><dt>九江市</dt><dd><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/car_jsp/car_wf.jsp">交通违法查询</a><a target="_blank" href="http://www.jjsga.gov.cn/chaxun.aspx?classid=86">机动车服务查询</a></dd></dl>
+<dl><dt>新余市</dt><dd><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/car_jsp/car_wf.jsp">交通违法查询</a><a target="_blank" href="http://www.xinyu.gov.cn/scene/jdcfw/">机动车服务查询</a></dd></dl>
+<dl><dt>鹰潭市</dt><dd><a target="_blank" href="http://www.ytsgaj.gov.cn/default.aspx">车辆违章查询</a></dd></dl>
+<dl><dt>赣州市</dt><dd><a target="_blank" href="http://www.gzsjjzd.gov.cn/cx.asp">交通违法信息查询</a><a target="_blank" href="http://www.gzsjjzd.gov.cn/ydcx.asp">外省外地违法车辆查询</a></dd></dl>
+<dl><dt>吉安市</dt><dd><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/car_jsp/car_wf.jsp">机动车违法信息查询</a><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/jsz_jsp/jsz_wf.jsp">驾驶证违法信息查询</a></dd></dl>
+<dl><dt>宜春市</dt><dd><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/car_jsp/car_wf.jsp">机动车违法信息查询</a><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/jsz_jsp/jsz_wf.jsp">驾驶证违法信息查询</a></dd></dl>
+<dl><dt>抚州市</dt><dd><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/car_jsp/car_wf.jsp">机动车违法信息查询</a><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/jsz_jsp/jsz_wf.jsp">驾驶证违法信息查询</a></dd></dl>
+<dl><dt>上饶市</dt><dd><a target="_blank" href="http://www.srjxj.com/home.asp">机动车违法信息查询</a><a target="_blank" href="http://jx.jxhld.gov.cn:8088/zhcx/web/jsz_jsp/jsz_wf.jsp">驾驶证违法信息查询</a></dd></dl>
+</div>
+</div>
+<!-- 辽宁 -->
+<div class="traf_box mt10"><a class="clear" name="m_liaoning" id="m_liaoning">&nbsp;</a>
+<div class="t_b_hd">辽宁省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.lnjj.gov.cn/_WFCX.aspx">辽宁全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.lnjj.gov.cn/_WFCX.aspx" class="fblue">辽宁省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://cgs.lnga.gov.cn/lncgs/map.jsp" class="fblue">网上选号</a></p>
+<dl><dt>沈阳市</dt><dd><a target="_blank" href="http://218.25.58.44/searchsys/">电子警察拍照信息</a><a target="_blank" href="http://218.25.58.44/searchsys/">驾驶员信息</a></dd></dl>
+<dl><dt>大连市</dt><dd><a target="_blank" href="http://www.dalianjiaojing.com/">车辆违章查询</a><a target="_blank" href="http://www.dlutc.gov.cn/index.php?option=com_content&view=article&id=129&Itemid=68">驾驶人违法信息查询</a><a target="_blank" href="http://www.dlutc.gov.cn/index.php?option=com_content&view=article&id=129&Itemid=68">车辆信息查询</a><a target="_blank" href="http://www.dlutc.gov.cn/index.php?option=com_content&view=article&id=129&Itemid=68">驾驶人信息查询</a></dd></dl>
+<dl><dt>鞍山市</dt><dd><a target="_blank" href="http://www.asgajj.com/">机动车违法信息查询</a><a target="_blank" href="http://www.asgajj.com/">驾驶人违法记分查询</a></dd></dl>
+<dl><dt>抚顺市</dt><dd><a target="_blank" href="http://www.fsjjzd.gov.cn/">车辆违章查询</a><a target="_blank" href="http://www.fsjjzd.gov.cn/">驾驶人积分查询</a></dd></dl>
+<dl><dt>本溪市</dt><dd><a target="_blank" href="http://www.bxgaggfwpt.gov.cn/search/jdcsearch/WebForm1.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.bxgaggfwpt.gov.cn/search/jsysearch/jsy_search.aspx">驾驶员记分查询</a></dd></dl>
+<dl><dt>丹东市</dt><dd><a target="_blank" href="http://www.dd122.com/index.asp">交通违章信息查询</a><a target="_blank" href="http://www.dd122.com/index.asp">驾驶员信息查询</a></dd></dl>
+<dl><dt>锦州市</dt><dd><a target="_blank" href="http://www.jzgajx.com/homepart/default2.aspx">车辆违法查询</a><a target="_blank" href="http://www.jzgajx.com/homepart/default2.aspx">驾驶人违法查询</a></dd></dl>
+<dl><dt>阜新市</dt><dd><a target="_blank" href="http://218.24.200.244/">交通违法网上查询</a></dd></dl>
+<dl><dt>盘锦市</dt><dd><a target="_blank" href="http://jjd.panjin.gov.cn/">机动车违法信息查询</a><a target="_blank" href="http://jjd.panjin.gov.cn/">驾驶人违法记分查询</a></dd></dl>
+<dl><dt>铁岭市</dt><dd><a target="_blank" href="http://0410.weizhangwang.com/">车辆违章查询</a></dd></dl>
+<dl><dt>营口市</dt><dd><a target="_blank" href="http://www.ykjj.gov.cn/wzcx.php">违章查询</a><a target="_blank" href="http://www.ykjj.gov.cn/wfcx.php">机动车违法信息查询</a><a target="_blank" href="http://www.ykjj.gov.cn/bfcx.php">机动车报废信息查询</a><a target="_blank" href="http://www.ykjj.gov.cn/jj_jycx.php">机动车检验查询</a></dd></dl>
+<dl><dt>朝阳市</dt><dd><a target="_blank" href="http://www.zgcy.gov.cn/car_seek/index.asp">车辆违章信息查询</a></dd></dl>
+<dl><dt>葫芦岛市</dt><dd><a target="_blank" href="http://www.hldgajjzd.com/sjcx/Index.asp">车辆违章信息查询</a><a target="_blank" href="http://www.hldgajjzd.com/sjcx/ljjfcx.asp">驾驶人积分查询</a></dd></dl>
+</div>
+</div>
+<!-- 内蒙古 -->
+<div class="traf_box mt10"><a class="clear" name="m_neimenggu" id="m_neimenggu">&nbsp;</a>
+<div class="t_b_hd">内蒙古省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.weizhang8.cn/neimenggu/">内蒙古全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://jjzd.nmgat.gov.cn/QueryViolation.jsp" class="fblue">内蒙古省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://cha.chelink.com/paizhao/neimenggu.htm" class="fblue">网上选号</a></p>
+<dl><dt>呼和浩特市</dt><dd><a target="_blank" href="http://cgs.hhhtgajt.com/">车管所官网</a></dd></dl>
+<dl><dt>包头市</dt><dd><a target="_blank" href="http://www.btjj.gov.cn/html/wscgs/wscx.html">车辆违法查询</a><a target="_blank" href="http://www.btjj.gov.cn/html/wscgs/wscx.html">驾驶员积分查询</a><a target="_blank" href="http://www.btjj.gov.cn/html/wscgs/wscx.html">报废车辆查询</a></dd></dl>
+<dl><dt>乌海市</dt><dd><a target="_blank" href="http://123.178.207.62/drivertestbooking/wz/wzcx.action">车辆违法行为查询</a><a target="_blank" href="http://123.178.207.62/drivertestbooking/wz/jfcx.action">驾驶人积分查询</a></dd></dl>
+<dl><dt>赤峰市</dt><dd><a target="_blank" href="http://0476.weizhangwang.com/">机动车违章查询</a><a target="_blank" href="http://0476.weizhangwang.com/">机动车报废查询</a><a target="_blank" href="http://0476.weizhangwang.com/">机动车年检查询</a></dd></dl>
+<dl><dt>通辽市</dt><dd><a target="_blank" href="http://www.tlcgs.com/Zxcx/clwzcx.asp">车辆违章信息查询</a><a target="_blank" href="http://www.tlcgs.com/Zxcx/jsyjfcx.asp">驾驶人记分查询</a><a target="_blank" href="http://www.tlcgs.com/Zxcx/bfclcx.asp">机动车报废查询</a></dd></dl>
+<dl><dt>鄂尔多斯市</dt><dd><a target="_blank" href="http://218.21.213.91:9081/ordosww/veh/wzcx/wfcx.jsp">交通违章查询</a><a target="_blank" href="http://218.21.213.91:9081/ordosww/veh/list/ljbf_list.jsp">机动车报废查询</a><a target="_blank" href="http://www.ordosgajj.gov.cn/aboutcars.aspx">车管所官网</a></dd></dl>
+<dl><dt>呼伦贝尔市</dt><dd><a target="_blank" href="http://0470.weizhangwang.com/">机动车违章查询</a><a target="_blank" href="http://www.hlbejjzd.com/">驾驶人违法查询</a></dd></dl>
+<dl><dt>巴彦淖尔市</dt><dd><a target="_blank" href="http://www.bsgajj.gov.cn/WSCG.jsp">车辆违法查询</a><a target="_blank" href="http://www.bsgajj.gov.cn/WSCG.jsp">驾驶员积分查询</a><a target="_blank" href="http://www.bsgajj.gov.cn/WSCG.jsp">机动车报废查询</a></dd></dl>
+<dl><dt>乌兰察布市</dt><dd><a target="_blank" href="http://www.wlcbga.gov.cn/bgpd/zxcx/">车辆违法信息查询</a></dd></dl>
+<dl><dt>兴安盟</dt><dd><a target="_blank" href="http://www.xamjjzd.gov.cn/">机动车违章查询</a><a target="_blank" href="http://www.xamjjzd.gov.cn/">驾驶人查询</a></dd></dl>
+<dl><dt>锡林郭勒盟</dt><dd><a target="_blank" href="http://jjzd.nmgat.gov.cn/QueryViolation.jsp">车辆违法信息查询</a></dd></dl>
+<dl><dt>阿拉善盟</dt><dd><a target="_blank" href="http://www.alsgajj.gov.cn/">车辆违法信息查询</a><a target="_blank" href="http://www.alsgajj.gov.cn/">驾驶员计分查询</a></dd></dl>
+</div>
+</div>
+<!-- 宁夏 -->
+<div class="traf_box mt10"><a class="clear" name="m_ningxia" id="m_ningxia">&nbsp;</a>
+<div class="t_b_hd">宁夏省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.nxjj.gov.cn/sys/jdcwzGuest_displayAll.act">宁夏全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.nxjj.gov.cn/sys/jdcwzGuest_displayAll.act" class="fblue">宁夏省全省机动车违法查询</a></p>
+<dl><dt>银川市</dt><dd><a target="_blank" href="http://www.ycpolice.com/index.php/Traffic/wzcx">车辆违章查询</a></dd></dl>
+<dl><dt>石嘴山市</dt><dd><a target="_blank" href="http://www.szssjj.gov.cn/">车辆违章查询</a><a target="_blank" href="http://www.szssjj.gov.cn/">驾驶员违法查询</a></dd></dl>
+<dl><dt>吴忠市</dt><dd><a target="_blank" href="http://www.nxjj.gov.cn/web/nxjjxxw/index.jsp?region=wzjjw">交通违法查询</a></dd></dl>
+<dl><dt>固原市</dt><dd><a target="_blank" href="http://www.nxjj.gov.cn/web/nxjjxxw/index.jsp?region=gyjjw">交通违法信息查询</a></dd></dl>
+<dl><dt>中卫市</dt><dd><a target="_blank" href="http://www.nxjj.gov.cn/sys/jdcwzGuest_displayAll.act">交通违法信息查询</a></dd></dl>
+</div>
+</div>
+<!-- 青海 -->
+<div class="traf_box mt10"><a class="clear" name="m_qinghai" id="m_qinghai">&nbsp;</a>
+<div class="t_b_hd">青海省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://jjzd.qhga.gov.cn/InfoSerch/vehvioinfo.aspx">青海全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://jjzd.qhga.gov.cn/InfoSerch/vehvioinfo.aspx" class="fblue">青海省全省机动车违法查询</a></p>
+<dl><dt>西宁市</dt><dd><a target="_blank" href="http://www.qh.xinhuanet.com/trafficxn/search.htm">交通违法信息查询</a></dd></dl>
+</div>
+</div>
+<!-- 四川 -->
+<div class="traf_box mt10"><a class="clear" name="m_sichuan" id="m_sichuan">&nbsp;</a>
+<div class="t_b_hd">四川省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.scjj.gov.cn/">四川全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.scjj.gov.cn/" class="fblue">四川省全省机动车违法查询</a></p>
+<dl><dt>成都市</dt><dd><a target="_blank" href="http://www.cdjg.gov.cn/">车辆违法信息查询</a><a target="_blank" href="http://www.cdcgs.cn/Board/BoardIndex.aspx">机动车基本信息查询</a><a target="_blank" href="http://www.cdcgs.cn/Board/BoardIndex.aspx">驾照信息查询</a></dd></dl>
+<dl><dt>自贡市</dt><dd><a target="_blank" href="http://www.zg122.gov.cn/illegal.jsp">违法违章信息查询</a></dd></dl>
+<dl><dt>攀枝花市</dt><dd><a target="_blank" href="http://www.pzh122.com/cheguansuo/index.asp">车辆违法信息查询</a><a target="_blank" href="http://www.pzh122.com/cheguansuo/index.asp">车管所官网</a></dd></dl>
+<dl><dt>泸州市</dt><dd><a target="_blank" href="http://www.sclzga.gov.cn/default.php?mod=c&s=ss282aa42">驾驶证查询</a><a target="_blank" href="http://www.sclzga.gov.cn/default.php?mod=c&s=ss282aa42">行驶证查询</a></dd></dl>
+<dl><dt>德阳市</dt><dd><a target="_blank" href="http://www.dyjj.gov.cn/InfoQuery.aspx">电子监控记录查询</a><a target="_blank" href="http://www.dyjj.gov.cn/InfoQuery.aspx">驾驶人交通违法查询</a><a target="_blank" href="http://www.dyjj.gov.cn/InfoQuery.aspx">驾驶人/机动车信息查询</a></dd></dl>
+<dl><dt>绵阳市</dt><dd><a target="_blank" href="http://www.myjtaq.com/cx.asp">交通违章综合查询</a></dd></dl>
+<dl><dt>广元市</dt><dd><a target="_blank" href="http://www.scgyjj.gov.cn/">交通违法查询</a><a target="_blank" href="http://www.gygaj.gov.cn/ser/yw_index.aspx">驾驶人违法查询</a></dd></dl>
+<dl><dt>遂宁市</dt><dd><a target="_blank" href="http://www.snjg.gov.cn/">交通违法信息查询</a></dd></dl>
+<dl><dt>内江市</dt><dd><a target="_blank" href="http://www.scnjjj.gov.cn/TrafficSeach.aspx">违章查询</a><a target="_blank" href="http://www.scnjjj.gov.cn/TrafficSeach.aspx">驾证查询</a><a target="_blank" href="http://www.scnjjj.gov.cn/TrafficSeach.aspx">汽车年检查询</a><a target="_blank" href="http://www.scnjjj.gov.cn/TrafficSeach.aspx">驾证年检查询</a></dd></dl>
+<dl><dt>乐山市</dt><dd><a target="_blank" href="http://www.lssjj.cn/lscgs/index.html">交通违法信息查询</a></dd></dl>
+<dl><dt>南充市</dt><dd><a target="_blank" href="http://ncsjj.gov.cn/">车辆违章查询</a></dd></dl>
+<dl><dt>宜宾市</dt><dd><a target="_blank" href="http://www.scybjj.com/">交通违法信息查询</a><a target="_blank" href="http://www.scybjj.com/cglist.asp">车管所官网</a></dd></dl>
+<dl><dt>达州市</dt><dd><a target="_blank" href="http://0818.weizhangwang.com/">交通违章综合查询</a></dd></dl>
+<dl><dt>雅安市</dt><dd><a target="_blank" href="http://zt.beiww.com/html/node_3080.htm">车管所官网</a></dd></dl>
+<dl><dt>巴中市</dt><dd><a target="_blank" href="http://www.bz122.gov.cn/">违法信息查询</a></dd></dl>
+<dl><dt>资阳市</dt><dd><a target="_blank" href="http://www.sczyjj.gov.cn/TrafficSeach.aspx">交通违章综合查询</a></dd></dl>
+<dl><dt>凉山州</dt><dd><a target="_blank" href="http://0834.weizhangwang.com/">交通违章综合查询</a></dd></dl>
+</div>
+</div>
+<!-- 山东 -->
+<div class="traf_box mt10"><a class="clear" name="m_shandong" id="m_shandong">&nbsp;</a>
+<div class="t_b_hd">山东省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.sdwscgs.com:9080/zdwz/">山东全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.sdwscgs.com:9080/zdwz/" class="fblue">山东省全省机动车违法查询</a></p>
+<dl><dt>济南市</dt><dd><a target="_blank" href="http://218.57.137.34/jnjjwebnew/GongAnIndex/GongAnIndex.aspx">车辆违法信息查询</a><a target="_blank" href="http://218.57.137.34/jnjjwebnew/GongAnIndex/GongAnIndex.aspx">驾驶员积分查询</a><a target="_blank" href="http://60.208.73.77/cheguansuo/homePage.action">车管所官网</a></dd></dl>
+<dl><dt>青岛市</dt><dd><a target="_blank" href="http://0532.weizhangwang.com/">车辆违法信息查询</a><a target="_blank" href="http://0532.weizhangwang.com/">驾驶人违法记分查询</a><a target="_blank" href="http://202.110.193.206:9080/wsgg/jdccx.do">机动车信息查询</a><a target="_blank" href="http://202.110.193.206:9080/wsgg/jszcx.do">驾驶人信息查询</a></dd></dl>
+<dl><dt>即墨市</dt><dd><a target="_blank" href="http://www.jimo.gov.cn/jmjiaojing/index/index.asp">违章信息查询</a><a target="_blank" href="http://www.jimo.gov.cn/jmjiaojing/news/200941115565534581.shtml?id=249&parentid=0&videos=&typeid=1553">电子警察查询</a></dd></dl>
+<dl><dt>淄博市</dt><dd><a target="_blank" href="http://www.zbjj.gov.cn/">交通违法查询</a><a target="_blank" href="http://www.zbjj.gov.cn/">驾驶人信息查询</a></dd></dl>
+<dl><dt>枣庄市</dt><dd><a target="_blank" href="http://218.59.228.162:9080/wfcx/html/jdcwf/jdcwfmain.jsp">车辆违法信息查询</a><a target="_blank" href="http://218.59.228.162:9080/wfcx/html/jsrjf/jsrjfmain.jsp">驾驶人违法记分查询</a><a target="_blank" href="http://218.59.228.162:9080/wsgg/jdccx.do">机动车信息查询</a><a target="_blank" href="http://218.59.228.162:9080/wsgg/jszcx.do">驾驶人信息查询</a></dd></dl>
+<dl><dt>东营市</dt><dd><a target="_blank" href="http://www.dygajj.gov.cn/wsyy/viovehcx.do">车辆违法信息查询</a><a target="_blank" href="http://www.dygajj.gov.cn/wsyy/drvcx.do">驾驶人积分信息查询</a><a target="_blank" href="http://www.dygajj.gov.cn/wsyy/vehcx.do">机动车信息查询</a><a target="_blank" href="http://www.dygajj.gov.cn/wsyy/drvcx.do">驾驶人信息查询</a></dd></dl>
+<dl><dt>烟台市</dt><dd><a target="_blank" href="http://www.ytjj.gov.cn/html/">车辆违法信息查询</a><a target="_blank" href="http://www.ytjj.gov.cn/html/">驾驶人信息查询</a><a target="_blank" href="http://cgs.ytjj.gov.cn/ytcgs/">车管所官网</a></dd></dl>
+<dl><dt>潍坊市</dt><dd><a target="_blank" href="http://www.wfcgs.com/wfcx/html/jdcwf/jdcwfmain.jsp">车辆违法信息查询</a><a target="_blank" href="http://www.wfcgs.com/wfcx/html/jsrjf/jsrjfmain.jsp">驾驶人积分信息查询</a><a target="_blank" href="http://www.wfcgs.com/wsgg/jdccx.do">机动车信息查询</a><a target="_blank" href="http://www.wfcgs.com/wsgg/cx/jszcx.jsp">驾驶人信息查询</a><a target="_blank" href="http://www.wfcgs.com/wscgs/">网上车管所</a></dd></dl>
+<dl><dt>济宁市</dt><dd><a target="_blank" href="http://0537.weizhangwang.com/">车辆违法信息查询</a><a target="_blank" href="http://0537.weizhangwang.com/">驾驶人积分信息查询</a><a target="_blank" href="http://0537.weizhangwang.com/">机动车信息查询</a><a target="_blank" href="http://0537.weizhangwang.com/">驾驶人信息查询</a></dd></dl>
+<dl><dt>诸城市</dt><dd><a target="_blank" href="http://car.zcinfo.net/#s_1">车辆违章信息查询</a><a target="_blank" href="http://car.zcinfo.net/">车管所信息平台</a></dd></dl>
+<dl><dt>泰安市</dt><dd><a target="_blank" href="http://60.213.185.51:9080/wsyy/viovehcx.do">车辆违法信息查询</a><a target="_blank" href="http://60.213.185.51:9080/wsyy/drvcx.do">驾驶人积分查询</a><a target="_blank" href="http://60.213.185.51:9080/wsyy/vehcx.do">机动车信息查询</a><a target="_blank" href="http://60.213.185.51:9080/wsyy/drvcx.do">驾驶人信息查询</a></dd></dl>
+<dl><dt>威海市</dt><dd><a target="_blank" href="http://www.whdzjc.com/infoquery/toQuerycarvioinfo.xhtml">机动车违法查询</a><a target="_blank" href="http://60.213.185.51:9080/wsyy/drvcx.do">驾驶人积分查询</a><a target="_blank" href="http://221.2.145.164:9080/wsgg/jszcx.do">驾驶人信息查询</a><a target="_blank" href="http://www.whdzjc.com/infoquery/toQuerymonitoringpoint.xhtml">监控点查询</a></dd></dl>
+<dl><dt>日照市</dt><dd><a target="_blank" href="http://58.59.39.43:9080/wfcx/html/jdcwf/jdcwfmain.jsp">车辆违法信息查询</a><a target="_blank" href="http://58.59.39.43:9080/wfcx/html/jsrjf/jsrjfmain.jsp">驾驶人积分查询</a><a target="_blank" href="http://58.59.39.43:9080/wsgg/jdccx.do">机动车信息查询</a><a target="_blank" href="http://58.59.39.43:9080/wsgg/jszcx.do">驾驶人信息查询</a></dd></dl>
+<dl><dt>莱芜市</dt><dd><a target="_blank" href="http://222.134.200.57:9080/wfcx/html/jdcwf/jdcwfmain.jsp">车辆违法信息查询</a><a target="_blank" href="http://222.134.200.57:9080/wfcx/html/jsrjf/jsrjfmain.jsp">驾驶人积分查询</a><a target="_blank" href="http://222.134.200.57:9080/wsgg/jdccx.do">机动车信息查询</a><a target="_blank" href="http://222.134.200.57:9080/wsgg/jszcx.do">驾驶人信息查询</a></dd></dl>
+<dl><dt>临沂市</dt><dd><a target="_blank" href="http://www.lycgs.gov.cn:9080/wfcx/html/jdcwf/jdcwfmain.jsp">车辆违法信息查询</a><a target="_blank" href="http://www.lycgs.gov.cn:9080/wfcx/html/jsrjf/jsrjfmain.jsp">驾驶人积分查询</a><a target="_blank" href="http://www.lycgs.gov.cn:9080/wsgg/cx/jdccx.jsp">机动车信息查询</a><a target="_blank" href="http://www.lycgs.gov.cn:9080/wsgg/cx/jszcx.jsp">驾驶人信息查询</a><a target="_blank" href="http://www.lycgs.gov.cn:9080/wscgs/sgcx.jsp">交通事故处理情况查询</a></dd></dl>
+<dl><dt>德州市</dt><dd><a target="_blank" href="http://218.201.153.138:50080/wfcx/html/jdcwf/jdcwfmain.jsp">车辆违法信息查询</a><a target="_blank" href="http://218.201.153.138:50080/wfcx/html/jsrjf/jsrjfmain.jsp">驾驶人积分查询</a><a target="_blank" href="http://218.201.153.138:50080/wsgg/jdccx.do">机动车信息查询</a><a target="_blank" href="http://218.201.153.138:50080/wsgg/jszcx.do">驾驶人信息查询</a></dd></dl>
+<dl><dt>聊城市</dt><dd><a target="_blank" href="http://218.56.165.82/wfcx/html/jdcwf/jdcwfmain.jsp">车辆违法信息查询</a><a target="_blank" href="http://218.56.165.82/wfcx/html/jsrjf/jsrjfmain.jsp">驾驶人积分查询</a></dd></dl>
+<dl><dt>滨州市</dt><dd><a target="_blank" href="http://222.134.43.251:9080/wfcx/html/jdcwf/jdcwfmain.jsp">车辆违法信息查询</a><a target="_blank" href="http://222.134.43.251:9080/wfcx/html/jsrjf/jsrjfmain.jsp">驾驶人积分查询</a><a target="_blank" href="http://222.134.43.251:9080/wsgg/jdccx.do">机动车信息查询</a><a target="_blank" href="http://222.134.43.251:9080/wsgg/jszcx.do">驾驶人信息查询</a></dd></dl>
+<dl><dt>菏泽市</dt><dd><a target="_blank" href="http://123.130.246.26:9080/wfcx/html/jdcwf/jdcwfmain.jsp">车辆违法信息查询</a><a target="_blank" href="http://123.130.246.26:9080/wfcx/html/jsrjf/jsrjfmain.jsp">驾驶人积分查询</a><a target="_blank" href="http://123.130.246.26:9080/wsgg/jdccx.do">机动车信息查询</a><a target="_blank" href="http://123.130.246.26:9080/wsgg/jszcx.do">驾驶人信息查询</a></dd></dl>
+<dl><dt>荣成市</dt><dd><a target="_blank" href="http://dzjc.whrc.cn/">车辆违法信息查询</a></dd></dl>
+</div>
+</div>
+<!-- 陕西 -->
+<div class="traf_box mt10"><a class="clear" name="m_shan3xi" id="m_shan3xi">&nbsp;</a>
+<div class="t_b_hd">陕西省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.xianjj.com/">陕西全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.xianjj.com/" class="fblue">陕西省全省机动车违法查询</a></p>
+<dl><dt>西安市</dt><dd><a target="_blank" href="http://www.xianjj.com/">机动车违法查询</a><a target="_blank" href="http://www.xianjj.com/">驾驶人违法查询</a></dd></dl>
+<dl><dt>铜川市</dt><dd><a target="_blank" href="http://0919.weizhangwang.com/">交通违法信息查询</a><a target="_blank" href="http://www.xianjj.com/">驾驶人违法查询</a></dd></dl>
+<dl><dt>宝鸡市</dt><dd><a target="_blank" href="http://0917.weizhangwang.com/">违规车辆查询</a><a target="_blank" href="http://0917.weizhangwang.com/">机动车违法信息查询</a><a target="_blank" href="http://0917.weizhangwang.com/">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>咸阳市</dt><dd><a target="_blank" href="http://www.xyjjzd.gov.cn/Index.html">机动车违法信息查询</a><a target="_blank" href="http://www.xyjjzd.gov.cn/Index.html">驾驶人积分查询</a></dd></dl>
+<dl><dt>渭南市</dt><dd><a target="_blank" href="http://218.200.15.149/jdcwzcx.htm">车辆违法信息查询</a><a target="_blank" href="http://218.200.15.149/jysjfcx.htm">驾驶人积分查询</a></dd></dl>
+<dl><dt>延安市</dt><dd><a target="_blank" href="http://www.zgya.com/ip/Shadu.asp?id=92">车辆违规查询</a></dd></dl>
+<dl><dt>榆林市</dt><dd><a target="_blank" href="http://0912.weizhangwang.com/">交通违章查询</a></dd></dl>
+<dl><dt>商洛市</dt><dd><a target="_blank" href="http://sljj.sl163.com/">强制注销车辆查询</a></dd></dl>
+</div>
+</div>
+<!-- 山西 -->
+<div class="traf_box mt10"><a class="clear" name="m_shan1xi" id="m_shan1xi">&nbsp;</a>
+<div class="t_b_hd">山西省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://59.49.18.116:8008/sxwwpt_wai/jsp/inquiresf/main.jsp?actype=vehillegal&hpzl=02&hpzl=01&hpzl=02&hpzl=03&hpzl=04&hpzl=05&hpzl=06&hpzl=07&hpzl=08&hpzl=09&hpzl=10&hpzl=11&hpzl=12&hpzl=13&hpzl=14&hpz">山西全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://59.49.18.116:8008/sxwwpt_wai/jsp/inquiresf/main.jsp?actype=vehillegal&hpzl=02&hpzl=01&hpzl=02&hpzl=03&hpzl=04&hpzl=05&hpzl=06&hpzl=07&hpzl=08&hpzl=09&hpzl=10&hpzl=11&hpzl=12&hpzl=13&hpzl=14&hpz" class="fblue">山西省全省机动车违法查询</a></p>
+<dl><dt>太原市</dt><dd><a target="_blank" href="http://0351.weizhangwang.com/">机动车违法信息查询</a><a target="_blank" href="http://0351.weizhangwang.com/">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>大同市</dt><dd><a target="_blank" href="http://121.30.227.26:9080/dtcgs/index.jsp">机动车违法信息查询</a><a target="_blank" href="http://121.30.227.26:9080/wssl/wsywsq/xxcx/jdcxxcx.jsp">机动车信息查询</a><a target="_blank" href="http://121.30.227.26:9080/wssl/wsywsq/xxcx/jsrxxcx.jsp">驾驶人信息查询</a></dd></dl>
+<dl><dt>长治市</dt><dd><a target="_blank" href="http://www.czscgs.com/">交通违法信息查询</a></dd></dl>
+<dl><dt>晋城市</dt><dd><a target="_blank" href="http://zxcx.jconline.cn/cms/custom_template/weizhang_2010_0429_full.jsp">道路交通违法查询</a><a target="_blank" href="http://www.jc122.com/wzcx.html">驾驶人违法查询</a><a target="_blank" href="http://www.jc122.com/wzcx.html">驾驶人记分查询</a></dd></dl>
+<dl><dt>朔州市</dt><dd><a target="_blank" href="http://0349.weizhangwang.com/">机动车违法查询</a><a target="_blank" href="http://0349.weizhangwang.com/">驾驶人违法查询</a><a target="_blank" href="http://0349.weizhangwang.com/">报废车辆查询</a></dd></dl>
+<dl><dt>晋中市</dt><dd><a target="_blank" href="http://www.sxjzjj.com/">车辆违章信息查询</a></dd></dl>
+<dl><dt>运城市</dt><dd><a target="_blank" href="http://cgs.ycjjzd.com/cgs/index.jsp">违法信息查询</a><a target="_blank" href="http://www.ycjjzd.com/index_gb.asp">驾驶证信息查询</a></dd></dl>
+<dl><dt>忻州市</dt><dd><a target="_blank" href="http://www.sxxzjj.gov.cn/xzcgs/">机动车违法信息查询</a><a target="_blank" href="http://www.sxxzjj.gov.cn/wssl/wsywsq/xxcx/jdcxxcx.jsp">机动车信息查询</a><a target="_blank" href="http://www.sxxzjj.gov.cn/wssl/wsywsq/xxcx/jsrxxcx.jsp">驾驶人信息查询</a></dd></dl>
+<dl><dt>临汾市</dt><dd><a target="_blank" href="http://www.lfjjzd.gov.cn/">车辆违法查询</a><a target="_blank" href="http://www.lfjjzd.gov.cn/">驾驶人违法查询</a><a target="_blank" href="http://www.lfjjzd.gov.cn/plus/list.php?tid=18">车辆事故查询</a></dd></dl>
+<dl><dt>吕梁市</dt><dd><a target="_blank" href="http://www.llgajj.gov.cn/">交通违法查询</a></dd></dl>
+</div>
+</div>
+<!-- 新疆 -->
+<div class="traf_box mt10"><a class="clear" name="m_xinjiang" id="m_xinjaing">&nbsp;</a>
+<div class="t_b_hd">新疆自治区 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.weizhang8.cn/">新疆自治区违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.weizhang8.cn/" class="fblue">新疆自治区机动车违法查询</a></p>
+<dl><dt>乌鲁木齐市</dt><dd><a target="_blank" href="http://www.xj163.cn/tools/car/">电子警察违章查询</a><a target="_blank" href="http://124.117.209.131:8088/voilet/jsrwfcx.aspx">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>克拉玛依市</dt><dd><a target="_blank" href="http://124.117.209.131:8088/voilet/jtwfcx.aspx">机动车违法信息查询</a><a target="_blank" href="http://124.117.209.131:8088/voilet/jsrwfcx.aspx">驾驶人违法信息查询</a></dd></dl>
+<dl><dt>哈密地区</dt><dd><a target="_blank" href="http://www.hami.gov.cn/webpub/bpf/cjcx/search.jsp?sea_id=10000">车辆违章信息查询</a></dd></dl>
+<dl><dt>昌吉市</dt><dd><a target="_blank" href="http://0994.weizhangwang.com/">机动车违法查询</a></dd></dl>
+<dl><dt>巴音郭楞州</dt><dd><a target="_blank" href="http://www.xjbzjj.com/default.asp">违法车辆查询</a><a target="_blank" href="http://www.xjbzjj.com/default.asp">机动车查询</a><a target="_blank" href="http://www.xjbzjj.com/default.asp">驾驶员查询</a></dd></dl>
+<dl><dt>阿克苏地区</dt><dd><a target="_blank" href="http://0997.weizhangwang.com/">本地违法车辆查询</a><a target="_blank" href="http://0997.weizhangwang.com/">外地违法车辆查询</a></dd></dl>
+<dl><dt>喀什地区</dt><dd><a target="_blank" href="http://122.qc188.com/kashidiqu/">车辆违法信息查询</a></dd></dl>
+<dl><dt>伊犁州</dt><dd><a target="_blank" href="http://www.xjyl.gov.cn/Article/ArticleClass.aspx?ClassID=2141">车辆违法信息查询</a><a target="_blank" href="http://www.xjyl.gov.cn/Article/ArticleClass.aspx?ClassID=2141">驾驶人扣分查询</a></dd></dl>
+</div>
+</div>
+
+<!-- 云南 -->
+<div class="traf_box mt10"><a class="clear" name="m_yunnan" id="m_yunnan">&nbsp;</a>
+<div class="t_b_hd">云南省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://220.163.43.26:8080/ynviowww/">云南全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://220.163.43.26:8080/ynviowww/" class="fblue">云南省全省机动车违法查询</a></p>
+<dl><dt>昆明市</dt><dd><a target="_blank" href="http://www.km122.cn/query/Inquiry.html">车辆违法查询</a><a target="_blank" href="http://www.km122.cn/query/Inquiry.html">驾驶员违法查询</a><a target="_blank" href="http://www.km122.cn/query/Inquiry.html">驾驶员累计计分查询</a></dd></dl>
+<dl><dt>曲靖市</dt><dd><a target="_blank" href="http://www.qjjj.gov.cn:88/query.aspx">机动车违法信息查询</a><a target="_blank" href="http://www.qjjj.gov.cn:88/queryjsr.aspx">驾驶人交通违法信息查询</a></dd></dl>
+<dl><dt>玉溪市</dt><dd><a target="_blank" href="http://yxjj.yuxi.gov.cn/">交通违法查询</a></dd></dl>
+<dl><dt>保山市</dt><dd><a target="_blank" href="http://www.bsjj.gov.cn/">交通违法查询</a></dd></dl>
+<dl><dt>普洱市</dt><dd><a target="_blank" href="http://www.puershi.gov.cn/">机动车辆违章查询</a></dd></dl>
+<dl><dt>红河自治州</dt><dd><a target="_blank" href="http://www.hhjj.gov.cn/">机动车违法信息查询</a><a target="_blank" href="http://www.hhjj.gov.cn:8081/riv.plc.vehwss/login.jsp">红河州车管所官网</a></dd></dl>
+</div>
+</div>
+<!-- 浙江 -->
+<div class="traf_box mt10"><a class="clear" name="m_zhejiang" id="m_zhejiang">&nbsp;</a>
+<div class="t_b_hd">浙江省 交通违章查询<ins>注：如城市查询使用不了，可进入<a class="fred" href="http://www.zjsgat.gov.cn:8080/was/portals/webSend/personlist.jsp?foruser=w$bP8rj2yMs=&lanmuid=81">浙江全省违章查询网站</a>进行查询。</ins></div>
+<div class="t_b_bd sheng clearfix">
+<p><a target="_blank" href="http://www.zjsgat.gov.cn:8080/was/portals/webSend/personlist.jsp?foruser=w$bP8rj2yMs=&lanmuid=81" class="fblue">浙江省全省机动车违法查询</a>&nbsp;&nbsp;<a target="_blank" href="http://zzxh.zjsgat.gov.cn:6081/zjwwzzxh/" class="fblue">网上选号</a>&nbsp;&nbsp;<a target="_blank" href="http://www.zjsgat.gov.cn:8080/was/portals/carlllegal/illegal.jsp" class="fblue">交通违法自助处理</a></p>
+<dl><dt>杭州市</dt><dd><a target="_blank" href="http://www.hzti.com/service/qry/peccancy.aspx?type=2&node=248">机动车现场违法查询</a><a target="_blank" href="http://www.hzti.com/service/qry/peccancy_drv.aspx?type=2&node=252">驾驶人现场违法查询</a><a target="_blank" href="http://www.hzcgs.gov.cn/">驾驶人信息查询</a><a target="_blank" href="http://www.hzcgs.gov.cn/">机动车信息查询</a></dd></dl>
+<dl><dt>宁波市</dt><dd><a target="_blank" href="http://60.190.2.101/web/searchcenter.aspx">车辆违法信息查询</a><a target="_blank" href="http://60.190.2.101/web/searchcenter.aspx">电子警察查询</a></dd></dl>
+<dl><dt>温州市</dt><dd><a target="_blank" href="http://www.wzsjj.cn/">车辆违法信息查询</a><a target="_blank" href="http://www.wzsjj.cn/">驾驶证违法信息查询</a><a target="_blank" href="http://wzcx.66wz.com/index.jsp">车辆信息查询</a><a target="_blank" href="http://wzcx.66wz.com/cardSearch.jsp">驾照信息查询</a></dd></dl>
+<dl><dt>嘉兴市</dt><dd><a target="_blank" href="http://60.190.151.158:8080/queryVehVio.do">机动车违法查询</a><a target="_blank" href="http://60.190.151.158:8080/queryDrvVio.do">驾驶人违法查询</a><a target="_blank" href="http://60.190.151.158:8080/queryVehInfo.do">机动车信息查询</a><a target="_blank" href="http://60.190.151.158:8080/queryDrvInfo.do">驾驶证信息查询</a></dd></dl>
+<dl><dt>湖州市</dt><dd><a target="_blank" href="http://old.hzgaj.gov.cn/in22/in22-2.asp">机动车违法查询</a><a target="_blank" href="http://old.hzgaj.gov.cn/in22/in22-1.asp">驾驶员违法查询</a><a target="_blank" href="http://www.hzjxj.com/in_Site1.asp">固定电子警察点</a></dd></dl>
+<dl><dt>绍兴市</dt><dd><a target="_blank" href="http://wscgs.sxga.gov.cn/">机动车交通违法信息查询</a><a target="_blank" href="http://wscgs.sxga.gov.cn/">驾驶人交通违法信息查询</a><a target="_blank" href="http://bsfw.sxga.gov.cn/was/portalsone/cxfw/searchmonitoring.jsp">电子监控点查询</a></dd></dl>
+<dl><dt>金华市</dt><dd><a target="_blank" href="http://www.jhga.gov.cn/Service/Interface/JDCList.aspx">机动车违法查询</a><a target="_blank" href="http://www.jhga.gov.cn/Service/Interface/Gajsywz.aspx">驾驶员违法查询</a><a target="_blank" href="http://www.jhga.gov.cn/Service/ExamManagement.aspx">驾驶证考试相关查询</a></dd></dl>
+<dl><dt>衢州市</dt><dd><a target="_blank" href="http://gajadmin.qz.gov.cn/was/portals/cxfw/searchclwf.jsp">车辆违法查询</a><a target="_blank" href="http://gajadmin.qz.gov.cn/was/portals/cxfw/searchwfjf.jsp">违法记分查询</a></dd></dl>
+<dl><dt>舟山市</dt><dd><a target="_blank" href="http://www.police.zhoushan.gov.cn/interaction_wfsearch.aspx">交通违法行为查询</a></dd></dl>
+<dl><dt>台州市</dt><dd><a target="_blank" href="http://www.tzga.gov.cn:6080/wscgs/vio.do?act=veh_vio_page">车辆违法信息查询</a><a target="_blank" href="http://www.tzga.gov.cn:6080/wscgs/vio.do?act=veh_vio_page">驾驶证记分查询</a></dd></dl>
+<dl><dt>丽水市</dt><dd><a target="_blank" href="http://jj.lishui.gov.cn/queryInfo.do?act=vehVio">机动车违法查询</a><a target="_blank" href="http://jj.lishui.gov.cn/queryInfo.do?act=drvVio">驾驶人违法查询</a><a target="_blank" href="http://jj.lishui.gov.cn/queryInfo.do?act=vehInfo">机动车信息查询</a><a target="_blank" href="http://jj.lishui.gov.cn/queryInfo.do?act=drvInfo">驾驶人信息查询</a></dd></dl>
+<dl><dt>义乌市</dt><dd><a target="_blank" href="http://www.ywga.gov.cn/">机动车违法查询</a><a target="_blank" href="http://www.ywga.gov.cn/">驾驶员违法查询</a></dd></dl>
+<dl><dt>萧山市</dt><dd><a target="_blank" href="http://www.xsti.gov.cn/bgcar.asp">交通违法查询</a></dd></dl>
+
+</div>
+</div>
+</div>
+</div>  
+<include file="Index:bottomNav" />
+<include file="common:footer" />

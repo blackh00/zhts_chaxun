@@ -1,0 +1,42 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="yaopin">
+		<h1>国家药品查询</h1>
+		<div class="cp_ts">提供药品药性、成分、使用说明查询。</div>
+		<div class="yaopin_con">
+			<div class="yp_tit"><span><a href="SITE_DYNAMIC_URL/drug/">返回 >></a></span><if condition='$flags eq "ks"'>"{$keyword}" <else />"{$appnum} {$pname} {$ename} {$name} {$category} {$unit} {$appnum2} {$code}"</if>的内容列表,共有{$count}条记录 </div>
+        	<div class="yp_list">
+	        	<ul>
+	        		<volist name="resultInfo" id="vo" key="k">
+	        			<li><span>{$k+$startItem}.</span><a href="SITE_DYNAMIC_URL/drug/detail/?id={$vo.id}">{$vo.pname} ({$vo.appnum} {$vo.unit} {$vo.code})</a></li>
+	        		</volist>
+	            </ul>
+<!--             	<div class="yp_page">第1页/共11025页 共165317条 <a href="#" class="fy">上一页</a> <a href="#">下一页</a> <a href="#">尾页</a> 跳转 <input type="text" class="gobox" /> <a href="#" class="go">GO</a></div> -->
+        		
+        		<div class="page">{$page}
+        			<if condition="($count gt 75)and($flags eq 'ks')"><span>跳转到 </span>
+	        			<input type="text" id="i_page" size="4" class="txt" value="" />
+	        			<input type="hidden" value="{$keyword}" id="key" />
+	        			<input type="hidden" value="{$category}" id="category" />
+	        			<span class="go" onclick="get_search_page_ks();">go</span>
+	        		<elseif condition="($count gt 75)and($flags eq 'gj')"/><span>跳转到 </span>
+	        			<input type="text" id="i_page" size="4" class="txt" value="" />
+	        			<input type="hidden" value="{$appnum}" id="appnum" />
+	        			<input type="hidden" value="{$pname}" id="pname" />
+	        			<input type="hidden" value="{$ename}" id="ename" />
+	        			<input type="hidden" value="{$name}" id="name" />
+	        			<input type="hidden" value="{$category}" id="category" />
+	        			<input type="hidden" value="{$unit}" id="unit" />
+	        			<input type="hidden" value="{$appnum2}" id="appnum2" />
+	        			<input type="hidden" value="{$code}" id="code" />
+	        			<span class="go" onclick="get_search_page_gj();">go</span>
+	        		</if>
+        		</div>
+        	</div>
+      	</div>           
+    </div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

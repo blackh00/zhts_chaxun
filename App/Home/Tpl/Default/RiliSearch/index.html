@@ -1,0 +1,194 @@
+  <include file="common:header" />
+    <div class="main">
+        <div class="wp clearfix" id="main">
+            <form id="CLD" name="CLD">
+            <div id="divBor">
+                <div id="wrap">
+                    <div class="mian clearfix">
+                        <div class="content-c">
+                            <div class="rili_L_up">
+                                <div id="shengxiao" class="wnl-title clearfix">
+								<a href="SITE_URL/{$Think.config.BjTime}/" target="_blank">
+                                    <div class="time" id="bjtime">
+                                        </div>
+								</a>
+                                    <div class="select-data">
+                                        <ul>
+                                            <li class="year-data select_year_box">
+                                                <div class="current-data" id="current-data" onclick="">
+                                                </div>
+                                                <div class="select-wrap" id="select-year-option">
+                                                    <ul class="select-year" id="select-year">
+                                                    </ul>
+
+                                                    <script type="text/javascript">
+                                                        var list='';
+                                                        for(var i=0; i<yearInfo.length; i++){
+                                                        list += '<li>'+yearInfo[i]+'年</li>'
+                                                        }
+                                                        document.getElementById('select-year').innerHTML = list;
+                                                    </script>
+
+                                                </div>
+                                            </li>
+                                          	<li class="pre" onclick="pushBtm('MU')"><a href="javascript:void(0)"></a></li>
+                                            <li class="month-data select_month_box" id="month-data">
+                                                <div class="current-data" id="current-data-month" onclick="">
+                                                </div>
+                                                <div class="select-wrap" id="select-month-option" style="display: none">
+                                                    <ul class="select-year select-month" id="select-month">
+                                                        <li>&nbsp;&nbsp;1月</li>
+                                                        <li>&nbsp;&nbsp;2月</li>
+                                                        <li>&nbsp;&nbsp;3月</li>
+                                                        <li>&nbsp;&nbsp;4月</li>
+                                                        <li>&nbsp;&nbsp;5月</li>
+                                                        <li>&nbsp;&nbsp;6月</li>
+                                                        <li>&nbsp;&nbsp;7月</li>
+                                                        <li>&nbsp;&nbsp;8月</li>
+                                                        <li>&nbsp;&nbsp;9月</li>
+                                                        <li>10月</li>
+                                                        <li>11月</li>
+                                                        <li>12月</li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="next" onclick="pushBtm('MD')"><a href="javascript:void(0)"></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="holidays select_day">
+                                        <a class="a_2" href="">假日安排</a>
+                                        <ul class="holidays_ul" style="display: none">
+                                            <li rel="1" red="1" rev="0">元旦</li>
+                                            <li rel="2" red="9" rev="1">春节</li>
+                                            <li rel="4" red="4" rev="3">清明节</li>
+                                            <li rel="5" red="1" rev="4">劳动节</li>
+                                            <li rel="6" red="12" rev="5">端午节</li>
+                                            <li rel="9" red="19" rev="8">中秋节</li>
+                                            <li rel="10" red="1" rev="9">国庆节</li>
+                                        </ul>
+                                    </div>
+                                    <span class="jin"><a class="a_1" onclick="pushBtm('JT')">返回今天</a> </span>
+                                </div>
+                            </div>
+                            <div class="content-tb" id="date_show" style="">
+                                <div class="nav-tlt">
+                                    <span class="weekend">星期日</span> <span>星期一</span> <span>星期二</span> <span>星期三</span>
+                                    <span>星期四</span> <span>星期五</span> <span class="weekend">星期六</span>
+                                </div>
+                                <div class="calendar">
+
+                                    <script language="javascript">
+                                    var gNum;
+                                    for(i=0;i<6;i++) {
+                                    if(i==5){
+                                    document.write('<ul id="lastLine">')
+                                    }else{
+                                    document.write('<ul>')
+                                    }
+                                    for(j=0;j<7;j++) {
+                                    gNum = i*7+j
+                                    document.write('<li id="GD' + gNum +'" onclick="mOvr(' + gNum +')" class=""><div')
+                                    if(j == 0){
+                                    document.write(' ><strong id="SD' + gNum +'"> </strong><span id="LD' + gNum + '"> </span><i></i></div></li>')
+                                    }else if(j == 6){
+                                    document.write(' ><strong id="SD' + gNum +'"> </strong><span id="LD' + gNum + '"> </span><i></i></div></li>')
+                                    }else{
+                                    document.write('><strong id="SD' + gNum +'"> </strong><span id="LD' + gNum + '"> </span><i></i></div></li>')
+                                    }
+                                    }
+                                    document.write('</ul>')
+                                    }
+                                    </script>
+
+                                    <div style="clear: both;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h_calendar_exp">
+                                <div class="wr-copyright">
+                                    <a target="_blank" href="SITE_DYNAMIC_URL/huangdaojiri/?k1=1">2013年结婚黄道吉日</a></div>
+                                <div class="exp_text">
+                                    <p>
+                                        <strong>阳历</strong><span class="c_ed6d23">橙色字</span>表示公休/节假日</p>
+                                    <p>
+                                        <strong>阴历</strong><span class="c_6aba49">蓝色字</span>表示24节气日，<span class="c_1f9237">绿色字</span>表示普通节日，<span
+                                            class="c_D02F12">橙色字</span>表示法定节假日</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subar">
+                            <div class="sub-icon">
+                                <div class="gday" id="info_all">
+                                </div>
+                                <div class="icon">
+                                    <span class="diffday" id="info_diffday" style="display: none;">今天</span> <span class="tday"
+                                        id="info_today"></span><span class="nday" id="info_nong"></span><span class="ganzhi"
+                                            id="info_chang"></span>
+                                    <div class="alm_lunar_date">
+                                    </div>
+                                    <div class="today_almanac">
+                                        <div class="yiji">
+                                            <div class="yi" id="yi">
+                                                <span>祭祀</span><span>作灶</span><span>畋猎</span><span>结网</span><span>修饰垣墙</span><span>平治道涂</span>
+                                            </div>
+                                            <div class="ji" id="ji">
+                                                <span>祈福</span><span>出火</span><span>置产</span><span>动土</span><span>破土</span><span>安葬</span><span>修造</span><span>上梁</span>
+                                            </div>
+                                            <div class="chong" id="chong">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="side-section" id="div_weather">
+                                <h3>
+                                    <i class="more"><span id="address">北京</span><b class="change">[更换]</b></i>天气</h3>
+                                <div style="display: none;" class="set-city" id="set-city">
+                                    <ul class="panel">
+                                        <li><span>省：</span><select id="s_province" name="s_province"></select></li>
+                                        <li><span>市：</span><select id="s_city" name="s_city"></select></li>
+                                        <li><span>区：</span><select id="s_county" name="s_county"></select></li>
+                                    </ul>
+                                    <div class="controls">
+                                        <button act="ok" id="btn" onclick="return false">
+                                            确定</button>
+                                        <button class="cancel">
+                                            取消</button></div>
+                                </div>
+                                <ul class="page" style="margin-top:0px;">
+                                    <li class="today"  id="today" title="8℃ ~ 23℃  晴  北风3-4级"><a target="_blank" href="" style="float:left;line-height:15px;font-size:12px;height:15px;border:0px;padding:0px;margin:0px;">8℃ ~ 23℃ 晴
+                                        北风3-4级</a></li>
+                                    <li class="tomorrow" id="tomorrow" title="10℃ ~ 23℃  晴转多云  微风"><a target="_blank" href="#" style="float:left;line-height:15px;font-size:12px;height:15px;border:0px;padding:0px;margin:0px;">10℃ ~ 23℃
+                                        晴转多云 微风</a></li>
+                                    <li class="tomorrow2" id="tomorrow2" title="10℃ ~ 23℃  晴转多云  微风"><a target="_blank" href="#" style="float:left;line-height:15px;font-size:12px;height:15px;border:0px;padding:0px;margin:0px;">10℃ ~
+                                        23℃ 晴转多云 微风</a></li>
+                                </ul>
+                            </div>
+                            {/*<div class="side-section" id="div_dayonhistory">
+                                <h3>
+                                    <a target="_blank" href="#" class="more">更多>></a>历史上的今天</h3>
+                                <div class="lishi">
+                                    <ul>
+                                        <li><a href="#" target="_blank">历史上的今天啥啥啥11</a></li>
+                                        <li><a href="#" target="_blank">历史上的今天啥啥啥22</a></li>
+                                        <li><a href="#" target="_blank">历史上的今天啥啥啥333</a></li>
+                                        <li><a href="#" target="_blank">历史上的今天啥啥啥444</a></li>
+                                        <li><a href="#" target="_blank">历史上的今天啥啥啥5</a></li>
+                                    </ul>
+                                </div>
+
+                               
+                            </div>*/}
+							
+
+                            <div class="today_event" style="display: none;">
+                                <a href="javascript:;" id="history_day" target="_blank">查看历史上的今天>></a> <i></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+<include file="common:relatedTools" />
+<include file="common:footer" />

@@ -1,0 +1,37 @@
+﻿<include file="common:header" />
+	<div class="main">
+        <div class="phone_left">
+            <div class="baike_bor">
+                <h1>
+                    百科全书
+                </h1>
+                <p class="baike_p1">提供一个涵盖所有领域知识、服务所有互联网用户的中文知识性百科全书。</p>
+                <form name="formBaiKe" id="formBaiKe" action="SITE_DYNAMIC_URL/encyclopedia/showDetaile/" method="get" onsubmit="return checkBaiKe()">
+                <div class="baike_shur">
+                   <input type="text" value="输入词条，如查找北京欢迎你的解释，输入北京欢迎你" onfocus="if(this.value=='输入词条，如查找北京欢迎你的解释，输入北京欢迎你') {this.value='';}this.style.color='#343235';"
+                        onblur="if(this.value=='') {this.value='输入词条，如查找北京欢迎你的解释，输入北京欢迎你';this.style.color='#999999';}"
+                        class="baike_sousuotxt" name="title" id="title" />
+                    <input type="submit" value="" class="baike_but" />
+                </div>
+                </form>
+                <script>
+                	function checkBaiKe(){
+                		var str=$('#title').val();
+                		if(str=='输入词条，如查找北京欢迎你的解释，输入北京欢迎你' || str==''){
+                			alert("请输入要查找内容的标题。");
+                			return false;
+                		}
+                		return true;
+                	}
+                </script>
+                <div class="baike_box">
+                	<div class="baike_up">百科全书<span>--{$record.title}</span></div>
+                    <h3>{$record.title}</h3>
+                    <p class="baike_c">{$record.content}</p>
+					<p class="baike_c2">此内容是本站根据您的指令自动搜索到的结果，不代表本站赞成其中所述的内容或立场</p>
+                </div>
+            </div>
+        </div>
+        <include file="common:rightSideInc" />	
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />

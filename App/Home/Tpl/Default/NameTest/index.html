@@ -1,0 +1,82 @@
+﻿	<include file="common:header" />
+	<div class="main">
+        <div class="phone_left">
+            <div class="name_bor">
+                <h1>
+                    姓名测试
+                </h1>
+                <div class="name_shur">
+                <form method="post" action="SITE_DYNAMIC_URL/xingmingces/testName/" name="sm"  onSubmit="return checkbz();">          
+                	<p>尊姓：</p>
+                   <div class="name_sousuo"><input type="text" name="xing" value="李" onfocus="if(this.value=='李') {this.value='';}this.style.color='#343235';"
+                        onblur="if(this.value=='') {this.value='李';this.style.color='#e2e2e2';}"
+                        class="name_sousuotxt" /></div>
+                	<p>大名：</p>
+                   <div class="name_sousuo"><input type="text" name="ming" value="四" onfocus="if(this.value=='四') {this.value='';}this.style.color='#343235';"
+                        onblur="if(this.value=='') {this.value='四';this.style.color='#e2e2e2';}"
+                        class="name_sousuotxt" /></div>
+                    <input type="submit" value="" class="name_but" />
+                    <input type="hidden" name="sm" value="5" />
+                    </form>
+                </div>
+                <div class="name_c">
+                    <div class="name_p">
+                    		<p class="name_p1">根据测试,<strong>李四</strong>的姓名得分为：</p>
+                            <div class="name_num">93</div>
+                        </div>	
+                    <div class="name_img"><img src="STATIC_URL/images/name/100-90.gif" alt="" /></div>
+                    <p class="name_txt">你的名字取得非常棒，如果与命理搭配得当，成功与惊喜将会伴随你的一生。但千万注意不要失去上进心!</p>
+                   <p class="name_link"><a href="SITE_URL/samename/" target="_blank">去看看有多少人跟你同名同姓吧</a></p>
+                </div> 
+            </div>
+        </div>
+        <include file="common:rightSideInc" />	
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />
+		 <script type="text/javascript">
+
+function checkbz()
+{
+
+while(document.sm.xing.value.indexOf(" ")!=-1){
+	
+	document.sm.xing.value=document.sm.xing.value.replace(" ","");
+	}
+	while(document.sm.xing.value.indexOf("	")!=-1){
+	document.sm.xing.value=document.sm.xing.value.replace("	","");
+	}
+	if (document.sm.xing.value=='')
+	{
+	alert('请输入您的姓氏！');
+	document.sm.xing.focus()
+	return false;
+	}
+	if (document.sm.xing.value.length < 1 || document.sm.xing.value.length>2)
+	{
+	alert("错误：姓氏应在1-2个字之间！");
+	document.sm.xing.focus();
+	return (false);
+	}
+
+	while(document.sm.ming.value.indexOf(" ")!=-1){
+	document.sm.ming.value=document.sm.ming.value.replace(" ","");
+	}
+	while(document.sm.ming.value.indexOf("	")!=-1){
+	document.sm.ming.value=document.sm.ming.value.replace("	","");
+	}
+	if (document.sm.ming.value=='')
+	{
+	alert('请输入您的名字！');
+	document.sm.ming.focus()
+	return false;
+	}
+	if (document.sm.ming.value.length < 1 || document.sm.ming.value.length>2)
+	{
+	alert("错误：名字应在1-2个字之间！");
+	document.sm.ming.focus();
+	return (false);
+	}
+	
+
+}
+</script>

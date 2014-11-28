@@ -1,0 +1,17 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+    <div class="jielong">
+        <h1>成语接龙</h1>
+        <div class="cp_ts">成语接龙有着悠久的历史，也有广泛的社会基础，是老少皆宜的民间文化娱乐活动.</div>
+  		<div class="jl_bg">
+			<div class="jl_jg">
+				<span>"{$start}"</span>&nbsp;→&nbsp;<volist name="resultInfo" id="vo" key="k">{$vo[0].name}<if condition="($k neq $iCount) and ($k lt $i+1)">&nbsp;→&nbsp;</if></volist>
+	        </div>
+	        <div class="jl_but1"><a href="/idiom/"><img src="STATIC_URL/images/anlian/cy_but1.gif" width="15" height="12" />重新开始</a></div>
+      	</div>
+    </div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

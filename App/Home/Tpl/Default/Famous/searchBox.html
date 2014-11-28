@@ -1,0 +1,11 @@
+<h1>名人语录查询</h1>
+<div class="txt">提供查询名人所说的谚语，格言等有名或是有意义的话。</div>
+<div class="shuru_box">
+<form action="SITE_DYNAMIC_URL/famous/search/" method="get" id="form">
+	<input type="text" value="<if condition='$search neq ""'>{$search}<else/>请输入人名或名人语录</if>" onfocus="if(this.value=='请输入人名或名人语录') {this.value='';}this.style.color='#343235';"
+			onblur="if(this.value=='') {this.value='请输入人名或名人语录';this.style.color='#999999';}" class="ip_sousuotxt" name="search" id="keyword"/>
+	<input type="submit" value="" class="ip_but" onclick="famousCheck();return false;"/>
+</div>
+</form>
+<div class="hot_search">热门搜索：<a href="SITE_DYNAMIC_URL/famous/search/hot/1/">培根</a><span>&nbsp;</span><a href="SITE_DYNAMIC_URL/famous/search/hot/2/">居里夫人</a><span>&nbsp;</span><a href="SITE_DYNAMIC_URL/famous/search/hot/3/">富兰克林</a><span>&nbsp;</span><a href="SITE_DYNAMIC_URL/famous/search/hot/4/">阿尔巴亚</a><span>&nbsp;</span><a href="SITE_DYNAMIC_URL/famous/search/hot/5/">爱迪生</a><span>&nbsp;</span><a href="SITE_DYNAMIC_URL/famous/search/hot/6/">牛顿</a><span>&nbsp;</span><a href="SITE_DYNAMIC_URL/famous/search/hot/7/">爱因斯坦</a><span>&nbsp;</span><a href="SITE_DYNAMIC_URL/famous/search/hot/8/">毛泽东</a><span>&nbsp;</span><a href="SITE_DYNAMIC_URL/famous/search/hot/9/">邓小平</a></div>	
+           

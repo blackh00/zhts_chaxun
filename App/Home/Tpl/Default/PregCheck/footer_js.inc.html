@@ -1,0 +1,25 @@
+    <script type="text/javascript" src="STATIC_URL/js/calendar_yuchanqi.js" ></script>  
+	<script type="text/javascript" src="STATIC_URL/js/calendar-zh.js" ></script>
+	<script type="text/javascript" src="STATIC_URL/js/calendar-setup.js"></script>
+	 <script type="text/javascript">
+           $(function () {
+                function tabs(tabTit, on, tabCon) {
+                    $(tabCon).each(function () {
+                        $(this).children().eq(0).show();
+                    });
+                    $(tabTit).each(function () {
+                        $(this).children().eq(0).addClass(on);
+                    });
+                    $(tabTit).children().hover( function () { 
+                        $(this).addClass(on).siblings().removeClass(on);
+                        var index = $(tabTit).children().index(this);
+                        $(tabCon).children().eq(index).show().siblings().hide();
+                    });
+                }
+                tabs(".tab-hd2", "active", ".tab-bd2");
+            });
+
+      </script>
+	
+<script src="STATIC_URL/js/select.js" type="text/javascript" ></script>
+<script src="STATIC_URL/js/yuchaqi.js" type="text/javascript" ></script>

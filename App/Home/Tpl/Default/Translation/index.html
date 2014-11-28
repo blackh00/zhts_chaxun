@@ -1,0 +1,32 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="fanyi_box">
+		<h1> 在线翻译</h1>
+        <form id="form1" name="form_translation" action="SITE_DYNAMIC_URL/fanyi/fanyiSearch" method="POST">
+        	<p class="fanyi_p1">支持各种语言在线互译、支持网页翻译，在输入框输入网页地址即可。</p>
+            <textarea id="text_search" name="content" cols="" rows="" class="fanyi_text" value="请输入要翻译的内容或网址" onfocus="if(this.value=='请输入要翻译的内容或网址') {this.value='';this.style.color='#343235';}" onblur="if(this.value=='') {this.value='请输入要翻译的内容或网址';this.style.color='#343235';}">请输入要翻译的内容或网址</textarea>
+            <div class="fanyi_bt">
+            	<div class="fanyi_sele">
+                	<span>请选择</span>
+                    <select name="language">
+                    	<option value=''>中英文自动检测</option>
+                    	<option value="zh-cn,en">中→英</option>
+                    	<option value="en,zh-cn">英→中</option>
+                    	<option value="zh-cn,ja">中→日</option>
+                    	<option value="ja,zh-cn">日→中</option>
+                    	<option value="en,ja">英→日</option>
+                    	<option value="ja,en">日→英</option>
+                    	<option value="en,th">英→泰</option>
+                    	<option value="th,en">泰→英</option>
+                    </select>
+                </div>
+           		<input name="button_submit" id="button_submit" type="submit" value="" />
+           		<input name="form_check" id="form_check" type="hidden" value="submit" />
+            </div>
+        </form>
+    </div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

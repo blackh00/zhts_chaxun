@@ -1,0 +1,20 @@
+
+.main .phone_left .pl_bor .iph1 { background-image: url(../images/bg_all2.png); background-repeat: no-repeat; background-position: 185px -53px; text-indent:245px;}
+.main .phone_left .pl_bor .txt{clear:both; text-align:center;background:url(../images/kuaidi_all.png) no-repeat 0px -827px; height:37px; padding-top:10px; color:#333333;}
+.main .phone_left .yuchan .txt{clear:both; text-align:center;background:url(../images/kuaidi_all.png) no-repeat 0px -827px; height:37px; padding-top:10px; color:#333333;}
+
+.ip_sousuotxt{width:393px; height:38px; border:2px solid #FD9F19; line-height:38px; font-size:14px; float:left; color:#999999; padding-left:15px; margin-top:30px; margin-left:34px; font-family: 微软雅黑;}
+
+.ip_but{ float:left; width:105px; height:42px;cursor:pointer; border:none;background:url(../images/kuaidi_all.png) 0px -874px no-repeat;margin-top:30px; }
+
+.pl_bor .shurip{ width:578px; float:left; margin-bottom:8px;}
+.ipxinxi{ width:500px; height:170px; border:1px solid #ffe0b4; clear:both; margin:30px auto 45px; auto; background:url(../images/ip_bg1.png) repeat-x;}
+.ipxinxi ul{ padding-top:20px; padding-left:30px; line-height:26px; font-size:14px; color:#999999;}
+.ipxinxi ul li.earr{ font-size:12px;}
+.ipxinxi ul li.earr span a{ color:#006f9f;}
+.text1{ color:#ff8500;}
+.line1{ background:url(../images/kuaidi_all.png) 0px -873px; height:1px;}
+
+.ip_map{ padding-top:20px; clear:both;}
+.ip_map h2{ font-size:14px; font-weight:bold; height:25px;}
+

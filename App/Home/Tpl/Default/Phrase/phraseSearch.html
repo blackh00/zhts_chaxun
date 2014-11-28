@@ -1,0 +1,12 @@
+<h1>成语大全</h1>
+<div class="cy_shur">
+	<form action="SITE_DYNAMIC_URL/phrase/search" method="get" id="phraseForm">
+		<input type="text" value="<if condition='$search eq null'>请输入关键字<else />{$search}</if>" onfocus="if(this.value=='请输入关键字') {this.value='';}this.style.color='#343235';"
+        onblur="if(this.value=='') {this.value='请输入关键字';this.style.color='#999999';}"
+        class="cy_sousuotxt" name="search" id="phraseSearch"/>
+		<input type="submit" value="" class="cy_but" onclick="phraseCheck();return false;"/>
+	</form>
+</div>
+<div class="cy_jiansuo">
+	本周热搜成语： <volist name='weekSearch' id='ws'><a href="SITE_DYNAMIC_URL/{$Think.config.Phrase}/show/?id={$ws.id}" target="_blank">{$ws.name}</a></volist>
+</div>

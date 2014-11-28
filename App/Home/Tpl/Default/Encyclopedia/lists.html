@@ -1,0 +1,86 @@
+﻿<include file="common:header" />
+	<div class="main">
+        <div class="phone_left">
+            <div class="baike_bor">
+                <h1>
+                    百科全书
+                </h1>
+                <p class="baike_p1">提供一个涵盖所有领域知识、服务所有互联网用户的中文知识性百科全书。</p>
+                <form name="formBaiKe" id="formBaiKe" action="SITE_DYNAMIC_URL/encyclopedia/showDetaile/" method="get" onsubmit="return checkBaiKe()">
+                <div class="baike_shur">
+                   <input type="text" value="输入词条，如查找北京欢迎你的解释，输入北京欢迎你" onfocus="if(this.value=='输入词条，如查找北京欢迎你的解释，输入北京欢迎你') {this.value='';}this.style.color='#343235';"
+                        onblur="if(this.value=='') {this.value='输入词条，如查找北京欢迎你的解释，输入北京欢迎你';this.style.color='#999999';}"
+                        class="baike_sousuotxt" name="title" id="title" />
+                    <input type="submit" value="" class="baike_but" />
+                </div>
+                </form>
+                <script>
+                	function checkBaiKe(){
+                		var str=$('#title').val();
+                		if(str=='输入词条，如查找北京欢迎你的解释，输入北京欢迎你' || str==''){
+                			alert("请输入要查找内容的标题。");
+                			return false;
+                		}
+                		return true;
+                	}
+                </script>
+                <div class="baike_box">
+                	<div class="baike_up">百科全书--第<em>{$cur}</em>页</div>
+                    <ul class="baike_ul1 baike_ul2 clearfix">
+                    <volist name="list" id="vo">
+                    	<li><a href="SITE_DYNAMIC_URL/encyclopedia/showDetaile/?id={$vo.id}" target="_blank">{$vo.title}</a></li>
+                    </volist>	
+                    </ul>
+                    <form name="form1" id='form1' action="SITE_DYNAMIC_URL/encyclopedia/lists/" method="get" onsubmit="return formCheck()">
+                    <div class="xiehouyu_fenye">
+                    	<php>             		
+							if($cur-1 < 1){
+								echo'<a>首页</a>';
+							}else{
+								echo'<a href="SITE_DYNAMIC_URL/encyclopedia/lists/?';
+								echo'page='.($cur-1).'">上一页</a>';
+							}
+							
+							for( $i=$start; $i<=$end; $i++ ){
+								if($cur==$i){
+									$class='class="'.'on"';
+								}else{
+									$class='';
+								}
+								echo  "<a href='SITE_DYNAMIC_URL/encyclopedia/lists/?page=".$i."' $class>".$i."</a>";
+							}
+							
+							if($cur+1>$total){
+								echo "<a>末页</a>";
+							}else{
+								echo '<a href="SITE_DYNAMIC_URL/encyclopedia/lists/?';
+								echo'page='.($cur+1).'">下一页</a>';
+							}	
+							
+							echo '共<span>'.$total.'</span>页'; 	                   		
+                    	</php>
+                    	
+                    	<span>跳转到 </span><input id="i_page" class="" type="text" name="page" size="2">&nbsp;<a class="go" href="javascript:tiaoZhuan()">go</a>
+                    	
+                    </div>
+                    </form>
+                    <script>
+                    	function formCheck(){
+		                    	var str=$('#i_page').val();
+		                    	var reg=/[0-9]+/;
+		                    	if(!reg.test(str)){
+		                    		alert('输入的必须为数字且不能为空。');
+		                    		return false;
+		                    	}		                    	
+		                    	return true;
+                    	}
+                    	function tiaoZhuan(){
+                    		$('#form1').submit();
+                    	}
+                    </script>
+                </div>
+            </div>
+        </div>
+        <include file="common:rightSideInc" />	
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />

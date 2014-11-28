@@ -1,0 +1,21 @@
+	<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="hz_py_box">
+            	<h1>
+                    汉字转拼音
+                </h1>
+           <form name="form1" id="form1" action="SITE_DYNAMIC_URL/hanzizhuanpinyin/index/" method="post">      
+                <p class="hz_py_p1">简单实用 一点即转</p>
+                <textarea name="text_ch" cols="" rows="" class="hz_py_text" value="请在这里输入您要转换的汉字" onfocus="if(this.value=='请在这里输入您要转换的汉字') {this.value='';}" onblur="if(this.value=='') {this.value='请在这里输入您要转换的汉字';}"><if condition="$chinese eq ''">请在这里输入您要转换的汉字<else />{$chinese}</if></textarea>
+                <div class="hz_py_bt">
+                	<input name="" type="submit" value="" />
+                	<input name="form_check" type="hidden" value="submit" />
+                </div>
+           </form>
+                <textarea name="pinyin" cols="" rows="" class="hz_py_text">{$pinyin}</textarea>
+            </div>
+        </div>
+         <include file="common:rightSideInc" />	
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />

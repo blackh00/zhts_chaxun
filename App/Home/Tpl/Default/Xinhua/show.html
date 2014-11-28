@@ -1,0 +1,30 @@
+<include file="common:header" />
+<div class="main">
+    <div class="phone_left">
+        <div class="zidian_bor">
+            <h1>
+                新华字典
+            </h1>
+            <include file="Xinhua:zidian" />
+            <div class="zidian_c3">
+            <volist name="result" id="vo">
+            	<h3>汉字"{$vo.zi}"的意思</h3>
+                <div class="zidian_word">
+                	<div class="word">{$vo.zi}</div>
+                    <p>拼音：<span>{$vo.pinyin}</span><br />部首：<span>{$vo.bushou}</span><br />笔画数：<span>{$vo.bihua}</span><br />五笔输入法：<span>{$vo.wubi}</span></p>
+                </div>
+            	<h3>基本字义</h3>
+                <div class="zidian_ziyi">
+                	{$vo.jijie}	
+                </div>
+            	<h3>详细解释</h3>
+                <div class="zidian_ziyi">
+                	{$vo.xiangjie}	
+                </div>
+            </volist>    
+            </div>
+        </div>
+    </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

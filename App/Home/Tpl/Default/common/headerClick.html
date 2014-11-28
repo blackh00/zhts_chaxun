@@ -1,0 +1,76 @@
+<div id="top">
+    <div class="main">
+        <p>
+            让你的生活更便捷——快查
+        </p>
+        <p class="top_line">
+            丨
+        </p>
+        <p>
+           <div id="div_gongao">
+                <div>
+
+                    
+
+                </div>
+                <div class="nongli">
+                    
+                </div>
+                <div class="clientIp">
+                   
+                </div>
+               
+            </div>
+        </p>
+        <div class="top_right">
+            <p>
+                <a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a>
+            </p>
+            <p style="padding-left:50px;">
+                <a href="SITE_DYNAMIC_URL/url.php">保存到桌面</a>
+            </p>
+            <div id="shouchang">
+                <a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="common">
+	  <div class="logo">
+        <div class="logo_left">
+            <a href="SITE_URL/">
+                <img src="STATIC_URL/images/logo.gif" alt="快查首页" />
+            </a>
+            <img src="STATIC_URL/images/logo_txt.gif" />
+        </div>
+        <div class="weather">
+           <iframe width="330" scrolling="no" height="70" frameborder="0" allowtransparency="true" marginheight="0" marginwidth="0" src="http://i.tianqi.com/index.php?c=code&id=2&num=2" name="weather_inc">
+		   </iframe>
+        </div>
+		
+		
+        <div class="sosuo">
+            <input type="text" value="输入您需要的查询工具" id="searchkey" class="sousuotxt" />
+            <input id="Button2" type="button" value="" class="sousuo_but" />
+        </div>
+    </div>
+    <div class="nav">
+        <div class="nav_left">
+        </div>
+        <ul>
+            <li><a href="SITE_URL">常用查询</a></li>
+            <li <if condition="$flag eq 'express'">class="nhover"</if> ><a href="SITE_URL/{$Think.config.ExpressSearch}/">快递查询</a></li>
+            <li <if condition="$flag eq 'shenghuo'">class="nhover"</if> ><a href="SITE_URL/{$Think.config.shenghuo}/">生活助手</a></li>
+            <li <if condition="$flag eq 'jiaotong'">class="nhover"</if> ><a href="SITE_URL/{$Think.config.jiaotong}/">交通出行</a></li>
+            <li <if condition="$flag eq 'jinrong'">class="nhover"</if> ><a href="SITE_URL/{$Think.config.jinrong}/">金融理财</a></li>
+            <li <if condition="$flag eq 'jiaoyu'">class="nhover"</if> ><a href="SITE_URL/{$Think.config.jiaoyu}/">教育学习</a></li>
+            <li <if condition="$flag eq 'yule'">class="nhover"</if> ><a href="SITE_URL/{$Think.config.yule}/">休闲娱乐</a></li>
+            <li <if condition="$flag eq 'zonghe'">class="nhover"</if> ><a href="SITE_URL/{$Think.config.zonghe}/">综合查询</a></li>
+           <li class="no_bg"><a href="http://www.7477.com/" target="_blank">网址大全</a></li>
+            <div class="nav_new">
+            </div>
+        </ul>
+        <div class="nav_right">
+        </div>
+    </div>
+</div>

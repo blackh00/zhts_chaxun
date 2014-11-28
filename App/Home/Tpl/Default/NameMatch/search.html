@@ -1,0 +1,58 @@
+﻿<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="namePd_bor">
+                <h1>
+                    姓名配对
+                </h1>
+                <div class="namePd_p1">根据姓名天格、地格、人格、总格、外格等五格数理关系，并运用阴阳五行相生相克理论测试您和对方的缘分指数。</div>
+                <div class="namePd_shur">
+                <form name="form_name" action="SITE_DYNAMIC_URL/namematch/search/" onsubmit="return validateForm()" method='post'>
+                   	<div class="name_s">
+                   		<input type="text" name='name1' id='name1' value="请输入姓名" onfocus="if(this.value=='请输入姓名') {this.value='';}this.style.color='#343235';" onblur="if(this.value=='') {this.value='请输入姓名';this.style.color='#999999';}" class="namePd_sousuotxt" />
+                        <p>vs</p>
+                        <input type="text" value="请输入姓名" name='name2' id='name2' onfocus="if(this.value=='请输入姓名') {this.value='';}this.style.color='#343235';" onblur="if(this.value=='') {this.value='请输入姓名';this.style.color='#999999';}" class="namePd_sousuotxt" />
+                   	</div>
+                    <input type="submit" value="" class="namePd_but" />
+                    <div class="namePd_a"><a href="SITE_URL/samename/" target="_blank">同名同姓查询</a></div>
+                    <div class="namePd_bg bg1"></div>
+                    <div class="namePd_bg bg2"></div>
+                    <div class="namePd_bg bg3"></div>
+                    <div class="namePd_bg bg4"></div>
+                    <input type="hidden" name="formcheck" value="submit" />
+                    </form>
+                </div>
+                <script type="text/javascript">
+                	function validateForm(){
+                		var str1=$('#name1').val();
+                		var str2=$('#name2').val();
+                		if(str1 == '' || str2 == '' ){
+                			alert('姓名不能为空,请输入姓名。');
+                			return false;
+                		}
+                		if(str1.length >4 || str2.length > 4){
+                			alert('姓名的长度不能大于四个字。');
+                			return false;
+                		}
+                		return true;
+                	}
+                </script>
+                
+                <div class="namePd_shur2">
+                   	<div class="namePd_L">
+                    	<p>匹配分值：</p>
+                        <div class="namePd_num"><span>{$record.score}</span>分</div>
+                        <p>双方姓名：<span>{$name1} vs {$name2}</span></p>
+                        <p>关系揭密：<span>{$record.intro}</span></p>
+                    </div>
+                    <div class="namePd_R"><img src="STATIC_URL/images/namePd/{$record.score}.gif" alt="表情" /></div>
+                    <div class="namePd_bg bg1"></div>
+                    <div class="namePd_bg bg2"></div>
+                    <div class="namePd_bg bg3"></div>
+                    <div class="namePd_bg bg4"></div>
+                </div>
+            </div>
+        </div>
+        <include file="common:rightSideInc" />	
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />

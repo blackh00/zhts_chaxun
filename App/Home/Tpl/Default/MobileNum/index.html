@@ -1,0 +1,42 @@
+﻿	<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="numJx_bor">
+                <h1>
+                    手机号码吉凶
+                </h1>
+                <form name="form1" id="form1" action="SITE_DYNAMIC_URL/mobilenum/mobilenumSearch/" method="post" onsubmit="return checkNumber()">
+                <div class="numJx_p1">揭开手机号码里的秘密</div>
+                <div class="numJx_shur">
+                   <input type="text" id="text_search" value="请输入您的电话号码" name="mobile" onfocus="if(this.value=='请输入您的电话号码') {this.value='';this.style.color='#343235';}"
+                        onblur="if(this.value=='') {this.value='请输入您的电话号码';this.style.color='#343235';}"
+                        class="numJx_sousuotxt" />
+                    <input type="submit" value="" class="numJx_but" />
+                </div>
+                <input type="hidden" name="checkform" id="checkform" value="submit" />
+                </form>
+                <span id="checkNumber" class="numJx_p2" style="color:red;display:none;">
+                	手机号码不能为空或者手机号码的格式不正确,请正确填写手机号码，例如:13415728579
+                </span>
+                <p class="numJx_p2">
+                	传说中，数字是一种符号，人们经常随身携带的符号则具有特定的暗示力。我们的生活几乎离不号码，如电话号码、手机号码、车牌号码等。其实号码也包含有一定的吉凶数理，这就像姓名会影响运势命运的意义是一样的。 
+                </p>
+                <p class="numJx_p2 numJx_p3">
+                	手机号码吉凶：手机号码与您的生活息息相关，也是您与很多人沟通的桥梁！所以就像风水、阳宅会影响运势命运一样，手机号码吉与凶可能会有一定的影响，不可轻视！ 
+                </p>
+            </div>
+        </div>
+        <include file="common:rightSideInc" />
+       <script type="text/javascript">
+       		function checkNumber(){
+       			var isMobile=/^(?:13\d|15\d|18\d)\d{5}(\d{3}|\*{3})$/; 
+       			var str=document.getElementById('text_search').value
+       			 if(!isMobile.test(str)){
+		            $('#checkNumber').css({'display':'block'});
+		            return false;
+       			 }  			
+       		}
+      		enterSubmit('text_search', 'form1');  
+     	</script>	
+<include file="common:relatedTools" />
+<include file="common:footer" />

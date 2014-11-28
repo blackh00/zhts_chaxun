@@ -1,0 +1,27 @@
+<include file="common:header" />
+<div class="main">
+   <div class="phone_left">
+       <div class="caipu_bor">
+           <h1>菜谱大全</h1>
+           <p class="caipu_p1"></p>
+           <include file="CookBook:search" />
+           <div class="caipu_c2">
+           	<div class="caipu_s">和<span>“{$search}”</span>相关的菜谱（{$count}）</div>
+               <ul>
+               	<Volist name="resultInfo" id="vo">
+               		<li class="" onmouseout="this.className=''" onmouseover="this.className='caipu_hover'">
+              			<div class="caipu_s_img"><a href="SITE_DYNAMIC_URL/caipu/dish/id/{$vo.id}" target="_blank"><img src="ATTACHMENT_URL/cookbook/{$vo.cookbook_pic}" alt="{$vo.cookbook_name}" width="120" height="90" /></a></div>
+                  		<div class="caipu_s_txt">
+                  			<h4><a href="SITE_DYNAMIC_URL/caipu/dish/id/{$vo.id}" target="_blank">{$vo.cookbook_name}</a></h4>
+                      		<p>{$search}<br /><br />菜品口味：<span>{$vo.cookbook_taste}</span><span>&nbsp;&nbsp;</span>主要工艺：<span>{$vo.cookbook_crafts}</span><br />所需时间：<span>{$vo.cookbook_time}</span><span>&nbsp;&nbsp;</span>制作难度：<span>{$vo.cookbook_difficulty}</span><span>&nbsp;&nbsp;</span>所需厨具：<span>{$vo.cookbook_kitchenware}</span></p>
+                  		</div>
+             		</li>
+        		</Volist>
+        		</ul>
+        		<div class="xiehouyu_fenye miyu_fenye" style="margin:27px 0 41px;border-radius:15px;">{$page}</div>
+     	</div>
+   	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

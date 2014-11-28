@@ -1,0 +1,13 @@
+<h1>谜语大全</h1>
+<p class="miyu_p1">提供谜语在线查阅，包括谜语的谜面，谜底以及谜语的分类等信息查询。</p>
+<div class="miyu_shur">
+	<form action="SITE_DYNAMIC_URL/riddle/search/" method="get" id="searchForm">
+		<input type="text" name="search" value="{$search}" class="miyu_sousuotxt" id="search"/>
+	    <input type="submit" name="submit" value="" onclick="riddleCheck();return false;" class="miyu_but" />
+	    <div class="miyu_lab">
+	    	<input name="miyu_rad" id="mimian" checked="checked" type="radio" value="mimian" /><label for="mimian">按谜面</label>
+	    	<input name="miyu_rad" id="midi" <if condition="$miyu_rad eq 'midi'">checked="checked"</if> type="radio" value="midi" /><label for="midi">按谜底</label>
+	    	<input name="miyu_rad" id="miyufl" <if condition="$miyu_rad eq 'miyufl'">checked="checked"</if> type="radio" value="miyufl" /><label for="miyufl">按谜语分类</label>
+	    </div>
+    </form>
+</div>

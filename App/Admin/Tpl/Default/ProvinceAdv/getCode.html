@@ -1,0 +1,20 @@
+<tagLib name="fanwe" />
+<include file="Public:header" />
+<script type="text/javascript" src="__STATIC__/Admin/Js/adv.js"></script>
+<div class="handle-btns">
+	<fanwe:linkBtn text="{$Think.lang.RETURN_LIST}" href="{:Cookie::get('returnUrl')}" />
+</div>
+<table cellpadding="4" cellspacing="0" border="0" class="table-form">
+	<tr>
+		<th width="150">{$Think.lang.AD_JS_CODE}</th>
+		<td><input id="jscode" type="text" class="textinput requireinput" name="name" size="72" value='{$Think.config.SITE_URL}/click.php?id={$vo.id}' /></td>
+	</tr>
+	<tr class="act">
+		<th>&nbsp;</th>
+		<td>
+			<input type="button" style="width:114px" class="button" value="复制代码至剪贴板" onclick="$('#jscode').select();document.execCommand('Copy');">
+			
+		</td>
+	</tr>
+</table>
+<include file="Public:footer" />

@@ -1,0 +1,11 @@
+<div class="zidian_shur">
+	<form action="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/show/" method="post" id="form">
+	 	<input type="text" value="请输入要查询的汉字或拼音" onfocus="if(this.value=='请输入要查询的汉字或拼音') {this.value='';}this.style.color='#343235';"
+	         onblur="if(this.value=='') {this.value='请输入要查询的汉字或拼音';this.style.color='#999999';}"
+	         class="zidian_sousuotxt" name="search" id="search"/>
+	     <input type="submit" value="" class="zidian_but" onclick="check();return false;"/>
+    </form>
+</div>
+<div class="zidian_jiansuo">
+	<a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/bslist/">按部首检索</a> | <a href="SITE_DYNAMIC_URL/{$Think.config.Xinhua}/pylist/">按拼音检索</a>
+</div>

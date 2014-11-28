@@ -1,0 +1,37 @@
+<include file="common:header" />
+   <div class="main">
+       <div class="phone_left">
+           <div class="zhougong_bor">
+               <h1>
+                   周公解梦
+               </h1>
+               <p class="zhougong_p1">在线解梦、梦中凶吉预测</p>
+               <div class="zhougong_shur">
+                 <form id="form1" action="SITE_DYNAMIC_URL/dreamsearch/dreamsearch" method="post">
+                  <input id="text_search" type="text" value="请输入做梦内容的关键字，如“女人”" onfocus="if(this.value=='请输入做梦内容的关键字，如“女人”') {this.value='';this.style.color='#343235';}"
+                    onblur="if(this.value=='') {this.value='请输入做梦内容的关键字，如“女人”';this.style.color='#343235';}"
+                    class="zhougong_sousuotxt" name="dr" />
+                 <input type="submit" value="" class="zhougong_but" />
+              </form>
+             </div>
+             <div class="zhougong_nav">
+             	<a class={$m1} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[0].category}">{$category[0].category}</a><a class={$m2} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[1].category}">{$category[1].category}</a><a class={$m3} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[2].category}">{$category[2].category}</a><a class={$m4} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[3].category}">{$category[3].category}</a><a class={$m5} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[4].category}">{$category[4].category}</a><a class={$m6} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[5].category}">{$category[5].category}</a><a class={$m7} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[6].category}">{$category[6].category}</a><a class={$m8} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[7].category}">{$category[7].category}</a><a class={$m9} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[8].category}">{$category[8].category}</a><a class={$m10} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[9].category}">{$category[9].category}</a>
+             </div>
+             <div class="zhougong_line"></div>
+             <div class="intro_tab_cont">
+                 <ul class="clearfix mt10 nobt">                      
+                    <volist name="list" id="vo">
+                    	<li>
+                         <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">
+                            {$vo.title}
+                         </a>
+                     	</li>
+                    </volist>
+                 </ul>
+                 <div class="page">{$page}</div>
+             </div>
+         </div>
+	</div>
+<include file="common:rightSideInc" />	
+<include file="common:relatedTools" />
+<include file="common:footer" />

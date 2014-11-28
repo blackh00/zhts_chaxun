@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+/**
+ * 谜语大全
+ * 
+ * @copyright (C)2013 ZHTS Inc.
+ * @project CHAXUNLE.COM
+ * @author Xieyihong <305095253@qq.com>
+ * @CreateDate: 2013-5-10 上午9:32:01
+ * @version 1.0
+ */
+.miyu_bor{border:1px solid #E6E6E6; margin-top:10px; padding:38px 0px 62px; overflow:hidden;}
+.miyu_bor h1{height:44px; font-size:30px; font-family:微软雅黑; background:url(../images/miyu_bg.gif) no-repeat 215px 0px; text-indent:270px; color:#338ace; line-height:44px;}
+.miyu_p1{margin:18px auto 0; padding-bottom:22px; width:576px; height:14px; line-height:14px; color:#282828; text-align:center; border-bottom:1px solid #e8e8e8;}
+.miyu_shur{height:108px; padding:40px 0 0px 54px;}
+.miyu_sousuotxt{ width:380px; height:38px; border:2px solid #FD9F19; line-height:38px; font-size:14px; float:left; color:#999; padding-left:13px; font-family: 微软雅黑; display:inline;}
+.miyu_but{ float:left; width:105px; height:42px;cursor:pointer; border:none;background:url(../images/miyu_bg.gif) 0px -50px no-repeat;}
+.miyu_lab{padding:20px 0 0 139px; clear:both; height:14px; line-height:14px; *height:19px; *line-height:19px;}
+.miyu_lab input{float:left;}
+.miyu_lab label{float:left; margin-right:16px; display:inline;}
+.miyu_box{margin:0 auto; width:578px; overflow:hidden;}
+.miyu_box h3{padding:0 10px 0 13px; margin-top:14px; height:32px; line-height:32px; border:1px solid #e1f3ff; border-bottom:none; background:#f6fbff; font-size:14px; color:#000;}
+.miyu_box h3 strong{ color:#434343;}
+.miyu_box h3 span{ color:#fda118;}
+.miyu_box h3 a{float:right; color:#bebebe; font-size:12px;}
+.miyu_box h3 a:hover{color:#ff0204; text-decoration:none;}
+.miyu_ul1{float:left;padding:18px 0 21px; border:1px solid #e1f3ff;}
+.miyu_ul1 li{float:left; padding-left:22px; width:122px; height:23px; line-height:23px; background:url(../images/miyu_bg.gif) 8px -179px no-repeat;overflow:hidden;}
+.miyu_ul1 li a{ color:#6b6b6b;}
+.miyu_ul1 li a:hover{ color:#ff0100;}
+.miyu_ul2{border:1px solid #e1f3ff;}
+.miyu_ul2 li{padding:0 68px 0 37px; line-height:65px; font-size:14px; color:#000;background:url(../images/miyu_bg.gif) 20px -158px no-repeat;border-bottom:1px dashed #e1f3ff;}
+/* .miyu_ul2 li.on{background:#f6fbff url(../images/miyu_bg3.gif) 20px -158px no-repeat;} */
+.miyu_ul2 li.last{border-bottom:none;}
+.miyu_ul2 li a{float:right; margin-top:28px; width:65px; height:0px; padding-top:19px; overflow:hidden; display:block; background:url(../images/miyu_bg.gif) 0px -130px no-repeat;}
+.miyu_ul2 li.on a{background:url(../images/miyu_bg3.gif) 0px -44px no-repeat;}
+.page .txt{ 
+	border: 1px solid #DCE0E6;
+    color: #4F4F4F;
+    font-size: 12px;
+    height: 19px;
+    line-height: 19px;
+    text-align: center;
+    vertical-align: top;
+    width: 40px;
+}
+.page .go {width:42px; height:29px;line-height:29px; background:url(../images/miyu_bg2.gif) no-repeat 0px 0px;color:#FFFFFF;cursor:pointer;display:inline-block;margin-left:2px;font-size:14px;}
+
+.miyu_ul3{ float:left;padding-top:5px;border:1px solid #e1f3ff;}
+.miyu_ul3 li{float:left; padding-left:30px; height:40px; line-height:40px; width:162px; border-bottom:1px dashed #e1f3ff;background:url(../images/miyu_bg.gif) 18px -172px no-repeat;}
+.miyu_ul3 li.last{border-bottom:none;}
+.miyu_ul3 li a{ color:#333; font-size:14px;}
+.miyu_none{border:1px solid #e1f3ff; padding-top:30px;}

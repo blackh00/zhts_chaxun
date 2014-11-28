@@ -1,0 +1,113 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="tongming">
+    	<h1>同名同姓查询</h1>
+       	<div class="cp_ts">你想知道全国有多少人与你同名同姓吗？提供身份证查询，包括姓氏、名字、姓名等信息。</div>
+      	<div class="shurip" id="shuru">
+        	<input type="text" value="请输入您要查询的姓名" maxlength="4" onfocus="if(this.value=='请输入您要查询的姓名') {this.value='';this.style.color='#343235';}"
+                 onblur="if(this.value=='') {this.value='请输入您要查询的姓名';this.style.color='#343235';}"
+                 class="ip_sousuotxt" id="fullname"/>
+        	<input type="submit" value="" class="ip_but" name='sub' onclick="ajaxSubmitFull(this)"/>
+         	<div class="clearfix"></div>
+		</div>
+		<div class="shurip" id="shuru2" style="display:none;">
+        	<input type="text" value="请输入您要查询的姓氏" maxlength="2" onfocus="if(this.value=='请输入您要查询的姓氏') {this.value='';this.style.color='#343235';}"
+                 onblur="if(this.value=='') {this.value='请输入您要查询的姓氏';this.style.color='#343235';}"
+                 class="ip_sousuotxt" id="surname2"/>
+        	<input type="submit" value="" class="ip_but" name='sub' onclick="ajaxSubmitSur2(this)"/>
+         	<div class="clearfix"></div>
+		</div>
+		<div class="shurip" id="shuru3" style="display:none;">
+        	<input type="text" value="请输入您要查询的名字" maxlength="2" onfocus="if(this.value=='请输入您要查询的名字') {this.value='';this.style.color='#343235';}"
+                 onblur="if(this.value=='') {this.value='请输入您要查询的名字';this.style.color='#343235';}"
+                 class="ip_sousuotxt" id="name2"/>
+        	<input type="submit" value="" class="ip_but" name='sub' onclick="ajaxSubmit2(this)"/>
+         	<div class="clearfix"></div>
+		</div>
+		
+     	<div class="tongming_con" id="enter">
+        	<div class="fn_search_detail left">
+				<h3><span>姓氏排行查询</span></h3>
+				<div class="fn_search clearfix">
+		  			<input class="ipt_text" maxlength="2" onblur="if(this.value==''){this.value='请输入您要查询的姓氏';this.style.color='#343235';}" onfocus="if(this.value=='请输入您要查询的姓氏'){this.value='';this.style.color='#343235';}" type="text" value="请输入您要查询的姓氏" id="surname">
+		  			<input type="submit" class="ipt_but" value="" name="sub" onclick="ajaxSubmitSur(this)"/>
+				</div>
+			</div>
+			<div class="fn_search_detail right">
+				<h3><span>名字排行查询</span></h3>
+				<div class="fn_search clearfix">
+			  		<input class="ipt_text" maxlength="2" onblur="if(this.value==''){this.value='请输入您要查询的名字';this.style.color='#343235';}" onfocus="if(this.value=='请输入您要查询的名字'){this.value='';this.style.color='#343235';}" type="text" value="请输入您要查询的名字" id="name">
+			  		<input type="submit" class="ipt_but" value="" name ="sub" onclick="ajaxSubmit(this)"/>
+				</div>
+			</div> 
+			<div class="clearfix"></div>
+		</div>
+		<div class="tongming_con" id="result" style="display:none;">
+			<div class="txing" id="mc">
+				<h2>名次</h2>
+				<h3></h3>
+			</div>
+	        <div class="txing" id="xm">
+	        	<h2>姓 名</h2>
+	            <h3></h3>
+	        </div>
+	        <div class="tmshu" id="tmtxshu1">
+	        	<h2>全国与您同名同姓的人数</h2>
+	            <h3></h3>
+	        </div>
+	        <div class="tmshu" id="tmtxshu2" style="display:none;">
+            	<h4>恭喜你！</h4>
+            	<h5>全国与您同名同姓的人数少于100人!</h5>
+            </div>
+			<div class="clearfix"></div>
+			<div class="tmqt">
+				· 给 <a href="SITE_DYNAMIC_URL/yanyuceshi/" class="say-yy"></a> 算算今天的<a href="SITE_DYNAMIC_URL/yanyuceshi/" class="say_yy">艳遇指数</a>吧！ · 给 <a href="SITE_DYNAMIC_URL/character/" class="say-rp"></a> 算算今天的<a href="SITE_DYNAMIC_URL/character/" class="say_rp">人品指数</a>吧！
+				<div class="tmqt2"><a class="back" href="SITE_DYNAMIC_URL/samename/"><img src="STATIC_URL/images/jieqi/back_off.jpg" onMouseOver="this.src='STATIC_URL/images/jieqi/back_on.jpg'" onMouseOut="this.src='STATIC_URL/images/jieqi/back_off.jpg'" alt="返回"/></a></div>      
+			</div>
+		</div>
+		<div class="tongming_con" id="result2" style="display:none;">
+			<div class="txing txing2" id="mc2">
+				<h2>名次</h2>
+				<h3></h3>
+			</div>
+	        <div class="txing txing2" id="xm2">
+	        	<h2>姓氏</h2>
+	            <h3></h3>
+	        </div>
+	        <div class="tmshu tmshu2" id="txshu1">
+	        	<h2>全国每千万人与您同姓的人数</h2>
+	            <h3></h3>
+	        </div>
+	        <div class="tmshu tmshu2" id="txshu2" style="display:none;">
+            	<h4>恭喜你！</h4>
+            	<h5>全国与您同姓的人数少于100人!</h5>
+            </div>
+			<div class="clearfix"></div>
+			<div class="tmqt2"><a class="back" href="SITE_DYNAMIC_URL/samename/"><img src="STATIC_URL/images/jieqi/back_off.jpg" onMouseOver="this.src='STATIC_URL/images/jieqi/back_on.jpg'" onMouseOut="this.src='STATIC_URL/images/jieqi/back_off.jpg'" alt="返回"/></a></div>      
+		</div>
+		<div class="tongming_con" id="result3" style="display:none;">
+			<div class="txing txing2" id="mc3">
+				<h2>名次</h2>
+				<h3></h3>
+			</div>
+	        <div class="txing txing2" id="xm3">
+	        	<h2>名字</h2>
+	            <h3></h3>
+	        </div>
+	        <div class="tmshu tmshu2" id="tmshu1">
+	        	<h2>全国每千万人与您同名的人数</h2>
+	            <h3></h3>
+	        </div>
+	        <div class="tmshu tmshu2" id="tmshu2" style="display:none;">
+            	<h4>恭喜你！</h4>
+            	<h5>全国与您同名的人数少于100人!</h5>
+            </div>
+			<div class="clearfix"></div>
+			<div class="tmqt2"><a class="back" href="SITE_DYNAMIC_URL/samename/"><img src="STATIC_URL/images/jieqi/back_off.jpg" onMouseOver="this.src='STATIC_URL/images/jieqi/back_on.jpg'" onMouseOut="this.src='STATIC_URL/images/jieqi/back_off.jpg'" alt="返回"/></a></div>      
+		</div>
+	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

@@ -1,0 +1,24 @@
+<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="shengxiao_bor">
+                <h1>
+                    生肖属相
+                </h1>
+                <div class="shengxiao_12">
+                	<volist name="shengxiao" id="vo">
+                		<a href="SITE_DYNAMIC_URL/{$Think.config.ShengxiaoSearch}/show/animal/{$vo.1}" <eq name="vo.1" value="$animal" >class="on"</eq>>{$vo.0}</a>
+                	</volist>
+                </div>
+                <div class="shengxiao_c2">
+                	<div class="shengxiao_c2_up"><img src="STATIC_URL/images/shengxiao/{$animal}.gif" alt="{$animal}" />
+                    <include file="$animal" />
+                </div>
+                <div class="shengxiao_btn">
+                	<a class="shengxiao_btn1" href="SITE_URL/shengxiao"></a><a class="shengxiao_btn2" href="SITE_URL"></a>
+                </div>
+            </div>
+        </div>
+        <include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

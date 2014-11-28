@@ -1,0 +1,165 @@
+<script src="STATIC_URL/js/rili.js" type='text/javascript'></script>
+<script src="STATIC_URL/js/calendar.min.js" type='text/javascript'></script>
+<script>
+function ajaxWeather(s_province,s_city,s_county){
+	$.ajax({
+			url:$CONFIG['siteDynamicUrl']+"/tianqi/weatherPort",
+			dataType:'jsonp', 
+			type:"get",	
+			data:{"province":s_province,"city":s_city,"county":s_county},
+			jsonp:'callback',
+			success:function(returnInfo) {
+			
+				$("#today").attr("title",returnInfo['today']['temperature']+returnInfo['today']['weather']+returnInfo['today']['wind']);
+				$("#today a").html(returnInfo['today']['temperature']+returnInfo['today']['weather']+returnInfo['today']['wind']);
+				$("#today a").attr("href",$CONFIG['siteDynamicUrl']+"/tianqi/index/province/"+s_province+"/city/"+s_city+"/county/"+s_county);
+				
+				$("#tomorrow").attr("title",returnInfo['tomorrow']['temperature']+returnInfo['tomorrow']['weather']+returnInfo['tomorrow']['wind']);
+				$("#tomorrow a").html(returnInfo['tomorrow']['temperature']+returnInfo['tomorrow']['weather']+returnInfo['tomorrow']['wind']);
+				$("#tomorrow a").attr("href",$CONFIG['siteDynamicUrl']+"/tianqi/index/province/"+s_province+"/city/"+s_city+"/county/"+s_county);
+				
+				$("#tomorrow2").attr("title",returnInfo['hou']['temperature']+returnInfo['hou']['weather']+returnInfo['hou']['wind']);
+				$("#tomorrow2 a").html(returnInfo['hou']['temperature']+returnInfo['hou']['weather']+returnInfo['hou']['wind']);
+				$("#tomorrow2 a").attr("href",$CONFIG['siteDynamicUrl']+"/tianqi/index/province/"+s_province+"/city/"+s_city+"/county/"+s_county);
+				$(".set-city").hide();
+				$(".page").show();
+				
+				// 切换地址
+				if(s_county){
+					$("#address").html(s_county);
+				}else{
+					$("#address").html(returnInfo['address']);
+					$("#today a").attr("href",$CONFIG['siteDynamicUrl']+"/tianqi/index/county/"+returnInfo['address']);
+					$("#tomorrow a").attr("href",$CONFIG['siteDynamicUrl']+"/tianqi/index/county/"+returnInfo['address']);
+					$("#tomorrow2 a").attr("href",$CONFIG['siteDynamicUrl']+"/tianqi/index/county/"+returnInfo['address']);
+				}
+			}
+		})
+
+}
+$(function(){
+	$("#btn").click(function(){
+
+	
+	// 获取id="s_province" 中的值即得到省份值
+	var s_province = $("#s_province").val();
+	
+	// 获取s_city中的值即得到市值
+	var s_city = $("#s_city").val();
+	
+	// 得到区或县对应的值
+	var s_county = $("#s_county").val();
+	
+	if(s_province!="省份"){
+		// ajax 跨域请求数据
+	// 如果匹配则通过ajax往服务器端提交数据
+		ajaxWeather(s_province,s_city,s_county);
+	} else {
+		alert("请选择地点");
+	}	
+	})
+})
+function ajaxTime(){
+	$.ajax({
+				url:$CONFIG['siteDynamicUrl']+"/bjtime/reback",
+				dataType:'jsonp', 
+				type:"get",	
+				jsonp:'callback',
+				success:function(time) {
+					set(time['bjtime']);
+				}
+		})
+
+}
+ajaxWeather("","","");
+/***用ajax跨域请求时间****/
+ajaxTime();
+setInterval(ajaxTime,1000);
+</script>
+<script src="STATIC_URL/js/weatherArea.js" type="text/javascript"></script>
+<script type="text/javascript">
+var num1=$('.lishi>ul>li').length;
+var lishi_n=0;
+var time1=null;
+function auto_js(){
+	clearTimeout(time1);
+	if(lishi_n==num1){
+		lishi_n=0;
+		}
+	$('.lishi>ul').animate({top:lishi_n*-20+'px'},500);
+	lishi_n++;
+	var time1=setTimeout('auto_js()',5000);
+	}
+	auto_js();
+                              
+$('.calendar>ul>li').click(function(){
+	if($(this).hasClass('now')||$(this).hasClass('nowworks')||$(this).hasClass('nowholidays')){
+		$('#wrap .mian .subar .sub-icon .icon').removeClass('jintian');
+		$('.now').removeClass('ts');
+		}
+		else{
+			$('#wrap .mian .subar .sub-icon .icon').addClass('jintian');
+			$('.now').addClass('ts');
+			}
+	})
+$('.jin').click(function(){
+	$('#wrap .mian .subar .sub-icon .icon').removeClass('jintian');
+	})
+
+// 用ajax到后台请求黄道吉日的数据
+$(function(){
+	var myDate=new Date();
+	
+	// 获取年月日组装成特定格式
+	// 年
+	var nowYear = myDate.getFullYear();
+	
+	// 月
+	var nowMonth = myDate.getMonth()+1;
+	
+	// 日
+	var nowDate = myDate.getDate();
+	
+	// 组装成年-月-日的格式
+	var yearMonthDate = nowYear+"-"+nowMonth+"-"+nowDate;
+	
+	// ajax去后台请求黄道吉日的数据
+	$.ajax({
+				url:$CONFIG['siteDynamicUrl']+"/rili/diesFaustusSearch",
+				dataType:'jsonp', 
+				type:"get",	
+				data:{"yearMonthDate":yearMonthDate},
+				jsonp:'callback',
+				success:function(dayInfo){
+					// 用空白分割字符串
+					jishi = dayInfo['ji'].split("　",9);
+					
+					// 保存ji中的东西
+					str = "";
+					for(var i in jishi){
+						if(i!=0){
+						str += "<span>"+jishi[i]+"</span>";
+						}
+					}
+					
+					// 往吉中添加数据
+					$("#ji").html(str);
+					
+					// 空白分割字符串
+					yishi = dayInfo['yi'].split("　",9);
+					
+					// 保存yi中的东西
+					str = "";
+					for(var i in yishi){
+						if(i!=0){
+						str += "<span>"+yishi[i]+"</span>";
+						}
+					}
+					
+					// 往宜事中添加数据
+					$("#yi").html(str);
+				}
+		})
+
+})
+</script>

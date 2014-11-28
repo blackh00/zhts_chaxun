@@ -1,0 +1,272 @@
+<include file="common:header" />
+    <div class="main">
+        <div class="content">
+   	    <div class="jtbox">
+            	<div class="jthc"> <a href="/{$Think.config.IpSearch}/" target="_blank"><img src="STATIC_URL/images/jiaotong/shenghuo_01.png" /></a>
+                    <div class="jttxt">
+           	      <p>IP查询<em id="ipInfo"> 丨 您的IP是：{$ip}</em></p>
+					<form action="/{$Think.config.IpSearch}/" method="get" id="ipform">
+                        <input type="text" value="请输入IP地址或域名" onfocus="if(this.value=='请输入IP地址或域名') {this.value='';}this.style.color='#a8a8a8';"
+                        onblur="if(this.value=='') {this.value='请输入IP地址或域名';this.style.color='#999999';}"
+                        class="mapbox" name="ip"/>
+                        <input type="image" src="STATIC_URL/images/jiaotong/cxan.gif" id="tijiaoIp" />
+					</form>
+                    </div>
+          		</div>
+                <div class="jthb"> <a href="/{$Think.config.PhoneSearch}/" target="_blank"><img src="STATIC_URL/images/jiaotong/shenghuo_02.png" /></a>
+                  <div class="jttxt">
+                    <p>手机号码归属地</p>
+					<form action="/{$Think.config.PhoneSearch}/" method="get">
+						<input type="text" value="请输入前7位或完整号码" onfocus="if(this.value=='请输入前7位或完整号码') {this.value='';}this.style.color='#a8a8a8';"
+							onblur="if(this.value=='') {this.value='请输入前7位或完整号码';this.style.color='#999999';}"
+							class="mapbox" name="phoneNum" />
+						<input type="image" src="STATIC_URL/images/jiaotong/cxan.gif"/>
+					</form>
+                  </div>
+      </div>
+            </div>
+            <div class="jtbox">
+            	<div class="jthc"><a href="/{$Think.config.IdentitySearch}/" target="_blank"><img src="STATIC_URL/images/jiaotong/shenghuo_03.png" /></a>
+            	  <div class="jttxt">
+   			<p>身份证查询 </p>
+					<form action="/{$Think.config.IdentitySearch}/" method="get">
+                        <input type="text" value="输入身份证号(15位或18位)" onfocus="if(this.value=='输入身份证号(15位或18位)') {this.value='';}this.style.color='#a8a8a8';"
+                        onblur="if(this.value=='') {this.value='输入身份证号(15位或18位)';this.style.color='#999999';}"
+                        class="mapbox"  value="identityNum" name="identityNum" />
+                        <input type="image" src="STATIC_URL/images/jiaotong/cxan.gif" />
+					</form>
+                    </div>
+          		</div>
+                <div class="jthb"> <a href="SITE_URL/{$Think.config.PostCode}/" target="_blank"><img src="STATIC_URL/images/jiaotong/shenghuo_04.png" /></a>
+                    <div class="jttxt">
+                   	  <p>邮编号码查询</p>
+					  <form action="SITE_URL/{$Think.config.PostCode}/" method="get">
+                      <input type="text" value="请输入地址或邮编查询" onfocus="if(this.value=='请输入地址或邮编查询') {this.value='';}this.style.color='#a8a8a8';"
+                        onblur="if(this.value=='') {this.value='请输入地址或邮编查询';this.style.color='#999999';}"
+                        class="mapbox" name="inputPostCode" />
+                      <input type="image" src="STATIC_URL/images/jiaotong/cxan.gif" />
+					  </form>
+                  </div>
+                </div>
+            </div>
+            <ul>
+                <li><a href="SITE_URL/{$Think.config.ExpressSearch}/" target="_blank">
+                    <img src="STATIC_URL/images/link_1.png" />
+                    <div class="link_txt">
+                        <p>
+                            快递查询
+                        </p>
+                        <span>快递物流单号跟踪查询</span>
+                    </div>
+                </a></li>
+                <li><a href="SITE_URL/{$Think.config.WeatherSearch}/" target="_blank">
+            <img src="STATIC_URL/images/link_7.png" />
+                    <div class="link_txt">
+                        <p>
+                            全国城市天气
+                    </p>
+                        <span>全国城市一周天气详情</span>
+                    </div>
+                </a></li>
+                <li><a href="SITE_URL/{$Think.config.RiliSearch}/" target="_blank">
+                    <img src="STATIC_URL/images/link_5.png" />
+                    <div class="link_txt">
+                        <p>
+                            万年历
+                    </p>
+                        <span>农历、公历、各种节日</span>
+                    </div>
+                </a></li>
+                <li><a href="SITE_URL/zone/" target="_blank">
+                    <img src="STATIC_URL/images/link_16.png" />
+                    <div class="link_txt">
+                        <p>
+                            电话区号
+                        </p>
+                        <span>全国各地电话区号查询</span>
+                    </div>
+                </a></li>
+        <li><a href="SITE_URL/commontelphone/" target="_blank">
+                    <img src="STATIC_URL/images/link_13.png" />
+                    <div class="link_txt">
+                        <p>
+                            常用电话号码
+                    </p>
+                        <span>常用报警、公共紧急电话</span>
+                    </div>
+                </a></li>
+                <li><a href="SITE_DYNAMIC_URL/{$Think.config.Lottery}/" target="_blank">
+                    <img src="STATIC_URL/images/link_12.png" />
+                    <div class="link_txt">
+                        <p>
+                            彩票查询
+                    </p>
+                        <span>各类彩票开奖情况查询</span>
+                    </div>
+                </a></li>
+                <li><a href="SITE_URL/bjtime/" target="_blank">
+                    <img src="STATIC_URL/images/link_15.png" />
+                    <div class="link_txt">
+                        <p>
+                            标准北京时间
+                        </p>
+                        <span>标准北京时间、精确校时</span>
+                    </div>
+                </a></li>
+                <li><a href="http://i.yeepay.com/shtml/mobile_01.jsp" target="_blank">
+                    <img src="STATIC_URL/images/link_17.png" />
+                    <div class="link_txt">
+                        <p>
+                            话费充值/查询
+                        </p>
+                        <span>移动联通话费充值/查询</span>
+                    </div>
+                </a></li>
+                <li><a href="http://search.114chn.com/" target="_blank">
+               	<img src="STATIC_URL/images/jiaotong/shenghuo_05.png"/>
+                  <div class="link_txt">
+                      <p>
+                        114黄页
+                </p>
+                        <span>更精准的找到企业资料</span>
+                </div>
+              </a></li>
+        <li><a href="SITE_DYNAMIC_URL/caipu/" target="_blank">
+                    <img src="STATIC_URL/images/jiaotong/shenghuo_06.png"/>
+                    <div class="link_txt">
+                        <p>
+                            菜谱大全
+                    </p>
+                        <span>各类家常菜、私房菜菜谱</span>
+                    </div>
+                </a></li>
+                <li><a href="http://www.gewara.com/movie/" target="_blank">
+                    <img src="STATIC_URL/images/jiaotong/shenghuo_07.png"/>
+                    <div class="link_txt">
+                        <p>
+                            电影票查询
+                    </p>
+                        <span>全国院线排片购票查询</span>
+                    </div>
+                </a></li>
+                
+                
+                
+                <li><a href="http://epg.tvsou.com/programys/TV_1/Channel_1/W6.htm" target="_blank">
+                    <img src="STATIC_URL/images/link_18.png" />
+                    <div class="link_txt">
+                        <p>
+                            电视节目预告
+                        </p>
+                        <span>全国各地电视台节目预告</span>
+                    </div>
+                </a></li>
+          </ul>
+      	</div>
+        <div class="linkline">
+        </div>
+        <div class="dange">
+			<div class="dange_title">日期天气</div>
+			<ul class="txtlinks">
+				<!--
+				<li><a href="SITE_URL/{$Think.config.WeatherSearch}/" target="_blank">全国城市天气</a></li>
+				<li><a href="SITE_URL/{$Think.config.RiliSearch}/" target="_blank">万年历</a></li>
+				<li><a href="SITE_URL/{$Think.config.Bjtime}/" target="_blank">北京时间</a></li>
+				<li><a href="#" target="_blank">黄道吉日</a></li>
+				<li><a href="#" target="_blank">空气质量查询</a></li>
+				<li><a href="#" target="_blank">24节气查询</a></li>
+				<li><a href="#" target="_blank">2013节目大全</a><div class="txt_hot"></div></li>
+				<li><a href="#" target="_blank">世界时间</a></li>
+				<li><a href="#" target="_blank">天数计算器</a></li>
+				<li><a href="#" target="_blank">pm2.5查询</a></li>
+				<li class="no_border"><a href="#" target="_blank">台风实时路径</a></li>
+				<li class="no_border"><a href="#" target="_blank">升降旗时间</a></li>
+				<li class="no_border"><a href="#" target="_blank">潮汐海浪预报</a></li>
+				-->
+				<li class="no_border"><a href="SITE_URL/tianqi/" target="_blank">全国城市天气</a></li>
+				<li class="no_border"><a href="SITE_URL/rili/" target="_blank">万年历</a></li>
+				<li class="no_border"><a href="SITE_URL/bjtime/" target="_blank">北京时间</a></li>
+				<li class="no_border"><a href="SITE_URL/huangdaojier/" target="_blank">黄道吉日</a></li>
+				<li class="no_border"><a href="SITE_URL/solar/" target="_blank">24节气查询</a></li>
+			</ul>
+		</div>
+		<div class="dange">
+			<div class="dange_title">邮政通讯</div>
+			<ul class="txtlinks">
+				<!--
+				<li><a href="SITE_URL/{$Think.config.PhoneSearch}/" target="_blank">手机号码归属地</a></li>
+				<li><a href="SITE_URL/{$Think.config.PostCode}/" target="_blank">邮政编码查询</a></li>
+				<li><a href="SITE_URL/{$Think.config.PostcodeSearch}/" target="_blank">邮政编码大全</a></li>
+				<li><a href="SITE_URL/{$Think.config.Zone}/" target="_blank">全国电话区号</a><div class="txt_new"></div></li>
+				<li><a href="SITE_URL/{$Think.config.commontelphone}/" target="_blank">常用电话号码</a><div class="txt_new"></div></li>
+				<li><a href="#" target="_blank">话费查询</a></li>
+				<li><a href="#" target="_blank">EMS查询</a></li>
+				<li><a href="#" target="_blank">邮政资费</a></li>
+				<li><a href="#" target="_blank">中国邮票查询</a></li>
+				<li><a href="#" target="_blank">海外应急电话</a></li>
+				<li class="no_border"><a href="#" target="_blank">个税计算器</a></li>
+				<li class="no_border"><a href="#" target="_blank">号码黑名单</a></li>
+				<li class="no_border"><a href="#" target="_blank">集邮市场名录</a></li>
+				<li class="no_border"><a href="#" target="_blank">禁寄物品目录</a></li>
+				-->
+				<li class="no_border"><a href="SITE_URL/commontelphone/" target="_blank">常用电话号码</a><div class="txt_new_6"></div></li>
+				<li class="no_border"><a href="SITE_URL/shouji/" target="_blank">手机号码归属地</a></li>
+				<li class="no_border"><a href="SITE_URL/youbiansousuo/" target="_blank">邮政编码查询</a></li>
+				<li class="no_border"><a href="SITE_URL/youbian/" target="_blank">邮政编码大全</a></li>
+				<li class="no_border"><a href="SITE_URL/zone/" target="_blank">全国电话区号</a><div class="txt_new_6"></div></li>
+			</ul>
+		</div>
+		<div class="dange">
+			<div class="dange_title">快递物流</div>
+			<ul class="txtlinks">
+				<!--
+				<li><a href="SITE_URL/{$Think.config.ExpressSearch}" target="_blank">快递查询</a><div class="txt_hot"></div></li>
+				<li><a href="#" target="_blank">寄快递</a></li>
+				<li><a href="#" target="_blank">快递公司查询</a></li>
+				<li><a href="#" target="_blank">快递网点查询</a></li>
+				<li><a href="#" target="_blank">快递资费</a></li>
+				<li class="no_border"><a href="#" target="_blank">物流查询</a></li>
+				<li class="no_border"><a href="#" target="_blank">落地配查询</a></li>
+				<li class="no_border"><a href="#" target="_blank">国际快递查询</a></li>
+				-->
+				<li class="no_border"><a href="SITE_URL/express/" target="_blank">快递查询</a><div class="txt_hot"></div></li>
+			</ul>
+		</div>
+		<div class="dange">
+			<div class="dange_title">生活资讯</div>
+			<ul class="txtlinks">
+				<!--
+				<li><a href="SITE_URL/{$Think.config.IdentitySearch}/" target="_blank">身份证查询</a></li>
+				<li><a href="SITE_URL/{$Think.config.IpSearch}/" target="_blank">IP查询</a><div class="txt_hot"> </div></li>
+				<li><a href="#" target="_blank">电影票查询</a></li>
+				<li><a href="SITE_URL/{$Think.config.Snacks}/" target="_blank">菜谱大全</a><div class="txt_new"> </div></li>
+				<li><a href="#" target="_blank">全国通缉犯查询</a></li>
+				<li><a href="#" target="_blank">家电下乡补贴</a></li>
+				<li><a href="#" target="_blank">农产品价格</a></li>
+				<li><a href="#" target="_blank">食用添加剂查询</a></li>
+				<li><a href="#" target="_blank">行政区域划分</a></li>
+				<li><a href="#" target="_blank">机关定点饭店</a></li>
+				<li class="no_border"><a href="#" target="_blank">演唱会门票查询</a></li>
+				<li class="no_border"><a href="#" target="_blank">在线电台</a></li>
+				-->
+				<li class="no_border"><a href="SITE_URL/shenfenzheng/" target="_blank">身份证查询</a></li>
+				<li class="no_border"><a href="SITE_URL/ip/" target="_blank">IP查询</a><div class="txt_hot_3"> </div></li>
+				<li class="no_border"><a href="SITE_DYNAMIC_URL/caipu/" target="_blank">菜谱大全</a><div class="txt_new"> </div></li>
+			</ul>
+		</div>
+		<!--
+		<div class="dange">
+			<div class="dange_title">单位换算</div>
+			<ul class="txtlinks">
+				<li><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/" target="_blank">长度单位换算</a></li>
+				<li><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/wendu/" target="_blank">温度单位换算</a></li>
+				<li><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/reliang/" target="_blank">热量单位换算</a></li>
+				<li><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/gonglv/" target="_blank">功率单位换算</a></li>
+				<li><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/yali/" target="_blank">压力单位换算</a></li>
+				<li class="no_border"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/zhongliang/" target="_blank">重量单位换算</a></li>
+				<li class="no_border"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/mianji/" target="_blank">面积单位换算</a></li>
+				<li class="no_border"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/tiji/" target="_blank">体积单位换算</a></li>
+			</ul>
+		</div>
+		-->
+		<include file="common:footer" />

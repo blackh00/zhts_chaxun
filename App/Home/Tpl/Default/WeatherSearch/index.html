@@ -1,0 +1,121 @@
+	<include file="common:header" />
+    <div class="main">
+        <div id="bd" class="container24">
+            <!-- custom-html-begin -->
+            <div id="weather-local">
+                <div class="g-box">
+                    <div class="tq_c1">
+                    </div>
+                    <div class="weather-local-hd g-box-hd">
+                        <h2 id="J-city-name">
+                            {$county}</h2>
+                        <div id="weather-city">
+                            <p class="weatheropt">
+                                不是{$county}?<a id="change-city" href="javascript:void(0)">点击这里更改</a></p>
+                            <div class="weather-setting">
+                                <h2>
+                                    选择城市</h2>
+                                <select id="s_province" name="s_province">
+                                </select>
+                                <select id="s_city" name="s_city">
+                                </select>
+                                <select id="s_county" name="s_county">
+                                </select>
+                                <input type="button" class="btn" value="更换"  id="btn" /><a id="cancel-change" href="javascript:void(0)">取消</a>
+                            </div>
+                        </div>
+                        <div class="more">
+                           <if condition="$suggest neq ''"> <span class="tips-icon">温馨提示: </span><span style="color: #e60012;">{$suggest}</span></if></div>
+                    </div>
+                    <div class="weather-local-bd g-box-bd">
+                        <div class="forecast">
+                            <ul class="g-list">
+                                <li>
+                                    <h4 class="g-list-hd">
+                                        今天<em>{$weatherInfoRecently['today']['day']}</em>{$weatherInfoRecently['today']['week']}</h4>
+                                    <div class="g-weather">
+                                        <div class="item">
+                                            <p class="pic" style="background-image: url('STATIC_URL/images/weather/big/{$weatherInfoRecently['today']['daytimePic']}'); _background-image: none;
+                                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='STATIC_URL/images/weather/{$weatherInfoRecently['today']['daytimePic']}', sizingMethod='image');">
+                                            </p>
+                                            <p class="type">
+                                                白天：{$weatherInfoRecently['today']['daytimeWeather']}</p>
+                                        </div>
+                                        <div class="item">
+                                            <p class="pic" style="background-image: url('STATIC_URL/images/weather/big/{$weatherInfoRecently['today']['nightPic']}'); _background-image: none;
+                                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='STATIC_URL/images/weather/{$weatherInfoRecently['today']['nightPic']}', sizingMethod='image');">
+                                            </p>
+                                            <p class="type">
+                                                夜间：{$weatherInfoRecently['today']['nightWeather']}</p>
+                                        </div>
+                                        <div></div>
+                                        <p class="detail">
+                                            <em>{$weatherInfoRecently['today']['temperature']}</em>{$weatherInfoRecently['today']['wind']}</p>
+                                    </div>
+                                </li>
+                                <li style="border-right: none;">
+                                    <h4 class="g-list-hd">
+                                        明天<em>{$weatherInfoRecently['tomorrow']['day']}</em>{$weatherInfoRecently['tomorrow']['week']}</h4>
+                                    <div class="g-weather">
+                                        <div class="item">
+                                            <p class="pic" style="background-image: url('STATIC_URL/images/weather/big/{$weatherInfoRecently['tomorrow']['daytimePic']}'); _background-image: none;
+                                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='STATIC_URL/images/weather/big/{$weatherInfoRecently['tomorrow']['daytimePic']}', sizingMethod='image');">
+                                            </p>
+                                            <p class="type">
+                                                白天：{$weatherInfoRecently['tomorrow']['daytimeWeather']}</p>
+                                        </div>
+                                        <div class="item">
+                                            <p class="pic" style="background-image: url('STATIC_URL/images/weather/big/{$weatherInfoRecently['tomorrow']['nightPic']}'); _background-image: none;
+                                                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='STATIC_URL/images/weather/big/{$weatherInfoRecently['tomorrow']['nightPic']}', sizingMethod='image');">
+                                            </p>
+                                            <p class="type">
+                                                夜间：{$weatherInfoRecently['tomorrow']['nightWeather']}</p>
+                                        </div>
+                                        <div></div>
+                                        <p class="detail">
+                                            <em>{$weatherInfoRecently['tomorrow']['temperature']}</em>{$weatherInfoRecently['tomorrow']['wind']}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div id="guide">
+                                <h4>
+                                    今日生活指数</h4>
+                                <ul>
+                                    <li class="dress">穿衣指数：{$todayAnotherInfo['index']}</li>
+                                    <li class="washcar">洗车指数： <span style="color: red;">{$todayAnotherInfo['index_xc']}</span></li>
+                                    <li class="cold">过敏指数：{$todayAnotherInfo['index_ag']}</li>
+                                    <li class="ultravioletray">紫外线指数：{$todayAnotherInfo['index_uv']}</li>
+                                    <li class="sports">运动指数：<span style="color: red;">{$todayAnotherInfo['index_cl']}</span></li><li class="icecream">
+                                       旅游指数：{$todayAnotherInfo['index_tr']}</li>
+                                    <li class="aircondition">晾晒指数：<span style="color: red;">{$todayAnotherInfo['index_ls']}</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <h3>
+                            未来几日天气</h3>
+                        <div class="future">
+                            <ul class="g-list">
+							<volist name="weatherAnotherDayInfo" id="vo">
+                                <li>
+                                    <h4 class="g-list-hd">
+                                        {$vo['day']}（{$vo['week']}）</h4>
+                                    <div class="g-weather">
+                                        <p class="pic" style="background-image: url('STATIC_URL/images/weather/small/{$vo['weatherAnotherInfo']['pic']}'); _background-image: none;
+                                            _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='STATIC_URL/images/weather/small/{$vo['weatherAnotherInfo']['pic']}', sizingMethod='image');">
+                                        </p>
+                                        <p class="type">
+                                            {$vo['weatherAnotherInfo']['weather']}</p>
+                                        <p class="detail">
+                                            <em>{$vo['weatherAnotherInfo']['temperature']}</em>{$vo['weatherAnotherInfo']['wind']}</p>
+                                    </div>
+                                </li>
+							</volist>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- custom-html-end -->
+        </div>
+<include file="common:relatedTools" />
+<include file="common:footer" />

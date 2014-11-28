@@ -1,0 +1,115 @@
+.danwei{border:1px solid #E6E6E6; margin-top:10px; padding:34px 0px;}
+.danwei h1{  height:60px; font-size:30px; font-family:微软雅黑; text-indent:270px; color:#338ace; line-height:43px; background-image: url(../images/danwei/danwei_1.gif); background-repeat: no-repeat; background-position: 206px 3px; }
+.cp_ts{ color:#333333; text-align:center; background: url(../images/kuaidi_all.png) no-repeat 38px -839px; height:35px; margin-bottom:30px;}
+.danwe_nav{ height:53px;}
+.danwe_nav li{ width:72px; float:left; text-align:center; line-height:41px; background:url(../images/danwei/danwei_2.gif) no-repeat right top; height:47px; font-size:14px; color:#444444;}
+.danwe_nav li.def{background:url(../images/danwei/danwei_2.gif) no-repeat 0px top; }
+.danwe_nav li.def a{color:#fff;}
+.danwe_nav li a{ color:#444444; width:72px; height:40px; display:block;}
+.danwei_con{ width:579px; margin:0px auto;}
+.dw_zhuanhuan{ height:156px; border:1px solid #eaeaea; padding:35px 0px 0px 35px; margin-bottom:20px;}
+
+.dw_text1{ width:140px; *padding-top:6px !important; height:28px; *height:22px !important; border:1px solid #ccc; padding-left:4px; float:left; margin-right:10px; display:inline;}
+
+.select_box4{width:116px; height:28px; position:relative; margin:0px;font-size:12px; float:left;}
+.select_box4 input{cursor:pointer; display:block; line-height:28px; width:101px; height:28px;border:1px solid #ccc; overflow:hidden; display:block; background: url(../images/danwei/danwei_5.gif) no-repeat 90px center; color:#4d4d4d; padding-left:5px; font-family:"宋体"; letter-spacing:-1px; float:left;}
+.select_box4 ul{ padding-top:5px;}
+.select_box4 ul li{display:block; width:76px; float:left;overflow:hidden;line-height:20px;cursor:pointer; color:#666666; padding-left:3px; overflow:hidden; height:20px;}
+.select_box4 ul li.hover{color:#f00; text-decoration:underline;}
+.changdu{ width:240px; position:absolute; left:0px; top:31px; border:1px solid #ccc; background:#fff; overflow: hidden;display:none; background:#fff; z-index:99999;padding:5px;}
+.changdu h2{ height:26px; line-height:26px; border-bottom:1px dashed #ccc;}
+.changdu h2 span{ float:right; padding:10px 0px 10px 10px; width:20px; cursor:pointer;}
+.dw_tu{ float:left; width:25px; height:22px; padding-top:8px;}
+.dw_but{ background:url(../images/danwei/danwei_3.gif) no-repeat; width:83px; height:30px; color:#fff; border:none 0px; float:left; margin-left:10px; display:inline; cursor:pointer;}
+
+.dw_zhuanhuan h3{ font-size:60px; color:#ff9c11; font-family:"微软雅黑"; padding-top:20px;}
+.dw_zhuanhuan h3 span{ font-size:30px; color:#666666;}
+.mod_a {
+margin-bottom: 10px;
+clear: both;
+overflow: hidden;
+color: #333;
+}
+.mod_a .th_a {
+height: 24px;
+line-height: 24px;
+padding: 1px;
+border: 1px solid #DCF0FF;
+}
+.mod_a .th_a strong {
+display: block;
+text-indent: 14px;
+background: #DCEFFF;
+color: #0D76C5;
+font-size: 14px;
+font-weight: 700;
+}
+.mod_a .td_a {
+margin-left: 1px;
+position: relative;
+}
+.mod_a .td120 {
+width: 89px;
+margin-left: -1px;
+font-size: 14px;
+text-align: center;
+}
+.mod_a .td120, .mod_a .td262 {
+height: 50px;
+line-height: 50px;
+float: left;
+vertical-align: middle;
+display: inline;
+border: 1px solid #DCF0FF;
+border-top: 0 none;
+position: relative;
+}
+.mod_a .td262 {
+width: 193px;
+border-left: 0 none;
+background: #F6FBFF;
+}
+.mod_a .inputTxtA {
+width: 105px;
+height: 20px;
+line-height: 20px;
+margin: 13px 0 0 13px;
+padding: 1px 3px;
+float: left;
+border: 1px solid #D5D5D5;
+display: inline;
+}
+.mod_a .submitCD,.submitWD,.submitGL,.submitYL,.submitMJ,.submitTJ,.submitRL,.submitZL {
+width: 60px;
+height: 24px;
+margin: 13px 0 0 5px;
+display: inline;
+float: left;
+cursor: pointer;
+}
+.submitB {
+width: 85px;
+height: 27px;
+line-height: 27px;
+margin: 20px auto;
+display: block;
+border: 0 none;
+vertical-align: middle;
+cursor: pointer;
+color: white;
+background: url(../images/danwei/submit.png);
+}
+.gray {
+color: #666;
+line-height:22px;
+}
+.bdtop {
+border-top: 1px solid #DCF0FF;
+}
+.pt10 {
+padding-top: 10px;
+}
+.lh16 {
+line-height: 16px;
+}
+#cd_h3,#wd_h3,#mj_h3,#tj_h3,#zl_h3,#gl_h3,#rd_h3,#yl_h3{color:#FF9C11;font-size:60px;}

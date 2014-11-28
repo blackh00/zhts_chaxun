@@ -1,0 +1,174 @@
+.anquan{border:1px solid #E6E6E6; margin-top:10px; padding:34px 0px;}
+.anquan h1{ height:60px; font-size:30px; font-family:微软雅黑; text-indent:250px; color:#338ace; line-height:43px; background-image: url(../images/link_b5.png); background-repeat: no-repeat; background-position: 185px 0px; }
+
+
+.clear{zoom:1;}.clear:after{content:'\20';display:block;height:0;clear:both;overflow:hidden;visibility:hidden;}a{outline:none;}a:active{star:expression(this.onFocus=this.blur());}a:focus{outline:none;}
+.addBor{ width:537px; height:471px; margin:0 auto; background-image: url(../images/anquanqi/bg.gif); }.t_wape01{width:537px;height:448px;position:relative;padding-top:52px;z-index:9;overflow:hidden;}.t_wape01Bg{background:url(images/bg.png) no-repeat 0 0;padding-left:16px;width:521px;}.wape-box{background:url(images/bg-c.png) no-repeat 0 0;width:507px;height:388px;overflow:hidden;}.wape-box2{width:1800px;height:388px;}/* t_wape01Bg */.formbox{padding:26px 0 0 30px;width:475px; height:126px;}.formbox .form-box-li{position: relative;height:32px;padding-bottom:15px;line-height:32px;color:#a3a3a3;}.formbox .form-box-li2{padding-bottom:0;}.formbox .li-position{position:relative;}.formbox label{color:#a3a3a3;float:left;font-size:14px;font-weight:600;text-align:right;width:157px;}.form-box-li .input{float:left;width:219px;height:13px;background:url(images/input.png) repeat-x scroll left top #FFF;color:#666;margin:0 5px;padding:8px;border:1px #d3d3d3 solid;}.form-box-li .form-input{width:83px;text-align:center;}
+.Wdate{float:left;width:219px;height:13px;color:#666;padding:8px;border:1px #d3d3d3 solid;cursor:pointer; margin-left:5px; display:inline; background:url(../images/anquanqi/jsan.gif) no-repeat 210px 7px;}
+.form-box-li .form-Wdate{width:83px;text-align:center;}.t{float:left;width:12px;}.form-box-li .formtips2{height:31px;width:160px;float:left;line-height:31px;padding:0 5px;color:red;}.form-box-li .tips2{display:inline-block;width:15px;height:15px;background:url(images/zhuanti-h2-tip.gif) no-repeat;vertical-align:middle;line-height:15px;margin-right:5px;}.formbox .li-position .tip{border:medium none;cursor:pointer;height:16px;margin-left:-32px;position:absolute;top:8px;width:16px;}.form-box-li .add{margin-left:5px;float:left;width:219px;}
+.form-box-li .add input, .form-box-li .add a,.form-box-li .add a:link,.form-box-li .add a:visited,.form-box-li .add a:hover{ width:87px; height:31px; overflow:hidden; line-height:31px; text-indent:-9999px; display:block; background-image: url(../images/anquanqi/btn.png); background-repeat: no-repeat; background-position: 0 0; border:none;}
+/*新加*/
+.form-box-li .add input, .form-box-li .add a,.form-box-li .add a:link,.form-box-li .add a:visited,.form-box-li .add a:hover{ width:87px; height:31px;  overflow:hidden;  line-height:31px; text-indent:-9999px;  display:block;  background: url("../images/anquanqi/btn.png") no-repeat scroll 0 0 transparent;cursor:pointer; border:none;}
+/*新加*/
+.form-box-li .add a:hover{background-position:-91px 0;}
+.formboxresult{ margin-left:1px; width:262px; height:206px; position:relative; background-image: url(../images/anquanqi/bg1.gif); background-repeat: no-repeat; background-position: 0 0; padding:70px 30px 0px 212px; color:#666666; line-height:20px;} 
+.formboxresult h2{ font-size:14px; padding-bottom:3px;}
+.formboxresult span{position:absolute;top:67px;color:red;font-size:12px;font-weight:600;}
+.formboxresult a,.formboxresult a:link,.formboxresult a:visited,.formboxresult a:hover{position:absolute;top:122px;width:53px;height:69px;}.formboxresult a.aplink-app,.formboxresult a.aplink-app:link,.formboxresult a.aplink-app:visited,.formboxresult a.aplink-app:hover{left:308px;}.formboxresult a.aqlink-app,.formboxresult a.aqlink-app:link,.formboxresult a.aqlink-app:visited,.formboxresult a.aqlink-app:hover{left:373px;}.formboxresult a.nnlink-app,.formboxresult a.nnlink-app:link,.formboxresult a.nnlink-app:visited,.formboxresult a.nnlink-app:hover{left:438px;}.logolink{position:absolute;left:396px;top:17px;height:30px;width:63px;display:block;}.ycq-tip{position:absolute;bottom:10px;right:16px;height:20px;width:100px;display:block;font-size:12px;color:#ffe3e0;}.morelink,.morelink:link,.morelink:visited,.morelink:hover{position:absolute;left:75px;bottom:10px;height:20px;width:121px;display:block;font-size:12px;color:#ffe3e0;}/* calendarbox */.p1,.p2{width:505px; height:362px;overflow:hidden;}
+.calenartitle{height:57px;width:505px;border-bottom:1px #e8cbca solid;overflow:hidden;line-height:57px;text-align:center;position:relative;}
+.calenartitle a,.calenartitle a:link,.calenartitle a:visited,.calenartitle a:hover{ position:absolute; top:16px; display:block; width:71px; height:25px; text-indent:-9999px; overflow:hidden; background-image: url(../images/anquanqi/btn.png); background-repeat: no-repeat; background-position: -148px -38px; }
+.calenartitle a.blacksy,.calenartitle a.blacksy:link,.calenartitle a.blacksy:visited,.calenartitle a.blacksy:hover{left:26px;background-position:-148px -38px;}
+.calenartitle a.blacksy:hover{background-position:-223px -38px;}
+.calenartitle a.today,.calenartitle a.today:link,.calenartitle a.today:visited,.calenartitle a.today:hover{left:400px;background-position:0 -38px;}.calenartitle a.today:hover{background-position:-74px -38px;}
+.calenartitle a.prev,.calenartitle .prev:link,.calenartitle .prev:visited{left:161px;background-position:-184px 0;width:26px;height:27px;}.calenartitle .prev:hover,.calendarbox .calenartitle a.prevno{background-position:-257px 0;width:26px;height:27px;}.calenartitle a.next,.calenartitle .next:link,.calenartitle .next:visited{left:318px;background-position:-221px 0;width:26px;height:27px;}.calenartitle .next:hover,.calendarbox .calenartitle a.nextno{background-position:-294px 0;width:26px;height:27px;}
+.calenartitle .nub-rls{color:#8b2c07;font-size:18px;font-weight:600; font-family:"微软雅黑";}
+.calenarform{padding-left:29px; width:476px; height:302px;}
+.calenarform .nav-tlt{height:32px;line-height:32px;width:468px;color:#8b2c07;font-weight:700;text-align:center;}.calenarform .nav-tlt span{float:left;width:65px;font-size:12px;display:block;}.calenartable{width:485px;}.calenartable .calendar{width:468px;float:left;table-layout:fixed;height:270px;}.calendar li{color:#dac2a5;cursor:pointer;text-align:left;width:44px;font-size:12px;font-weight:700;border-left:1px #e0b9b7 solid;border-top:1px #e0b9b7 solid;height:32px;float:left;background:#f0eaea;padding:5px 10px 4px;}.calendar li.bdright{border-right:1px #e0b9b7 solid;text-align:left;}.calendar li.bdbottom{border-bottom:1px #E0B9B7 solid;}.calendar li strong{height:16px;line-height:16px;display:block;}.calendar li b{height:18px;line-height:18px;display:block;text-align:right;font:normal 12px "Helvetica Neue",Helvetica,Arial,微软雅黑,sans-serif;}.calendarbox .calendar li.jin{ _background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='scale',src='images/jin.png');background-image: url(../images/anquanqi/jin.png); }.calendar li.plq{color:#726f6f;background:#ffeaea;}.calendar li.plq b{color:#e66e6e;}.calendar li.aqq{color:#726f6f;background:#e6f9bc;}.calendar li.aqq b{color:#97b84a;}.calendar li.dym{color:#726f6f;background:#fff1cf;}.calendar li.dym b{color:#f9a328;}
+.tmblog{ position:absolute;top:2px;left:280px;}.morelink2{bottom: 10px;color: #FFE3E0;font-size: 12px;height: 20px;position: absolute;width: 230px;}
+
+.morelink:hover{text-decoration:underline;}
+
+
+
+.calendar11{ position: relative; display: none; border:1px solid #bbbbbb; font-size: 11px; color: #666; cursor: default; background:white; font-family:arial; margin-top:2px; width:180px; height:175px; z-index:10000000000; margin-left:-55px;} 
+
+.calendar11 table {
+  font-size: 12px;
+  color: #666;
+  cursor: default;
+ background:white;
+  font-family: tahoma,verdana,sans-serif;
+}
+
+.calendar11 .button { 
+  text-align: center;
+  padding: 1px;
+
+}
+
+.calendar11 thead .title { 
+  padding: 1px;
+  color: #000;
+  text-align: center;
+}
+
+
+
+.calendar11 thead .name { 
+  padding: 2px;
+  text-align: center;
+background:#fce5e3;
+color:#000000;
+}
+
+.calendar11 thead .weekend { background:#fce5e3; color:#000000;
+ 
+}
+
+.calendar11 thead .hilite { 
+}
+
+.calendar11 thead .active { 
+
+}
+
+
+
+.calendar11 tbody .day {width:24px; height:21px; line-height:20px; text-align:center; color:#000;}
+
+.calendar11 table .wn {
+
+
+}
+
+.calendar11 tbody .rowhilite td {
+
+}
+
+.calendar11 tbody .rowhilite td.wn {
+  background: #c8d4d0;
+}
+
+.calendar11 tbody td.hilite { background:#fce5e3
+}
+
+.calendar11 tbody td.active { 
+
+}
+
+.calendar11 tbody td.selected { 
+  background: #fce5e3;
+  color:#000000;
+}
+
+
+
+.calendar11 tbody td.today { 
+  color:#000000;
+  background:#fce5e3;
+}
+
+.calendar11 tbody .disabled { color: #999; }
+
+.calendar11 tbody .emptycell {
+  visibility: hidden;
+}
+
+.calendar11 tbody .emptyrow {
+  display: none;
+}
+
+
+
+.calendar11 tfoot .footrow { 
+}
+
+.calendar11 tfoot .ttip { 
+  background:#fff;  
+
+  background: #788084;
+  background:#fff; 
+  color:#000;
+  text-align: center;
+}
+
+.calendar11 tfoot .hilite { 
+
+  background: #000;
+}
+
+.calendar11 tfoot .active {
+
+}
+
+.combo {
+  position: absolute;
+  display: none;
+  width: 4em;
+  top: 0px;
+  left: 0px;
+  cursor: default;
+  
+  background: #000;
+  font-size: smaller;
+  padding: 1px;
+}
+
+.combo .label {
+  text-align: center;
+  padding: 1px;
+}
+
+.combo .active {
+ background:white;
+  padding: 0px;
+
+}
+
+.combo .hilite {
+  background: #048;
+  color: #aef;
+}
+
+
+.calendar11 tbody td.weekend{ color:#F00;}

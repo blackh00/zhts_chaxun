@@ -1,0 +1,123 @@
+﻿<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="caipiao">
+                <h1>
+                    彩票查询
+                </h1>
+                <div class="cp_ts">提供彩票查询服务，包括彩票开奖号码 ,开奖日期,开奖金额等信息。</div>
+          <div class="cpbut">
+                	
+                    <form id="form1" name='form1' action='SITE_DYNAMIC_URL/caipiao/' method='post'>
+                    <div class="cp_select_box1">                  
+                        <input id="myselect" type="text" value="请选择彩票" name='caipiao' readonly="readonly">
+                            <ul class="select_ul">
+                            	<li value='1'>双色球</li>
+                            	<li value='2'>福彩3D</li>
+                                <li value='3'>七乐彩</li>
+                                <li value='4'>22选5</li>
+                            	<li value='5'>排列三</li>
+                                <li value='6'>七星彩</li>
+                                <li value='7'>超级大乐透</li>
+                            </ul>                      
+                      
+                      </div>
+                      <input type="submit" class="ip_but" value="" style="margin:0px;" />
+                   </form>
+                </div>
+                <div class="tab">
+                    <ul class="tab-hd">
+                        <PHP>
+                    		if($color2==2){                         		
+                    	</PHP>                   	
+                    	 <li class="active"><a href="SITE_DYNAMIC_URL/caipiao/tiCaiPage/">体彩开奖结果</a></li>
+                    	<PHP>
+                    	}else{                    		
+                    	</PHP>
+                    	 <li class=""><a href="SITE_DYNAMIC_URL/caipiao/tiCaiPage/">体彩开奖结果</a></li>
+                    	<PHP>
+                    	}                  		
+                    	</PHP>                                        	                 	
+                    	<PHP>
+                    		if($color1==1){                         		
+                    	</PHP>                   	
+                    	  <li  class="active"><a href="SITE_DYNAMIC_URL/caipiao/">福彩开奖结果</a></li>
+                    	<PHP>
+                    	}else{                    		
+                    	</PHP>
+                    	 <li  class=""><a href="SITE_DYNAMIC_URL/caipiao/">福彩开奖结果</a></li>
+                    	<PHP>
+                    	}                  		
+                    	</PHP> 
+                    </ul>
+                    <div class="seqiu">
+                    	<table width="100%" border="0" cellspacing="0" cellpadding="0" class="qiubiao">
+  <tr>
+    <td align="center" class="qiulei"><i>22选5</i> 第<b>{$data1['shuangSe01']}</b>期</td>
+    <td class="kjgg">{$data1['shuangSe02']}</td>
+  </tr>
+  <tr>
+    <td colspan="2" class="kjxx">
+    	<b>开奖号码: </b>
+        <span>{$data1['shuangSe03'][0]}</span>
+        <span>{$data1['shuangSe03'][1]}</span>
+        <span>{$data1['shuangSe03'][2]}</span>
+         <span>{$data1['shuangSe03'][3]}</span>
+         <span>{$data1['shuangSe03'][4]}</span>
+          <br />
+    	<b>出球顺序：</b>{$data1['shuangSe05']} </td>
+    </tr>
+  <tr>
+    <td colspan="2" class="jc">奖池滚动：<span class="txtred">{$data1['shuangSe07']}</span>元</td>
+    </tr>
+</table>
+						<table width="100%" border="0" cellspacing="0" cellpadding="0" class="kjxq">
+  <tr>
+    <td colspan="3" class="textblue kjtit" >开奖详情</td>
+    </tr>
+  <tr class="textblue">
+    <td align="center">奖项</td>
+    <td align="center">中奖注数</td>
+    <td align="center">单注奖金（元）</td>
+  </tr>
+  <tr>
+    <td align="center" class="textblue">一等奖 </td>
+    <td align="center">{$data1['n8']}</td>
+    <td align="center">{$data1['m8']},{$data1['shuangSe08'][1]}</td>
+  </tr>
+  <tr>
+    <td align="center" class="textblue">二等奖</td>
+    <td align="center">{$data1['n9']}</td>
+    <td align="center">{$data1['m9']}</td>
+  </tr>
+  <tr>
+    <td align="center" class="textblue">三等奖</td>
+    <td align="center">{$data1['n10']}</td>
+    <td align="center">{$data1['m10']}</td>
+  </tr>
+ <!--  <tr>
+    <td align="center" class="textblue">四等奖</td>
+    <td align="center">118908</td>
+    <td align="center">10</td>
+  </tr>
+  <tr>
+    <td align="center" class="textblue">五等奖</td>
+    <td align="center">2130642</td>
+    <td align="center">5</td>
+  </tr> -->
+</table>
+
+                    </div>
+       		  </div>
+                <div class="shuom">
+                	<h2>22选5设奖规则</h2>
+                    <p class="ssp">1. 设3个奖级，即一、二、三等奖。其中一等奖为浮动奖，其余为固定奖。                    </p>
+                    <p class="ssp">2. 奖金分配：一等奖为当期奖金额减去固定奖总额后的100%，及奖池和调节基金转入部分。<br />
+二等奖单注固定奖金为50元。三等奖单注固定奖金为5元。                  </p>
+                    <p class="ssp">3. 单注彩票中奖奖金最高限额500万元。</p>
+                </div>
+            </div>
+        </div>
+        <include file="common:rightSideInc" />	
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />

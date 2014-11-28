@@ -1,0 +1,40 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="car_bor">
+		<h1>汽车标志大全</h1>
+		<div class="car_line"></div>
+		<div class="car_shur">
+			<form method="post" action="SITE_DYNAMIC_URL/qichebiaozhi/search/">
+				<input type="submit" value="" class="car_but" />
+				<input type="text" value="宝马" onfocus="if(this.value=='宝马') {this.value='';this.style.color='#343235';}"
+                        onblur="if(this.value=='') {this.value='宝马';this.style.color='#343235';}"
+                        class="car_sousuotxt"  name="searchKey" />
+			</form>
+			<a class="car_fanhui" href="SITE_URL/qichebiaozhi/">返回车标大全</a>
+		</div>
+		<div class="car_box2">
+		<volist name="resultInfo" id="vo">
+			<dl>
+				<dt>
+					<img src="ATTACHMENT_URL/carSign/{$vo.pic}" alt=""  width="102px" />
+                    {$vo.name}
+				</dt>
+                <dd>{$vo.simpleDetails}<a href="javascript:void(0)" onclick="showclass('car_xiangxi',this);">[详细]</a>
+				<div class="car_xiangxi" style="display:none;">
+              		<div class="car_xiangxi_up">
+                  		<div class="car_close"></div>
+                  		<h3>{$vo.name}</h3>
+                      	<p>{$vo.details}</p>
+                  	</div>
+              	</div>
+				</dd>
+			</dl>
+			<div class="car_line2"></div>  
+		</volist>
+		</div>
+	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

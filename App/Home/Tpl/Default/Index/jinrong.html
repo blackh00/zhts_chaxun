@@ -1,0 +1,312 @@
+﻿<include file="common:header" />
+<div class="main">
+       <div class="content">
+  	    <div class="jtbox">
+           	<div class="jthc"> <a href="SITE_URL/caipiao/" target="_blank"><img src="STATIC_URL/images/jiaotong/jingrong_01.png" /></a>
+                   <div class="jttxt">
+          	      <p>彩票查询</p>
+                       <div class="select_box"><input id="myselect" type="text" value="双色球" readonly="readonly">                         
+                           <ul class="select_ul">
+                          		<li id="shuangseqiu" onclick="javascript: getData('#shuangseqiu')">双色球</li>
+                               <li id="sandi" onclick="javascript: getData('#sandi')">福彩3D</li>
+                               <li id="qicaile" onclick="javascript: getData('#qicaile')">七乐彩</li>
+                              <li id="erer" onclick="javascript: getData('#erer')">22选5</li>
+                              <li id="pailiesan" onclick="javascript: getData('#pailiesan')">排列三</li>
+                              <li id="qixingcai" onclick="javascript: getData('#qixingcai')">七星彩</li>
+                              <li id="daletou" onclick="javascript: getData('#daletou')">大乐透</li>
+                           </ul>
+                       </div>
+                       <div class="qiu">
+                       	<ul id="kaijiang">                      	
+                               <li>{$data[1]}</li>
+                               <li>{$data[2]}</li>
+                               <li>{$data[3]}</li>
+                               <li>{$data[4]}</li>
+                               <li>{$data[5]}</li>
+                               <li>{$data[6]}</li>
+                               <li  class="blue">{$data[7]}</li>
+                           </ul>
+                       </div>
+                   </div>
+         		</div>
+         		<script type="text/javascript">
+         			
+         				/* function get(id){   //测试js
+         					var str=$(id).text();
+         					alert(str);	
+         				} */
+         				
+	          	// 获得所选彩票数据。
+	          		function getData(id)
+	          		{	  
+         				   var re1=/双色/;
+         				   var re2=/3D/;
+         				   var re3=/七乐/;
+         				   var re4=/22选/;
+         				   var re5=/排列/;
+       				   var re6=/七星/;
+       				   var re7=/大乐/;
+	          		   var data={};
+	          		   var str=$(id).text();
+	          		   if(re1.test(str)){		          			
+	          			 data.cate=1;
+	          		   }else if(re2.test(str)){
+	          			 data.cate=2;  
+	          		   }else if(re3.test(str)){
+	          			 data.cate=3;  
+	          		   }else if(re4.test(str)){
+	          			 data.cate=4;  
+	          		   }else if(re5.test(str)){
+	          			 data.cate=5;  
+	          		   }else if(re6.test(str)){
+	          			 data.cate=6;  
+	          		   }else if(re7.test(str)){
+	          			 data.cate=7;  
+	          		   }else{
+	          			   
+	          		   }		          	
+	          		/*  var yuming = window.location.href;
+	          		 var regUrl=/d.chaxun.cc/;
+	          		 if(!regUrl.test(yuming)){
+	          			 alert('请继续刚才的访问。');
+	          			 window.location.href="SITE_DYNAMIC_URL/jinrong/";	
+	          			 return false;
+	          		 } */
+	          		   // data.client=$('#client').val();		          		  
+	          		   $.ajax({
+	          			   type:'get',
+	          			   url:'SITE_DYNAMIC_URL/Index/caiPiao/',
+	          			   data:data,
+	          			   dataType:'jsonp',
+	          			   jsonp:'callback',
+	          			   success:function(data){
+	          				 $("#kaijiang").html('');
+	          				 //alert(data[1]);
+	          				   if(data['status']=='shuangseqiu'){
+	          					 var data1=new Array(data['1'],data['2'],data['3'],data['4'],data['5'],data['6']);		          		   	
+			          				 $.each(data1,function(key,val){
+			          				    //回调函数有两个参数,第一个是元素索引,第二个为当前值
+			          				    //alert('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val);
+			          				     $("#kaijiang").append("<li>"+val+"</li>");
+			          				});  
+			          				$("#kaijiang").append("<li class='blue'>"+data['7']+"</li>");
+			          				
+	          				   }else if(data['status']=='sandi'){	          				
+	          					 var data1=new Array(data['1'],data['2'],data['3']);  
+	          					 $.each(data1,function(key,val){
+			          				    //回调函数有两个参数,第一个是元素索引,第二个为当前值
+			          				    //alert('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val);
+			          				     $("#kaijiang").append("<li>"+val+"</li>");
+			          				});  
+	          					 
+	          				   }else if(data['status']=='qicaile'){
+	          					 var data1=new Array(data['1'],data['2'],data['3'],data['4'],data['5'],data['6'],data['7']);		          		   	
+		          				 $.each(data1,function(key,val){
+		          				    //回调函数有两个参数,第一个是元素索引,第二个为当前值
+		          				    //alert('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val);
+		          				     $("#kaijiang").append("<li>"+val+"</li>");
+		          				});  
+		          				$("#kaijiang").append("<li class='blue'>"+data['8']+"</li>");
+		          				
+	          				   }else if(data['status']=='erer'){	          				
+		          					 var data1=new Array(data['1'],data['2'],data['3'],data['4'],data['5']);  
+		          					 $.each(data1,function(key,val){
+				          				    //回调函数有两个参数,第一个是元素索引,第二个为当前值
+				          				    //alert('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val);
+				          				     $("#kaijiang").append("<li>"+val+"</li>");
+				          				});  
+		          					 			          					
+	          				   } else if(data['status']=='paile'){	          				
+		          					 var data1=new Array(data['1'],data['2'],data['3']);  
+		          					 $.each(data1,function(key,val){
+				          				    //回调函数有两个参数,第一个是元素索引,第二个为当前值
+				          				    //alert('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val);
+				          				     $("#kaijiang").append("<li>"+val+"</li>");
+				          				});  
+		          					 
+		          			   } else if(data['status']=='qixingcai'){	          				
+		          					 var data1=new Array(data['1'],data['2'],data['3'],data['4'],data['5'],data['6']);  
+		          					 $.each(data1,function(key,val){
+				          				    //回调函数有两个参数,第一个是元素索引,第二个为当前值
+				          				    //alert('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val);
+				          				     $("#kaijiang").append("<li>"+val+"</li>");
+				          				});  
+		          					 
+		          			   } else if(data['status']=='daletou'){
+		          					 var data1=new Array(data['1'],data['2'],data['3'],data['4'],data['5']);		          		   	
+			          				 $.each(data1,function(key,val){
+			          				    //回调函数有两个参数,第一个是元素索引,第二个为当前值
+			          				    //alert('_mozi数组中 ,索引 : '+key+' 对应的值为: '+val);
+			          				     $("#kaijiang").append("<li>"+val+"</li>");
+			          				});  
+			          				$("#kaijiang").append("<li class='blue'>"+data['6']+"</li>");
+			          				$("#kaijiang").append("<li class='blue'>"+data['7']+"</li>");
+			          				
+		          			   }else{
+		          				   
+		          			   }
+	          				   
+	          				   
+	          			   }
+	          		   });
+	          		   // alert('aaa');   
+	          		}
+         		</script>
+               <div class="jthb"><a href="SITE_URL/daxie/" target="_blank"><img src="STATIC_URL/images/jiaotong/jingrong_03.png" /></a>
+           	  <div class="jttxt">
+  				<p>金额大写转换 </p>
+  						<form action="SITE_DYNAMIC_URL/daxie/" method="get">
+                        <input type="text" value="输入数字，小数点后最多2位" onfocus="if(this.value=='输入数字，小数点后最多2位') {this.value='';}this.style.color='#a8a8a8';"
+                        onblur="if(this.value=='') {this.value='输入数字，小数点后最多2位';this.style.color='#999999';}"
+                        class="mapbox" id="shuzi_input" name='search'/>
+                        <input type="image" src="STATIC_URL/images/jiaotong/cxan.gif" />
+                        <input type="hidden" name="form_check" value="submit"/>
+                       </form>
+                   </div>
+         		</div>
+           </div>
+           
+           <ul>
+               <li><a href="SITE_URL/{$Think.config.ExchangeRate}/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jingrong_05.png" />
+                   <div class="link_txt">
+                       <p>
+                           汇率查询
+                       </p>
+                       <span>各类货币汇率在线计算</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/huangjinbaojia" target="_blank">
+           			<img src="STATIC_URL/images/jiaotong/jingrong_06.png" />
+                   <div class="link_txt">
+                       <p>
+                           黄金价格
+                   	</p>
+                       <span>黄金价格走势在线查询</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/bank/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jingrong_07.png" />
+                   <div class="link_txt">
+                       <p>
+                         银行大全
+                   	</p>
+                       <span>为你提供最全银行信息</span>
+                   </div>
+               </a></li>
+               <li><a href="http://tools.2345.com/fapiaocx.htm" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jingrong_08.png" />
+                   <div class="link_txt">
+                       <p>
+                           发票真伪查询
+                       </p>
+                       <span>发票真伪，一查就知道</span>
+                   </div>
+               </a></li>
+       <li><a href="http://soufun.com/house/tools.htm" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jingrong_09.png" />
+                   <div class="link_txt">
+                       <p>
+                           购房税费计算
+                   	</p>
+                       <span>计算你购房所交纳税费</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/shebao/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jingrong_10.png" />
+                   <div class="link_txt">
+                       <p>
+                           各地社保查询
+                   	</p>
+                       <span>全国各省社保在线查询</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/zhufanggongji/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jingrong_11.png" />
+                   <div class="link_txt">
+                       <p>
+                           住房公积金
+                       </p>
+                       <span>全国住房公积金查询</span>
+                   </div>
+               </a></li>
+               <li><a href="http://price.pcauto.com.cn/vbuycar.jsp" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/jingrong_12.png" />
+                   <div class="link_txt">
+                       <p>
+                           车贷计算器
+                       </p>
+                       <span>计算你每月交纳的金额</span>
+                   </div>
+               </a></li>
+         </ul>
+     	</div>
+       <div class="linkline">
+       </div>
+   <div class="dange">
+<div class="dange_title">投资理财</div>
+<ul class="txtlinks">
+	<!--
+	<li><a href="#" target="_blank">股市行情</a></li>
+	<li><a href="#" target="_blank">彩票开奖查询</a><div class="txt_hot"></div></li>
+	<li><a href="#" target="_blank">ATM网点查询</a></li>
+	<li><a href="SITE_URL/{$Think.config.GoldPrice}/" target="_blank">黄金价格查询</a></li>
+	<li><a href="SITE_URL/{$Think.config.ExchangeRate}/" target="_blank">汇率查询</a></li>
+	<li class="no_border"><a href="http://fund.eastmoney.com/fund.html" target="_blank">基金查询</a></li>
+	<li class="no_border"><a href="#" target="_blank">银行存贷利率</a></li>
+	<li class="no_border"><a href="SITE_URL/{$Think.config.Bank}/" target="_blank">银行大全</a></li>
+	-->
+	<li class="no_border"><a href="SITE_URL/huangjinbaojia/" target="_blank">黄金价格查询</a></li>
+	<li class="no_border"><a href="SITE_URL/huilv/" target="_blank">汇率查询</a></li>
+	<li class="no_border"><a href="http://fund.eastmoney.com/fund.html" target="_blank">基金查询</a></li>
+	<li class="no_border"><a href="SITE_URL/bank/" target="_blank">银行大全</a></li>
+</ul>
+</div>
+<div class="dange">
+<div class="dange_title">理财计算</div>
+<ul class="txtlinks">
+	<!--
+	<li><a href="SITE_URL/daxie/" target="_blank">数字大写转换</a></li>
+	<li><a href="SITE_URL/buyhouse/" target="_blank">房贷计算器</a></li>
+	<li><a href="#" target="_blank">存贷款计算器</a></li>
+	<li><a href="#" target="_blank">教育基金计算</a><div class="txt_new"></div></li>
+	<li><a href="http://www.2345.com/baoxian.htm#map" target="_blank">各地社保查询</a></li>
+	<li><a href="#" target="_blank">购车计算器</a></li>
+	<li><a href="#" target="_blank">住房公积金计算</a></li>
+	<li><a href="#" target="_blank">购房能力评估</a></li>
+	<li><a href="#" target="_blank">退休金计算器</a></li>
+	<li><a href="#" target="_blank">个税计算器</a></li>
+	<li class="no_border"><a href="#" target="_blank">在线计算器</a><div class="txt_hot"></div></li>
+	<li class="no_border"><a href="#" target="_blank">提前还款计算</a></li>
+	-->
+	<li class="no_border"><a href="SITE_DYNAMIC_URL/calculator/" target="_blank">在线计算器</a><div class="txt_hot_5"></div></li>
+	<li class="no_border"><a href="SITE_URL/daxie/" target="_blank">数字大写转换</a></li>
+	<li class="no_border"><a href="http://www.2345.com/baoxian.htm#map" target="_blank">各地社保查询</a></li>
+</ul>
+</div>
+<!--
+<div class="dange">
+<div class="dange_title">商标证书</div>
+<ul class="txtlinks">
+	<li><a href="#" target="_blank">发票真伪查询</a></li>
+	<li><a href="#" target="_blank">条形码查询</a></li>
+	<li><a href="#" target="_blank">中国商标查询</a></li>
+	<li><a href="#" target="_blank">营业执照查询</a></li>
+	<li><a href="#" target="_blank">食品生产许可证</a></li>
+	<li class="no_border"><a href="#" target="_blank">卫生许可证</a></li>
+	<li class="no_border"><a href="#" target="_blank">国家标准查询</a></li>
+	<li class="no_border"><a href="#" target="_blank">中国专利查询</a></li>
+</ul>
+</div>
+<div class="dange">
+<div class="dange_title">程序附件</div>
+<ul class="txtlinks">
+	<li class="no_border"><a href="#" target="_blank">电子产品报价</a></li>
+	<li class="no_border"><a href="#" target="_blank">汽车报价</a></li>
+	<li class="no_border"><a href="#" target="_blank">手机报价</a></li>
+	<li class="no_border"><a href="#" target="_blank">电脑报价</a></li>
+	<li class="no_border"><a href="#" target="_blank">购物网站大全</a></li>
+</ul>
+</div>
+-->
+<include file="common:footer" />

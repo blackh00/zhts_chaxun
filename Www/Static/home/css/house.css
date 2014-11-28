@@ -1,0 +1,94 @@
+@charset "utf-8";
+/*
+ * Created: 20130513
+ * Author : xieyihong
+ */
+ /* menu strong bg */
+.menu_xy strong{background:url(http://s.chaxun.cc/images/house/menuicon.png) 0 2px no-repeat;}
+
+.container{width:986px; padding-bottom:40px; border:2px solid #d1ebff; border-top:0 none; overflow:hidden}
+.gray{color:#666}
+.lh16{line-height:16px}
+.pt10{padding-top:10px}
+.bdtop{border-top:1px solid #dcf0ff}
+/*htitle*/
+.htitle{margin:40px 0; height:42px;overflow:hidden;text-align:center; line-height:0; font-size:0;}
+.htitle h1{padding:0 0 0 54px;background-image:url(http://s.chaxun.cc/images/house/er.png); background-repeat:no-repeat; display:inline; font:34px/42px \5FAE\8F6F\96C5\9ED1,\9ED1\4F53,\5B8B\4F53;color:#348bcf;}
+.icon1{background-position:0 5px}
+.icon2{background-position:0 -39px}
+.icon3{background-position:0 -81px}
+.icon4{background-position:0 -125px}
+/*col_a*/
+.col_a{width:190px; float:left}
+.col_b{width:755px; float:left;}
+
+.guestbook01 {
+border: #d5d5d5 1px solid;
+font: 12px arial, verdana, sans-serif;
+color: black;
+text-align: left;
+text-decoration: none;
+width: 75px;
+height: 17px;
+}
+.guestbook01,.guestbook02,.guestbook03 {border: #d5d5d5 1px solid;font: 12px arial, verdana, sans-serif; color:#000;text-align: left;text-decoration: none;height:17px;; margin-right:2px}
+.guestbook01{width:75px}
+.guestbook02{width:120px}
+.guestbook03{width:55px}
+
+/*navbar*/
+.navbar{width:150px;margin:0 0 0 39px;}
+.navbar li{width:133px; height:37px;margin-bottom:1px; float:left}
+.navbar li a{height:37px;display:block;line-height:9999px; overflow:hidden; background:url(http://s.chaxun.cc/images/house/nav.png) no-repeat}
+.navbar li a.current{width:139px}
+.navbar li.nav1 a{background-position:0 -143px}
+.navbar li.nav1 a.current{background-position:0 0}
+.navbar li.nav2 a{background-position:0 -182px}
+.navbar li.nav2 a.current{background-position:0 -39px}
+.navbar li.nav3 a{background-position:0 -221px}
+.navbar li.nav3 a.current{background-position:0 -78px}
+.mt20{margin-top:20px}
+.fl{float:left}
+.f14{font-size:14px}
+.fbold{font-weight:700}
+.red{color:#ff8700}
+.main0{width:751px;border:2px solid #cbe8ff}
+.mainbottom{width:691px;border:2px solid #cbe8ff; border-top:2px; padding:20px 30px; margin-top:-1px;}
+.mainbottom li {line-height:25px; }
+.mainbottom li.big{line-height:25px; font-size:14px;}
+.mainbottom li.red{line-height:25px; color:#ff8700;}
+.mainl{padding:10px 0 25px; width:340px; margin:0 18px}
+
+.ul01{padding-top:10px; margin-top:10px; border-top:1px dashed #a6d9ff}
+
+.main0 .h1{height:25px;line-height:25px;padding-left:20px;padding-bottom:5px; font-size:14px;font-weight:bold;color:#ff8700;}
+.mainl .h2{height:25px;line-height:25px;padding-bottom:5px;}
+.mainltr01{line-height:36px;_height:36px;padding-left:20px;}
+.mainltr02{line-height:26px;margin-top:10px; text-align:left;}
+.mainltr01tr{line-height:36px;_height:36px;}
+.mainltr01 li{line-height:36px;_height:36px;padding-left:5px;}
+.mainltr01 li.zt{line-height:36px;color:#9c9c9c;}
+
+.mainr{padding:10px 0 25px 5px;border-left:1px solid #cbe8ff;  background:#f3faff url(http://s.chaxun.cc/images/house/bg01.png) center bottom no-repeat; position:relative}
+.mainrtr01{line-height:36px;_height:36px;padding-left:10px;padding-bottom:10px; padding-top:5px;}
+.mainrtr01tr{line-height:36px;_height:36px;}
+.mainrtr01 li{line-height:36px;_height:36px;padding-left:5px; display:block; height:36px}
+
+.mainrtr02{line-height:36px;padding-left:10px;padding-bottom:10px;  padding-top:5px;}
+.mainrtr02 li{line-height:36px;padding-left:5px;}
+.mainltr03{line-height:26px;margin-top:10px; text-align:center;}
+
+a.btnA{width:123px; height:37px; line-height:9999px; overflow:hidden; display:inline; float:left; margin:15px 25px 0 25px; background:url(http://s.chaxun.cc/images/house/btn.png) 0 0 no-repeat}
+a.btnA:hover{text-decoration:none; background-position:0 -40px}
+
+.arrow{width:20px; height:60px; display:block; background:url(http://s.chaxun.cc/images/house/arrow.png) 0 0 no-repeat; position:absolute; left:-1px; top:50%; margin-top:-30px}
+.alphabet{width:880px;line-height:14px; padding:20px; margin:0 auto; background:#f5faff; font-size:14px; font-weight:700}
+.alphabet a{ line-height:22px; padding:0 7px; margin:0 8px;display:inline-block; vertical-align:middle; color:#ee6100; font-family:Arial}
+.alphabet a:hover{background:#ee6100; color:#fff}
+.dlTxtA{padding:10px 0 10px 25px; margin:0 15px; overflow:hidden; clear:both;font-size:14px; word-break:normal; word-wrap:normal; background:#f4faff}
+.dlTxtA dd{width:878px}
+.dlTxtA dt{margin-bottom:10px; font-weight:700}
+.dlTxtA dt,.dlTxtA dt a{color:#ee6100}
+.dlTxtA dd,.dlTxtA dd a{color:#333; line-height:24px}
+.dlTxtA dd a{margin-right:20px; display:inline-block}
+.dlTxtA dd a:hover{color:#ee6100}

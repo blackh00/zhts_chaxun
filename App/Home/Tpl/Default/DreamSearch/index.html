@@ -1,0 +1,288 @@
+	<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="zhougong_bor">
+                <h1>
+                    周公解梦
+                </h1>
+                <p class="zhougong_p1">在线解梦、梦中凶吉预测</p>
+                <div class="zhougong_shur">
+                <form id="form1" action="SITE_DYNAMIC_URL/dreamsearch/dreamsearch" method="post">
+                   <input type="text" value="请输入做梦内容的关键字，如“女人”" onfocus="if(this.value=='请输入做梦内容的关键字，如“女人”') {this.value='';this.style.color='#343235';}"
+                        onblur="if(this.value=='') {this.value='请输入做梦内容的关键字，如“女人”';this.style.color='#343235';}"
+                        class="zhougong_sousuotxt" id="text_search" name="dr" />
+                    <input type="submit" value="" class="zhougong_but" />
+                 </form>
+                </div>
+                <div class="zhougong_nav">
+                	<a class={$m1} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[0].category}">{$category[0].category}</a><a class={$m2} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[1].category}">{$category[1].category}</a><a class={$m3} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[2].category}">{$category[2].category}</a><a class={$m4} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[3].category}">{$category[3].category}</a><a class={$m5} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[4].category}">{$category[4].category}</a><a class={$m6} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[5].category}">{$category[5].category}</a><a class={$m7} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[6].category}">{$category[6].category}</a><a class={$m8} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[7].category}">{$category[7].category}</a><a class={$m9} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[8].category}">{$category[8].category}</a><a class={$m10} &nbsp; href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[9].category}">{$category[9].category}</a>
+                </div>
+                <div class="zhougong_line"></div>
+                <div class="zhougong_fenlei">
+                    <div class="dream_cate">
+                        <div class="dream_h">
+                            【
+                            <a id="zg1" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[0].category}">
+                                {$category[0].category}
+                            </a>
+                            】
+                        </div>
+                        <div class="dream_c">
+                            <ul class="clearfix">
+                            <volist name="record[0]" id="vo" offset='1' length='69'>
+                            	<li>
+                                    <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">
+                                        {$vo.title}
+                                    </a>
+                                </li>                        
+                            </volist>                    
+                                <li>
+                                    <a class="more" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[0].category}">
+                                        更多&gt;&gt;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both; height:0; overflow:hidden;"></div>
+                    </div>
+                    <div class="dream_cate dream_cate_bg">
+                        <div class="dream_h">
+                            【
+                            <a id="zg2" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[1].category}">
+                                {$category[1].category}
+                            </a>
+                            】
+                        </div>
+                        <div class="dream_c">
+                            <ul class="clearfix">                              
+							<volist name="record[1]" id="vo" offset='1' length='69'>
+	                          	<li>
+	                                  <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">
+	                                      {$vo.title}
+	                                  </a>
+	                            </li>                        
+                            </volist> 
+                                <li>
+                                    <a class="more" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[1].category}">
+                                        更多&gt;&gt;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both; height:0; overflow:hidden;"></div>
+                    </div>
+                    <div class="dream_cate">
+                        <div class="dream_h">
+                            【
+                            <a id="zg3" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[2].category}">
+                                {$category[2].category}
+                            </a>
+                            】
+                        </div>
+                        <div class="dream_c">
+                            <ul class="clearfix">                              
+							<volist name="record[2]" id="vo" offset='1' length='69'>
+	                          	<li>
+	                                  <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">
+	                                      {$vo.title}
+	                                  </a>
+	                            </li>                        
+                            </volist>
+                                <li>
+                                    <a class="more" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[2].category}">
+                                        更多&gt;&gt;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both; height:0; overflow:hidden;"></div>
+                    </div>
+                    <div class="dream_cate dream_cate_bg">
+                        <div class="dream_h">
+                            【
+                            <a id="zg4" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[3].category}">
+                                {$category[3].category}
+                            </a>
+                            】
+                        </div>
+                        <div class="dream_c">
+                            <ul class="clearfix">
+                            <volist name="record[3]" id="vo" offset='1' length='69'>
+	                          	<li>
+	                                  <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">
+	                                      {$vo.title}
+	                                  </a>
+	                            </li>                        
+                            </volist>							
+                                <li>
+                                    <a class="more" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[3].category}">
+                                        更多&gt;&gt;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both; height:0; overflow:hidden;"></div>
+                    </div>
+                    <div class="dream_cate">
+                        <div class="dream_h">
+                            【
+                            <a id="zg5" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[4].category}">
+                              {$category[4].category}
+                            </a>
+                            】
+                        </div>
+                        <div class="dream_c">
+                            <ul class="clearfix">
+                            <volist name="record[4]" id="vo" offset='1' length='69'>
+	                          	<li>
+	                                  <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">
+	                                      {$vo.title}
+	                                  </a>
+	                            </li>                        
+                            </volist>
+                                <li>
+                                    <a class="more" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[4].category}">
+                                        更多&gt;&gt;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both; height:0; overflow:hidden;"></div>
+                    </div>
+                    <div class="dream_cate dream_cate_bg">
+                        <div class="dream_h">
+                            【
+                            <a id="zg6" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[5].category}">
+                              {$category[5].category}
+                            </a>
+                            】
+                        </div>
+                        <div class="dream_c">
+                            <ul class="clearfix">
+                            <volist name="record[5]" id="vo" offset='1' length='69'>
+	                          	<li>
+	                                  <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">
+	                                      {$vo.title}
+	                                  </a>
+	                            </li>                        
+                            </volist>
+                                <li>
+                                    <a class="more" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[5].category}">
+                                        更多&gt;&gt;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both; height:0; overflow:hidden;"></div>
+                    </div>
+                    <div class="dream_cate">
+                        <div class="dream_h">
+                            【
+                            <a id="zg7" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[6].category}">
+                                {$category[6].category}
+                            </a>
+                            】
+                        </div>
+                        <div class="dream_c">
+                            <ul class="clearfix">
+                            <volist name="record[6]" id="vo" offset='1' length='69'>
+	                          	<li>
+	                                  <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">
+	                                      {$vo.title}
+	                                  </a>
+	                            </li>                        
+                            </volist>
+                                <li>
+                                    <a class="more" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[6].category}">
+                                        更多&gt;&gt;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both; height:0; overflow:hidden;"></div>
+                    </div>
+                    <div class="dream_cate dream_cate_bg">
+                        <div class="dream_h">
+                            【
+                            <a id="zg8" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[7].category}">
+                              {$category[7].category}
+                            </a>
+                            】
+                        </div>
+                        <div class="dream_c">
+                            <ul class="clearfix">
+                            <volist name="record[7]" id="vo" offset='1' length='69'>
+	                          	<li>
+	                                  <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">
+	                                      {$vo.title}
+	                                  </a>
+	                            </li>                        
+                            </volist>
+                                <li>
+                                    <a class="more" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[7].category}">
+                                        更多&gt;&gt;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both; height:0; overflow:hidden;"></div>
+                    </div>
+                    <div class="dream_cate">
+                        <div class="dream_h">
+                            【
+                            <a id="zg9" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[8].category}">
+                               {$category[8].category}
+                            </a>
+                            】
+                        </div>
+                        <div class="dream_c">
+                            <ul class="clearfix">
+                            <volist name="record[8]" id="vo" offset='1' length='69'>
+	                          	<li>
+	                                  <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">
+	                                      {$vo.title}
+	                                  </a>
+	                            </li>                        
+                            </volist>
+                                <li>
+                                    <a class="more" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[8].category}">
+                                        更多&gt;&gt;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both; height:0; overflow:hidden;"></div>
+                    </div>
+                    <div class="dream_cate dream_cate_bg">
+                        <div class="dream_h">
+                            【
+                            <a id="zg10" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[9].category}">
+                               {$category[9].category}
+                            </a>
+                            】
+                        </div>
+                        <div class="dream_c">
+                            <ul class="clearfix">
+                            <volist name="record[9]" id="vo" offset='1' length='69'>
+	                          	<li>
+	                                  <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">
+	                                      {$vo.title}
+	                                  </a>
+	                            </li>                        
+                            </volist>
+                                <li>
+                                    <a class="more" href="SITE_DYNAMIC_URL/dreamsearch/titleDetail/cate/{$category[9].category}">
+                                        更多&gt;&gt;
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div style="clear:both; height:0; overflow:hidden;"></div>
+                    </div>
+                    <!--分类 end-->
+                </div>
+            </div>
+        </div>
+    	 <include file="common:rightSideInc" />	
+      <include file="common:relatedTools" />
+<include file="common:footer" />

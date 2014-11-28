@@ -1,0 +1,210 @@
+<include file="common:header" />
+<div class="main">
+	<div class="mod_2d_2 cl" style="padding:0px;">
+            <h1>彩票查询</h1>
+            <div class="description clearfix">提供彩票查询服务，包括彩票开奖号码 ,开奖日期,开奖金额等信息。</div>
+    		 <div class="caipiao clearfix">
+             	<div><img src="STATIC_URL/images/caipiao/tit.gif" /></div>
+                <div class="cp_con" style="border-top:none 0px; ">
+                    <div id="divfucai">
+                        <table cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                                <tr class="trTit">
+                                    <th colspan="6">
+                                        <img src="STATIC_URL/images/caipiao/style_logo1.jpg">
+                                        中国福利彩票
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td class="td_style">
+                                        <a target="_blank" href="SITE_DYNAMIC_URL/lottery/shuangseqiu">
+                                        	<img src="STATIC_URL/images/caipiao/tu1.gif" />
+                                            双色球 
+                                        </a>
+                                    </td>
+                                    <td class="td_issue">{$data.shuangseqiu.qihao}</td>
+                                    <td class="td_date">{$data.shuangseqiu.notice}</td>
+                                    <td class="td_num">
+                                    	<span>奖池滚存：{$data.shuangseqiu.jiangchiguncun}</span>
+                                        <i>{$data.shuangseqiu.redballs.0}</i>
+                                        <i>{$data.shuangseqiu.redballs.1}</i>
+                                        <i>{$data.shuangseqiu.redballs.2}</i>
+                                        <i>{$data.shuangseqiu.redballs.3}</i>
+                                        <i>{$data.shuangseqiu.redballs.4}</i>
+                                        <i>{$data.shuangseqiu.redballs.5}</i>
+                                        <i class="iBlue">{$data.shuangseqiu.blueball}</i>
+                                    </td>
+                                    <td class="td_day">
+                                        二四日
+                                    </td>
+                                    <td class="td_end">
+                                    	<a href="SITE_DYNAMIC_URL/lottery/r_shuangseqiu" target="_blank"><img src="STATIC_URL/images/caipiao/tu.gif" /></a>
+                                  	</td>
+                                </tr>
+                                <tr class="">
+                                    <td class="td_style">
+                                        <a target="_blank" href="SITE_DYNAMIC_URL/lottery/fucai3d">
+                                        	<img src="STATIC_URL/images/caipiao/tu2.gif" />
+                                            福彩3D
+                                        </a>
+                                    </td>
+                                    <td class="td_issue">{$data.fucai3d.qihao}</td>
+                                    <td class="td_date">{$data.fucai3d.notice}</td>
+                                    <td class="td_num">
+                                    	<span>奖池滚存：{$data.fucai3d.jiangchiguncun}</span>
+                                        <i>{$data.fucai3d.balls.0}</i>
+                                        <i>{$data.fucai3d.balls.1}</i>
+                                        <i>{$data.fucai3d.balls.2}</i>
+                                    </td>
+                                    <td class="td_day">
+                                        每日
+                                    </td>
+                                    <td class="td_end">
+                                    	<a href="SITE_DYNAMIC_URL/lottery/r_fucai3d" target="_blank"><img src="STATIC_URL/images/caipiao/tu.gif" /></a>
+                                  	</td>
+                                </tr>
+                                <tr>
+                                    <td class="td_style">
+                                        <a href="SITE_DYNAMIC_URL/lottery/qilecai" target="_blank">
+                                        	<img src="STATIC_URL/images/caipiao/tu3.gif" />
+                                            七乐彩
+                                        </a>
+                                    </td>
+                                    <td class="td_issue">{$data.qilecai.qihao}</td>
+                                    <td class="td_date">{$data.qilecai.notice}</td>
+                                    <td class="td_num">
+                                    	<span>奖池滚存：{$data.qilecai.jiangchiguncun}</span>
+                                        <i>{$data.qilecai.redballs.0}</i>
+                                        <i>{$data.qilecai.redballs.1}</i>
+                                        <i>{$data.qilecai.redballs.2}</i>
+                                        <i>{$data.qilecai.redballs.3}</i>
+                                        <i>{$data.qilecai.redballs.4}</i>
+                                        <i>{$data.qilecai.redballs.5}</i>
+                                        <i>{$data.qilecai.redballs.6}</i>
+                                        <i class="iBlue">{$data.qilecai.blueball}</i>
+                                    </td>
+                                    <td class="td_day">
+                                        一三五
+                                    </td>
+                                    <td class="td_end">
+                                    	<a href="SITE_DYNAMIC_URL/lottery/r_qilecai" target="_blank"><img src="STATIC_URL/images/caipiao/tu.gif" /></a>
+                                  	</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                  </div>
+					<div id="divticai">
+                        <table cellspacing="0" cellpadding="0" border="0">
+                            <tbody>
+                                <tr class="trTit">
+                                    <th colspan="6">
+                                        <img src="STATIC_URL/images/caipiao/style_logo2.jpg">
+                                        中国体育彩票
+                                    </th>
+                                </tr>
+                                <tr class="">
+                                    <td class="td_style">
+                                        <a target="_blank" href="SITE_DYNAMIC_URL/lottery/pailie3">
+                                        	<img src="STATIC_URL/images/caipiao/tu4.gif" />
+                                            排列三
+                                        </a>
+                                    </td>
+                                    <td class="td_issue">{$data.pailie3.qihao}</td>
+                                    <td class="td_date">{$data.pailie3.notice}</td>
+                                    <td class="td_num">
+                                    	<span>奖池滚存：0</span>
+                                        <i>{$data.pailie3.balls.0}</i>
+                                        <i>{$data.pailie3.balls.1}</i>
+                                        <i>{$data.pailie3.balls.2}</i>
+                                    </td>
+                                    <td class="td_day">
+                                        每日
+                                    </td>
+                                    <td class="td_end">
+                                    	<a href="SITE_DYNAMIC_URL/lottery/r_pailie3" target="_blank"><img src="STATIC_URL/images/caipiao/tu.gif" /></a>
+                                  	</td>
+                                </tr>
+                                <tr>
+                                    <td class="td_style">
+                                        <a target="_blank" href="SITE_DYNAMIC_URL/lottery/qixingcai">
+                                        	<img src="STATIC_URL/images/caipiao/tu5.gif" />
+                                            七星彩
+                                        </a>
+                                    </td>
+                                    <td class="td_issue">{$data.qixingcai.qihao}</td>
+                                    <td class="td_date">{$data.qixingcai.notice}</td>
+                                    <td class="td_num">
+                                    	<span>奖池滚存：{$data.qixingcai.jiangchiguncun}</span>
+                                        <i>{$data.qixingcai.balls.0}</i>
+                                        <i>{$data.qixingcai.balls.1}</i>
+                                        <i>{$data.qixingcai.balls.2}</i>
+                                        <i>{$data.qixingcai.balls.3}</i>
+                                        <i>{$data.qixingcai.balls.4}</i>
+                                        <i>{$data.qixingcai.balls.5}</i>
+                                        <i>{$data.qixingcai.balls.6}</i>
+                                    </td>
+                                    <td class="td_day">
+                                        二五日
+                                    </td>
+                                    <td class="td_end">
+                                    	<a href="SITE_DYNAMIC_URL/lottery/r_qixingcai" target="_blank"><img src="STATIC_URL/images/caipiao/tu.gif" /></a>
+                                  	</td>
+                                </tr>
+                                <tr>
+                                    <td class="td_style">
+                                        <a target="_blank" href="SITE_DYNAMIC_URL/lottery/eexuan5">
+                                        	<img src="STATIC_URL/images/caipiao/tu6.gif" />
+                                            22选5
+                                        </a>
+                                    </td>
+                                    <td class="td_issue">{$data.22xuan5.qihao}</td>
+                                    <td class="td_date">{$data.22xuan5.notice}</td>
+                                    <td class="td_num">
+                                    	<span>奖池滚存：{$data.22xuan5.jiangchiguncun}</span>
+                                        <i>{$data.22xuan5.balls.0}</i>
+                                        <i>{$data.22xuan5.balls.1}</i>
+                                        <i>{$data.22xuan5.balls.2}</i>
+                                        <i>{$data.22xuan5.balls.3}</i>
+                                        <i>{$data.22xuan5.balls.4}</i>
+                                    </td>
+                                    <td class="td_day">
+                                        每日
+                                    </td>
+                                    <td class="td_end">
+                                    	<a href="SITE_DYNAMIC_URL/lottery/r_eexuan5" target="_blank"><img src="STATIC_URL/images/caipiao/tu.gif" /></a>
+                                  	</td>
+                                </tr>
+                                <tr>
+                                    <td class="td_style">
+                                        <a target="_blank" href="SITE_DYNAMIC_URL/lottery/daletou">
+                                        	<img src="STATIC_URL/images/caipiao/tu7.gif" />
+                                            大乐透
+                                        </a>
+                                    </td>
+                                    <td class="td_issue">{$data.daletou.qihao}</td>
+                                    <td class="td_date">{$data.daletou.notice}</td>
+                                    <td class="td_num">
+                                    	<span>奖池滚存：{$data.daletou.jiangchiguncun}</span>
+                                        <i>{$data.daletou.redballs.0}</i>
+                                        <i>{$data.daletou.redballs.1}</i>
+                                        <i>{$data.daletou.redballs.2}</i>
+                                        <i>{$data.daletou.redballs.3}</i>
+                                        <i>{$data.daletou.redballs.4}</i>
+                                        <i class="iBlue">{$data.daletou.blueballs.0}</i>
+                                        <i class="iBlue">{$data.daletou.blueballs.1}</i>
+                                    </td>
+                                    <td  class="td_day">
+                                        一三六
+                                    </td>
+                                    <td class="td_end">
+                                    	<a href="SITE_DYNAMIC_URL/lottery/r_daletou" target="_blank"><img src="STATIC_URL/images/caipiao/tu.gif" /></a>
+                                  	</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+             </div>
+           </div>
+<include file="common:relatedTools" />
+<include file="common:footer" />

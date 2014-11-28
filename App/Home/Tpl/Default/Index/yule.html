@@ -1,0 +1,205 @@
+﻿<include file="common:header" />
+<div class="main">
+       <div class="content">
+  	    <div class="jtbox">
+           	<div class="jthc"> <a href="SITE_DYNAMIC_URL/yanyuceshi/" target="_blank"><img src="STATIC_URL/images/jiaotong/yule_01.png" /></a>
+          	 <div class="jttxt">
+          	      <p>艳遇测试</p>
+                       <input type="text" value="请输入要测试的名字" id="inputText" name="yanYu" onfocus="if(this.value=='请输入要测试的名字') {this.value='';}this.style.color='#a8a8a8';"
+                       onblur="if(this.value=='') {this.value='请输入要测试的名字';this.style.color='#999999';}"
+                       class="mapbox" id="inputText"/>
+                     <input type="image" onclick="submit_yanyu();" src="STATIC_URL/images/jiaotong/cxan.gif" />
+                   </div>
+         		</div>
+               <div class="jthb"> <a href="SITE_URL/qqlt/" target="_blank"><img src="STATIC_URL/images/jiaotong/yule_02.png" /></a>
+                 <div class="jttxt">
+                   <p>QQ强制对话</p>
+                   <input type="text" id="zdssname" value="登录QQ后输入对方QQ即可" onfocus="if(this.value=='登录QQ后输入对方QQ即可') {this.value='';}this.style.color='#a8a8a8';"
+                       onblur="if(this.value=='') {this.value='登录QQ后输入对方QQ即可';this.style.color='#999999';}"
+                       class="mapbox" />
+                       <input type="image" onclick="shouyetijiao();" src="STATIC_URL/images/jiaotong/duihua.gif" />
+                 </div>
+     </div>
+           </div>
+           <div class="jtbox">
+           	<div class="jthc"><a href="http://s.music.so.com/" target="_blank"><img src="STATIC_URL/images/jiaotong/yule_03.png" /></a>
+           	  <div class="jttxt">
+  			<p>歌词搜索 </p>
+  					<form id="suggest-align" method="get" name="f2" action="http://s.music.so.com/s" >
+                       <input type="text" value="请输入歌名、歌词、歌手或专辑" onfocus="if(this.value=='请输入歌名、歌词、歌手或专辑') {this.value='';}this.style.color='#a8a8a8';"
+                       onblur="if(this.value=='') {this.value='输入歌名或者关键词句';this.style.color='#999999';}"
+                       class="mapbox" id="search_kw" name="q"/>
+                       <input type="submit" value="" class="music_so"/>
+                      </form>
+                   </div>
+         		</div>
+               <div class="jthb"> <a href="SITE_URL/character/" target="_blank"><img src="STATIC_URL/images/jiaotong/yule_04.png" /></a>
+                   <div class="jttxt">
+                  	  <p>人品计算器</p>
+                     <input type="text" value="请输入您的尊姓大名" onfocus="if(this.value=='请输入您的尊姓大名') {this.value='';}this.style.color='#a8a8a8';"
+                       onblur="if(this.value=='') {this.value='请输入您的尊姓大名';this.style.color='#999999';}"
+                       class="mapbox" id="name"/>
+                     <input type="image" onclick="submit();" src="STATIC_URL/images/jiaotong/cxan.gif" />
+                 </div>
+               </div>
+           </div>
+           <ul>
+               <li><a href="http://member.guinnessworldrecords.com/zh/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/yule_05.png" />
+                   <div class="link_txt">
+                       <p>
+                           吉尼斯大全
+                       </p>
+                       <span>世界吉尼斯纪录汇集地</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/iq/" target="_blank">
+           			<img src="STATIC_URL/images/jiaotong/yule_06.png" />
+                   <div class="link_txt">
+                       <p>
+                           IQ智商测试
+                   	</p>
+                       <span>国际标准的智商测试</span>
+                   </div>
+               </a></li>
+               <li><a href="http://8.app.meitu.com/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/yule_07.png" />
+                   <div class="link_txt">
+                       <p>
+                           超能力测试
+                   	</p>
+                       <span>你知道自己的超能力吗</span>
+                   </div>
+               </a></li>
+               <li><a href="http://www.fifm.cn/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/yule_08.png" />
+                   <div class="link_txt">
+                       <p>
+                           在线电台
+                       </p>
+                       <span>提供做全面的电台频率</span>
+                   </div>
+               </a></li>
+       <li><a href="SITE_DYNAMIC_URL/mentalagetest/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/yule_09.png" />
+                   <div class="link_txt">
+                       <p>
+                           心理年龄测试
+                   	</p>
+                       <span>准确测出你的心理年龄</span>
+                   </div>
+               </a></li>
+               <li><a href="http://tools.2345.com/jzw/" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/yule_10.png" />
+                   <div class="link_txt">
+                       <p>
+                           脑筋急转弯
+                   	</p>
+                       <span>休闲时刻让脑子转起了</span>
+                   </div>
+               </a></li>
+               <li><a href="http://app.baidu.com/app/enter?appid=308482" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/yule_11.png" />
+                   <div class="link_txt">
+                       <p>
+                           性格色彩测试
+                       </p>
+                       <span>以"有色眼睛"洞察人性</span>
+                   </div>
+               </a></li>
+               <li><a href="SITE_URL/huoxingwen" target="_blank">
+                   <img src="STATIC_URL/images/jiaotong/yule_12.png" />
+                   <div class="link_txt">
+                       <p>
+                           火星文转换
+                       </p>
+                       <span>非主流简体/繁体字转换</span>
+                   </div>
+               </a></li>
+         </ul>
+     	</div>
+       <div class="linkline">
+       </div>
+       <div class="dange">
+	<div class="dange_title">趣味测试</div>
+	<ul class="txtlinks">
+		<!--  
+		<li><a href="SITE_URL/yanyuceshi/" target="_blank">艳遇测试</a><div class="txt_hot"></div></li>
+		<li><a href="SITE_URL/{$Think.config.Character}/" target="_blank">人品计算器</a></li>
+		<li><a href="#" target="_blank">IQ智商测试</a></li>
+		<li><a href="#" target="_blank">性格色彩测试</a></li>
+		<li><a href="#" target="_blank">超能力测试</a></li>
+		<li><a href="#" target="_blank">心理年龄测试</a></li>
+		<li><a href="SITE_URL/xingmingces/" target="_blank">姓名测试</a></li>
+		<li><a href="#" target="_blank">前世职业测试</a></li>
+		<li><a href="#" target="_blank">古代名字测试</a></li>
+		<li><a href="#" target="_blank">恋爱测试</a></li>
+		<li><a href="#" target="_blank">离婚计算器</a></li>
+		<li class="no_border"><a href="#" target="_blank">强迫症自测</a></li>
+		<li class="no_border"><a href="#" target="_blank">长寿评估测试</a></li>
+		<li><a href="SITE_URL/shengchengbazi/" target="_blank">生辰八字</a></li>
+       <li><a href="SITE_URL/xingmingces/" target="_blank">姓名测试</a></li>
+       -->
+        <li><a href="SITE_URL/yanyuceshi/" target="_blank">艳遇测试</a><div class="txt_hot"></div></li>
+		<li><a href="SITE_URL/character/" target="_blank">人品计算器</a></li>
+		<li><a href="SITE_URL/xingmingces/" target="_blank">姓名测试</a></li>
+		<li><a href="SITE_URL/shengchengbazi/" target="_blank">生辰八字</a></li>
+		<li><a href="SITE_URL/divorce/" target="_blank">离婚计算器</a></li>
+		<li class="no_border"><a href="SITE_URL/crush/" target="_blank">暗恋测试</a></li>
+		<li class="no_border"><a href="SITE_URL/iq/" target="_blank">IQ智商测试</a></li>
+		<li class="no_border"><a href="SITE_DYNAMIC_URL/mentalagetest/" target="_blank">心理年龄测试</a></li>
+	</ul>
+	</div>
+	<div class="dange">
+	<div class="dange_title">游戏网络</div>
+	<ul class="txtlinks">
+		<!-- 
+		<li><a href="SITE_URL/qqlt/" target="_blank">QQ强制对话</a></li>
+		<li><a href="#" target="_blank">火星文转换</a></li>
+		<li><a href="#" target="_blank">在线小游戏</a><div class="txt_new"></div></li>
+		<li><a href="#" target="_blank">lol战斗力查询</a></li>
+		<li><a href="#" target="_blank">搞笑证件制作</a></li>
+		<li><a href="#" target="_blank">gif图片制作</a></li>
+		<li><a href="#" target="_blank">签名设计</a></li>
+		<li><a href="#" target="_blank">头像设计</a></li>
+		<li><a href="#" target="_blank">QQ头像</a></li>
+		<li><a href="#" target="_blank">QQ个性签名</a></li>
+		<li class="no_border"><a href="#" target="_blank">QQ个性分组</a></li>
+		<li class="no_border"><a href="#" target="_blank">QQ空间</a></li>
+		 -->
+		<li class="no_border"><a href="SITE_URL/qqlt/" target="_blank">QQ强制对话</a></li>
+		<li class="no_border"><a href="SITE_URL/huoxingwen/" target="_blank">火星文转换</a></li>
+	</ul>
+	</div>
+	<div class="dange">
+	<div class="dange_title">趣味阅览</div>
+	<ul class="txtlinks">
+		<!--  
+		<li><a href="SITE_URL/naojinjizhuanwan/" target="_blank">脑筋急转弯</a></li>
+		<li><a href="#" target="_blank">短信大全</a></li>
+		<li><a href="SITE_URL/{$Think.config.Riddle}/" target="_blank">谜语大全</a></li>
+		<li><a href="#" target="_blank">每日一乐</a></li>
+		<li><a href="#" target="_blank">在线小说</a></li>
+		<li class="no_border"><a href="#" target="_blank">美女图片大全</a></li>
+		<li class="no_border"><a href="#" target="_blank">人生感悟</a></li>
+		<li class="no_border"><a href="#" target="_blank">民间谚语</a></li>
+		-->
+		<li class="no_border"><a href="SITE_DYNAMIC_URL/riddle/" target="_blank">谜语大全</a></li>
+		<li class="no_border"><a href="http://tools.2345.com/jzw/" target="_blank">脑筋急转弯</a></li>
+	</ul>
+	</div>
+	<!-- 
+	<div class="dange">
+	<div class="dange_title">音乐影视</div>
+	<ul class="txtlinks">
+		<li><a href="#" target="_blank">歌词搜索</a></li>
+		<li><a href="#" target="_blank">在线电台</a><div class="txt_hot"> </div></li>
+		<li><a href="#" target="_blank">钢琴键盘</a></li>
+		<li><a href="#" target="_blank">在线听歌</a></li>
+		<li><a href="#" target="_blank">免费高清电影</a></li>
+		<li class="no_border"><a href="#" target="_blank">热播电视剧</a></li>
+		<li class="no_border"><a href="#" target="_blank">电视剧同步直播</a></li>
+	</ul>
+</div>
+-->
+<include file="common:footer" />

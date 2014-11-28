@@ -1,0 +1,87 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+            <div class="goods">
+                <include file="searchBox" />
+                <div class="l180">
+         <div class="food_xx_border"><img src="ATTACHMENT_URL/food/{$image}" width="147" height="110" /></div>
+		 <div class="block10"></div>
+		 <div class="food_xx_ls">营养信息</div>
+		 <div class="food_xx_lc">
+		    <ul class="food_xx_lyy">
+				<li class="bold"><span class="left">营养素</span><span class="right">含量(每100克)</span></li>
+				<volist name="info_jy" id="info" offset="0" length="6">
+					<li><span class="left">{$info.information_name}</span><span class="right fontf60">{$info.information_value}</span></li>
+				</volist>
+			</ul>
+			<ul class="food_xx_lyy" style="display: none; " id="hidden_div">
+				<volist name="info_xx" id="info" offset="6">
+					<li><span class="left">{$info.information_name}</span><span class="right fontf60">{$info.information_value}</span></li>
+				</volist>
+			</ul> 
+			<div class="right xiangx" style="padding-top:10px"><a id="_strHref" href="javascript:show_hiddendiv();"><span id="_strSpan">&gt;&gt; 详细</span></a></div>
+		</div>
+      </div>
+      <div class="food_xx_cs">
+      <volist name='resultInfo' id='vo'>
+	      <div class="intr">
+	      <h2><span class="font14px">{$vo.name}的热量和减肥功效&nbsp;</span></h2>
+		  <p><b>别名:</b> {$vo.alias}</p>
+          <p><b>热量:</b> <span class="fontf00">{$vo.value}</span>&nbsp;大卡（100克）</p>
+          <p><b>分类:</b> <a href="SITE_DYNAMIC_URL/food/foodList/type/{$type}/">{$vo.type}</a> ,<a href="SITE_DYNAMIC_URL/food/foodSubList/subtype/{$sub_type}/">{$vo.sub_type}</a></p>
+         </div>
+         <if condition="($vo.unit neq '') and ($vo.unit_value neq 0)">
+         <div class="dw">
+	         <ul>
+		         <li class="left">度量单位</li>
+		         <li class="right">热量（可食用部分热量）</li>
+	         </ul>
+         </div>
+         <div class="dw unit_food">
+         	<ul>
+         		<li class="left">{$vo.unit}</li>
+         		<li class="right">{$vo.unit_value}大卡</li>
+         	</ul>
+         </div>
+         <div class="dw bz_food">
+         	<ul>
+         		<li class="left">标准（100克）</li>
+         		<li class="right">{$vo.value}大卡</li>
+         	</ul>
+         </div>
+         </if>
+		 <div class="b1">
+		 	<if condition="$vo.introduce neq ''">
+		 	<h2>介绍</h2>
+			<p>{$vo.introduce}</p>
+			</if>
+			<if condition="$vo.food_value neq ''">
+			<h2>营养价值</h2>
+			<p>{$vo.food_value}</p>
+			</if>
+			<if condition="$vo.effect neq ''">
+			<h2>食用效果</h2>
+			<p>{$vo.effect}</p>
+			</if>
+			<if condition="$vo.crowd neq ''">
+			<h2>适用人群</h2>
+			<p>{$vo.crowd}</p>
+			</if>
+		</div>
+		<div class="b1 related_food">
+			<h2>{$vo.name}相关食物</h2>
+			<p>
+				<volist name="relatedArrList" id="related">
+					<a href="SITE_DYNAMIC_URL/food/detail/id/{$related.id}/" target="_blank">{$related.name}</a>
+					<span class="gap10"></span>
+				</volist>
+			</p>
+		</div>
+	</volist>
+	   </div>
+                <div class="clear"></div>
+          </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

@@ -1,0 +1,540 @@
+<include file="common:header" />
+<div class="main">
+<div class="clearfix"></div>
+	<div class="mod_2d" style="padding:0px;">
+		<h2> 搞笑网络证件制作</h2>
+		<div class="description clearfix">在线免费制作各种搞笑证件，只供娱乐。</div>
+		<div class="container">
+		<!--category begin-->
+		<div class="category clearfix">
+		<dl class="category_dl first">
+		<dt class="nv">女生</dt>
+		<dd>
+		<a href="javascript:void(0);" onclick="changeCred('v_1','处女证')" class="noml">处女证</a>
+		<a href="javascript:void(0);" onclick="changeCred('v_2','黑帮大姐大')">黑帮大姐大</a>
+		<a href="javascript:void(0);" onclick="changeCred('v_3','最有女人味')">最有女人味</a>
+		<a href="javascript:void(0);" onclick="changeCred('v_4','最佳好老婆',2)">最佳好老婆</a>
+		</dd>
+		</dl>
+		<dl class="category_dl">
+		<dt class="nan">男生</dt>
+		<dd>
+		<a href="javascript:void(0);" onclick="changeCred('n_1','处男证')" class="noml">处男证</a>
+		<a href="javascript:void(0);" onclick="changeCred('n_2','光棍证')">光棍证</a>
+		<a href="javascript:void(0);" onclick="changeCred('n_3','好男人证')">好男人证</a>
+		<a href="javascript:void(0);" onclick="changeCred('n_4','最佳好老公',2)">最佳好老公</a>
+		</dd>
+		</dl>
+		<dl class="category_dl">
+		<dt class="aiqing">爱情</dt>
+		<dd>
+		<a href="javascript:void(0);" onclick="changeCred('a_1','失恋证')" class="noml">失恋证</a>
+		<a href="javascript:void(0);" onclick="changeCred('a_2','痴情证')">痴情证</a>
+		<a href="javascript:void(0);" onclick="changeCred('a_4','结婚证',1)">结婚证</a>
+		<a href="javascript:void(0);" onclick="changeCred('a_3','征婚证')">征婚证</a>
+		</dd>
+		</dl>
+		<dl class="category_dl">
+		<dt class="zhiye">职业</dt>
+		<dd>
+		<a href="javascript:void(0);" onclick="changeCred('z_1','职业聊天证')" class="noml">职业聊天证</a>
+		<a href="javascript:void(0);" onclick="changeCred('z_2','乞丐行乞证')">乞丐行乞证</a>
+		<a href="javascript:void(0);" onclick="changeCred('z_3','吹牛证')">吹牛证</a>
+		<a href="javascript:void(0);" onclick="changeCred('z_4','十大杰出青年')">十大杰出青年</a>
+		</dd>
+		</dl>
+		<dl class="category_dl">
+		<dt class="zh">综合</dt>
+		<dd>
+		<a href="javascript:void(0);" onclick="changeCred('h_1','死不要脸证')" class="noml">死不要脸证</a>
+		<a href="javascript:void(0);" onclick="changeCred('h_2','放屁许可证')">放屁许可证</a>
+		<a href="javascript:void(0);" onclick="changeCred('h_3','麦霸证')">麦霸证</a>
+		<a href="javascript:void(0);" onclick="changeCred('h_4','天才证')">天才证</a>
+		</dd>
+		</dl>
+		<div class="clearfix"></div>
+		</div>
+		<!--category end-->
+
+		<!--证件DIY区域 begin-->
+		<div class="credentialsWrap clearfix">
+		<!-- credentials_preview -->
+		<div class="credentials_preview">
+			<!-- preview_pic -->
+			<div class="preview_pic">
+				<div id="pic_new" class="diyPicForm" style="display:none;">
+				<img id="createdImg" src="">
+				</div>
+				<!--Diy begin-->
+				<div class="diyPicForm" style="display:block;" id="pic_1">
+				<img class="backImage" id="diy_image_1" src="STATIC_URL/images/funnyweb/default.png">
+				<img class="logoImage" id="diy_image_3" src="STATIC_URL/images/funnyweb/normal_logo.png" width="156" height="156">
+				<img class="avatarImage" id="diy_image_4" src="STATIC_URL/images/funnyweb/normal_avatar.png" width="73" height="85" name="iuserImg">
+				<span class="zjName"><img src="STATIC_URL/images/funnyweb/normal_zjName.png"></span>
+				<span class="orgName"><img src="STATIC_URL/images/funnyweb/normal_orgName.png"></span>
+				<span class="iName" name="iname"></span>
+				<span class="iGender" name="isex">男</span>
+				<span class="iAge" name="iage"></span>
+				<p id="iCont" class="normal"><!--未输入状态class="normal"-->
+				<span class="iCont_normal"></span>
+				<span class="iName2" name="iname"></span>
+				<span class="iContLine0"><i>兹证明</i>同志</span>
+				<span class="iContLine1" id="icont"></span>
+				</p>
+				<span class="iDate" name="idate">2013-8-26</span>
+				<span class="iSerial" name="iserial">0000081</span>
+				</div>
+				<!--Diy end-->
+				<!--普通类似处女证件 begin-->
+				<div class="diyPicForm existing" style="display:none;" id="pic_2">
+				<!--将生成的图片传到页面-->
+				<img class="backImage" id="normal_image_1" style="display:block;" src="STATIC_URL/images/funnyweb/v_1.png">
+				<span class="iName" name="iname"></span>
+				<span class="iGender" name="isex">男</span>
+				<span class="iAge" name="iage"></span>
+				<span class="iName2" name="iname"></span>
+				<span class="iDate" name="idate">2013-8-26</span>
+				<span class="iSerial" name="iserial">0000081</span>
+				</div>
+				<!--结婚证件 begin-->
+				<div class="diyPicForm existing marry" style="display:none" id="pic_3">
+				<img class="backImage" id="marry_image_1" style="display:block;" src="STATIC_URL/images/funnyweb/a_4.png">
+				<span class="bName" name="inamem"></span>
+				<span class="bAge" name="iagem"></span>
+				<span class="bName2" name="inamem"></span>
+				<span class="gName" name="inamef"></span>
+				<span class="gAge" name="iagef"></span>
+				<span class="gName2" name="inamef"></span>
+				<span class="iDate" name="idate">2013-8-26</span>
+				<span class="iSerial" name="iserial">0000081</span>
+				</div>
+				<!--结婚证件 end-->
+				<!--奖状 begin-->
+				<div class="diyPicForm existing awards " style="display:none" id="pic_4">
+				<img class="backImage" id="award_image_1" src="STATIC_URL/images/funnyweb/n_4.png">
+				<span class="iName" name="iname"></span>
+				<span class="iDate" name="idate">2013-8-26</span>
+				<span class="iSerial" name="iserial">0000081</span>
+				</div>
+			</div>
+			<!-- preview_pic -->
+			<div class="shareWrap clearfix">
+			<!-- Baidu Button BEGIN -->
+			<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+			<span class="bds_more">分享到：</span>
+			<a class="bds_qzone" title="分享到QQ空间" href="#"></a>
+			<a class="bds_tsina" title="分享到新浪微博" href="#"></a>
+			<a class="bds_tqq" title="分享到腾讯微博" href="#"></a>
+			<a class="bds_renren" title="分享到人人网" href="#"></a>
+			<a class="shareCount" href="#" title="累计分享578次">578</a>
+			</div>
+			<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" src="http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=382638"></script>
+			
+			<script type="text/javascript">
+			document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+			</script>
+			<!-- Baidu Button END -->
+			<div class="preview_btn_wrap">
+			<a href="javascript:void(0);" class="orange_btn123" onclick="copyImage($('#pic_new img')[0])">复制证件</a>
+			<a href="javascript:void(0);" class="orange_btn123" onclick="saveImage()">保存到电脑</a>
+			</div>
+			</div>
+		</div>
+		<!-- credentials_preview -->
+		<div class="credentials_diy">
+		<div class="credentials_form diyForm">
+			<!--Diy版式form-->
+			<form id="diy" method="post" action="SITE_DYNAMIC_URL/funnyweb/" enctype="multipart/form-data" target="dframe">
+			<input type="hidden" name="ctype" value="1">
+			<input type="hidden" name="sourceImg" value="default">
+			<input type="hidden" name="act" value="0">
+			<ul class="diyForm" style="display:block;" id="form_diy">
+			<li class="cl">
+			<label>证件名</label>
+			<span class="customInput" style="z-index:100;"><input type="text" value="最多5字" class="txt w224" maxlength="5" name="title"><a href="javascript:void(0);" class="dropdown_a" onclick="showMenu(this);"></a>
+			<!--credentialsMenu-->
+			<div class="credentialsMenu" id="zjMenu" style="display:none">
+			<!--[if lte IE 6]>
+			<iframe class="ie6Iframe"></iframe>
+			<![endif]-->
+			<div class="credentialsMenu-inner">
+			<dl class="credentialsMenu_dl">
+			<dt>女生</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('v_1','处女证')" class="noml">处女证</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_2','黑帮大姐大')">黑帮大姐大</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_3','最有女人味')">最有女人味</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_4','最佳好老婆',2)">最佳好老婆</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>男生</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('n_1','处男证')" class="noml">处男证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_2','光棍证')">光棍证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_3','好男人证')">好男人证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_4','最佳好老公',2)">最佳好老公</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>爱情</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('a_1','失恋证')" class="noml">失恋证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_2','痴情证')">痴情证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_4','结婚证',1)">结婚证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_3','征婚证')">征婚证</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>职业</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('z_1','职业聊天证')" class="noml">职业聊天证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_2','乞丐行乞证')">乞丐行乞证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_3','吹牛证')">吹牛证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_4','十大杰出青年')">十大杰出青年</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>综合</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('h_1','死不要脸证')" class="noml">死不要脸证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_2','放屁许可证')">放屁许可证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_3','麦霸证')">麦霸证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_4','天才证')">天才证</a>
+			<a href="javascript:void(0);" onclick="changeCred()">DIY</a>
+			</dd>
+			</dl>
+			</div>
+			</div>
+			<!--credentialsMenu end-->
+			</span>
+			</li>
+			<li class="cl">
+			<label>颁证机构</label>
+			<span class="customInput" style="z-index:99;"><input type="text" value="最多12字" class="txt w224" maxlength="12" name="org"></span>
+			</li>
+			<li class="cl">
+			<label>姓名</label>
+			<input type="text" value="最多4字" class="txt w126" maxlength="8" name="name">
+			</li>
+			<li class="cl">
+			<label>性别</label>
+			<div class="select_outer select_gender">
+			<div class="select_inner">
+			<select name="ssex">
+			<option value="1">男</option>
+			<option value="2">女</option>
+			</select>
+			</div>
+			</div>
+			<label>年龄</label>
+			<input type="text" value="最多2个数字" class="txt w93" maxlength="2" name="age">
+			</li>
+			<li class="cl">
+			<label>上传头像</label>
+			<span class="file_t">
+			<button class="upload_btn" type="button">上传图片</button>
+			<input type="file" name="userImg" id="userImg" value="" class="file_b">
+			</span>
+			（可选）
+			</li>
+			<li class="cl">
+			<label>证件内容</label>
+			<textarea name="cont" cols="" rows="4" class="textarea w224" id="cont"></textarea>
+			<iframe id="dframe" name="dframe" src="about:blank" style="display:none;"></iframe>
+			</li>
+			<li><p class="btn_p"><input type="button" value="办理证件" class="blue_btn123" onclick="createImg(1); return false;" onmouseover="this.className='blue_btn123 blue_btn123_hover'" onmouseout="this.className='blue_btn123'"></p></li>
+			</ul>
+			</form>
+			
+			<!--普通版式form-->
+			<form id="normal" method="post" action="SITE_DYNAMIC_URL/funnyweb/" enctype="multipart/form-data" target="yframe">
+			<input type="hidden" name="ctype" value="2">
+			<input type="hidden" name="sourceImg" value="default">
+			<input type="hidden" name="act" value="0">
+			<ul class="existingForm1" style="display:none;" id="form_common">
+			<li class="cl">
+			<label>证件名</label>
+			<span class="customInput" style="z-index:100;"><input type="text" value="处女证" class="txt w224" maxlength="5" name="card"><a href="javascript:void(0);" class="dropdown_a" onclick="showMenu(this);"></a>
+			<!--credentialsMenu 点击证件名称弹出证件列表-->
+			<div class="credentialsMenu" style="display:none;">
+			<!--[if lte IE 6]>
+			<iframe class="ie6Iframe"></iframe>
+			<![endif]-->
+			<div class="credentialsMenu-inner">
+			<dl class="credentialsMenu_dl first">
+			<dt>女生</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('v_1','处女证')" class="noml">处女证</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_2','黑帮大姐大')">黑帮大姐大</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_3','最有女人味')">最有女人味</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_4','最佳好老婆',2)">最佳好老婆</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>男生</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('n_1','处男证')" class="noml">处男证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_2','光棍证')">光棍证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_3','好男人证')">好男人证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_4','最佳好老公',2)">最佳好老公</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>爱情</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('a_1','失恋证')" class="noml">失恋证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_2','痴情证')">痴情证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_4','结婚证',1)">结婚证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_3','征婚证')">征婚证</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>职业</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('z_1','职业聊天证')" class="noml">职业聊天证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_2','乞丐行乞证')">乞丐行乞证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_3','吹牛证')">吹牛证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_4','十大杰出青年')">十大杰出青年</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>综合</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('h_1','死不要脸证')" class="noml">死不要脸证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_2','放屁许可证')">放屁许可证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_3','麦霸证')">麦霸证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_4','天才证')">天才证</a>
+			<a href="javascript:void(0);" onclick="changeCred()">DIY</a>
+			</dd>
+			</dl>
+			</div>
+			</div>
+			<!--credentialsMenu end-->
+			</span>
+			</li>
+			<li class="cl">
+			<label>姓名</label>
+			<input type="text" value="最多4字" class="txt w126 normal_name" maxlength="8" name="name">
+			</li>
+			<li class="cl">
+			<label>性别</label>
+			<div class="select_outer select_gender">
+			<div class="select_inner">
+			<select name="sex">
+				<option value="1">男</option>
+				<option value="2">女</option>
+			</select>
+			<input type="hidden" name="ssex" value="男">
+			</div>
+			</div>
+			</li>
+			<li class="cl">
+			<label>年龄</label>
+			<input type="text" value="最多2个数字" class="txt w93 normal_age" maxlength="2" name="age">
+			</li>
+			<li class="cl mb20">
+			<label>上传头像</label>
+			<span class="file_t">
+			<button class="upload_btn" type="button">上传图片</button>
+			<input type="file" name="image" id="userImg2" value="" class="file_b">
+			<iframe id="yframe" name="yframe" src="about:blank" style="display:none;"></iframe>
+			</span>
+			（可选）
+			</li>
+			<li><p class="btn_p"><input type="button" value="办理证件" class="blue_btn123" onclick="createImg(2); return false;" onmouseover="this.className='blue_btn123 blue_btn123_hover'" onmouseout="this.className='blue_btn123'"></p></li>
+			</ul>
+			</form>
+			
+			<!--奖状版式form-->
+			<form id="award" method="post" action="SITE_DYNAMIC_URL/funnyweb/" target="aframe">
+			<input type="hidden" name="ctype" value="4">
+			<input type="hidden" name="sourceImg" value="default">
+			<ul class="existingForm2" style="display:none;" id="form_award">
+			<li class="cl">
+			<label>证件名</label>
+			<span class="customInput" style="z-index:100;"><input type="text" value="最佳好老婆" class="txt w224" maxlength="10" name="title"><a href="javascript:void(0);" class="dropdown_a" onclick="showMenu(this);"></a>
+			<!--credentialsMenu-->
+			<div class="credentialsMenu" style="display:none;">
+			<!--[if lte IE 6]>
+			<iframe class="ie6Iframe"></iframe>
+			<![endif]-->
+			<div class="credentialsMenu-inner">
+			<dl class="credentialsMenu_dl first">
+			<dt>女生</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('v_1','处女证')" class="noml">处女证</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_2','黑帮大姐大')">黑帮大姐大</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_3','最有女人味')">最有女人味</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_4','最佳好老婆',2)">最佳好老婆</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>男生</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('n_1','处男证')" class="noml">处男证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_2','光棍证')">光棍证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_3','好男人证')">好男人证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_4','最佳好老公',2)">最佳好老公</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>爱情</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('a_1','失恋证')" class="noml">失恋证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_2','痴情证')">痴情证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_4','结婚证',1)">结婚证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_3','征婚证')">征婚证</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>职业</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('z_1','职业聊天证')" class="noml">职业聊天证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_2','乞丐行乞证')">乞丐行乞证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_3','吹牛证')">吹牛证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_4','十大杰出青年')">十大杰出青年</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>综合</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('h_1','死不要脸证')" class="noml">死不要脸证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_2','放屁许可证')">放屁许可证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_3','麦霸证')">麦霸证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_4','天才证')">天才证</a>
+			<a href="javascript:void(0);" onclick="changeCred()">DIY</a>
+			</dd>
+			</dl>
+			</div>
+			</div>
+			<!--credentialsMenu end-->
+			</span>
+			</li>
+			<li class="cl">
+			<label>姓名</label>
+			<input type="text" value="最多4字" class="txt w126" maxlength="8" name="name">
+			<iframe id="aframe" name="aframe" src="about:blank" style="display:none;"></iframe>
+			</li>
+			<p class="award_btn_p"><input type="submit" value="办理证件" class="blue_btn123" onmouseover="this.className='blue_btn123 blue_btn123_hover'" onmouseout="this.className='blue_btn123'" onclick="createImg(4);return false;"></p>
+			</ul>
+			</form>
+			
+			<!--结婚证版式form-->
+			<form id="marry" method="post" action="SITE_DYNAMIC_URL/funnyweb/" enctype="multipart/form-data" target="mframe">
+			<input type="hidden" name="ctype" value="3">
+			<input type="hidden" name="sourceImg" value="default">
+			<input type="hidden" name="act" value="0">
+			<ul class="existingForm3" style="display:none;" id="form_merry">
+			<li class="cl">
+			<label>证件名</label>
+			<span class="customInput" style="z-index:100;"><input type="text" value="处女证" class="txt w224" maxlength="10" name="title"><a href="javascript:void(0);" class="dropdown_a" onclick="showMenu(this);"></a>
+			<!--credentialsMenu-->
+			<div class="credentialsMenu" style="display:none;">
+			<!--[if lte IE 6]>
+			<iframe class="ie6Iframe"></iframe>
+			<![endif]-->
+			<div class="credentialsMenu-inner">
+			<dl class="credentialsMenu_dl first">
+			<dt>女生</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('v_1','处女证')" class="noml">处女证</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_2','黑帮大姐大')">黑帮大姐大</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_3','最有女人味')">最有女人味</a>
+			<a href="javascript:void(0);" onclick="changeCred('v_4','最佳好老婆',2)">最佳好老婆</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>男生</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('n_1','处男证')" class="noml">处男证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_2','光棍证')">光棍证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_3','好男人证')">好男人证</a>
+			<a href="javascript:void(0);" onclick="changeCred('n_4','最佳好老公',2)">最佳好老公</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>爱情</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('a_1','失恋证')" class="noml">失恋证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_2','痴情证')">痴情证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_4','结婚证',1)">结婚证</a>
+			<a href="javascript:void(0);" onclick="changeCred('a_3','征婚证')">征婚证</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>职业</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('z_1','职业聊天证')" class="noml">职业聊天证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_2','乞丐行乞证')">乞丐行乞证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_3','吹牛证')">吹牛证</a>
+			<a href="javascript:void(0);" onclick="changeCred('z_4','十大杰出青年')">十大杰出青年</a>
+			</dd>
+			</dl>
+			<dl class="credentialsMenu_dl">
+			<dt>综合</dt>
+			<dd>
+			<a href="javascript:void(0);" onclick="changeCred('h_1','死不要脸证')" class="noml">死不要脸证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_2','放屁许可证')">放屁许可证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_3','麦霸证')">麦霸证</a>
+			<a href="javascript:void(0);" onclick="changeCred('h_4','天才证')">天才证</a>
+			<a href="javascript:void(0);" onclick="changeCred()">DIY</a>
+			</dd>
+			</dl>
+			</div>
+			</div>
+			<!--credentialsMenu end-->
+			</span>
+			</li>
+			<li class="cl mt30">
+			<p style="float:left;font-size:14px;">
+			<label>男方姓名</label>
+			<input type="text" value="最多4字" class="txt w81" maxlength="8" name="namem" class="namem">
+			</p>
+			<p style="float:left;font-size:14px;">
+			<label class="wd39">年龄</label>
+			<input type="text" value="最多2个数字" class="txt w81" maxlength="2" name="agem" class="agem">
+			</p>
+			<div style="clear:both;"></div>
+			</li>
+			<li class="cl">
+			<label>上传头像</label>
+			<span class="file_t">
+			<button class="upload_btn" type="button">上传图片</button>
+			<input type="file" name="userImgm" id="userImgm" value="" class="file_b" />
+			</span>
+			（可选）
+			</li>
+			<li class="cl mt40">
+			<p style="float:left;font-size:14px;">
+			<label>女方姓名</label>
+			<input type="text" value="最多4字" class="txt w81" maxlength="8" name="namef" class="namef">
+			</p>
+			<p style="float:left;font-size:14px;">
+			<label class="wd39">年龄</label>
+			<input type="text" value="最多2个数字" class="txt w81" maxlength="2" name="agef" class="agef">
+			</p>
+			<div style="clear:both;"></div>
+			</li>
+			<li class="cl">
+			<label>上传头像</label>
+			<span class="file_t">
+			<button class="upload_btn" type="button">上传图片</button>
+			<input type="file" name="userImgf" id="userImgf" value="" class="file_b">
+			</span>
+			（可选）
+			<iframe id="mframe" name="mframe" src="about:blank" style="display:none;"></iframe>
+			</li>
+			<li>
+			<p class="btn_p"><input type="submit" value="办理证件" class="blue_btn123" onmouseover="this.className='blue_btn123 blue_btn123_hover'" onmouseout="this.className='blue_btn123'" onclick="createImg(3);return false;"></p>
+			</li>
+			</ul>
+			</form>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	</div>
+	</div>
+</div>
+<include file="common:relatedTools" />
+<include file="common:footer" />

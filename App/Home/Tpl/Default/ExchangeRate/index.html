@@ -1,0 +1,102 @@
+﻿<include file="common:header" />
+    <div class="main">
+        <div class="huilv_box">
+        	<h1>汇率换算</h1>
+        	<p class="huilv_p1">为您提供在线汇率换算的服务。( 汇率自动按国际换汇牌价进行调整。)</p>
+            <div class="licai clearfix">
+                <div class="huilv_data_search">
+                	<form action="SITE_DYNAMIC_URL/{$Think.config.ExchangeRate}/search/" method="post">
+                        <div class="info">
+                            先选择左侧列表中要兑换的货币，输入要兑换的金额并点击"汇率转换"便可得到结果：
+                        </div>
+                        <span class="huilv_zhi">将</span>
+                        <div class="select_outer select_outer145">
+                            <div class="select_inner">
+                                <select name="from" id="from">
+                                
+                                	<option value="CNY" >人民币(CNY)</option>
+                                <volist name="data" id="vo">
+                                	<option value="{$vo.symbol}" <eq name="vo.symbol" value="$froms">selected="selected"</eq>>{$vo.name}({$vo.symbol})</option>
+				            	</volist>
+
+                                </select>
+                            </div>
+                        </div>
+                        <span class="huilv_zhi">兑换成：</span>
+                        <div class="select_outer select_outer145">
+                            <div class="select_inner">
+                                <select id="to" name="to">
+                                		<option value="CNY" >人民币(CNY)</option>
+                                    <volist name="data" id="vo">
+                                		<option value="{$vo.symbol}" <eq name="vo.symbol" value="$tos">selected="selected"</eq>>{$vo.name}({$vo.symbol})</option>
+				            		</volist>
+                                </select>
+                            </div>
+                        </div>
+                        <span class="huilv_zhi">数额：</span>
+                        <input type="text" name="total" id="num" class="inputTxtA" value="{$total}">
+                        <input class="selt_btn" type="submit" name="sub_post" value="">
+                    </form>
+                    <div class="clear"></div>
+                        <div class="huilv_jieguo" <if condition="($sub_post eq 1) or ($total gt 0)"> style="display:block;" <else/>style="display:none;"</if>>
+                        	<div class="huilv_time">日期<br /><span>{$result.now}</span></div>
+                        	<div class="huilv_jg">
+                            	<p>{$from}<br /><span>{$total}</span></p>
+                            	<p>当前汇率<br /><span>{$result.1}</span></p>
+                            	<p class="last">{$to}<br /><span>{$result.resultNum}</span></p>
+                            </div>
+                        	<div class="huilv_jg2">买入：<span>{$result.5}</span><br />卖出：<span>{$result.4}</span></div>
+                        </div>
+                </div>
+                <div id="tb">
+                    <table cellspacing="0" cellpadding="0" border="0" class="tableA">
+                        <tbody>
+                            <tr>
+                                <th scope="col">
+                                    货币代号
+                                </th>
+                                <th scope="col">
+                                    货币名称
+                                </th>
+                                <th scope="col">
+                                    现钞买入价
+                                </th>
+                                <th scope="col">
+                                    现汇买入价
+                                </th>
+                                <th scope="col">
+                                    卖出价
+                                </th>
+                                <th scope="col">
+                                    基准价
+                                </th>
+                            </tr>
+                        <volist name="data" id="vo">
+                            <tr>
+                                <td>
+                                    {$vo.symbol}
+                                </td>
+                                <td>
+                                  {$vo.name}
+                                </td>
+                                <td>
+                                    {$vo.mBuyPri}
+                                </td>
+                                <td>
+                                    {$vo.fSellPri}
+                                </td>
+                                <td>
+                                    {$vo.fBuyPri}
+                                </td>
+                                <td>
+                                    {$vo.bankConversionPri}
+                                </td>
+                            </tr>
+		            	</volist>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+<include file="common:relatedTools" />
+<include file="common:footer" />

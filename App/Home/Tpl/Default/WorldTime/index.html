@@ -1,0 +1,179 @@
+	<include file="common:header" />
+    <div class="main">        
+        <div class="phone_left">
+            <div class="shijian">
+                <h1>世界时间</h1>
+              <div class="cp_ts">提供世界各地的标准时间查询，让您随时知道世界各地标准时间。</div>
+                <div class="worldtime">
+                	<div class="tab">            
+                        <div class="tab-bd">
+                            <div class="shiqu" style="display:none;">
+                            	<div class="shiqu_tab">
+								<volist name="cityInfoByZone" id="vo" key="k">
+                            	<div class="shiqu_neirong">
+								<if condition="$vo neq ''">
+                            	<div class="biao">
+                                	<div class="biao_tit"><h2>{$vo[0]['city_name']}: <span class="hourminutesecond" 
+">时间加载中。。。</span><span><if condition="$k eq 1">东12区<elseif condition="$k lt 13"/>西{$k*(-1)+13}区（GMT-0{$k*(-1)+13}：00）<elseif condition="$k eq 13"/>GMT<elseif condition="$k gt 13" />东{$k-13}区（GMT+0{$k-13}：00）</if></span></h2></div>
+                                    <div class="biao_con">
+                                    	<span class="shi">00<em></em></span>
+                                        <span class="fen">00 <em></em></span>
+                                        <span class="miao">00<em></em></span>
+                                    </div>
+                                </div>
+								<else />
+								<div class="biao">
+                                	<div class="biao_tit"><h2>暂无相关信息<span class="hourminutesecond" 
+">时间加载中。。。</span><span><if condition="$k eq 1">东12区<elseif condition="$k lt 13"/>西{$k*(-1)+13}区（GMT-0{$k*(-1)+13}：00）<elseif condition="$k eq 13"/>GMT<elseif condition="$k gt 13" />东{$k-13}区（GMT+0{$k-13}：00）</if></span></h2></div>
+                                    <div class="biao_con">
+                                    	<span class="shi">00<em></em></span>
+                                        <span class="fen">00 <em></em></span>
+                                        <span class="miao">00<em></em></span>
+                                    </div>
+                                </div>
+								</if>
+                                <div class="slideTxtBox">
+									
+                                    <div class="bd" id="id{$k}">
+                                        <ul>
+											<volist name="vo" id="item" key="key1">
+                                             <li>同一时区下部分城市：<img src="ATTACHMENT_URL/nationalflag/width35/{$item['banner_pic']}" /> <span>{$item['country_name']}（{$item['city_name']}）</span></li>
+                                             	
+											</volist>
+                                        </ul>
+                                    </div>
+									
+                                    <div class="hd">
+                                            <a class="next" id="{$k}"><img src="STATIC_URL/images/shijian/icon_03.png" /></a><a class="prev" id="{$k}"><img src="STATIC_URL/images/shijian/icon_04.png" /></a>
+                                    </div>
+                                </div>     
+                                </div>
+								</volist>
+                                 </div>
+                                 <ul class="shiqu_nav">   
+                                     <volist name="cityInfoByZone" id="vo" key="k">
+                                     <li <if condition="$k gt 12"> class='shiqu_{$k}  zuo'<else />class='shiqu_{$k}'</if> >
+                                     <div class='sq_con'>
+                                         <h3>时区主要城市：</h3>
+                                         <if condition="$vo neq ''">
+                                         <div class="cs_name"><img src="ATTACHMENT_URL/nationalflag/width47/{$vo[0]['banner_pic']}" /> <strong><if condition="$vo neq ''">{$vo[0]['city_name']}</if></strong></div>
+                                         <else />
+                                         <div class="cs_name">无</div>
+                                         </if>
+                                            <h3>时区其他城市：</h3>
+                                            <if condition="$vo neq ''">
+                                            <div class="cs_name"><volist name="vo" id="item" key="ki" offset="1" length="5">{$item['city_name']}&nbsp;</volist></div>
+                                            <else />
+                                            <div class="cs_name">无</if>
+                                            </if>
+                                            <div class="quming"><if condition="$k eq 1">东12区<elseif condition="$k lt 13"/>西{$k*(-1)+13}区（GMT-0{$k*(-1)+13}：00）<elseif condition="$k eq 13"/>GMT<elseif condition="$k gt 13" />东{$k-13}区（GMT+0{$k-13}：00）</if></div>
+                                            <div class="jtou"></div>
+                                    </div>
+                                    </li>                                   
+                                    </volist>
+                                </ul>                    		
+                            </div>
+                            <div class="dazhou">
+                            	
+                                <div class="dazhou_bg">
+                                	<div class="dazhou_nav dz1">
+                                    	<div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国</span>北京</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div> 
+                                    <div class="dazhou_nav dz2">
+                                    	<div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国2</span>北京</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dazhou_nav dz3">
+                                    	<div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国</span>北京3</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dazhou_nav dz4">
+                                    	<div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国</span>北京4</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dazhou_nav dz5">
+                               	  <div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国</span>北京5</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dazhou_nav dz6">
+                                    	<div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国</span>北京6</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dazhou_nav dz7">
+                                    	<div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国</span>北京7</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dazhou_nav dz8">
+                                    	<div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国</span>北京8</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dazhou_nav dz9">
+                                    	<div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国</span>北京9</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dazhou_nav dz10">
+                                    	<div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国</span>北京10</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dazhou_nav dz11">
+       	  <div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国</span>北京11</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div>
+                                    <div class="dazhou_nav dz12">
+                                    	<div class="guoj">
+                                        	<div class="guoj_l">	</div>
+                                            	<div class="guoj_c"><span>中国</span>北京12</div>
+                                            <div class="guoj_r"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <ul class="tab-hd">
+                            <li class="hd-shiqu">按时区选择城市</li>
+                        </ul>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+      <include file="common:rightSideInc" />
+      <include file="common:relatedTools" />
+      <include file="common:footer" />

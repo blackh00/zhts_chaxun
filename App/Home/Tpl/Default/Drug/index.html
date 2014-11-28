@@ -1,0 +1,120 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+<div id="gj" class="yaopin" style="display:none;">
+	<h1>国家药品查询</h1>
+	<div class="cp_ts">提供药品药性、成分、使用说明查询。</div>
+	<div class="yaopin_con">
+		<div class="yaopin_nav_gj">
+	    	<a href="javascript:void(0);" onclick="ks_search();" title="快速查询"></a>
+	        <a href="javascript:void(0);" onclick="gj_search();" title="高级查询"></a>
+    	</div>
+	    <div class="yp_gaoji">
+	    	<form action="SITE_DYNAMIC_URL/drug/result/" method="get" id="form_gj" name="form_gj">
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+				    <td width="70">批准文号</td>
+				    <td><input type="text" class="yp_box" name="appnum"/></td>
+				  </tr>
+				  <tr>
+				    <td>产品名称</td>
+				    <td><input type="text" class="yp_box" name="pname"/></td>
+				  </tr>
+				  <tr>
+				    <td>英文名称</td>
+				    <td><input type="text" class="yp_box" name="ename"/></td>
+				  </tr>
+				  <tr>
+				    <td>商品名</td>
+				    <td><input type="text" class="yp_box" name="name"/></td>
+				  </tr>
+				  <tr>
+				    <td>生产单位</td>
+				    <td><input type="text" class="yp_box" name="unit"/></td>
+				  </tr>
+				  <tr>
+				    <td>产品类别</td>
+				    <td><input type="text" class="yp_box" name="category"/></td>
+				  </tr>
+				  <tr>
+				    <td>原批准文号</td>
+				    <td><input type="text" class="yp_box" name="appnum2"/></td>
+				  </tr>
+				  <tr>
+				    <td>药品本位号</td>
+				    <td><input type="text" class="yp_box" name="code"/></td>
+				  </tr>
+				  <tr>
+				    <td>&nbsp;</td>
+				    <td>
+				    	<input type="hidden" name="flags" value="gj" />
+				    	<input style="width:102px;height:33px;border:0;background-image:url(STATIC_URL/images/yaopin/an_1.gif);" type="submit" name="submit" value="" class="drug_sub_gj"/>
+				    </td>
+				  </tr>
+				</table>
+				</form>
+	       </div>
+     	</div>              
+   	</div>
+   	
+	<div id="ks" class="yaopin">
+		<h1>国家药品查询</h1>
+        <div class="cp_ts">提供药品药性、成分、使用说明查询。</div>
+        <div class="yaopin_con">
+			<div class="yaopin_nav_ks">
+				<a href="javascript:void(0);" onclick="ks_search();" title="快速查询"></a>
+	        	<a href="javascript:void(0);" onclick="gj_search();" title="高级查询"></a>
+			</div>
+          <div class="yp_gaoji yp_kuaisu">
+          	<form name="form_ks" id="form_ks" action="SITE_DYNAMIC_URL/drug/result/">
+          	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			 <tr>
+			   <td>药品
+<!-- 			   	<input type="text" class="yp_box w70" value="药 品" onfocus="if(this.value=='药 品') {this.value='';}" -->
+<!-- 			                       onblur="if(this.value=='') {this.value='药 品';}" /> -->
+
+			   </td>
+			 </tr>
+			 <tr>
+			   <td>国药产品
+<!-- 			   	<select> -->
+<!-- 			       <option>国药产品</option> -->
+<!-- 		           <option>产品注册补充申请备案情况公示</option> -->
+<!-- 		           <option>国药基本药物（2012年版）</option> -->
+<!-- 		           <option>国药产品商标名</option> -->
+<!-- 		           <option>药品注册相关专利信息公开公示</option> -->
+<!-- 		           <option>申报人申报受理情况</option> -->
+<!-- 		           <option>药物临床试验机构名单</option> -->
+<!-- 			   	</select> -->
+			   </td>
+			 </tr>
+			 <tr>
+			 	<td>
+					<select class="w81" name="category">
+						<option value="化学药品">化学药品</option>
+						<option value="中药">中药</option>
+						<option value="生物制品">生物制品</option>
+						<option value="辅料">辅料</option>
+						<option value="国产包料">国产包料</option>
+						<option value="中药保护">中药保护</option>
+					</select>
+			 	</td>
+			 </tr>
+			 <tr>
+			   <td><input type="text" class="yp_box" id="keyword" name="drug_key" /></td>
+			 </tr>
+			 <tr>
+			   	<td>
+				   	<input type="hidden" name="flags" value="ks" />
+				   	<input style="width:102px;height:33px;border:0;background-image:url(STATIC_URL/images/yaopin/an_2.gif);" type="submit" name="submit" value="" onclick="check_form_ks();return false;" class="drug_sub_ks"/>
+			   	</td>
+			  </tr>
+			</table>
+			</form>
+	    </div>
+	  </div>      
+	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

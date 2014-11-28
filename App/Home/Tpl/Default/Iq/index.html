@@ -1,0 +1,621 @@
+<include file="common:header" />
+<div id="mask"></div>
+<div class="main">
+<div class="phone_left">
+	<div class="iq">
+    	<h1>IQ智商测试</h1>
+	        <div class="cp_ts">国际标准的智商测试，让你更加了解你自己。</div>
+	        <div class="entermain clearfix">
+				<div class="mod_zodiac_tips" id="pageTitle">IQ智商测试题</div>
+				<div class="mod_iq" id="mod_iq">
+					<dl class="clearfix">
+					<dt><img src="STATIC_URL/images/jieqi/iq_ren.gif" alt="智力测试"></dt>
+					<dd>
+						<h2>IQ智商测试简介</h2>
+					<span>智商，就是IQ（Intelligence Quotient的简称)，通俗地可以理解为智力，是指数字、空间、逻辑、词汇、创造、记忆等能力，它是德国心理学家施特恩在1912年提出的。智商表示人的聪明程度：智商越高，则表示越聪明。IQ多少算正常呢？一般情况下智商在90-120之间算正常。</span><span>想检验自己的智商是多少吗？这并不困难，以下就是一例国际标准的智商测试题，共33题，测试时间20分钟，最大IQ为174分。</span><p><a href="javascript:;" onclick="startTest();"></a></p></dd>
+					</dl>
+					
+					</div>
+					<span id="iq_time" class="iq_time" style="display: none; ">00:04</span>
+					<form id="myForm">
+					<div class="mod_iq_item" id="mod_iq_item" style="display: none; ">
+					<dl class="clearfix nobt">
+					<dt>1-8</dt>
+					<dd>
+					<p>请从理论上或逻辑的角度在后面的空格中填入后续字母或数字；</p>
+					<ol>
+					<li>
+					<span>A,　D,　G,　J　</span>
+					<em>?</em>
+					<p>
+					<input type="radio" name="group1" id="aw1">
+					<label for="aw1"> E</label>
+					<input type="radio" name="group1" id="aw2">
+					<label for="aw2"> F</label>
+					<input type="radio" name="group1" id="aw3">
+					<label for="aw3"> M</label>
+					<input type="radio" name="group1" id="aw4">
+					<label for="aw4"> K</label>
+					</p>
+					</li>
+					<li>
+					<span>1,　3,　6,　10　</span>
+					<em>?</em>
+					<p>
+					<input type="radio" name="group2" id="aw5">
+					<label for="aw5"> 13</label>
+					<input type="radio" name="group2" id="aw6">
+					<label for="aw6"> 15</label>
+					<input type="radio" name="group2" id="aw7">
+					<label for="aw7"> 17</label>
+					<input type="radio" name="group2" id="aw8">
+					<label for="aw8"> 18</label>
+					</p>
+					</li>
+					<li><span>1,　1,　2,　3,　5　</span>
+					<em>?</em>
+					<p>
+					<input type="radio" name="group3" id="aw9">
+					<label for="aw9"> 8</label>
+					<input type="radio" name="group3" id="aw10">
+					<label for="aw10"> 9</label>
+					<input type="radio" name="group3" id="aw11">
+					<label for="aw11"> 11</label>
+					<input type="radio" name="group3" id="aw12">
+					<label for="aw12"> 12</label>
+				</p>
+			</li>
+			<li>
+				<span>21,　20,　18,　15, 　11　</span>
+				<em>?</em>
+				<p>
+					<input type="radio" name="group4" id="aw13">
+					<label for="aw13"> 5</label>
+					<input type="radio" name="group4" id="aw14">
+					<label for="aw14"> 6</label>
+					<input type="radio" name="group4" id="aw15">
+					<label for="aw15"> 7</label>
+					<input type="radio" name="group4" id="aw16">
+					<label for="aw16"> 8</label>
+				</p>
+			</li>
+			<li>
+				<span>8,　6,　7,　5,　6,　4　</span>
+				<em>?</em>
+				<p>
+					<input type="radio" name="group5" id="aw17">
+					<label for="aw17"> 5</label>
+					<input type="radio" name="group5" id="aw18">
+					<label for="aw18"> 6</label>
+					<input type="radio" name="group5" id="aw19">
+					<label for="aw19"> 7</label>
+					<input type="radio" name="group5" id="aw20">
+					<label for="aw20"> 8</label>
+				</p>
+			</li>
+			<li>
+				<span>65536,　256,　16　</span>
+				<em>?</em>
+				<p>
+					<input type="radio" name="group6" id="aw21">
+					<label for="aw21"> 4</label>
+					<input type="radio" name="group6" id="aw22">
+					<label for="aw22"> 5</label>
+					<input type="radio" name="group6" id="aw23">
+					<label for="aw23"> 8</label>
+					<input type="radio" name="group6" id="aw24">
+					<label for="aw24"> 9</label>
+				</p>
+			</li>
+			<li>
+				<span>1,　0,　-1,　0　</span>
+				<em>?</em>
+				<p>
+					<input type="radio" name="group7" id="aw25">
+					<label for="aw25"> -1</label>
+					<input type="radio" name="group7" id="aw26">
+					<label for="aw26"> 0</label>
+					<input type="radio" name="group7" id="aw27">
+					<label for="aw27"> 1</label>
+					<input type="radio" name="group7" id="aw28">
+					<label for="aw28"> 2</label>
+				</p>
+			</li>
+			<li>
+				<span>3968,　63,　8,　3　</span>
+				<em>?</em>
+				<p>
+					<input type="radio" name="group8" id="aw29">
+					<label for="aw29"> 1</label>
+					<input type="radio" name="group8" id="aw30">
+					<label for="aw30"> 2</label>
+					<input type="radio" name="group8" id="aw31">
+					<label for="aw31"> 15</label>
+					<input type="radio" name="group8" id="aw32">
+					<label for="aw32"> 24</label>
+				</p>
+			</li>
+		</ol>
+	</dd>
+</dl>
+<dl class="clearfix">
+	<dt>9-15</dt>
+	<dd>
+		<p>请从右边的图形中选择一个正确的(a,b,c,d)填入左边的空白处</p>
+		<ol>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/9-1.gif">
+					<img src="STATIC_URL/images/jieqi/9-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group9" id="aw33">
+					<label for="aw33"> A</label>
+					<input type="radio" name="group9" id="aw34">
+					<label for="aw34"> B</label>
+					<input type="radio" name="group9" id="aw35">
+					<label for="aw35"> C</label>
+					<input type="radio" name="group9" id="aw36">
+					<label for="aw36"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/10-1.gif">
+					<img src="STATIC_URL/images/jieqi/10-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group10" id="aw37">
+					<label for="aw37"> A</label>
+					<input type="radio" name="group10" id="aw38">
+					<label for="aw38"> B</label>
+					<input type="radio" name="group10" id="aw39">
+					<label for="aw39"> C</label>
+					<input type="radio" name="group10" id="aw40">
+					<label for="aw40"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/11-1.gif">
+					<img src="STATIC_URL/images/jieqi/11-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group11" id="aw41">
+					<label for="aw41"> A</label>
+					<input type="radio" name="group11" id="aw42">
+					<label for="aw42"> B</label>
+					<input type="radio" name="group11" id="aw43">
+					<label for="aw43"> C</label>
+					<input type="radio" name="group11" id="aw44">
+					<label for="aw44"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/12-1.gif">
+					<img src="STATIC_URL/images/jieqi/12-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group12" id="aw45">
+					<label for="aw45"> A</label>
+					<input type="radio" name="group12" id="aw46">
+					<label for="aw46"> B</label>
+					<input type="radio" name="group12" id="aw47">
+					<label for="aw47"> C</label>
+					<input type="radio" name="group12" id="aw48">
+					<label for="aw48"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/13-1.gif">
+					<img src="STATIC_URL/images/jieqi/13-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group13" id="aw49">
+					<label for="aw49"> A</label>
+					<input type="radio" name="group13" id="aw50">
+					<label for="aw50"> B</label>
+					<input type="radio" name="group13" id="aw51">
+					<label for="aw51"> C</label>
+					<input type="radio" name="group13" id="aw52">
+					<label for="aw52"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/14-1.gif">
+					<img src="STATIC_URL/images/jieqi/14-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group14" id="aw53">
+					<label for="aw53"> A</label>
+					<input type="radio" name="group14" id="aw54">
+					<label for="aw54"> B</label>
+					<input type="radio" name="group14" id="aw55">
+					<label for="aw55"> C</label>
+					<input type="radio" name="group14" id="aw56">
+					<label for="aw56"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/15-1.gif">
+					<img src="STATIC_URL/images/jieqi/15-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group15" id="aw57">
+					<label for="aw57"> A</label>
+					<input type="radio" name="group15" id="aw58">
+					<label for="aw58"> B</label>
+					<input type="radio" name="group15" id="aw59">
+					<label for="aw59"> C</label>
+					<input type="radio" name="group15" id="aw60">
+					<label for="aw60"> D</label>
+				</p>
+			</li>
+		</ol>
+	</dd>
+</dl>
+<dl class="clearfix">
+	<dt>16-25</dt>
+	<dd>
+		<p>从右边的列(A B C D)中选择图形，以满足左边的图形<br>按照逻辑角度能正确排列下来。</p>
+		<p class="mtl"><img src="STATIC_URL/images/jieqi/abcd.gif"></p>
+		<ol>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/16-1.gif">
+					<img src="STATIC_URL/images/jieqi/16-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group16" id="aw61">
+					<label for="aw61"> A</label>
+					<input type="radio" name="group16" id="aw62">
+					<label for="aw62"> B</label>
+					<input type="radio" name="group16" id="aw63">
+					<label for="aw63"> C</label>
+					<input type="radio" name="group16" id="aw64">
+					<label for="aw64"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/17-1.gif">
+					<img src="STATIC_URL/images/jieqi/17-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group17" id="aw65">
+					<label for="aw65"> A</label>
+					<input type="radio" name="group17" id="aw66">
+					<label for="aw66"> B</label>
+					<input type="radio" name="group17" id="aw67">
+					<label for="aw67"> C</label>
+					<input type="radio" name="group17" id="aw68">
+					<label for="aw68"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/18-1.gif">
+					<img src="STATIC_URL/images/jieqi/18-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group18" id="aw69">
+					<label for="aw69"> A</label>
+					<input type="radio" name="group18" id="aw70">
+					<label for="aw70"> B</label>
+					<input type="radio" name="group18" id="aw71">
+					<label for="aw71"> C</label>
+					<input type="radio" name="group18" id="aw72">
+					<label for="aw72"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/19-1.gif">
+					<img src="STATIC_URL/images/jieqi/19-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group19" id="aw73">
+					<label for="aw73"> A</label>
+					<input type="radio" name="group19" id="aw74">
+					<label for="aw74"> B</label>
+					<input type="radio" name="group19" id="aw75">
+					<label for="aw75"> C</label>
+					<input type="radio" name="group19" id="aw76">
+					<label for="aw76"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/20-1.gif">
+					<img src="STATIC_URL/images/jieqi/20-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group20" id="aw77">
+					<label for="aw77"> A</label>
+					<input type="radio" name="group20" id="aw78">
+					<label for="aw78"> B</label>
+					<input type="radio" name="group20" id="aw79">
+					<label for="aw79"> C</label>
+					<input type="radio" name="group20" id="aw80">
+					<label for="aw80"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/21-1.gif">
+					<img src="STATIC_URL/images/jieqi/21-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group21" id="aw81">
+					<label for="aw81"> A</label>
+					<input type="radio" name="group21" id="aw82">
+					<label for="aw82"> B</label>
+					<input type="radio" name="group21" id="aw83">
+					<label for="aw83"> C</label>
+					<input type="radio" name="group21" id="aw84">
+					<label for="aw84"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/22-1.gif">
+					<img src="STATIC_URL/images/jieqi/22-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group22" id="aw85">
+					<label for="aw85"> A</label>
+					<input type="radio" name="group22" id="aw86">
+					<label for="aw86"> B</label>
+					<input type="radio" name="group22" id="aw87">
+					<label for="aw87"> C</label>
+					<input type="radio" name="group22" id="aw88">
+					<label for="aw88"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/23-1.gif">
+					<img src="STATIC_URL/images/jieqi/23-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group23" id="aw89">
+					<label for="aw89"> A</label>
+					<input type="radio" name="group23" id="aw90">
+					<label for="aw90"> B</label>
+					<input type="radio" name="group23" id="aw91">
+					<label for="aw91"> C</label>
+					<input type="radio" name="group23" id="aw92">
+					<label for="aw92"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/24-1.gif">
+					<img src="STATIC_URL/images/jieqi/24-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group24" id="aw93">
+					<label for="aw93"> A</label>
+					<input type="radio" name="group24" id="aw94">
+					<label for="aw94"> B</label>
+					<input type="radio" name="group24" id="aw95">
+					<label for="aw95"> C</label>
+					<input type="radio" name="group24" id="aw96">
+					<label for="aw96"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/25-1.gif">
+					<img src="STATIC_URL/images/jieqi/25-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group25" id="aw97">
+					<label for="aw97"> A</label>
+					<input type="radio" name="group25" id="aw98">
+					<label for="aw98"> B</label>
+					<input type="radio" name="group25" id="aw99">
+					<label for="aw99"> C</label>
+					<input type="radio" name="group25" id="aw100">
+					<label for="aw100"> D</label>
+				</p>
+			</li>
+		</ol>
+	</dd>
+</dl>
+<dl class="clearfix">
+	<dt>26-29</dt>
+	<dd>
+		<p>在左边的四个图形中缺少两个图形，请从右边的一组图形(a b c d e)<br>中选出两个填入左边以使左边的图形从逻辑角度上能成双配对</p>
+		<ol>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/26-1.gif">
+					<img src="STATIC_URL/images/jieqi/26-2.gif">
+				</span>
+				<p>
+					<input type="checkbox" name="group26" id="aw101">
+					<label for="aw101"> A</label>
+					<input type="checkbox" name="group26" id="aw102">
+					<label for="aw102"> B</label>
+					<input type="checkbox" name="group26" id="aw103">
+					<label for="aw103"> C</label>
+					<input type="checkbox" name="group26" id="aw104">
+					<label for="aw104"> D</label>
+					<input type="checkbox" name="group26" id="aw104_e">
+					<label for="aw104_e"> E</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/27-1.gif">
+					<img src="STATIC_URL/images/jieqi/27-2.gif">
+				</span>
+				<p>
+					<input type="checkbox" name="group27" id="aw105">
+					<label for="aw105"> A</label>
+					<input type="checkbox" name="group27" id="aw106">
+					<label for="aw106"> B</label>
+					<input type="checkbox" name="group27" id="aw107">
+					<label for="aw107"> C</label>
+					<input type="checkbox" name="group27" id="aw108">
+					<label for="aw108"> D</label>
+					<input type="checkbox" name="group27" id="aw108_e">
+					<label for="aw108_e"> E</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/28-1.gif">
+					<img src="STATIC_URL/images/jieqi/28-2.gif">
+				</span>
+				<p>
+					<input type="checkbox" name="group28" id="aw109">
+					<label for="aw109"> A</label>
+					<input type="checkbox" name="group28" id="aw110">
+					<label for="aw110"> B</label>
+					<input type="checkbox" name="group28" id="aw111">
+					<label for="aw111"> C</label>
+					<input type="checkbox" name="group28" id="aw112">
+					<label for="aw112"> D</label>
+					<input type="checkbox" name="group28" id="aw112_e">
+					<label for="aw112_e"> E</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/29-1.gif">
+					<img src="STATIC_URL/images/jieqi/29-2.gif">
+				</span>
+				<p>
+					<input type="checkbox" name="group29" id="aw113">
+					<label for="aw113"> A</label>
+					<input type="checkbox" name="group29" id="aw114">
+					<label for="aw114"> B</label>
+					<input type="checkbox" name="group29" id="aw115">
+					<label for="aw115"> C</label>
+					<input type="checkbox" name="group29" id="aw116">
+					<label for="aw116"> D</label>
+					<input type="checkbox" name="group29" id="aw116_e">
+					<label for="aw116_e"> E</label>
+				</p>
+			</li>
+		</ol>
+	</dd>
+</dl>
+<dl class="clearfix">
+	<dt>30-33</dt>
+	<dd>
+		<p>在下列题目中每一行都缺少一个图，请从右边选择一个(a b c d)<br>插入左边图形中以使左边的图形从逻辑角度上能成双配对</p>
+		<ol>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/30-1.gif">
+					<img src="STATIC_URL/images/jieqi/30-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group30" id="aw117">
+					<label for="aw117"> A</label>
+					<input type="radio" name="group30" id="aw118">
+					<label for="aw118"> B</label>
+					<input type="radio" name="group30" id="aw119">
+					<label for="aw119"> C</label>
+					<input type="radio" name="group30" id="aw120">
+					<label for="aw120"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/31-1.gif">
+					<img src="STATIC_URL/images/jieqi/31-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group31" id="aw121">
+					<label for="aw121"> A</label>
+					<input type="radio" name="group31" id="aw122">
+					<label for="aw122"> B</label>
+					<input type="radio" name="group31" id="aw123">
+					<label for="aw123"> C</label>
+					<input type="radio" name="group31" id="aw124">
+					<label for="aw124"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/32-1.gif">
+					<img src="STATIC_URL/images/jieqi/32-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group32" id="aw125">
+					<label for="aw125"> A</label>
+					<input type="radio" name="group32" id="aw126">
+					<label for="aw126"> B</label>
+					<input type="radio" name="group32" id="aw127">
+					<label for="aw127"> C</label>
+					<input type="radio" name="group32" id="aw128">
+					<label for="aw128"> D</label>
+				</p>
+			</li>
+			<li>
+				<span>
+					<img src="STATIC_URL/images/jieqi/33-1.gif">
+					<img src="STATIC_URL/images/jieqi/33-2.gif">
+				</span>
+				<p>
+					<input type="radio" name="group33" id="aw129">
+					<label for="aw129"> A</label>
+					<input type="radio" name="group33" id="aw130">
+					<label for="aw130"> B</label>
+					<input type="radio" name="group33" id="aw131">
+					<label for="aw131"> C</label>
+					<input type="radio" name="group33" id="aw132">
+					<label for="aw132"> D</label>
+				</p>
+			</li>
+		</ol>
+	</dd>
+</dl>
+<dl class="clearfix">
+	<dt>&nbsp;</dt>
+	<dd>
+		<input type="button" value="计算我的智商分数(IQ)" class="iq_submit" onclick="jisuanfenshu();">
+<input type="reset" value="擦除重做" class="iq_cancel" onclick="document.documentElement.scrollTop = 0;window.pageYOffset=0;document.body.scrollTop=0;startclock();">
+				</dd>
+			</dl>
+			
+		</div>
+		</form>
+</div>
+<div class="popup_iq" style="display: none; " id="popup_iq">
+	<div class="popup_iq_inner">
+  		<div class="zhis">
+        	<div class="zs_l">
+                <p>感谢您参与测试!</p>
+                <p>您的智商为:<strong class="cYellow" id="cYellow_stro"></strong> <span class="cYellow" id="info"></span></p>
+                <p>所用时间为:<span class="cYellow" id="cYellow"></span></p>
+            </div>
+            <div class="zs_r"><img src="STATIC_URL/images/jieqi/zs1.gif" /></div>
+        </div>
+		<div class="popup_iq_score">
+			<h6>参考成绩</h6>
+			<p class="first"><em>0-70</em>弱智</p>
+			<p><em>70-89</em>智力低下</p>
+			<p><em>90-99</em>智力中等</p>
+			<p><em>100-109</em>智力中上</p>
+			<p><em>110-119</em>智力优秀</p>
+			<p><em>120-129</em>智力非常优秀</p>
+			<p><em>130-139</em>智力非常非常优秀</p>
+			<p><em>140+</em>天才</p>
+		</div>
+	<p class="last"><input type="button"  onclick="$('#mask').hide();$('#popup_iq').hide();"></p>
+	</div>
+</div>
+</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

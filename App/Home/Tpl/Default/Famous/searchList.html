@@ -1,0 +1,24 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+            <div class="mr">
+               <include file="searchBox" />
+   			 <div class="mod">
+				  <div class="msg_list_cate">关于{$type_name}的语录</div>
+					<div class="msg_list_detail">
+						<ul>
+							<volist name="result" id="vo" key="k">
+								<li <if condition="(($k eq $count)and($nowPage eq 0)) or (($k eq $count%($nowPage*20))and $nowPage neq 0) or ($k eq 20)">class="noneborder"</if>>
+									<p>{$vo.content}</p>
+									<div class="reference">————{$vo.name}</div>
+								</li>
+							</volist>
+						</ul>
+				  </div>
+			  </div>
+			  <div class="page">{$page}</div>
+          </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

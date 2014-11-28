@@ -1,0 +1,197 @@
+﻿<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="jp_c_L1">
+            	<div id="bd" class="gclearfix">
+        <div class="plane gclearfix js-plane-search" id="M-plane">
+            <div class="searchbox" >
+                <div class="searchbox-hd">
+                    <ul class="le-tab gclearfix">
+                        <li id="aInternal" class="js-internal"><a href="javascript:void(0)">国内机票</a></li>
+                        <li id="aInternational" class="js-international"><a href="javascript:void(0)">国际/港澳台</a></li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    if(location.hash&&location.hash=='#inter'){
+                        document.getElementById('aInternational').className='js-international on';
+                    }else{
+                        document.getElementById('aInternal').className='js-internal on';
+                    }
+                </script>
+                <div class="searchbox-bd">
+                    <div id="vInternal" class="js-internal view-item">
+                   
+                        <div class="rdv-item gclearfix">
+                            <div class="rd-item">
+                                <input type="radio" name="type1" id="OneWayQuery" class="js-oneway-query"  data="oneway" value="1" checked="true"/><label for="OneWayQuery">单程</label>
+                            </div>
+                            <div class="rd-item last">
+                                <input type="radio" name="type1" id="RoundQuery" class="js-round-query" data="round" value="2" /><label for="RoundQuery">往返</label>
+                            </div>
+                            <p class="hangxian_num">
+                            	可实时搜索 <strong>3246</strong> 条国内航线 
+                            </p>
+                        </div>
+                        <div style="float:left; width:320px;">
+                            <div class="v-item gclearfix">
+                                <label>城市</label>
+                                <div class="item-text">
+                                    <input type="text" id="owStart" class="city-text js-departure" data-tag="出发地" autocomplete="off" name="t" placeholder="北京/出发"/>
+                                    <span class="city-selector"></span>
+                                    <span class="date-chong">从</span>
+                                </div>
+                            </div>
+                            <div class="v-item gclearfix">
+                                <label></label>
+                                <div class="item-text">
+                                    <input type="text" id="owEnd" class="city-text js-arrival" data-tag="目的地" autocomplete="off" name="q" placeholder="上海/到达"/>
+                                    <span class="city-selector"></span>
+                                    <span class="date-chong">到</span>
+                                </div>
+                            </div>
+                            <div class="switch">
+                                <a title="互换出发、到达城市" href="###">互换城市</a>
+                            </div>
+                        </div>
+                        <div style="float:left; width:320px;">
+                            <div class="v-item rdb-item gclearfix">
+                                <label>日期</label>
+                                <div class="item-text g-cal">
+                                    <input type="text" id="owTime" name="date" class="J-date js-departure-date" autocomplete="off" placeholder="出发时间" />
+                                    <span class="date-selector"></span>
+                                    <span class="date-prompt"></span>
+                                    <span class="date-chong">往</span>
+                                </div>
+                            </div>
+                            <div class="v-item js-return-item v-return gclearfix"  id="danchengOrwangfan">
+                                <label></label>
+                                <div class="item-text g-cal">
+                                    <input type="text" id="rdEndTime" name="rtdate" class="J-date js-return-date" autocomplete="off" placeholder="返回时间" />
+                                    <span class="date-selector"></span>
+                                    <span class="date-prompt"></span>
+                                    <span class="date-chong">返</span>
+                                </div>
+                            </div>
+                        </div>    
+                        <div class="jp_btn">
+                        	<button type="submit" class="btn_search1" id="btn_search1" onclick="btn_search1()"></button>
+                    		<button type="submit" class="btn_search1 btn_search2" id="btn_search2" onclick="btn_search2()"></button>
+                        </div>
+                   
+                    </div>
+                    <div id="vInternational" class="js-international view-item">
+                        <div class="rdv-item gclearfix">
+                            <div class="rd-item">
+                                <input type="radio" name="type" id="oneWayInterQuery" data="oneway" class="js-oneway-query" value="1" checked="checked" /><label for="oneWayInterQuery">单程</label>
+                            </div>
+                            <div class="rd-item last">
+                                <input type="radio" name="type" id="roundInterQuery" class="js-round-query"  data="round" value="2" /><label for="roundInterQuery">往返</label>
+                            </div>
+                            <p class="hangxian_num">
+                            	可实时搜索 <strong>14000</strong> 条国际航线 
+                            </p>
+                        </div>
+                    	<div style="float:left; width:320px;">
+                            <div class="v-item gclearfix">
+                                <label>城市</label>
+                                <div class="item-text">
+                                    <input type="text" id="owInterStart" class="city-text js-departure" data-tag="出发地" data-panel="internal" autocomplete="off" name="t" value="北京" placeholder="出发地"/>
+                                    <span class="city-selector"></span>
+                                    <span class="date-chong">从</span>
+                                </div>
+                            </div>
+                            <div class="v-item gclearfix">
+                                <label></label>
+                                <div class="item-text">
+                                    <input type="text" id="owInterEnd" class="city-text js-arrival" data-tag="目的地" data-panel="international" autocomplete="off" name="q" placeholder="目的地"/>
+                                    <span class="city-selector"></span>
+                                    <span class="date-chong">到</span>
+                                </div>
+                            </div>
+                            <div class="switch">
+                                <a title="互换出发、到达城市" href="###">互换城市</a>
+                            </div>
+                        </div>
+                        <div style="float:left; width:320px;">
+                            <div class="v-item rdb-item gclearfix">
+                                <label>日期</label>
+                                <div class="item-text g-cal">
+                                    <input type="text" id="owInterTime" name="date" class="J-date js-departure-date" autocomplete="off" placeholder="出发时间" />
+                                    <span class="date-selector"></span>
+                                    <span class="date-prompt"></span>
+                                    <span class="date-chong">往</span>
+                                </div>
+                            </div>
+                            <div class="v-item js-return-item gclearfix" id="guojidanchengOrwangfan">
+                                <label></label>
+                                <div class="item-text g-cal">
+                                    <input type="text" id="rdInterEndTime" name="rtdate" class="J-date js-return-date" autocomplete="off" placeholder="返回时间" />
+                                    <span class="date-selector"></span>
+                                    <span class="date-prompt"></span>
+                                    <span class="date-chong">反</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jp_btn">
+                        	<button type="submit" class="btn_search1" id="guoji_btn_search1" onclick="guoji_btn_search1();"></button>
+                    		<button type="submit" class="btn_search1 btn_search2" id="guoji_btn_search2" onclick="guoji_btn_search2();"></button>
+                        </div>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    if(location.hash&&location.hash=='#inter'){
+                        document.getElementById('vInternational').className='js-international view-item on';
+                    }else{
+                        document.getElementById('vInternal').className='js-internal view-item on';
+                    }
+                </script>
+            </div>
+        </div>
+        <script type="text/x-qwrap-tmpl" id="cityPanelTmpl">
+            <div class="citiesbox-hd">
+                <h5><em>热门城市</em>(可直接输入城市或者城市拼音)</h5>
+                <span class="close"></span>
+            </div>
+            <div class="citiesbox-bd">
+			<literal>
+                {$panelCont}
+			</literal>
+            </div>
+        </script>
+		<div id="citiesBox"></div>
+    </div>
+            </div>
+            <div class="jp_c_L2">
+                	<div class="jp_nav">
+                    	<h3>特价机票</h3>
+                        <p class="gengduo"><a href="http://jipiao.kuxun.cn/" target="_blank">更多</a></p>
+                        <ul class="jipiao_ul">
+                        	<li class="active">北京</li>
+                        	<li>上海</li>
+                        	<li>广州</li>
+                        	<li>深圳</li>
+                        	<li>重庆</li>
+                        </ul>
+                    </div>
+                    <div class="tejia1" id="tejia1">
+                    	<center><img src='STATIC_URL/images/loading.gif' /></center>
+                    </div>
+                    <div class="jp_nav">
+                    	<h3>精选酒店</h3>
+                        <p class="gengduo"><a href="http://hotel.kuxun.cn/zhuanti-HotelExp.html?ifid=hotel_shouye_tiyanshi_zhuanti" target="_blank">更多</a></p>
+                        <ul class="jiudian_ul">
+                        	<li class="active">厦门</li>
+                        	<li>青岛</li>
+                        	<li>杭州</li>
+                        	<li>北京</li>
+                        	<li>上海</li>
+                        </ul>
+                    </div>
+                    <div class="jiudian" id="jiudian">
+						<center><img src='STATIC_URL/images/loading.gif' /></center>
+                    </div>
+                </div>	
+        </div>
+		 <include file="common:rightSideInc" />
+         <include file="common:relatedTools" />
+ <include file="common:footer" />

@@ -1,0 +1,116 @@
+@CHARSET "utf-8";
+/**********住房公积金查询*********/
+.gjj_bor{border:1px solid #E6E6E6; margin-top:10px; padding:36px 0px 45px; overflow:hidden;}
+.gjj_bor h1{height:42px; line-height:42px; font-size:30px; font-family:微软雅黑; background:url(../images/gjj_bg.gif) no-repeat 330px 0px; text-indent:393px; color:#338ace; margin-bottom:40px;}
+.gjj_p1{height:14px; line-height:14px; text-align:center; color:#323232;}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix{zoom:1;}
+.traffic_main {
+    margin:22px auto 0; width:868px; position:relative; padding-top:120px;
+}
+.traf_search {
+    border: 1px solid #D1EBFF; position:absolute; top:0; width:866px; background:#FFF; z-index:999;
+}
+.traf_search a{ color:#323232;
+}
+.city_list {
+    font-size: 14px;
+    padding: 20px 10px 10px 35px;
+}
+.city_list dt {
+    color: #666666;
+    float: left;
+    font-weight: bold;
+    line-height: 30px;
+}
+.city_list dd {
+    line-height: 30px;
+    margin-left: 95px;
+}
+.city_list dd a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 0 5px;
+}
+.city_list dd a:hover { color:#FFF; background:#ff8b00; text-decoration:none;}
+.traf_box {
+    border: 1px solid #CDE9FF;
+}
+.mt10 {
+    margin-top: 10px;
+}
+.traf_box .t_b_hd {
+    background: none repeat scroll 0 0 #EDF7FF;
+    border-bottom: 1px solid #CBE8FF;
+    color: #348BCF;
+    font-size: 14px;
+    font-weight: 700;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 21px;
+    position: relative;
+}
+.traf_box .t_b_bd {
+    color: #666666;
+    font-size: 14px;
+    line-height: 30px;
+    padding: 10px 33px;
+}
+.zhixiashi dt {
+    float: left;
+    font-weight: 700;
+    width: 75px;
+}
+.zhixiashi dd {
+    margin-left: 75px;
+}
+.zhixiashi dd a {
+    color: #666666;
+    display: inline-block;
+    margin-right: 20px;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+.traf_box .t_b_hd ins {
+    color: #333333;
+    font-size: 12px;
+    font-weight: 100;
+    position: absolute;
+    right: 12px;
+    text-decoration: none;
+    top: 0;
+}
+.traf_box .t_b_hd .fred {
+    color: #FD5151;
+    text-decoration: underline;
+}
+.sheng a.fblue {
+    color: #348BCF;
+    text-decoration: underline; font-size:14px;
+}
+.sheng dt {
+    float: left;
+    font-weight: bold;
+    width: 90px;
+}
+.sheng dd {
+    margin-left: 90px;
+}
+.sheng dd a {
+    color: #666666;
+    display: inline-block;
+    margin-right: 20px;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+.sheng dl {
+    border-bottom: 1px dashed #CBE8FF;
+    line-height: 22px;
+    padding: 8px 0;
+}

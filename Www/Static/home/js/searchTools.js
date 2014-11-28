@@ -1,0 +1,1 @@
+var searchTools = [{"id":"9","name":"\u624b\u673a\u53f7\u7801\u5f52\u5c5e\u5730","module":"shouji","details":"\u5feb\u901f\u67e5\u8be2\u624b\u673a\u53f7\u7801\u5f52\u5c5e\u5730","pic":"http:\/\/img.chaxun.cc\/searchToolsPic\/51abf88884ff3.png","pid":"1"}]

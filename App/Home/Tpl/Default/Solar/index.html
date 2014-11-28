@@ -1,0 +1,145 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="jieqi">
+    	<h1>24节气查询</h1>
+        <div class="cp_ts">为您提供二十四节气查询服务，包括二十四节气的具体时间、二十四节气养生、二十四节气习俗等信息。</div>
+        <div class="ssbox season" id="ssbox">
+        	<div class="season_box">
+        		<dl class="spring clearfix">
+            		<dt></dt>
+	                <dd>
+	                	<a data="立春" onclick="changeJiqi(&#39;立春&#39;,this);" href="javascript:void(0);"><strong>立春</strong><span>2.4</span></a>
+	                    <a data="雨水" onclick="changeJiqi(&#39;雨水&#39;,this);" href="javascript:void(0);"><strong>雨水</strong><span>2.18</span></a>
+	                    <a data="惊蛰" onclick="changeJiqi(&#39;惊蛰&#39;,this);" href="javascript:void(0);"><strong>惊蛰</strong><span>3.5</span></a>
+	                	<a data="春分" onclick="changeJiqi(&#39;春分&#39;,this);" href="javascript:void(0);"><strong>春分</strong><span>3.20</span></a>
+	                    <a data="清明" onclick="changeJiqi(&#39;清明&#39;,this);" href="javascript:void(0);"><strong>清明</strong><span>4.4</span></a>
+	                    <a data="谷雨" onclick="changeJiqi(&#39;谷雨&#39;,this);" href="javascript:void(0);" ><strong>谷雨</strong><span>4.20</span></a>
+	                </dd>
+            	</dl>
+            	<dl class="summer clearfix">
+            		<dt></dt>
+	                <dd>
+	                	<a data="立夏" onclick="changeJiqi(&#39;立夏&#39;,this);" href="javascript:void(0);"><strong>立夏</strong><span>5.5</span></a>
+	                    <a data="小满" onclick="changeJiqi(&#39;小满&#39;,this);" href="javascript:void(0);"><strong>小满</strong><span>5.21</span></a>
+	                    <a data="芒种" onclick="changeJiqi(&#39;芒种&#39;,this);" href="javascript:void(0);"><strong>芒种</strong><span>6.5</span></a>
+	                	<a data="夏至" onclick="changeJiqi(&#39;夏至&#39;,this);" href="javascript:void(0);"><strong>夏至</strong><span>6.21</span></a>
+	                    <a data="小暑" onclick="changeJiqi(&#39;小暑&#39;,this);" href="javascript:void(0);"><strong>小暑</strong><span>7.7</span></a>
+	                    <a data="大暑" onclick="changeJiqi(&#39;大暑&#39;,this);" href="javascript:void(0);"><strong>大暑</strong><span>7.22</span></a>
+	                </dd>
+            	</dl>
+            	<dl class="autumn clearfix">
+            		<dt></dt>
+	                <dd>
+	                	<a data="立秋" onclick="changeJiqi(&#39;立秋&#39;,this);" href="javascript:void(0);"><strong>立秋</strong><span>8.7</span></a>
+	                    <a data="处暑" onclick="changeJiqi(&#39;处暑&#39;,this);" href="javascript:void(0);"><strong>处暑</strong><span>8.23</span></a>
+	                    <a data="白露" onclick="changeJiqi(&#39;白露&#39;,this);" href="javascript:void(0);"><strong>白露</strong><span>9.7</span></a>
+	                	<a data="秋分" onclick="changeJiqi(&#39;秋分&#39;,this);" href="javascript:void(0);"><strong>秋分</strong><span>9.23</span></a>
+	                    <a data="寒露" onclick="changeJiqi(&#39;寒露&#39;,this);" href="javascript:void(0);"><strong>寒露</strong><span>10.8</span></a>
+	                    <a data="霜降" onclick="changeJiqi(&#39;霜降&#39;,this);" href="javascript:void(0);"><strong>霜降</strong><span>10.23</span></a>
+	                </dd>
+            	</dl>
+           	 	<dl class="winter clearfix">
+            		<dt></dt>
+	                <dd>
+	                	<a data="立冬" onclick="changeJiqi(&#39;立冬&#39;,this);" href="javascript:void(0);"><strong>立冬</strong><span>11.7</span></a>
+	                    <a data="小雪" onclick="changeJiqi(&#39;小雪&#39;,this);" href="javascript:void(0);"><strong>小雪</strong><span>11.22</span></a>
+	                    <a data="大雪" onclick="changeJiqi(&#39;大雪&#39;,this);" href="javascript:void(0);" class=""><strong>大雪</strong><span>12.7</span></a>
+	                	<a data="冬至" onclick="changeJiqi(&#39;冬至&#39;,this);" href="javascript:void(0);"><strong>冬至</strong><span>12.22</span></a>
+	                    <a data="小寒" onclick="changeJiqi(&#39;小寒&#39;,this);" href="javascript:void(0);" class=""><strong>小寒</strong><p><span>1.5</span></p></a>
+	                    <a data="大寒" onclick="changeJiqi(&#39;大寒&#39;,this);" href="javascript:void(0);"><strong>大寒</strong><p><span>1.20</span></p></a>
+	                </dd>
+            	</dl>
+        	</div>
+        	<div class="season_desc">
+            	<dl class="cleardix">
+	                <dt id="jieqi_name">小暑</dt>
+	                <dd><font id="jieqi_years">2013</font>年<font id="jieqi_name_time"></font>时间是（<em id="jieqi_year_time">07月07日 06:34:36</em>）</dd>
+	            </dl>
+	        </div>
+        	<div class="season_mod">
+        		<div class="season_hd"><h3>标准时间</h3></div>
+            	<div id="jieqi_time_table" class="season_bd">
+            		<table>
+						<tbody>
+							<tr>
+							  <th> 2012年小暑时间 </th>
+							  <td> 07月07日 00:40:43 </td>
+							  <th>2013年小暑时间</th>
+							  <td>07月07日 06:34:36</td>
+						  </tr>
+							<tr>
+							  <th>2014年小暑时间</th>
+							  <td>07月07日 12:14:45 </td>
+							  <th>2015年小暑时间</th>
+							  <td>07月07日 18:12:14</td>
+						  </tr>
+							<tr>
+							  <th>2016年小暑时间</th>
+							  <td>07月07日 00:03:18</td>
+							  <th>2017年小暑时间</th>
+							  <td>07月07日 05:50:38 </td>
+						  </tr>
+							<tr>
+								<th>2018年小暑时间</th>
+								<td>07月07日 11:41:47</td>
+								<th>2019年小暑时间</th>
+								<td>07月07日 17:20:25</td>
+							</tr>
+							<tr>
+								<th>2020年小暑时间</th>
+								<td>07月06日 23:14:20 </td>
+								<th>2021年小暑时间</th>
+								<td>07月07日 05:05:19</td>
+							</tr>
+							<tr>
+								<th>2022年小暑时间</th>
+								<td>07月07日 10:37:49 </td>
+								<th>2023年小暑时间</th>
+								<td>07月07日 16:30:29 </td>
+							</tr>
+							<tr>
+								<th>2024年小暑时间</th>
+								<td>07月06日 22:19:49</td>
+								<th>2025年小暑时间</th>
+								<td>07月07日 04:04:43 </td>
+							</tr>
+							<tr>
+								<th>2026年小暑时间 </th>
+								<td>07月07日 09:56:40 </td>
+								<th>2027年小暑时间</th>
+								<td>07月07日 15:36:44</td>
+							</tr>
+							<tr>
+								<th>2028年小暑时间</th>
+								<td>07月06日 21:29:57 </td>
+								<th>2029年小暑时间</th>
+								<td>07月07日 03:22:01
+								</td>
+							</tr>
+						</tbody>
+					</table>
+            	</div>
+        	</div>
+            <div class="season_mod">
+                <div class="season_hd"><h3>简 介</h3></div>
+                <div id="jieqi_jianjie" class="season_bd"><p>　　每年7月7日或8日视太阳到达黄经105°时为小暑（slight heat）。斗指辛。太阳黄经为105°。天气已经很热，但不到最热的时候，所以叫小暑。此时，已是初伏前后。</p></div>
+            </div>
+            <div class="season_mod">
+                <div class="season_hd"><h3>由 来</h3></div>
+                <div id="jieqi_youlai" class="season_bd"><p>　　小暑时节，大地上便不再有一丝凉风，而是所有的风中都带着热浪；《诗经·七月》中描述蟋蟀的字句有"七月在野，八月在宇，九月在户，十月蟋蟀入我床下。"。文中所说的八月即是夏历的六月，即小暑节气的时候，由于炎热，蟋蟀离开了田野，到庭院的墙角下以避暑热；在这一节气中，老鹰因地面气温太高而在清凉的高空中活动。</p></div>
+            </div>	
+           	<div class="season_mod">
+               <div class="season_hd"><h3>习 俗</h3></div>
+               <div id="jieqi_xisu" class="season_bd"><p>　　六月初六日为"天贶节"。据史书记载，此节始于宋代哲宗元符四年。"贶"即"赐"，即天赐之节。这是宋代皇帝在伏天向臣属赐"冰麨"和"炒面"之因，故称天贶节。<br>　　头伏萝卜二伏菜，三伏还能种荞麦；头伏饺子，二伏面，三伏烙饼摊鸡蛋。小暑头伏吃饺子是传统习俗，伏日人们食欲不振，往往比常日消瘦，俗谓之苦夏，而饺子在传统习俗里正是开胃解馋的食物山东有的地方吃生黄瓜和煮鸡蛋来治苦夏，入伏的早晨吃鸡蛋，不吃别的食物。<br>　　徐州人入伏吃羊肉，称为吃伏羊这种习俗可上溯到尧舜时期，在民间有彭城伏羊一碗汤，不用神医开药方之说法。徐州人对吃伏羊的喜爱莫过于当地民谣：六月六接姑娘，新麦饼羊肉汤。伏日吃面习俗至少三国时期就已开始了。</p></div>
+           	</div>
+           	<div class="season_mod">
+               <div class="season_hd"><h3>养 生</h3></div>
+               <div id="jieqi_yangsheng" class="season_bd"><p>　　小暑是二十四节气的第11个节气，也是人体阳气最旺盛的时候，"春夏养阳"。所以人们在工作劳动之时，要注意劳逸结合，保护人体的阳气。<br>　　民间度过伏天的办法，就是吃清凉消暑的食品。俗话说"头伏饺子二伏面，三伏烙饼摊鸡蛋"。这种吃法便是为了使身体多出汗，排出体内的各种毒素。天气热的时候要喝粥，用荷叶、土茯苓、扁豆、薏米、猪苓、泽泻、木棉花等材料煲成的消暑汤或粥，或甜或咸，非常适合此节气食用，多吃水果也有益的防暑，但是不要食用过量，以免增加肠胃负担，严重的会造成腹泻。</p></div>
+           	</div>
+		</div>
+	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

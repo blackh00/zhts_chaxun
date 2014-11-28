@@ -1,0 +1,285 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div style="height:10px;width:100%;overflow:hidden;"></div>
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/normal" enctype="multipart/form-data" method="post" id="normal">
+			证件名称：
+			<select name="card" id="card" onchange="change()">
+				<option value="0">请选择证件名称</option>
+				<!-- 爱情证件 -->
+				<option value="shilian">失恋证</option>
+				<option value="wanglian">网恋许可证</option>
+				<option value="chiqing">痴情证</option>
+				<!--<option value="marry">结婚证</option> -->
+				<!--综合证件 -->
+				<option value="chidai">老年痴呆证</option>
+				<option value="huyou">忽悠证</option>
+				<option value="guanshui">灌水证</option>
+				<option value="qianshui">潜水证</option>
+				<option value="jianghu">浆糊证</option>
+				<option value="shimin">良好市民证</option>
+				<!-- <option value="postcard">祝福明信片</option> -->
+				<!--女生证件 -->
+				<option value="funv">良家妇女证</option>
+				<option value="shunv">淑女证</option>
+				<option value="shunvzheng">熟女证</option>
+				<option value="meimei">超级美眉证</option>
+				<option value="laopo">乖老婆证</option>
+				<option value="dajie">黑帮大姐大证</option>
+				<!--执行证件 -->
+				<option value="tufu">屠夫证</option>
+				<option value="mofashi">魔法师</option>
+				<option value="maiba">麦霸证</option>
+				<option value="junyi">老军医证</option>
+				<option value="xingqi">行乞证</option>
+				<option value="fangpi">放屁许可证</option>
+				<!--男生证件 -->
+				<option value="selang">色狼证</option>
+				<option value="chunan">处男证</option>
+				<option value="guanggun">光棍证</option>
+				<option value="jingwu">劲舞高手</option>
+			</select>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			姓&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" maxlength="4" value="" name="name"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			<div id="sex">
+			性&nbsp;&nbsp;&nbsp;&nbsp;别：<input type="radio" value="1" name="sex" /> 男 <input type="radio" name="sex" value="2" /> 女
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			</div>
+			年&nbsp;&nbsp;&nbsp;&nbsp;龄：<input type="age" value="" name="age" maxlength="2"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			上传头像：<input type="file" value="" name="image" />
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件" onclick="createImg(1); return false;"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+	<!-- 结婚证 -->
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;margin-top:10px;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/marry" enctype="multipart/form-data" method="post" id="marry">
+			证件名称：<input type="text" value="结婚证" disabled="true"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			男方姓名：<input type="text" maxlength="4" value="" name="name1"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			年&nbsp;&nbsp;&nbsp;&nbsp;龄：<input type="age" value="" name="age1" maxlength="2"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			上传头像：<input type="file" value="" name="image11" />
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			女方姓名：<input type="text" maxlength="4" value="" name="name2"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			年&nbsp;&nbsp;&nbsp;&nbsp;龄：<input type="age" value="" name="age2" maxlength="2"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			上传头像：<input type="file" value="" name="image2" />
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+	<!-- 奖状证件 -->
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;margin-top:10px;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/awards" method="post" id="awards">
+			证件名称：
+			<select name="card" id="card2">
+				<option value="0">请选择证件名称</option>
+				<option value="aoyun">奥运火炬手</option>
+				<option value="meinv">美女之最</option>
+				<option value="zuijia">最佳好老婆</option>
+				<option value="nvrenwei">最有女人味</option>
+				<option value="sanba">三八红旗手</option>
+				<option value="zuishuai">最帅男青年</option>
+				<option value="quanqiu">全球模范生</option>
+				<option value="shida">十大杰出青年</option>
+				<option value="zuitengai">最疼爱老公</option>
+				<option value="gaoshou">网恋高手</option>
+			</select>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			姓&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" maxlength="5" value="" name="name"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件" onclick="createImg(2); return false;"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+	<!-- qq证件 -->
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;margin-top:10px;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/qq" method="post" id="qq">
+			证件名称：
+			<select name="card" id="card3">
+				<option value="0">请选择证件名称</option>
+				<option value="kucha">我的小裤衩</option>
+				<option value="woaini">恩，我爱你</option>
+				<option value="shijie">我的世界听我的</option>
+				<option value="jiayou">baby加油</option>
+				<option value="xingge">性格有点拽</option>
+				<option value="qzone">Qzone英雄</option>
+				<option value="xiaoniu">韩版小妞</option>
+				<option value="shuaige">韩版帅哥</option>
+				<option value="ruguoai">如果爱，请深爱</option>
+				<option value="ouyiding">偶一定会爱你</option>
+			</select>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			QQ&nbsp;&nbsp;&nbsp;&nbsp;号：<input type="text" maxlength="12" value="" name="num"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			QQ&nbsp;&nbsp;&nbsp;&nbsp;群：<input type="text" maxlength="12" value="" name="group"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			昵&nbsp;&nbsp;&nbsp;&nbsp;称：<input type="text" maxlength="6" value="" name="name"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			性&nbsp;&nbsp;&nbsp;&nbsp;别：<input type="radio" value="1" name="sex" />男<input type="radio" name="sex" value="2" />女
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			签&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" maxlength="12" value="" name="sign"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件" onclick="createImg(3); return false;"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+	<!-- 新闻联播 -->
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;margin-top:10px;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/news" enctype="multipart/form-data" method="post" id="news">
+			证件名称：<input type="text" value="新闻联播" disabled="disabled" name="card"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			新闻标题：<input type="text" maxlength="12" value="" name="title"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			主&nbsp;持&nbsp;人：
+			<select name="compere">
+				<option value="0">请选择风格</option>			
+				<option value="1">风格一</option>
+				<option value="2">风格二</option>
+			</select>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			新闻图片：<input type="file" value="" name="image" />
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件" onclick="createImg(4); return false;"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+	<!--智慧日报 -->
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;margin-top:10px;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/daily" enctype="multipart/form-data" method="post" id="daily">
+			证件名称：<input type="text" value="智慧日报" disabled="disabled" name="card"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			报纸名称：<input type="text" maxlength="6" value="" name="name" id="daily_name"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办报宗旨：<input type="text" maxlength="10" value="" name="topic"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			新闻标题：<input type="text" maxlength="12" value="" name="title"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			新闻图片：<input type="file" value="" name="image" />
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件" onclick="createImg(5); return false;"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+	<!--TIME杂志 -->
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;margin-top:10px;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/time" enctype="multipart/form-data" method="post" id="time">
+			证件名称：<input type="text" value="TIME杂志" disabled="disabled" name="card"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			人物名称：<input type="text" maxlength="4" value="" name="name" id="time_name"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			事件标题：<input type="text" maxlength="8" value="" name="title" id="time_title"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			杂志封面：<input type="file" value="" name="image" />
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件" onclick="createImg(6); return false;"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+	<!-- 锦旗证件 -->
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;margin-top:10px;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/jinqi" method="post" enctype="multipart/form-data" id="jinqi">
+			证件名称：<input type="text" value="锦旗" disabled="disabled" name="card"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			授予对象：<input type="text" maxlength="10" value="" name="name" id="jinqi_name"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			感谢语&nbsp;1：<input type="text" maxlength="8" value="" name="thank1" id="thank1"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			感谢语&nbsp;2：<input type="text" maxlength="8" value="" name="thank2" id="thank2"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			落&nbsp;&nbsp;&nbsp;&nbsp;款：<input type="text" maxlength="10" value="" name="sign" id="jinqi_sign"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件" onclick="createImg(7); return false;"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+	<!-- 大学录取通知书 -->
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;margin-top:10px;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/offer" method="post" enctype="multipart/form-data" id="offer">
+			证件名称：<input type="text" value="大学录取通知书" disabled="disabled" name="card"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			大学名称：<input type="text" maxlength="10" value="" name="university" id="university"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			学生名字：<input type="text" maxlength="6" value="" name="name" id="offer_name"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			专业名称：<input type="text" maxlength="12" value="" name="professional" id="professional"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件" onclick="createImg(8); return false;"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+	<!--寻人启事 -->
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;margin-top:10px;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/search" enctype="multipart/form-data" method="post" id="search">
+			证件名称&nbsp;&nbsp;：<input type="text" value="寻人启事" disabled="disabled" name="card"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			丢失人姓名：<input type="text" maxlength="4" value="" name="name1" id="search_name1"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			丢失人性别：<input type="radio" value="1" name="sex" checked="checked"/> 男<input type="radio" value="2" name="sex"/> 女
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			丢失人年龄：<input type="text" maxlength="2" value="" name="age" id="search_age"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			丢失人照片：<input type="file" value="" name="image" />
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			寻找人&nbsp;Q&nbsp;Q：<input type="text" maxlength="12" value="" name="qq" id="search_qq"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			寻找人姓名：<input type="text" maxlength="4" value="" name="name2" id="search_name2"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件" onclick="createImg(9); return false;"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+	<!--全球通缉令 -->
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;margin-top:10px;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/tongji" enctype="multipart/form-data" method="post" id="tongji">
+			证件名称：<input type="text" value="全球通缉令" disabled="disabled" name="card"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			姓&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" maxlength="4" value="" name="name" id="tongji_name"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			性&nbsp;&nbsp;&nbsp;&nbsp;别：<input type="radio" value="1" name="sex" checked="checked"/> 男<input type="radio" value="2" name="sex"/> 女
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			年&nbsp;&nbsp;&nbsp;&nbsp;龄：<input type="text" maxlength="2" value="" name="age" id="tongji_age"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			头&nbsp;&nbsp;&nbsp;&nbsp;像：<input type="file" value="" name="image" />
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			罪&nbsp;&nbsp;&nbsp;&nbsp;行：<input type="text" maxlength="10" value="" name="crime" id="tongji_crime"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			籍&nbsp;&nbsp;&nbsp;&nbsp;贯：<input type="text" maxlength="12" value="" name="address" id="tongji_address"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件" onclick="createImg(10); return false;"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+	<!-- 自定义证件 -->
+	<div style="border:1px solid #E6E6E6;width:600px;padding:10px;margin-top:10px; display:none;">
+		<form action="SITE_DYNAMIC_URL/funnyweb/diy" enctype="multipart/form-data" method="post" id="diy">
+			证件名称：<input type="text" value="最多5字" maxlength="5" name="card"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			颁发机构：<input type="text" value="最多12字" maxlength="12" name="unit"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			姓&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text" maxlength="4" value="" name="name"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			性&nbsp;&nbsp;&nbsp;&nbsp;别：<input type="radio" value="1" name="sex" />男<input type="radio" value="2" />女
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			年&nbsp;&nbsp;&nbsp;&nbsp;龄：<input type="age" value="" name="age" maxlength="2"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			上传头像：<input type="file" value="" name="image" />
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			证件内容：<textarea id="content" name="content"></textarea>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+			办理证件：<input type="submit" value="办理证件" onclick="createImg();"/>
+			<div style="height:20px;width:100%;overflow:hidden;"></div>
+		</form>
+	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

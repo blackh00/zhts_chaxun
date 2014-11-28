@@ -1,0 +1,58 @@
+﻿	<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="pl_bor">
+                <div class="sfz_title">
+                    身份证号码查询
+                </div>
+                <div class="sfz_jieshao">
+                提供身份证号码查询服务，包括身份证的所在地区、性别及生日等信息
+                </div>
+                <div class="sfzshu">
+                    <input type="text" value="请输入身份证号（15位或者18位）" onfocus="if(this.value=='请输入身份证号（15位或者18位）') {this.value='';this.style.color='#343235';}"
+                        onblur="if(this.value=='') {this.value='请输入身份证号（15位或者18位）';this.style.color='#343235';}"
+                        class="pl_sousuotxt" id="identityNum" />
+                    <input id="Button1" type="button" value="" class="pl_but" />
+                </div>
+				<div id="resultInfo">
+				<if condition="$identityInfo neq ''">
+				<div class='pl_jieguo'><ul class='sfz_jieguoc' id='sfz_say'><li>号码：<span>{$identityInfo['identity_num']}</span> <a href='#' target='_blank'>（查吉凶）</a></li><li>地区：<span>{$identityInfo['address']}
+				</span></li><li>生日：<span>{$identityInfo['birthday']}</span></li><li>性别：<span>{$identityInfo['sex']}</span></li></ul></div><div class='sfz_jieguoline'></div>
+				<elseif condition="$errorInfo neq ''">
+					<ul class="sfz_say" id="sfz_say">
+					<li><font color='red'>{$errorInfo}</font></li>
+					</ul>
+				<else/>
+					<ul class="sfz_say" id="sfz_say">
+						<li><span>郑重申明：</span></li>
+						<li>1.通过该查询服务，您可以通过您的身份证查询到您本人的部分身份信息；</li>
+						<li>2.为保护他人的隐私，不建议您查询他人的身份信息或者将他人的身份信息予以传播；</li>
+						<li>3.如需查询他人的详细身份信息，请依据相关规定至相关部门查询；</li>
+						<li>4.改身份证号码查询系统提供的信息仅供参考；</li>
+						<li>5.请在查询前阅读本申明，点击查询后即视为您已阅读并同意本申明内容；</li>
+					</ul>
+				</if>
+				</div>
+                <div class="sfz_no">
+                    <div class="sfz_not">
+                        身份证号码前6位查询</div>
+                    <div class="sfz_select">
+                        <select id="s_province" name="s_province">
+                        </select>
+                        省
+                        <select id="s_city" name="s_city">
+                        </select>
+                        市
+                        <select id="s_county" name="s_county">
+                        </select>
+                        区
+                    </div>
+                    <div class="sfz_jieguos">
+                        对应的身份证前6位是：<span id="identityNumPreSix" style="color:#ff8601;font-weight:700;">123456</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <include file="common:rightSideInc" />
+		<include file="common:relatedTools" />
+        <include file="common:footer" />

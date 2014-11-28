@@ -1,0 +1,22 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+    <div class="caipu_bor">
+        <h1> 菜谱大全</h1>
+        <p class="caipu_p1"></p>
+        <include file="CookBook:search" />
+        <div class="caipu_c">
+        	<Volist name="list" id="vo">
+        		<h6>{$vo[0]}</h6>
+             <p>
+             	<Volist name="vo[1]" id="vo1">
+             		<a href="SITE_DYNAMIC_URL/caipu/show/search/{$vo1.tag_name}" target="_blank">{$vo1.tag_name}</a>
+             	</Volist>
+             </p>
+        	</Volist>
+        </div>
+    </div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

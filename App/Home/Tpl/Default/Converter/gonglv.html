@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>单位换算器</title>
+<link type="text/css" rel="stylesheet" href="STATIC_URL/css/converterPublic.css" />
+<link type="text/css" rel="stylesheet" href="STATIC_URL/css/converter.css" />
+<script type='text/javascript' src='STATIC_URL/js/converter_gonglv.js' ></script>
+</head>
+<body>
+<div class="wrapper">
+  <!-- main -->
+  <div class="main">
+    <div class="container">
+      <div class="htitle">
+        <h1 class="gonglv">功率单位换算</h1>
+      </div>
+      <div class="col_a">
+        <div class="navbar">
+          <ul>
+            <li class="nav1"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/index/">长度</a></li>
+            <li class="nav8"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/wendu/">温度</a></li>
+            <li class="nav6"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/reliang/">热量</a></li>
+            <li class="nav7"><a class="current" href="SITE_DYNAMIC_URL/{$Think.config.Converter}/gonglv/">功率</a></li>
+            <li class="nav5"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/yali/">压力</a></li>
+            <li class="nav3"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/zhongliang/">重量</a></li>
+            <li class="nav2"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/mianji/">面积</a></li>
+            <li class="nav4"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/tiji/">体积</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col_b">
+        <div class="mod_a">
+          <div class="td_a bdtop">
+            <div class="td120">瓦(W)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="watt"/>
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">千瓦(kW)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA"  id="kiloWatt"/>
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">英制马力</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="enHorsepower" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">米制马力</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA"  id="miHorsepower"/>
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">公斤·米/秒</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA"  id="kgMeS"/>
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">千卡/秒</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="kkeS" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">英热单位/秒</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA"  id="enHoteS"/>
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">英尺·磅/秒</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA"  id="enChiBangeS"/>
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+          <div class="td120">焦耳/秒</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="jiaoereS" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">牛顿·米/秒</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="nS" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+          </div>
+        </div>
+        
+        <input type="button" class="submitB" value="数据重置" onclick="data_reset()"/>
+        <p class="gray">可实现在线瓦(W)、千瓦(kW)、英制马力(HP)、米制马力(PS)、公斤·米/秒(kg·m/s)、千卡/秒(kcal/s)、英热单位/秒(Btu/s)、英尺·磅/秒(ft·lb/s)、焦耳/秒(J/s)、牛顿·米/秒(N·m/s)间的互转互换。</p>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!-- main end --> 
+  <!-- footer -->
+  <script type='text/javascript' src='js/footer201208_easy.js' ></script>
+  <!-- footer end --> 
+   <script type='text/javascript'>
+		var inputs = document.getElementsByTagName("input");
+		for(var i=0;i<inputs.length;i++) {
+			if(inputs[i].nodeType== 1 &&  inputs[i].className=='submitA' && inputs[i].nodeName.toUpperCase() == 'INPUT') {
+				inputs[i].onclick = function() {
+					//验证数字是否正确
+					var parent = this.parentNode;
+					var childs = parent.childNodes;
+					var id;
+					var value ;
+			
+					for(var i=0;i<childs.length;i++) {
+						if(childs[i].nodeType==1 &&  childs[i].className=='inputTxtA' && childs[i].nodeName.toUpperCase() == 'INPUT') {
+							var val = childs[i].value;
+							val = val.replace(/(^\s+)|(\s+$)/g,'');
+
+							if(!checkNum(val)) {
+								return false;
+							}
+							id = childs[i].id;
+							value = val;
+							break;
+						}
+					}
+					conv_length(id,value);
+
+				}
+			}
+		}
+  </script>
+</div>
+</body>
+</html>

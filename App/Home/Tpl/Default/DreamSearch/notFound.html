@@ -1,0 +1,25 @@
+	<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="zhougong_bor">
+                <h1>
+                    周公解梦
+                </h1>
+                <p class="zhougong_p1">在线解梦、梦中凶吉预测</p>
+                 <div class="zhougong_shur">
+                  <form action="SITE_DYNAMIC_URL/dreamsearch/dreamsearch" method="post">
+                   <input type="text" value="请输入做梦内容的关键字，如“女人”" onfocus="if(this.value=='请输入做梦内容的关键字，如“女人”') {this.value='';this.style.color='#343235';}"
+                        onblur="if(this.value=='') {this.value='请输入做梦内容的关键字，如“女人”';this.style.color='#343235';}"
+                        class="zhougong_sousuotxt" name="dr" />
+                    <input type="submit" value="" class="zhougong_but" />
+                 </form>
+                </div>
+                <div class="zhougong_line"></div>
+                <div class="zhougong5_c">
+                	对不起，没有找到<empty name="keyWord"><strong>“对其”</strong><else/><strong>"{$keyWord}"</strong></empty>相关结果
+                </div>
+            </div>
+        </div>
+              	 <include file="common:rightSideInc" />	
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />

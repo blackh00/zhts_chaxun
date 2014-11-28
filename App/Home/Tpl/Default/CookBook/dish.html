@@ -1,0 +1,82 @@
+<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="caipu_bor" >
+            <Volist name="resultInfo" id="vo">
+                <h1>
+                    菜谱大全
+                </h1>
+                <p class="caipu_p1"></p>
+                <include file="CookBook:search" />
+                <div id="printfrom">
+                <div class="caipu_c4">
+                	<div class="caipu_c4_img">
+                    	<img src="ATTACHMENT_URL/cookbook/{$vo.cookbook_pic}" alt="{$vo.cookbook_name}" width="284" height="178"/>
+                        <p>所在分类：
+                        <Volist name="tags" id="vo_tags">
+                        	<a href="SITE_DYNAMIC_URL/caipu/show/search/{$vo_tags}" target="_blank">{$vo_tags}</a>
+                        </Volist>
+						</p>
+                    </div>
+                    <div class="caipu_c4_txt">
+                    	<h2>{$vo.cookbook_name}</h2>
+                        <p>菜品口味：<span>{$vo.cookbook_taste}</span><br />主要工艺：<span>{$vo.cookbook_crafts}</span><br />所需时间：<span>{$vo.cookbook_time}</span><br />制作难度：<span>{$vo.cookbook_difficulty}</span><if condition = "$vo.cookbook_kitchenware neq null"><!-- <br />所需厨具：<span>{$vo.cookbook_kitchenware}</span>--></if></p>
+                    </div>
+                </div>
+                <h3>用料</h3>
+                <ul class="caipu_biao1 clearfix">
+                <Volist name="ingredients" id="vo_ingredients">
+					<li><span>{$vo_ingredients.amount}</span>{$vo_ingredients.name}</li>
+                </Volist>
+                </ul>
+                <h3>步骤</h3>
+                <ul class="caipu_buzou">
+                <Volist name="step" id="vo_step">
+                	<li>
+                		<div class="caipu_buzou_img"><img src="ATTACHMENT_URL/cookbook/{$vo_step.pic}" width="180" height="101" alt="{$vo_step.content}" /></div>
+                        <if condition="$step_length eq $i">
+                		<p class="last">
+                        	<span>{$i}.</span>{$vo_step.content}
+                            <em class="caipu_dayin"><a target="_blank" href="SITE_URL/food">查看食物热量</a><a href=javascript:; onclick="printme()" class="dayin">打印菜单</a></em>
+                        </p>
+                        <else/>
+                    	<p><span>{$i}.</span>{$vo_step.content}</p>
+                		</if>
+                    </li>
+                </Volist>
+                </ul>
+                </div>
+                <div id="printto"></div>
+                <script type="text/javascript">
+					function printme()
+					{
+						document.body.innerHTML=document.getElementById('printfrom').innerHTML+'<br/>'+document.getElementById('printto').innerHTML;
+						window.print();
+						self.location.reload()
+					}
+				</script>
+				
+                <div class="caipu_h"><a href="SITE_DYNAMIC_URL/{$Think.config.CookBook}/show/search/{$vo.cookbook_name}" target="_blank">查看更多>></a>{$vo.cookbook_name}的其他做法</div>
+                <ul class="caipu_love clearfix" style="padding-bottom:0;">
+                	<Volist name="other" id="vo_other">
+                		<li>
+	                    	<div class="caipu_love_img"><a href="SITE_DYNAMIC_URL/{$Think.config.CookBook}/dish/id/{$vo_other.id}" title="{$vo_other.cookbook_name}" target="_blank"><img src="ATTACHMENT_URL/cookbook/{$vo_other.cookbook_pic}" alt="{$vo_other.cookbook_name}" width="120" height="90" /></a></div>
+	                        <p><a href="SITE_DYNAMIC_URL/caipu/dish/id/{$vo1.id}" target="_blank">{$vo_other.cookbook_name}</a></p>
+	                    </li>
+                	</Volist>
+                </ul>
+                <div class="caipu_h"><a href="SITE_DYNAMIC_URL/{$Think.config.CookBook}/show/search/{$tagrand}" target="_blank">查看更多>></a>您还可能喜欢</div>
+                <ul class="caipu_love caipu_love2 clearfix">
+                	<Volist name="guess" id="vo_guess">
+                		<li>
+	                    	<div class="caipu_love_img"><a href="SITE_DYNAMIC_URL/caipu/dish/id/{$vo_guess.id}" title="{$vo_guess.cookbook_name}" target="_blank"><img src="ATTACHMENT_URL/cookbook/{$vo_guess.cookbook_pic}" alt="{$vo_guess.cookbook_name}" width="120" height="90" /></a></div>
+	                        <p><a href="SITE_DYNAMIC_URL/caipu/dish/id/{$vo_guess.id}" target="_blank">{$vo_guess.cookbook_name}</a></p>
+	                    </li>
+                	</Volist>
+                </ul>
+            </Volist>
+            </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

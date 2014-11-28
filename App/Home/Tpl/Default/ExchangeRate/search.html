@@ -1,0 +1,520 @@
+﻿<include file="common:header" />
+    <div class="main">
+        <div class="huilv_box">
+        	<h1>汇率换算</h1>
+        	<p class="huilv_p1">为您实现在线汇率换算的服务。( 汇率自动按国际换汇牌价进行调整。)</p>
+            <div class="licai clearfix">
+                <div class="huilv_data_search">
+                        <div class="info">
+                            先选择左侧列表中要兑换的货币，输入要兑换的金额并点击"汇率转换"便可得到结果：
+                        </div>
+                        <span class="huilv_zhi">将</span>
+                        <div class="select_outer select_outer145">
+                            <div class="select_inner">
+                                <select name="from" id="from">
+                                    <option value="CNY" selected="selected">
+                                        人民币(CNY)
+                                    </option>
+                                    <option value="HKD">
+                                        港币(HKD)
+                                    </option>
+                                    <option value="MOP">
+                                        澳门元(MOP)
+                                    </option>
+                                    <option value="TWD">
+                                        台币(TWD)
+                                    </option>
+                                    <option value="USD">
+                                        美元(USD)
+                                    </option>
+                                    <option value="GBP">
+                                        英镑(GBP)
+                                    </option>
+                                    <option value="EUR">
+                                        欧元(EUR)
+                                    </option>
+                                    <option value="KRW">
+                                        韩元(KRW)
+                                    </option>
+                                    <option value="JPY">
+                                        日元(JPY)
+                                    </option>
+                                    <option value="CAD">
+                                        加拿大元(CAD)
+                                    </option>
+                                    <option value="AUD">
+                                        澳大利亚元(AUD)
+                                    </option>
+                                    <option value="CHF">
+                                        瑞士法郎(CHF)
+                                    </option>
+                                    <option value="SGD">
+                                        新加坡元(SGD)
+                                    </option>
+                                    <option value="SEK">
+                                        瑞典克朗(SEK)
+                                    </option>
+                                    <option value="DKK">
+                                        丹麦克朗(DKK)
+                                    </option>
+                                    <option value="NOK">
+                                        挪威克朗(NOK)
+                                    </option>
+                                    <option value="PHP">
+                                        菲律宾比索(PHP)
+                                    </option>
+                                    <option value="THB">
+                                        泰国铢(THB)
+                                    </option>
+                                    <option value="NZD">
+                                        新西兰元(NZD)
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <span class="huilv_zhi">兑换成：</span>
+                        <div class="select_outer select_outer145">
+                            <div class="select_inner">
+                                <select id="to" name="to">
+                                    <option value="CNY">
+                                        人民币(CNY)
+                                    </option>
+                                    <option value="HKD">
+                                        港币(HKD)
+                                    </option>
+                                    <option value="MOP">
+                                        澳门元(MOP)
+                                    </option>
+                                    <option value="TWD">
+                                        台币(TWD)
+                                    </option>
+                                    <option value="USD" selected="selected">
+                                        美元(USD)
+                                    </option>
+                                    <option value="GBP">
+                                        英镑(GBP)
+                                    </option>
+                                    <option value="EUR">
+                                        欧元(EUR)
+                                    </option>
+                                    <option value="KRW">
+                                        韩元(KRW)
+                                    </option>
+                                    <option value="JPY">
+                                        日元(JPY)
+                                    </option>
+                                    <option value="CAD">
+                                        加拿大元(CAD)
+                                    </option>
+                                    <option value="AUD">
+                                        澳大利亚元(AUD)
+                                    </option>
+                                    <option value="CHF">
+                                        瑞士法郎(CHF)
+                                    </option>
+                                    <option value="SGD">
+                                        新加坡元(SGD)
+                                    </option>
+                                    <option value="SEK">
+                                        瑞典克朗(SEK)
+                                    </option>
+                                    <option value="DKK">
+                                        丹麦克朗(DKK)
+                                    </option>
+                                    <option value="NOK">
+                                        挪威克朗(NOK)
+                                    </option>
+                                    <option value="PHP">
+                                        菲律宾比索(PHP)
+                                    </option>
+                                    <option value="THB">
+                                        泰国铢(THB)
+                                    </option>
+                                    <option value="NZD">
+                                        新西兰元(NZD)
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <span class="huilv_zhi">数额：</span>
+                        <input type="text" name="total" id="num" class="inputTxtA">
+                        <a class="selt_btn">
+                            汇率转换
+                        </a>
+                        <div class="clear"></div>
+                        <div class="huilv_jieguo">
+                        	<div class="huilv_time">日期<br /><span>{$result.now}</span></div>
+                        	<div class="huilv_jg">
+                            	<p>人民币<br /><span>10000</span></p>
+                            	<p>当前汇率<br /><span>0.1632</span></p>
+                            	<p class="last">美元<br /><span>{$total}</span></p>
+                            </div>
+                        	<div class="huilv_jg2">买入：<span>0.1633</span><br />卖出：<span>0.163</span></div>
+                        </div>
+                </div>
+                <div id="tb">
+                    <table cellspacing="0" cellpadding="0" border="0" class="tableA">
+                        <tbody>
+                            <tr>
+                                <th scope="col">
+                                    货币代号
+                                </th>
+                                <th scope="col">
+                                    货币名称
+                                </th>
+                                <th scope="col">
+                                    现钞买入价
+                                </th>
+                                <th scope="col">
+                                    现汇买入价
+                                </th>
+                                <th scope="col">
+                                    卖出价
+                                </th>
+                                <th scope="col">
+                                    基准价
+                                </th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    GBP
+                                </td>
+                                <td>
+                                    英镑
+                                </td>
+                                <td>
+                                    890.490
+                                </td>
+                                <td>
+                                    918.850
+                                </td>
+                                <td>
+                                    926.240
+                                </td>
+                                <td>
+                                    926.240
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    HKD
+                                </td>
+                                <td>
+                                    港币
+                                </td>
+                                <td>
+                                    78.120
+                                </td>
+                                <td>
+                                    78.750
+                                </td>
+                                <td>
+                                    79.050
+                                </td>
+                                <td>
+                                    79.050
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    USD
+                                </td>
+                                <td>
+                                    美元
+                                </td>
+                                <td>
+                                    606.470
+                                </td>
+                                <td>
+                                    611.370
+                                </td>
+                                <td>
+                                    613.830
+                                </td>
+                                <td>
+                                    613.830
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    CHF
+                                </td>
+                                <td>
+                                    瑞士法郎
+                                </td>
+                                <td>
+                                    609.100
+                                </td>
+                                <td>
+                                    628.500
+                                </td>
+                                <td>
+                                    633.550
+                                </td>
+                                <td>
+                                    633.550
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    SGD
+                                </td>
+                                <td>
+                                    新加坡元
+                                </td>
+                                <td>
+                                    465.110
+                                </td>
+                                <td>
+                                    479.920
+                                </td>
+                                <td>
+                                    483.780
+                                </td>
+                                <td>
+                                    483.780
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    SEK
+                                </td>
+                                <td>
+                                    瑞典克朗
+                                </td>
+                                <td>
+                                    88.590
+                                </td>
+                                <td>
+                                    91.410
+                                </td>
+                                <td>
+                                    92.140
+                                </td>
+                                <td>
+                                    92.140
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    DKK
+                                </td>
+                                <td>
+                                    丹麦克朗
+                                </td>
+                                <td>
+                                    102.260
+                                </td>
+                                <td>
+                                    105.520
+                                </td>
+                                <td>
+                                    106.370
+                                </td>
+                                <td>
+                                    106.370
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    NOK
+                                </td>
+                                <td>
+                                    挪威克朗
+                                </td>
+                                <td>
+                                    100.320
+                                </td>
+                                <td>
+                                    103.520
+                                </td>
+                                <td>
+                                    104.350
+                                </td>
+                                <td>
+                                    104.350
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    JPY
+                                </td>
+                                <td>
+                                    日元
+                                </td>
+                                <td>
+                                    5.813
+                                </td>
+                                <td>
+                                    5.998
+                                </td>
+                                <td>
+                                    6.040
+                                </td>
+                                <td>
+                                    6.040
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    CAD
+                                </td>
+                                <td>
+                                    加拿大元
+                                </td>
+                                <td>
+                                    568.950
+                                </td>
+                                <td>
+                                    587.080
+                                </td>
+                                <td>
+                                    591.790
+                                </td>
+                                <td>
+                                    591.790
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    AUD
+                                </td>
+                                <td>
+                                    澳大利亚元
+                                </td>
+                                <td>
+                                    566.390
+                                </td>
+                                <td>
+                                    584.420
+                                </td>
+                                <td>
+                                    588.530
+                                </td>
+                                <td>
+                                    588.530
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    EUR
+                                </td>
+                                <td>
+                                    欧元
+                                </td>
+                                <td>
+                                    762.230
+                                </td>
+                                <td>
+                                    786.510
+                                </td>
+                                <td>
+                                    792.830
+                                </td>
+                                <td>
+                                    792.830
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    MOP
+                                </td>
+                                <td>
+                                    澳门元
+                                </td>
+                                <td>
+                                    73.970
+                                </td>
+                                <td>
+                                    76.540
+                                </td>
+                                <td>
+                                    76.830
+                                </td>
+                                <td>
+                                    79.290
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    PHP
+                                </td>
+                                <td>
+                                    菲律宾比索
+                                </td>
+                                <td>
+                                    13.920
+                                </td>
+                                <td>
+                                    14.370
+                                </td>
+                                <td>
+                                    14.480
+                                </td>
+                                <td>
+                                    14.930
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    THB
+                                </td>
+                                <td>
+                                    泰国铢
+                                </td>
+                                <td>
+                                    19.620
+                                </td>
+                                <td>
+                                    20.240
+                                </td>
+                                <td>
+                                    20.410
+                                </td>
+                                <td>
+                                    21.030
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    NZD
+                                </td>
+                                <td>
+                                    新西兰元
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    492.360
+                                </td>
+                                <td>
+                                    496.310
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    KRW
+                                </td>
+                                <td>
+                                    韩国元
+                                </td>
+                                <td>
+                                    0.522
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                </td>
+                                <td>
+                                    0.566
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>        
+<include file="common:relatedTools" />
+<include file="common:footer" />

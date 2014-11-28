@@ -1,0 +1,1316 @@
+﻿	<include file="common:header" />
+    <div class="main">
+        <div style="clear:both; height:0; overflow:hidden;"></div>
+        <div class="chepai_box">
+        	<h1>车牌号查询</h1>
+            <div class="mod_2b">
+            <div class="carlist_city">
+            <ul class="clearfix" id="ul1">
+            <li onclick="maodian(1)"><a href="javascript:void(0)" title="北京市车牌号" class="current">北京市（京）</a></li>
+            <li onclick="maodian(1)"><a href="javascript:void(0)" title="天津市车牌号">天津市（津）</a></li>
+            <li onclick="maodian(1)"><a href="javascript:void(0)" title="上海市车牌号">上海市（沪）</a></li>
+            <li onclick="maodian(12)"><a href="javascript:void(0)" title="重庆市车牌号">重庆市（渝）</a></li>
+            </ul>
+            <ul class="clearfix" id="ul2">
+            <li onclick="maodian(2)"><a href="javascript:void(0)" title="河北省车牌号">河北省（冀）</a></li>
+            <li onclick="maodian(2)"><a href="javascript:void(0)" title="河南省车牌号">河南省（豫）</a></li>
+            <li onclick="maodian(2)"><a href="javascript:void(0)" title="云南省车牌号">云南省（云）</a></li>
+            <li onclick="maodian(3)"><a href="javascript:void(0)" title="辽宁省车牌号">辽宁省（辽）</a></li>
+            <li onclick="maodian(3)"><a href="javascript:void(0)" title="黑龙江省车牌号">黑龙江省(黑)</a></li>
+            <li onclick="maodian(3)"><a href="javascript:void(0)" title="湖南省车牌号">湖南省（湘）</a></li>
+            <li onclick="maodian(4)"><a href="javascript:void(0)" title="安徽省车牌号">安徽省（皖）</a></li>
+            <li onclick="maodian(4)"><a href="javascript:void(0)" title="山东省车牌号">山东省（鲁）</a></li>
+            <li onclick="maodian(4)"><a href="javascript:void(0)" title="新疆车牌号">新疆（新）</a></li>
+            <li onclick="maodian(5)"><a href="javascript:void(0)" title="江苏省车牌号">江苏省（苏）</a></li>
+            <li onclick="maodian(5)"><a href="javascript:void(0)" title="浙江省车牌号">浙江省（浙）</a></li>
+            <li onclick="maodian(5)"><a href="javascript:void(0)" title="江西省车牌号">江西省（赣）</a></li>
+            <li onclick="maodian(6)"><a href="javascript:void(0)" title="湖北省车牌号">湖北省（鄂）</a></li>
+            <li onclick="maodian(6)"><a href="javascript:void(0)" title="广西省车牌号">广西（桂）</a></li>
+            <li onclick="maodian(6)"><a href="javascript:void(0)" title="甘肃省车牌号">甘肃省（甘）</a></li>
+            <li onclick="maodian(7)"><a href="javascript:void(0)" title="山西省车牌号">山西省（晋）</a></li>
+            <li onclick="maodian(7)"><a href="javascript:void(0)" title="内蒙古车牌号">内蒙古（蒙）</a></li>
+            <li onclick="maodian(7)"><a href="javascript:void(0)" title="陕西省车牌号">陕西省（陕）</a></li>
+            <li onclick="maodian(8)"><a href="javascript:void(0)" title="吉林省车牌号">吉林省（吉）</a></li>
+            <li onclick="maodian(8)"><a href="javascript:void(0)" title="福建省车牌号">福建省（闽）</a></li>
+            <li onclick="maodian(8)"><a href="javascript:void(0)" title="贵州省车牌号">贵州省（贵）</a></li>
+            <li onclick="maodian(9)"><a href="javascript:void(0)" title="云南省车牌号">广东省（粤）</a></li>
+            <li onclick="maodian(9)"><a href="javascript:void(0)" title="四川省车牌号">四川省（川）</a></li>
+            <li onclick="maodian(9)"><a href="javascript:void(0)" title="青海省车牌号">青海省（青）</a></li>
+            <li onclick="maodian(10)"><a href="javascript:void(0)" title="西藏车牌号">西藏（藏）</a></li>
+            <li onclick="maodian(11)"><a href="javascript:void(0)" title="海南省车牌号">海南省（琼）</a></li>
+            <li onclick="maodian(12)"><a href="javascript:void(0)" title="宁夏回族车牌号">宁夏回族（宁）</a></li>
+            </ul>
+            <div style="clear:both; height:0; overflow:hidden;"></div>
+            </div>
+            <div class="carlist_detail">
+            <table cellpadding="0" cellspacing="0" name="1" id="1">
+            <tr class="province">
+            <td colspan="2">北京市（京）</td>
+            <td colspan="2" class="bl2">天津市（津）</td>
+            <td colspan="2" class="bl2">上海市（沪）</td>
+            </tr>
+            <tr>
+            <th width="60">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            </tr>
+            <tr>
+            <td>京A</td>
+            <td>北京市</td>
+            <td class="bl2">津A</td>
+            <td>天津市</td>
+            <td class="bl2">沪A</td>
+            <td>上海市</td>
+            </tr>
+            <tr>
+            <td>京B</td>
+            <td>北京市</td>
+            <td class="bl2">津B</td>
+            <td>天津市</td>
+            <td class="bl2">沪B</td>
+            <td>上海市</td>
+            </tr>
+            <tr>
+            <td>京C</td>
+            <td>北京市</td>
+            <td class="bl2">津C</td>
+            <td>天津市</td>
+            <td class="bl2">沪C</td>
+            <td>上海市</td>
+            </tr>
+            <tr>
+            <td>京E</td>
+            <td>北京市</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            <td class="bl2">沪D</td>
+            <td>上海市</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            <td class="bl2">沪R</td>
+            <td>崇明、长兴、横沙</td>
+            </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" name="2" id="2">
+            <tr class="province">
+            <td colspan="2">河北省（冀）</td>
+            <td colspan="2" class="bl2">河南省（豫）</td>
+            <td colspan="2" class="bl2">云南省（云）</td>
+            </tr>
+            <tr>
+            <th width="60">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            </tr>
+            <tr>
+            <td>冀A</td>
+            <td>石家庄市</td>
+            <td class="bl2">豫A</td>
+            <td>郑州市</td>
+            <td class="bl2">云A</td>
+            <td>昆明市</td>
+            </tr>
+            <tr>
+            <td>冀B</td>
+            <td>唐山市</td>
+            <td class="bl2">豫B</td>
+            <td>开封市</td>
+            <td class="bl2">云A-V</td>
+            <td>东川市</td>
+            </tr>
+            <tr>
+            <td>冀C</td>
+            <td>秦皇岛市</td>
+            <td class="bl2">豫C</td>
+            <td>洛阳市</td>
+            <td class="bl2">云C</td>
+            <td>昭通市</td>
+            </tr>
+            <tr>
+            <td>冀D</td>
+            <td>邯郸市</td>
+            <td class="bl2">豫D</td>
+            <td>平顶山市</td>
+            <td class="bl2">云D</td>
+            <td>曲靖市</td>
+            </tr>
+            <tr>
+            <td>冀E</td>
+            <td>邢台市</td>
+            <td class="bl2">豫E</td>
+            <td>安阳市</td>
+            <td class="bl2">云E</td>
+            <td>楚雄彝族自治州</td>
+            </tr>
+            <tr>
+            <td>冀F</td>
+            <td>保定市</td>
+            <td class="bl2">豫F</td>
+            <td>鹤壁市</td>
+            <td class="bl2">云F</td>
+            <td>玉溪市</td>
+            </tr>
+            <tr>
+            <td>冀G</td>
+            <td>张家口市</td>
+            <td class="bl2">豫G</td>
+            <td>新乡市</td>
+            <td class="bl2">云G</td>
+            <td>红河哈尼族彝族自治州</td>
+            </tr>
+            <tr>
+            <td>冀H</td>
+            <td>承德市</td>
+            <td class="bl2">豫H</td>
+            <td>焦作市</td>
+            <td class="bl2">云H</td>
+            <td>文山壮族苗族自治州</td>
+            </tr>
+            <tr>
+            <td>冀J</td>
+            <td>沧州市</td>
+            <td class="bl2">豫J</td>
+            <td>濮阳市</td>
+            <td class="bl2">云J</td>
+            <td>普洱市</td>
+            </tr>
+            <tr>
+            <td>冀R</td>
+            <td>廊坊市</td>
+            <td class="bl2">豫K</td>
+            <td>许昌市</td>
+            <td class="bl2">云K</td>
+            <td>西双版纳傣族自治州</td>
+            </tr>
+            <tr>
+            <td>冀S
+            <td>沧州市</td>
+            <td class="bl2">豫L</td>
+            <td>漯河市</td>
+            <td class="bl2">云L</td>
+            <td>大理白族自治州</td>
+            </tr>
+            <tr>
+            <td>冀T
+            <td>衡水市</td>
+            <td class="bl2">豫M</td>
+            <td>三门峡市</td>
+            <td class="bl2">云M</td>
+            <td>保山市</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2">豫N</td>
+            <td>商丘市</td>
+            <td class="bl2">云N</td>
+            <td>德宏傣族景颇族自治州</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2">豫P</td>
+            <td>周口市</td>
+            <td class="bl2">云P</td>
+            <td>丽江市</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2">豫Q</td>
+            <td>驻马店市</td>
+            <td class="bl2">云Q</td>
+            <td>怒江傈僳族自治州</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2">豫R</td>
+            <td>南阳市</td>
+            <td class="bl2">云R</td>
+            <td>迪庆藏族自治州</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2">豫S</td>
+            <td>信阳市</td>
+            <td class="bl2">云S</td>
+            <td>临沧地区</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2">豫U
+            <td>济源市</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" name="3" id="3">
+            <tr class="province">
+            <td colspan="2">辽宁省（辽）</td>
+            <td colspan="2" class="bl2">黑龙江省(黑)</td>
+            <td colspan="2" class="bl2">湖南省（湘）</td>
+            </tr>
+            <tr>
+            <th width="60">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            </tr>
+            <tr>
+            <td>辽A</td>
+            <td>沈阳市</td>
+            <td class="bl2">黑A</td>
+            <td>哈尔滨市</td>
+            <td class="bl2">湘A</td>
+            <td>长沙市</td>
+            </tr>
+            <tr>
+            <td>辽B</td>
+            <td>大连市</td>
+            <td class="bl2">黑B</td>
+            <td>齐齐哈尔市</td>
+            <td class="bl2">湘B</td>
+            <td>株洲市</td>
+            </tr>
+            <tr>
+            <td>辽C</td>
+            <td>鞍山市</td>
+            <td class="bl2">黑C</td>
+            <td>牡丹江市</td>
+            <td class="bl2">湘C</td>
+            <td>湘潭市</td>
+            </tr>
+            <tr>
+            <td>辽D</td>
+            <td>抚顺市</td>
+            <td class="bl2">黑D</td>
+            <td>佳木斯市</td>
+            <td class="bl2">湘D</td>
+            <td>衡阳市</td>
+            </tr>
+            <tr>
+            <td>辽E</td>
+            <td>本溪市</td>
+            <td class="bl2">黑E</td>
+            <td>大庆市</td>
+            <td class="bl2">湘E</td>
+            <td>邵阳市</td>
+            </tr>
+            <tr>
+            <td>辽F</td>
+            <td>丹东市</td>
+            <td class="bl2">黑F</td>
+            <td>伊春市</td>
+            <td class="bl2">湘F</td>
+            <td>岳阳市</td>
+            </tr>
+            <tr>
+            <td>辽G</td>
+            <td>锦州市</td>
+            <td class="bl2">黑G</td>
+            <td>鸡西市</td>
+            <td class="bl2">湘G</td>
+            <td>张家界市</td>
+            </tr>
+            <tr>
+            <td>辽H</td>
+            <td>营口市</td>
+            <td class="bl2">黑H</td>
+            <td>鹤岗市</td>
+            <td class="bl2">湘H</td>
+            <td>益阳市</td>
+            </tr>
+            <tr>
+            <td>辽J</td>
+            <td>阜新市</td>
+            <td class="bl2">黑J</td>
+            <td>双鸭山市</td>
+            <td class="bl2">湘J</td>
+            <td>常德市</td>
+            </tr>
+            <tr>
+            <td>辽K</td>
+            <td>辽阳市</td>
+            <td class="bl2">黑K</td>
+            <td>七台河市 </td>
+            <td class="bl2">湘K</td>
+            <td>娄底市</td>
+            </tr>
+            <tr>
+            <td>辽L</td>
+            <td>盘锦市</td>
+            <td class="bl2">黑L</td>
+            <td>松花江地区<em>（已并入哈尔滨市，车牌未改）</em></td>
+            <td class="bl2">湘L</td>
+            <td>郴州市</td>
+            </tr>
+            <tr>
+            <td>辽M</td>
+            <td>铁岭市</td>
+            <td class="bl2">黑M</td>
+            <td>绥化市</td>
+            <td class="bl2">湘M</td>
+            <td>永州市</td>
+            </tr>
+            <tr>
+            <td>辽N</td>
+            <td>朝阳市</td>
+            <td class="bl2">黑N</td>
+            <td>黑河市</td>
+            <td class="bl2">湘N</td>
+            <td>怀化市</td>
+            </tr>
+            <tr>
+            <td>辽P</td>
+            <td>葫芦岛市</td>
+            <td class="bl2">黑P</td>
+            <td>大兴安岭地区</td>
+            <td class="bl2">湘U</td>
+            <td>湘西土家族苗族自治州</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2">黑R</td>
+            <td>农垦系统</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" name="4" id="4">
+            <tr class="province">
+            <td colspan="2">安徽省（皖）</td>
+            <td colspan="2" class="bl2">山东省（鲁）</td>
+            <td colspan="2" class="bl2">新疆维吾尔（新）</td>
+            </tr>
+            <tr>
+            <th width="60">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            </tr>
+            <tr>
+            <td>皖A</td>
+            <td>合肥市</td>
+            <td class="bl2">鲁A </td>
+            <td>济南市</td>
+            <td class="bl2">新A</td>
+            <td>乌鲁木齐市</td>
+            </tr>
+            <tr>
+            <td>皖B</td>
+            <td>芜湖市</td>
+            <td class="bl2">鲁B</td>
+            <td>青岛市</td>
+            <td class="bl2">新B</td>
+            <td>昌吉回族自治州</td>
+            </tr>
+            <tr>
+            <td>皖C</td>
+            <td>蚌埠市</td>
+            <td class="bl2">鲁C</td>
+            <td>淄博市</td>
+            <td class="bl2">新C</td>
+            <td>石河子市</td>
+            </tr>
+            <tr>
+            <td>皖D</td>
+            <td>淮南市</td>
+            <td class="bl2">鲁D</td>
+            <td>枣庄市</td>
+            <td class="bl2">新D</td>
+            <td>奎屯市</td>
+            </tr>
+            <tr>
+            <td>皖E</td>
+            <td>马鞍山市</td>
+            <td class="bl2">鲁E</td>
+            <td>东营市</td>
+            <td class="bl2">新E</td>
+            <td>博尔塔拉蒙古自治州</td>
+            </tr>
+            <tr>
+            <td>皖F</td>
+            <td>淮北市</td>
+            <td class="bl2">鲁F</td>
+            <td>烟台市</td>
+            <td class="bl2">新F</td>
+            <td>伊犁哈萨克自治州直辖县</td>
+            </tr>
+            <tr>
+            <td>皖G</td>
+            <td>铜陵市</td>
+            <td class="bl2">鲁G</td>
+            <td>潍坊市</td>
+            <td class="bl2">新G</td>
+            <td>塔城市</td>
+            </tr>
+            <tr>
+            <td>皖H</td>
+            <td>安庆市</td>
+            <td class="bl2">鲁H</td>
+            <td>济宁市</td>
+            <td class="bl2">新H</td>
+            <td>阿勒泰市</td>
+            </tr>
+            <tr>
+            <td>皖J</td>
+            <td>黄山市</td>
+            <td class="bl2">鲁J</td>
+            <td>泰安市</td>
+            <td class="bl2">新J</td>
+            <td>克拉玛依市</td>
+            </tr>
+            <tr>
+            <td>皖K</td>
+            <td>阜阳市</td>
+            <td class="bl2">鲁K</td>
+            <td>威海市</td>
+            <td class="bl2">新K</td>
+            <td>吐鲁番市</td>
+            </tr>
+            <tr>
+            <td>皖L</td>
+            <td>宿州市</td>
+            <td class="bl2">鲁L</td>
+            <td>日照市</td>
+            <td class="bl2">新L</td>
+            <td>哈密市</td>
+            </tr>
+            <tr>
+            <td>皖M</td>
+            <td>滁州市</td>
+            <td class="bl2">鲁M</td>
+            <td>滨州市</td>
+            <td class="bl2">新M</td>
+            <td>巴音郭愣蒙古自治州</td>
+            </tr>
+            <tr>
+            <td>皖N</td>
+            <td>六安市</td>
+            <td class="bl2">鲁N</td>
+            <td>德州市</td>
+            <td class="bl2">新N</td>
+            <td>阿克苏市</td>
+            </tr>
+            <tr>
+            <td>皖P</td>
+            <td>宣城市</td>
+            <td class="bl2">鲁P</td>
+            <td>聊城市</td>
+            <td class="bl2">新P</td>
+            <td>克孜勒苏柯尔克孜自治州</td>
+            </tr>
+            <tr>
+            <td>皖Q</td>
+            <td>巢湖市</td>
+            <td class="bl2">鲁Q</td>
+            <td>临沂市</td>
+            <td class="bl2">新Q</td>
+            <td>喀什市</td>
+            </tr>
+            <tr>
+            <td>皖R</td>
+            <td>池州市</td>
+            <td class="bl2">鲁R</td>
+            <td>荷泽市</td>
+            <td class="bl2">新R</td>
+            <td>和田市</td>
+            </tr>
+            <tr>
+            <td>皖S</td>
+            <td>亳州市</td>
+            <td class="bl2">鲁S</td>
+            <td>莱芜市</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2">鲁U</td>
+            <td>青岛市增补</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2">鲁V</td>
+            <td>潍坊市增补</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" name="5" id="5">
+            <tr class="province">
+            <td colspan="2">江苏省（苏）</td>
+            <td colspan="2" class="bl2">浙江省（浙）</td>
+            <td colspan="2" class="bl2">江西省（赣）</td>
+            </tr>
+            <tr>
+            <th width="60">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            </tr>
+            <tr>
+            <td>苏A</td>
+            <td>南京市</td>
+            <td class="bl2">浙A</td>
+            <td>杭州市</td>
+            <td class="bl2">赣A</td>
+            <td>南昌市</td>
+            </tr>
+            <tr>
+            <td>苏B</td>
+            <td>无锡市</td>
+            <td class="bl2">浙B</td>
+            <td>宁波市</td>
+            <td class="bl2">赣B</td>
+            <td>赣州市</td>
+            </tr>
+            <tr>
+            <td>苏C</td>
+            <td>徐州市</td>
+            <td class="bl2">浙C</td>
+            <td>温州市</td>
+            <td class="bl2">赣C</td>
+            <td>宜春市</td>
+            </tr>
+            <tr>
+            <td>苏D</td>
+            <td>常州市</td>
+            <td class="bl2">浙D</td>
+            <td>绍兴市</td>
+            <td class="bl2">赣D</td>
+            <td>吉安市</td>
+            </tr>
+            <tr>
+            <td>苏E</td>
+            <td>苏州市</td>
+            <td class="bl2">浙E</td>
+            <td>湖州市</td>
+            <td class="bl2">赣E</td>
+            <td>上饶市</td>
+            </tr>
+            <tr>
+            <td>苏F</td>
+            <td>南通市</td>
+            <td class="bl2">浙F</td>
+            <td>嘉兴市</td>
+            <td class="bl2">赣F</td>
+            <td>抚州市</td>
+            </tr>
+            <tr>
+            <td>苏G</td>
+            <td>连云港市</td>
+            <td class="bl2">浙G</td>
+            <td>金华市</td>
+            <td class="bl2">赣G</td>
+            <td>九江市</td>
+            </tr>
+            <tr>
+            <td>苏H</td>
+            <td>淮安市</td>
+            <td class="bl2">浙H</td>
+            <td>衢州市</td>
+            <td class="bl2">赣H</td>
+            <td>景德镇市</td>
+            </tr>
+            <tr>
+            <td>苏J</td>
+            <td>盐城市</td>
+            <td class="bl2">浙J</td>
+            <td>台州市</td>
+            <td class="bl2">赣J</td>
+            <td>萍乡市</td>
+            </tr>
+            <tr>
+            <td>苏K</td>
+            <td>扬州市</td>
+            <td class="bl2">浙K</td>
+            <td>丽水市</td>
+            <td class="bl2">赣K</td>
+            <td>新余市</td>
+            </tr>
+            <tr>
+            <td>苏L</td>
+            <td>镇江市</td>
+            <td class="bl2">浙L</td>
+            <td>舟山市</td>
+            <td class="bl2">赣L</td>
+            <td>鹰潭市</td>
+            </tr>
+            <tr>
+            <td>苏M</td>
+            <td>泰州市</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            <td class="bl2">赣M</td>
+            <td>南昌市,省直系统</td>
+            </tr>
+            <tr>
+            <td>苏N</td>
+            <td>宿迁市</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" name="6" id="6">
+            <tr class="province">
+            <td colspan="2">湖北省（鄂）</td>
+            <td colspan="2" class="bl2">广西壮族（桂）</td>
+            <td colspan="2" class="bl2">甘肃省（甘）</td>
+            </tr>
+            <tr>
+            <th width="60">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            </tr>
+            <tr>
+            <td>鄂A</td>
+            <td>武汉市</td>
+            <td class="bl2">桂A</td>
+            <td>南宁市</td>
+            <td class="bl2">甘A</td>
+            <td>兰州市</td>
+            </tr>
+            <tr>
+            <td>鄂B</td>
+            <td>黄石市</td>
+            <td class="bl2">桂B</td>
+            <td>柳州市</td>
+            <td class="bl2">甘B</td>
+            <td>嘉峪关市</td>
+            </tr>
+            <tr>
+            <td>鄂C</td>
+            <td>十堰市</td>
+            <td class="bl2">桂C</td>
+            <td>桂林市</td>
+            <td class="bl2">甘C</td>
+            <td>金昌市</td>
+            </tr>
+            <tr>
+            <td>鄂D</td>
+            <td>荆州市</td>
+            <td class="bl2">桂D</td>
+            <td>梧州市</td>
+            <td class="bl2">甘D</td>
+            <td>白银市</td>
+            </tr>
+            <tr>
+            <td>鄂E</td>
+            <td>宜昌市</td>
+            <td class="bl2">桂E</td>
+            <td>北海市</td>
+            <td class="bl2">甘E</td>
+            <td>天水市</td>
+            </tr>
+            <tr>
+            <td>鄂F</td>
+            <td>襄樊市</td>
+            <td class="bl2">桂F</td>
+            <td>南宁地区</td>
+            <td class="bl2">甘F</td>
+            <td>洒泉市</td>
+            </tr>
+            <tr>
+            <td>鄂G</td>
+            <td>鄂州市</td>
+            <td class="bl2">桂G</td>
+            <td>柳州地区</td>
+            <td class="bl2">甘G</td>
+            <td>张掖市</td>
+            </tr>
+            <tr>
+            <td>鄂H</td>
+            <td>荆门市 </td>
+            <td class="bl2">桂H</td>
+            <td>桂林地区</td>
+            <td class="bl2">甘H</td>
+            <td>武威市</td>
+            </tr>
+            <tr>
+            <td>鄂J</td>
+            <td>黄冈市</td>
+            <td class="bl2">桂J</td>
+            <td>贺州市</td>
+            <td class="bl2">甘J</td>
+            <td>定西市</td>
+            </tr>
+            <tr>
+            <td>鄂K</td>
+            <td>孝感市</td>
+            <td class="bl2">桂K</td>
+            <td>玉林市</td>
+            <td class="bl2">甘K</td>
+            <td>陇南市</td>
+            </tr>
+            <tr>
+            <td>鄂L</td>
+            <td>咸宁市</td>
+            <td class="bl2">桂L</td>
+            <td>百色市</td>
+            <td class="bl2">甘L</td>
+            <td>平凉市</td>
+            </tr>
+            <tr>
+            <td>鄂M</td>
+            <td>仙桃市</td>
+            <td class="bl2">桂M</td>
+            <td>河池市</td>
+            <td class="bl2">甘M</td>
+            <td>庆阳市</td>
+            </tr>
+            <tr>
+            <td>鄂N</td>
+            <td>潜江市</td>
+            <td class="bl2">桂N</td>
+            <td>钦州市</td>
+            <td class="bl2">甘N</td>
+            <td>临夏回族自治州</td>
+            </tr>
+            <tr>
+            <td>鄂P</td>
+            <td>神农架林区</td>
+            <td class="bl2">桂P</td>
+            <td>防城港市</td>
+            <td class="bl2">甘P</td>
+            <td>甘南藏族自治州</td>
+            </tr>
+            <tr>
+            <td>鄂Q</td>
+            <td>恩施土家族苗族自治州</td>
+            <td class="bl2">桂R</td>
+            <td>贵港市</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            </tr>
+            <tr>
+            <td>鄂R</td>
+            <td>天门市</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            </tr>
+            <tr>
+            <td>鄂S</td>
+            <td>随州市</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" name="7" id="7">
+            <tr class="province">
+            <td colspan="2">山西省（晋）</td>
+            <td colspan="2" class="bl2">内蒙古（蒙）</td>
+            <td colspan="2" class="bl2">陕西省（陕）</td>
+            </tr>
+            <tr>
+            <th width="60">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            </tr>
+            <tr>
+            <td>晋A</td>
+            <td>太原市</td>
+            <td class="bl2">蒙A</td>
+            <td>呼和浩特市</td>
+            <td class="bl2">陕A</td>
+            <td>西安市</td>
+            </tr>
+            <tr>
+            <td>晋B</td>
+            <td>大同市</td>
+            <td class="bl2">蒙B</td>
+            <td>包头市</td>
+            <td class="bl2">陕B</td>
+            <td>铜川市</td>
+            </tr>
+            <tr>
+            <td>晋C</td>
+            <td>阳泉市</td>
+            <td class="bl2">蒙C</td>
+            <td>乌海市</td>
+            <td class="bl2">陕C</td>
+            <td>宝鸡市</td>
+            </tr>
+            <tr>
+            <td>晋D</td>
+            <td>长治市</td>
+            <td class="bl2">蒙D</td>
+            <td>赤峰市</td>
+            <td class="bl2">陕D</td>
+            <td>咸阳市</td>
+            </tr>
+            <tr>
+            <td>晋E</td>
+            <td>晋城市</td>
+            <td class="bl2">蒙E</td>
+            <td>呼伦贝尔市</td>
+            <td class="bl2">陕E</td>
+            <td>渭南市</td>
+            </tr>
+            <tr>
+            <td>晋F</td>
+            <td>朔州市</td>
+            <td class="bl2">蒙F</td>
+            <td>兴安盟</td>
+            <td class="bl2">陕F</td>
+            <td>汉中市</td>
+            </tr>
+            <tr>
+            <td>晋G</td>
+            <td>雁北地区</td>
+            <td class="bl2">蒙G</td>
+            <td>通辽市</td>
+            <td class="bl2">陕G</td>
+            <td>安康市</td>
+            </tr>
+            <tr>
+            <td>晋H</td>
+            <td>忻州市</td>
+            <td class="bl2">蒙H</td>
+            <td>锡林郭勒盟</td>
+            <td class="bl2">陕H</td>
+            <td>商洛市</td>
+            </tr>
+            <tr>
+            <td>晋J</td>
+            <td>吕梁地区</td>
+            <td class="bl2">蒙J</td>
+            <td>乌兰察布盟</td>
+            <td class="bl2">陕J</td>
+            <td>延安市</td>
+            </tr>
+            <tr>
+            <td>晋K</td>
+            <td>晋中市</td>
+            <td class="bl2">蒙K</td>
+            <td>鄂尔多斯市 </td>
+            <td class="bl2">陕K</td>
+            <td>榆林市</td>
+            </tr>
+            <tr>
+            <td>晋L</td>
+            <td>临汾市</td>
+            <td class="bl2">蒙L</td>
+            <td>巴彦淖尔盟</td>
+            <td class="bl2">陕V</td>
+            <td>杨凌高新农业示范区</td>
+            </tr>
+            <tr>
+            <td>晋M</td>
+            <td>运城市</td>
+            <td class="bl2">蒙M</td>
+            <td>阿拉善盟</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" name="8" id="8">
+            <tr class="province">
+            <td colspan="2">吉林省（吉）</td>
+            <td colspan="2" class="bl2">福建省（闽）</td>
+            <td colspan="2" class="bl2">贵州省（贵）</td>
+            </tr>
+            <tr>
+            <th width="60">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            </tr>
+            <tr>
+            <td>吉A</td>
+            <td>长春市</td>
+            <td class="bl2">闽A</td>
+            <td>福州市</td>
+            <td class="bl2">贵A</td>
+            <td>贵阳市</td>
+            </tr>
+            <tr>
+            <td>吉B</td>
+            <td>吉林市</td>
+            <td class="bl2">闽B</td>
+            <td>莆田市</td>
+            <td class="bl2">贵B</td>
+            <td>六盘水市</td>
+            </tr>
+            <tr>
+            <td>吉C</td>
+            <td>四平市</td>
+            <td class="bl2">闽C</td>
+            <td>泉州市</td>
+            <td class="bl2">贵C</td>
+            <td>遵义市</td>
+            </tr>
+            <tr>
+            <td>吉D</td>
+            <td>辽源市</td>
+            <td class="bl2">闽D</td>
+            <td>厦门市</td>
+            <td class="bl2">贵D</td>
+            <td>铜仁市</td>
+            </tr>
+            <tr>
+            <td>吉E</td>
+            <td>通化市</td>
+            <td class="bl2">闽E</td>
+            <td>漳州市</td>
+            <td class="bl2">贵E</td>
+            <td>黔西南布依族苗族自治州</td>
+            </tr>
+            <tr>
+            <td>吉F</td>
+            <td>白山市</td>
+            <td class="bl2">闽F</td>
+            <td>龙岩市</td>
+            <td class="bl2">贵F</td>
+            <td>毕节市</td>
+            </tr>
+            <tr>
+            <td>吉G</td>
+            <td>白城市</td>
+            <td class="bl2">闽G</td>
+            <td>三明市</td>
+            <td class="bl2">贵G</td>
+            <td>安顺市</td>
+            </tr>
+            <tr>
+            <td>吉H</td>
+            <td>延边朝鲜族自治州</td>
+            <td class="bl2">闽H</td>
+            <td>南平市</td>
+            <td class="bl2">贵H</td>
+            <td>黔东南苗族侗族自治州</td>
+            </tr>
+            <tr>
+            <td>吉J</td>
+            <td>松原市</td>
+            <td class="bl2">闽J</td>
+            <td>宁德市</td>
+            <td class="bl2">贵J</td>
+            <td>黔南布依族苗族自治州</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2">闽K</td>
+            <td>省直系统</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" name="9" id="9">
+            <tr class="province">
+            <td colspan="2">广东省（粤）</td>
+            <td colspan="2" class="bl2">四川省（川）</td>
+            <td colspan="2" class="bl2">青海省（青）</td>
+            </tr>
+            <tr>
+            <th width="60">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            </tr>
+            <tr>
+            <td>粤A</td>
+            <td>广州市</td>
+            <td class="bl2">川A</td>
+            <td>成都市</td>
+            <td class="bl2">青A</td>
+            <td>西宁市</td>
+            </tr>
+            <tr>
+            <td>粤B</td>
+            <td>深圳市</td>
+            <td class="bl2">川B</td>
+            <td>绵阳市</td>
+            <td class="bl2">青B</td>
+            <td>海东地区</td>
+            </tr>
+            <tr>
+            <td>粤C</td>
+            <td>珠海市</td>
+            <td class="bl2">川C</td>
+            <td>自贡市</td>
+            <td class="bl2">青C</td>
+            <td>海北藏族自治州</td>
+            </tr>
+            <tr>
+            <td>粤D</td>
+            <td>汕头市</td>
+            <td class="bl2">川D</td>
+            <td>攀枝花市</td>
+            <td class="bl2">青D</td>
+            <td>黄南藏族自治州</td>
+            </tr>
+            <tr>
+            <td>粤E</td>
+            <td>佛山市</td>
+            <td class="bl2">川E</td>
+            <td>泸州市</td>
+            <td class="bl2">青E</td>
+            <td>海南藏族自治州</td>
+            </tr>
+            <tr>
+            <td>粤F</td>
+            <td>韶关市</td>
+            <td class="bl2">川F</td>
+            <td>德阳市</td>
+            <td class="bl2">青F</td>
+            
+            <td>果洛藏族自治州</td>
+            </tr>
+            <tr>
+            <td>粤G</td>
+            <td>湛江市</td>
+            <td class="bl2">川H</td>
+            <td>广元市</td>
+            <td class="bl2">青G</td>
+            <td>玉树藏族自治州</td>
+            </tr>
+            <tr>
+            <td>粤H</td>
+            <td>肇庆市</td>
+            <td class="bl2">川J</td>
+            <td>遂宁市</td>
+            <td class="bl2">青H</td>
+            <td>海西蒙古族藏族自治州</td>
+            </tr>
+            <tr>
+            <td>粤J</td>
+            <td>江门市</td>
+            <td class="bl2">川K</td>
+            <td>内江市</td>
+            <td class="province bl2" colspan="2" name="10" id="10">西藏（藏）</td>
+            </tr>
+            <tr>
+            <td>粤K</td>
+            <td>茂名市</td>
+            <td class="bl2">川L</td>
+            <td>乐山市</td>
+            <td class="bl2">藏A</td>
+            <td>拉萨市</td>
+            </tr>
+            <tr>
+            <td>粤L</td>
+            <td>惠州市</td>
+            <td class="bl2">川M</td>
+            <td>资阳市</td>
+            <td class="bl2">藏B</td>
+            <td>昌都地区</td>
+            </tr>
+            <tr>
+            <td>粤M</td>
+            <td>梅州市</td>
+            <td class="bl2">川N</td>
+            <td>&nbsp;</td>
+            <td class="bl2">藏C</td>
+            <td>山南地区</td>
+            </tr>
+            <tr>
+            <td>粤N</td>
+            <td>汕尾市</td>
+            <td class="bl2">川P</td>
+            <td>&nbsp;</td>
+            <td class="bl2">藏D</td>
+            <td>日喀则地区</td>
+            </tr>
+            <tr>
+            <td>粤P</td>
+            <td>河源市</td>
+            <td class="bl2">川Q</td>
+            <td>宜宾市</td>
+            <td class="bl2">藏E</td>
+            <td>那曲地区</td>
+            </tr>
+            <tr>
+            <td>粤Q</td>
+            <td>阳江市</td>
+            <td class="bl2">川R</td>
+            <td>南充市</td>
+            <td class="bl2">藏F</td>
+            <td>阿里地区</td>
+            </tr>
+            <tr>
+            <td>粤R</td>
+            <td>清远市</td>
+            <td class="bl2">川S</td>
+            <td>达州市</td>
+            <td class="bl2">藏G</td>
+            <td>林芝地区</td>
+            </tr>
+            <tr>
+            <td>粤S</td>
+            <td>东莞市</td>
+            <td class="bl2">川T</td>
+            <td>雅安市</td>
+            <td class="bl2">藏H</td>
+            <td>驻四川省天全县车辆管理所</td>
+            </tr>
+            <tr>
+            <td>粤T</td>
+            <td>中山市</td>
+            <td class="bl2">川U</td>
+            <td>阿坝藏族羌族自治州</td>
+            <td class="bl2">藏J</td>
+            <td>驻青海省格尔木市车辆管理所</td>
+            </tr>
+            <tr>
+            <td>粤U</td>
+            <td>潮州市</td>
+            <td class="bl2">川V</td>
+            <td>甘孜藏族自治州</td>
+            <td class="province bl2" colspan="2" name="11" id="11">海南省（琼）</td>
+            </tr>
+            <tr>
+            <td>粤V</td>
+            <td>揭阳市</td>
+            <td class="bl2">川W</td>
+            <td>凉山彝族自治州</td>
+            <td class="bl2">琼A</td>
+            <td>海口市</td>
+            </tr>
+            <tr>
+            <td>粤W</td>
+            <td>云浮市</td>
+            <td class="bl2">川X</td>
+            <td>广安市</td>
+            <td class="bl2">琼B</td>
+            <td>三亚市</td>
+            </tr>
+            <tr>
+            <td>粤X</td>
+            <td>顺德区</td>
+            <td class="bl2">川Y</td>
+            <td>巴中市</td>
+            <td class="bl2">琼C</td>
+            <td>琼海市</td>
+            </tr>
+            <tr>
+            <td>粤Y</td>
+            <td>南海区</td>
+            <td class="bl2">川Z</td>
+            <td>眉山市</td>
+            <td class="bl2">琼D</td>
+            <td>五指山市</td>
+            </tr>
+            <tr>
+            <td>粤Z</td>
+            <td>港澳进入内地车辆</td>
+            <td class="bl2"></td>
+            <td>&nbsp;</td>
+            <td class="bl2">琼E</td>
+            <td>洋浦开发区</td>
+            </tr>
+            </table>
+            <table cellpadding="0" cellspacing="0" name="12" id="12">
+            <tr class="province">
+            <td colspan="2">宁夏回族（宁）</td>
+            <td colspan="2" class="bl2">重庆市（渝）</td>
+            <td colspan="2" class="bl2">&nbsp;</td>
+            </tr>
+            <tr>
+            <th width="60">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            <th width="60" class="bl2">牌号</th>
+            <th width="190">地区</th>
+            </tr>
+            <tr>
+            <td>宁A</td>
+            <td>银川市</td>
+            <td class="bl2">渝A</td>
+            <td>重庆市区（江南）</td>
+            <td class="bl2" colspan="2" rowspan="6">&nbsp;</td>
+            </tr>
+            <tr>
+            <td>宁B</td>
+            <td>石嘴山市</td>
+            <td class="bl2">渝B</td>
+            <td>重庆市区（江北）</td>
+            </tr>
+            <tr>
+            <td>宁C</td>
+            <td>银南市</td>
+            <td class="bl2">渝C</td>
+            <td>永川区</td>
+            </tr>
+            <tr>
+            <td>宁D</td>
+            <td>固原市</td>
+            <td class="bl2">渝F</td>
+            <td>万州区</td>
+            </tr>
+            <tr>
+            <td>宁E</td>
+            <td>中卫市</td>
+            <td class="bl2">渝G</td>
+            <td>涪陵区</td>
+            </tr>
+            <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class="bl2">渝H</td>
+            <td>黔江区</td>
+            </tr>
+            </table>
+            </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+    $(document).ready(function(){
+                var topMain=450//是头部的高度加头部与nav导航之间的距离。
+                var nav=$(".carlist_city");
+                $(window).scroll(function(){
+                    if ($(window).scrollTop()>topMain){//如果滚动条顶部的距离大于topMain则就nav导航就添加类.nav_scroll，否则就移除。
+                        nav.addClass("nav_scroll");
+                    }
+                    else
+                    {
+                        nav.removeClass("nav_scroll");
+                    }
+                });
+     
+        })
+</script>
+<include file="common:relatedTools" />
+<include file="common:footer" />

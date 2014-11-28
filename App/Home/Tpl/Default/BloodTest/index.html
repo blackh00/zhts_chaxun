@@ -1,0 +1,42 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="blood checkbar">
+	<div class="pl190">
+	<span class="fl">爸爸的血型：</span>
+	<div class="select_outer select_outer120">
+	<div class="select_inner">
+	<select id="father_xx">
+	<option selected="">A</option>
+	<option>B</option>
+	<option>O</option>
+	<option>AB</option>
+	</select>
+	</div>
+	</div>
+	<span class="fl">妈妈的血型：</span>
+	<div class="select_outer select_outer120">
+	<div class="select_inner">
+	<select id="mother_xx">
+	<option selected="">A</option>
+	<option>B</option>
+	<option>O</option>
+	<option>AB</option>
+	</select>
+	</div>
+	</div>
+	
+	<div class="clear"></div>
+	<input class="btnB" type="button" id="xx_cha" onclick="xx_cha();" value="查询血型" />
+	</div>
+	<div class="blood_result" style="display:none;" id="show_info">
+	<p>爸爸的血型： <strong id="f_xx">A型</strong>妈妈的血型： <strong id="m_xx">B型</strong></p>
+	<p id="kn_xx">孩子有可能出现的血型是： <strong><a href="/xuexing/A.htm">A型</a> 或 <a href="/xuexing/O.htm">O型</a> </strong></p>
+	<p id="bkn_xx" style="display: none;">不可能出现的血型是： <strong><a href="/xuexing/B.htm">B型</a>  和 <a href="/xuexing/AB.htm">AB型</a> </strong></p>
+	</div>
+	
+	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

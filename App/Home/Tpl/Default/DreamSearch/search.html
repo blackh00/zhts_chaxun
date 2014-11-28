@@ -1,0 +1,62 @@
+	<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="zhougong_bor">
+                <h1>
+                    周公解梦
+                </h1>
+                <p class="zhougong_p1">在线解梦、梦中凶吉预测</p>
+                <div class="zhougong_shur">
+                   <form id="form1" action="SITE_DYNAMIC_URL/dreamsearch/dreamsearch" method="post">
+                   <input id="text_search" type="text" value="请输入做梦内容的关键字，如“女人”" onfocus="if(this.value=='请输入做梦内容的关键字，如“女人”') {this.value='';this.style.color='#343235';}"
+                        onblur="if(this.value=='') {this.value='请输入做梦内容的关键字，如“女人”';this.style.color='#343235';}"
+                        class="zhougong_sousuotxt" name="dr" />
+                    <input type="submit" value="" class="zhougong_but" />
+                 </form>
+                </div>
+                <div class="zhougong_line"></div>
+                <h3 class="zhougong3_h">与”<span>{$dreamTitle}</span>“有关的周公解梦</h3>
+                <div class="zhougong_fenxiang">
+                    <!-- Baidu Button BEGIN -->
+                    <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+                    <span class="bds_more">分享到：</span>
+                    <a class="bds_qzone"></a>
+                    <a class="bds_tsina"></a>
+                    <a class="bds_tqq"></a>
+                    <a class="bds_renren"></a>
+                    </div>
+                    <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6572336" ></script>
+                    <script type="text/javascript" id="bdshell_js"></script>
+                    <script type="text/javascript">
+                    document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+                    </script>
+                    <!-- Baidu Button END -->
+                </div>
+                <div class="zhougong3_c">
+                <ul class="dream_rlist" id="search_list">
+                 <volist name="data" id="oneDetail" key="k">
+                    <li>
+                        <h6 class="current">梦见<span class="cRed">{$oneDetail.title}</span></h6>
+                        <div class="dream_rtxt">
+                            <p>
+                               <PHP>echo mb_substr($oneDetail['content'],0,200,"utf8")</PHP>
+                                <a target="_blank" href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$oneDetail.id}">
+                                    ...[详情]
+                                </a>
+                            </p>
+                        </div>
+                    </li>
+                 </volist>   
+                </ul>
+                </div>
+                <h4 class="zhougong3_h4">你是否还梦见？</h4>
+               <div class="zhougong3_more">
+                	<volist name='bottomTitle' id='vo' offset='1' length='44'>
+                		<a href="SITE_DYNAMIC_URL/dreamsearch/contentDetail/id/{$vo.id}">{$vo.title}</a>
+                	</volist>
+                </div>
+            </div>
+        </div>
+        <include file="common:rightSideInc" />	
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />

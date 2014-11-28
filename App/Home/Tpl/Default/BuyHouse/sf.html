@@ -1,0 +1,386 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>购房税费计算器</title>
+<link type="text/css" rel="stylesheet" href="STATIC_URL/css/housePublic.css" />
+<link type="text/css" rel="stylesheet" href="STATIC_URL/css/house.css" />
+<script type='text/javascript' src='STATIC_URL/js/house.js'></script>
+<script language="javascript" type="text/javascript">
+	function checkformt3(){
+		if (document.formt3.dj3.value == "" || document.formt3.mj3.value == ""){
+			alert("请填写单价和面积");
+			return;
+		}else{
+			runjs3(document.formt3);
+		}
+	}
+</script>
+<script>
+lilv_array = new Array; 
+//08年12月23日利率下限(7折)
+lilv_array[1] = new Array;
+lilv_array[1][1] = new Array;
+lilv_array[1][2] = new Array;
+lilv_array[1][1][5] = 0.0403;//商贷 1～5年 4.03%
+lilv_array[1][1][10] = 0.0416;//商贷 5-30年 4.16%
+lilv_array[1][2][5] = 0.0333;//公积金 1～5年 3.33%
+lilv_array[1][2][10] = 0.0387;//公积金 5-30年 3.87%
+//08年12月23日利率下限(85折)
+lilv_array[2] = new Array;
+lilv_array[2][1] = new Array;
+lilv_array[2][2] = new Array;
+lilv_array[2][1][5] = 0.049;//商贷 1～5年 4.9%
+lilv_array[2][1][10] = 0.0505;//商贷 5-30年 5.05%
+lilv_array[2][2][5] = 0.0333;//公积金 1～5年 3.33%
+lilv_array[2][2][10] = 0.0387;//公积金 5-30年 3.87%
+//08年12月23日基准利率
+lilv_array[3] = new Array;
+lilv_array[3][1] = new Array;
+lilv_array[3][2] = new Array;
+lilv_array[3][1][5] = 0.0576;//商贷 1～5年 5.76%
+lilv_array[3][1][10] = 0.0594;//商贷 5-30年 5.94%
+lilv_array[3][2][5] = 0.0333;//公积金 1～5年 3.33%
+lilv_array[3][2][10] = 0.0387;//公积金 5-30年 3.87%
+//08年12月23日利率上限(1.1倍)
+lilv_array[4] = new Array;
+lilv_array[4][1] = new Array;
+lilv_array[4][2] = new Array;
+lilv_array[4][1][5] = 0.0634;//商贷 1～5年 6.34%
+lilv_array[4][1][10] = 0.0653;//商贷 5-30年 6.53%
+lilv_array[4][2][5] = 0.0333;//公积金 1～5年 3.33%
+lilv_array[4][2][10] = 0.0387;//公积金 5-30年 3.87%
+//10年10月20日利率下限(7折)
+lilv_array[5] = new Array;
+lilv_array[5][1] = new Array;
+lilv_array[5][2] = new Array;
+lilv_array[5][1][5] = 0.04172;//商贷 1～5年 4.172%
+lilv_array[5][1][10] = 0.04298;//商贷 5-30年 4.298%
+lilv_array[5][2][5] = 0.035;//公积金 1～5年 3.5%
+lilv_array[5][2][10] = 0.0405;//公积金 5-30年 4.05%
+//10年10月20日利率下限(85折)
+lilv_array[6] = new Array;
+lilv_array[6][1] = new Array;
+lilv_array[6][2] = new Array;
+lilv_array[6][1][5] = 0.05066;//商贷 1～5年 5.066%
+lilv_array[6][1][10] = 0.05218;//商贷 5-30年 5.218%
+lilv_array[6][2][5] = 0.035;//公积金 1～5年 3.5%
+lilv_array[6][2][10] = 0.0405;//公积金 5-30年 4.05%
+//10年10月20日基准利率
+lilv_array[7] = new Array;
+lilv_array[7][1] = new Array;
+lilv_array[7][2] = new Array;
+lilv_array[7][1][5] = 0.0596;//商贷 1～5年 5.96%
+lilv_array[7][1][10] = 0.0614;//商贷 5-30年 6.14%
+lilv_array[7][2][5] = 0.035;//公积金 1～5年 3.5%
+lilv_array[7][2][10] = 0.0405;//公积金 5-30年 4.05%
+//10年10月20日利率上限(1.1倍)
+lilv_array[8] = new Array;
+lilv_array[8][1] = new Array;
+lilv_array[8][2] = new Array;
+lilv_array[8][1][5] = 0.06556;//商贷 1～5年 6.556%
+lilv_array[8][1][10] = 0.06754;//商贷 5-30年 6.754%
+lilv_array[8][2][5] = 0.035;//公积金 1～5年 3.5%
+lilv_array[8][2][10] = 0.0405;//公积金 5-30年 4.05%
+//10年12月26日基准利率
+lilv_array[9] = new Array;
+lilv_array[9][1] = new Array;
+lilv_array[9][2] = new Array;
+lilv_array[9][1][5] = 0.0622;//商贷 1～5年 6.22%
+lilv_array[9][1][10] = 0.0640;//商贷 5-30年 6.4%
+lilv_array[9][2][5] = 0.0375;//公积金 1～5年 3.75%
+lilv_array[9][2][10] = 0.0430;//公积金 5-30年 4.3%
+//10年12月26日利率下限(7折)
+lilv_array[10] = new Array;
+lilv_array[10][1] = new Array;
+lilv_array[10][2] = new Array;
+lilv_array[10][1][5] = 0.04354;//商贷 1～5年 4.354%
+lilv_array[10][1][10] = 0.0448;//商贷 5-30年 4.48%
+lilv_array[10][2][5] = 0.0375;//公积金 1～5年 3.75%
+lilv_array[10][2][10] = 0.0430;//公积金 5-30年 4.3%
+//10年12月26日利率上限(1.1倍)
+lilv_array[11] = new Array;
+lilv_array[11][1] = new Array;
+lilv_array[11][2] = new Array;
+lilv_array[11][1][5] = 0.06842;//商贷 1～5年 6.842%
+lilv_array[11][1][10] = 0.0704;//商贷 5-30年 7.04%
+lilv_array[11][2][5] = 0.0375;//公积金 1～5年 3.75%
+lilv_array[11][2][10] = 0.0430;//公积金 5-30年 4.3%
+//11年2月9日基准利率
+lilv_array[12] = new Array;
+lilv_array[12][1] = new Array;
+lilv_array[12][2] = new Array;
+lilv_array[12][1][5] = 0.0645;//商贷 1～5年 6.45%
+lilv_array[12][1][10] = 0.0660;//商贷 5-30年 6.6%
+lilv_array[12][2][5] = 0.0400;//公积金 1～5年 4%
+lilv_array[12][2][10] = 0.0450;//公积金 5-30年 4.5%
+//11年2月9日利率下限(7折)
+lilv_array[13] = new Array;
+lilv_array[13][1] = new Array;
+lilv_array[13][2] = new Array;
+lilv_array[13][1][5] = 0.04515;//商贷 1～5年 4.515%
+lilv_array[13][1][10] = 0.04620;//商贷 5-30年 4.62%
+lilv_array[13][2][5] = 0.0400;//公积金 1～5年 4%
+lilv_array[13][2][10] = 0.0450;//公积金 5-30年 4.5%
+//11年2月9日利率下限(85折)
+lilv_array[14] = new Array;
+lilv_array[14][1] = new Array;
+lilv_array[14][2] = new Array;
+lilv_array[14][1][5] = 0.054825;//商贷 1～5年 5.4825%
+lilv_array[14][1][10] = 0.0561;//商贷 5-30年 5.61%
+lilv_array[14][2][5] = 0.0400;//公积金 1～5年 4%
+lilv_array[14][2][10] = 0.0450;//公积金 5-30年 4.5%
+//11年2月9日利率上限(1.1倍)
+lilv_array[15] = new Array;
+lilv_array[15][1] = new Array;
+lilv_array[15][2] = new Array;
+lilv_array[15][1][5] = 0.07095;//商贷 1～5年 7.095%
+lilv_array[15][1][10] = 0.0726;//商贷 5-30年 7.26%
+lilv_array[15][2][5] = 0.0400;//公积金 1～5年 4%
+lilv_array[15][2][10] = 0.0450;//公积金 5-30年 4.5%
+//11年4月5日基准利率
+lilv_array[16] = new Array;
+lilv_array[16][1] = new Array;
+lilv_array[16][2] = new Array;
+lilv_array[16][1][5] = 0.0665;//商贷 1～5年 6.65%
+lilv_array[16][1][10] = 0.0680;//商贷 5-30年 6.8%
+lilv_array[16][2][5] = 0.0420;//公积金 1～5年 4.2%
+lilv_array[16][2][10] = 0.0470;//公积金 5-30年 4.7%
+//11年4月5日利率下限（7折）
+lilv_array[17] = new Array;
+lilv_array[17][1] = new Array;
+lilv_array[17][2] = new Array;
+lilv_array[17][1][5] = 0.04655;//商贷 1～5年 4.655%
+lilv_array[17][1][10] = 0.0476;//商贷 5-30年 4.76%
+lilv_array[17][2][5] = 0.0420;//公积金 1～5年 4.2%
+lilv_array[17][2][10] = 0.0470;//公积金 5-30年 4.7%
+//11年4月5日利率下限（85折）
+lilv_array[18] = new Array;
+lilv_array[18][1] = new Array;
+lilv_array[18][2] = new Array;
+lilv_array[18][1][5] = 0.056525;//商贷 1～5年 5.6525%
+lilv_array[18][1][10] = 0.0578;//商贷 5-30年 5.78%
+lilv_array[18][2][5] = 0.0420;//公积金 1～5年 4.2%
+lilv_array[18][2][10] = 0.0470;//公积金 5-30年 4.7%
+//11年4月5日利率上限（1.1倍）
+lilv_array[19] = new Array;
+lilv_array[19][1] = new Array;
+lilv_array[19][2] = new Array;
+lilv_array[19][1][5] = 0.07315;//商贷 1～5年 7.315%
+lilv_array[19][1][10] = 0.0748;//商贷 5-30年 7.48%
+lilv_array[19][2][5] = 0.0420;//公积金 1～5年 4.2%
+lilv_array[19][2][10] = 0.0470;//公积金 5-30年 4.7%
+//11年7月6日基准利率
+lilv_array[20] = new Array;
+lilv_array[20][1] = new Array;
+lilv_array[20][2] = new Array;
+lilv_array[20][1][5] = 0.0690;//商贷 1～5年 6.9%
+lilv_array[20][1][10] = 0.0705;//商贷 5-30年 7.05%
+lilv_array[20][2][5] = 0.0445;//公积金 1～5年 4.45%
+lilv_array[20][2][10] = 0.0490;//公积金 5-30年 4.9%
+//11年7月6日利率下限（7折）
+lilv_array[21] = new Array;
+lilv_array[21][1] = new Array;
+lilv_array[21][2] = new Array;
+lilv_array[21][1][5] = 0.0483;//商贷 1～5年 4.83%
+lilv_array[21][1][10] = 0.04935;//商贷 5-30年 4.935%
+lilv_array[21][2][5] = 0.0445;//公积金 1～5年 4.45%
+lilv_array[21][2][10] = 0.0490;//公积金 5-30年 4.9%
+//11年7月6日利率下限（85折）
+lilv_array[22] = new Array;
+lilv_array[22][1] = new Array;
+lilv_array[22][2] = new Array;
+lilv_array[22][1][5] = 0.05865;//商贷 1～5年 5.865%
+lilv_array[22][1][10] = 0.059925;//商贷 5-30年 5.9925%
+lilv_array[22][2][5] = 0.0445;//公积金 1～5年 4.45%
+lilv_array[22][2][10] = 0.0490;//公积金 5-30年 4.9%
+//11年7月6日利率上限（1.1倍）
+lilv_array[23] = new Array;
+lilv_array[23][1] = new Array;
+lilv_array[23][2] = new Array;
+lilv_array[23][1][5] = 0.0759;//商贷 1～5年 7.59%
+lilv_array[23][1][10] = 0.07755;//商贷 5-30年 7.755%
+lilv_array[23][2][5] = 0.0445;//公积金 1～5年 4.45%
+lilv_array[23][2][10] = 0.0490;//公积金 5-30年 4.9%
+//12年6月8日基准利率
+lilv_array[24] = new Array;
+lilv_array[24][1] = new Array;
+lilv_array[24][2] = new Array;
+lilv_array[24][1][5] = 0.0665;//商贷 1～5年 6.65%
+lilv_array[24][1][10] = 0.0680;//商贷 5-30年 6.8%
+lilv_array[24][2][5] = 0.0420;//公积金 1～5年 4.2%
+lilv_array[24][2][10] = 0.0470;//公积金 5-30年 4.7%
+//12年6月8日利率下限（7折）
+lilv_array[25] = new Array;
+lilv_array[25][1] = new Array;
+lilv_array[25][2] = new Array;
+lilv_array[25][1][5] = 0.04655;//商贷 1～5年 4.655%
+lilv_array[25][1][10] = 0.0476;//商贷 5-30年 4.76%
+lilv_array[25][2][5] = 0.0420;//公积金 1～5年 4.2%
+lilv_array[25][2][10] = 0.0470;//公积金 5-30年 4.7%
+//12年6月8日利率下限（85折）
+lilv_array[26] = new Array;
+lilv_array[26][1] = new Array;
+lilv_array[26][2] = new Array;
+lilv_array[26][1][5] = 0.056525;//商贷 1～5年 5.6525%
+lilv_array[26][1][10] = 0.0578;//商贷 5-30年 5.78%
+lilv_array[26][2][5] = 0.0420;//公积金 1～5年 4.2%
+lilv_array[26][2][10] = 0.0470;//公积金 5-30年 4.7%
+//12年6月8日利率上限（1.1倍）
+lilv_array[27] = new Array;
+lilv_array[27][1] = new Array;
+lilv_array[27][2] = new Array;
+lilv_array[27][1][5] = 0.07315;//商贷 1～5年 7.315%
+lilv_array[27][1][10] = 0.0748;//商贷 5-30年 7.48%
+lilv_array[27][2][5] = 0.0420;//公积金 1～5年 4.2%
+lilv_array[27][2][10] = 0.0470;//公积金 5-30年 4.7%
+//12年7月6日基准利率
+lilv_array[28] = new Array;
+lilv_array[28][1] = new Array;
+lilv_array[28][2] = new Array;
+lilv_array[28][1][5] = 0.0640;//商贷 1～5年 6.4%
+lilv_array[28][1][10] = 0.0655;//商贷 5-30年 6.55%
+lilv_array[28][2][5] = 0.0400;//公积金 1～5年 4%
+lilv_array[28][2][10] = 0.0450;//公积金 5-30年 4.5%
+//12年7月6日利率下限（7折）
+lilv_array[29] = new Array;
+lilv_array[29][1] = new Array;
+lilv_array[29][2] = new Array;
+lilv_array[29][1][5] = 0.0448;//商贷 1～5年 4.48%
+lilv_array[29][1][10] = 0.04585;//商贷 5-30年 4.585%
+lilv_array[29][2][5] = 0.0400;//公积金 1～5年 4%
+lilv_array[29][2][10] = 0.0450;//公积金 5-30年 4.5%
+//12年7月6日利率下限（85折）
+lilv_array[30] = new Array;
+lilv_array[30][1] = new Array;
+lilv_array[30][2] = new Array;
+lilv_array[30][1][5] = 0.0544;//商贷 1～5年 5.44%
+lilv_array[30][1][10] = 0.055675;//商贷 5-30年 5.5675%
+lilv_array[30][2][5] = 0.0400;//公积金 1～5年 4%
+lilv_array[30][2][10] = 0.0450;//公积金 5-30年 4.5%
+//12年7月6日利率上限（1.1倍）
+lilv_array[31] = new Array;
+lilv_array[31][1] = new Array;
+lilv_array[31][2] = new Array;
+lilv_array[31][1][5] = 0.0704;//商贷 1～5年 7.04%
+lilv_array[31][1][10] = 0.07205;//商贷 5-30年 7.205%
+lilv_array[31][2][5] = 0.0400;//公积金 1～5年 4%
+lilv_array[31][2][10] = 0.0450;//公积金 5-30年 4.5%
+</script>
+<script>
+isNorth = "Y";
+uvcode  = ['UA-24140496-1','UA-24829808-1','UA-24830538-1','UA-24829808-2','UA-24830538-2'];
+uv_bid  = '9';
+</script>
+</head>
+<body>
+ <!-- main -->
+  <div class="main">
+    <div class="container">
+      <div class="htitle">
+        <h1 class="icon2">购房税费计算器</h1>
+      </div>
+      <div class="col_a">
+        <div class="navbar">
+          <ul>
+            <li class="nav1"><a href="SITE_DYNAMIC_URL/{$Think.config.BuyHouse}/index">购房贷款计算器</a></li>
+            <li class="nav2"><a href="SITE_DYNAMIC_URL/{$Think.config.BuyHouse}/hk">提前还款计算器</a></li>
+            <li class="nav3"><a class="current" href="SITE_DYNAMIC_URL/{$Think.config.BuyHouse}/sf">购房税费计算器</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col_b">
+      <!--计算器分类 end-->
+						<div id="calculate01" class="main0">
+							<form name="formt3">
+								<table width="751" border="0" cellpadding="0" cellspacing="0">
+									<tr>
+										<td width="377" valign="top">
+											<div class="mainl">
+												<div class="h1">请您填写：</div>
+												<div class="mainltr01">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0">
+														<tr>
+															<td width="33%" style="text-align:right; padding-right:5px;"> 单&nbsp;&nbsp;&nbsp;&nbsp;价：</td>
+															<td width="67%"><input name="dj3" type="text" class="guestbook01" />元/平米</td>
+														</tr>
+													</table>
+												</div>
+												<div class="mainltr01">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0">
+														<tr>
+															<td width="33%" style="text-align:right; padding-right:5px;">面&nbsp;&nbsp;&nbsp;&nbsp;积：</td>
+															<td width="67%"><input name="mj3" type="text" class="guestbook01" />平方米</td>
+														</tr>
+													</table>
+												</div>
+												<div class="mainltr02 ul01"><a href="javascript:checkformt3();" class="btnA">开始计算</a><a href="javascript:document.formt3.reset()" class="f14 red" style="line-height:76px">重新填写</a></div>
+											</div>
+										</td>
+										<td width="373" valign="top">
+											<div class="mainr">
+                                            <i class="arrow"></i>
+												<div class="h1">查看结果：</div>
+												<div class="mainrtr01">
+													<table width="100%" border="0" cellpadding="0" cellspacing="0">
+														<tr>
+															<td width="47%" style="text-align:right; padding-right:5px;">房款总价：</td>
+															<td width="53%"><input name="fkz3" type="text" class="guestbook01" readonly="true" />元</td>
+														</tr>
+														<tr>
+															<td style="text-align:right; padding-right:5px;">印 花 税：</td>
+															<td><input name="yh" type="text" class="guestbook01" readonly="true" />元</td>
+														</tr>
+														<tr>
+															<td style="text-align:right; padding-right:5px;">公 证 费：</td>
+															<td><input name="gzh" type="text" class="guestbook01" readonly="true" />元</td>
+														</tr>
+														<tr>
+															<td style="text-align:right; padding-right:5px;">契　　税：</td>
+															<td><input name="q" type="text" class="guestbook01" readonly="true" />元</td>
+														</tr>
+														<tr>
+															<td style="text-align:right; padding-right:5px;">委托办理产权手续费：</td>
+															<td><input name="wt" type="text" class="guestbook01" readonly="true" />元</td>
+														</tr>
+														<tr>
+															<td style="text-align:right; padding-right:5px;">房屋买卖手续费：</td>
+															<td><input name="fw" type="text" class="guestbook01" readonly="true" />元</td>
+														</tr>
+													</table>
+												</div>
+												<div class="mainrtr01tr" style="text-align:right; padding-right:110px; color:#999">*以上结果仅供参考 </div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</form>
+						</div>
+						<!--说明 begin-->
+                        <div id="note05" class="mainbottom">
+                            <ul>
+                                <li>
+                                    <strong class="red f14" style="margin-left:-14px">&middot;部分城市契税/税费政策说明<span class="gray">（详细规定请参考各地政策）</span></strong><br />
+                                    <span class="red f14" style="margin-left:-14px">&middot;北京：</span><br />
+                                    （1）住宅小区建筑容积率在1.0（含）以上，单套建筑面积小于90平米，且该住房属于家庭(成员范围包括购房人、配偶以及未成年子女)唯一住房，单价低于区域内平均价格上限。满足以上所有条件的契税征收总房款的1%。<br />
+                                    （2）住宅小区建筑容积率在1.0（含）以上，单套建筑面积大于90平米小于140平米，单价低于区域内平均价格上限。满足以上所有条件的契税契税征收总房款的1.5%。<br />
+                                    （3）以上两种情况都不是的按3%征收。<br />
+                                    <span class="red f14" style="margin-left:-14px">&middot;北京目前规定的区域内价格上限：</span><br />
+                                    四环内北部地区为38880元、南部地区为34560元，四至五环北部地区为32400元、南部地区为28080元，五至六环北部地区为25920元、南部地区为21600元，六环外地区为17280元。
+                                    目前全市住房平均交易价格为每平方米建筑面积18000元，分环线区域和方位进行系数调整。<br />
+                                    调整系数为四环内北部1.8、南部1.6，四至五环北部1.5、南部1.3，五至六环北部1.2、南部1.0，六环外0.8。南、北部地区以莲石西路经广安门内大街至京沈高速公路一线为界划分。
+                                    "实际成交价格"的计算公式为：每平方米价格上限=平均交易价格（18000元/平方米）×调整系数×1.2。<br />
+                                    <span class="red" style="margin-left:-12px">&middot;上海：</span>普通住宅契税税率1-1.5%（90平方米以下首套房按1%征收)，非普通住宅契税税率3%。 <br />
+                                    <span class="red" style="margin-left:-12px">&middot;深圳：</span>首套房90平米以下契约税率1%，90到140平米契税税率1.5%，140平米以上契税税率3%。 二套房契约税率统一征收3%。<br />
+                                    <span class="red" style="margin-left:-12px">&middot;广州：</span>首套房建筑面积90平以下享受税费优惠，契税税率1%；90到144平米契税税率1.5%，144平米以上契税税率3%。
+                                </li>
+                            </ul>
+                        </div>
+                        <!--说明 end-->
+   </div>   
+   </div>
+  </div>
+  <div class="clear"></div>
+</body>
+</html>

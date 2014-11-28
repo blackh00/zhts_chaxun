@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+/* reset */
+html{overflow-y:scroll;}
+body{font:12px/1.5 \5b8b\4f53,Tahoma,sans-serif;background:#fff;}
+html,body,p,dl,dt,dd,table,td,th,input,img,form,div,span,ul,ol,li,h1,h2,h3,h4,h5,h6,select,fieldset,input,button,sub,sup,textarea{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+iframe,img{border:0 none;}
+img{vertical-align:top;}
+em{font-style:normal;}
+ul,li,ol{list-style:none outside none;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+:focus{outline:0;}
+.clear{clear:both;overflow:hidden;font-size:0;height:0;line-height:0;display:block;}
+input[type="button"]::-moz-focus-inner, input[type="reset"]::-moz-focus-inner, input[type="submit"]::-moz-focus-inner, input[type="file"] > input[type="button"]::-moz-focus-inner, button::-moz-focus-inner{border:0 none;padding:0;}
+

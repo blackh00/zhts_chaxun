@@ -1,0 +1,48 @@
+	<include file="common:header" />
+    <div class="main">
+        <div class="phone_left yanyu">
+            <div class="yanyu_bor">
+                <h1>
+                    艳遇测试
+                </h1>
+                <div class="yanyu_p1">只要在输入框中输入自己或其他任何人的名字，便可以得知该人当天的“艳遇指数”。</div>
+                <div class="yanyu_shur">
+                  	<input type="text" value="请输入要测试的名字" id="inputText" onfocus="if(this.value=='请输入要测试的名字') {this.value='';}this.style.color='#343235';"
+                        onblur="if(this.value=='') {this.value='请输入要测试的名字';this.style.color='#999999';}"
+                        class="yanyu_sousuotxt" />
+                    <input type="button" value="" onclick="test()" class="yanyu_but" />
+                </div>
+                
+            </div>  
+                             
+            <div class="yanyu_c" id="yanyu_c">
+                    <p><span>郑重声明：</span><br />本程序内容纯属虚构  仅供娱乐之用  如有雷同  纯属巧合</p>
+                    <p style="display:none;"><span>提示：</span><br />请输入少于7个字的中文名字</p>
+            </div>
+                
+            <div class="yanyu_jieguo" id="yanyu_jieguo" style="display:none">
+                    <div class="yanyu_j1">
+                    	<div class="yanyu_bg" id="yanyu_bg" style="background:url(STATIC_URL/images/yanyu/yanyu_p1.jpg) right top no-repeat;"><!--这里的背景有6张，只需要换最后的数字。-->
+                        	<h3><span id="score">-100</span>分</h3>
+                            <p class="yanyu_name">姓名：<span id="userName">小明</span></p>
+                            <p class="yanyu_zhishu">今日艳遇指数：</p>
+                            <div class="yanyu_xing" id="yanyu_xing">
+                            	<!-- <div></div>
+                            	<div class="yanyu_xing1"></div>
+                            	<div class="yanyu_xing2"></div>
+                            	<div class="yanyu_xing3"></div>
+                            	<div class="yanyu_xing4"></div>
+                            	<div class="yanyu_xing5"></div> -->
+                            </div>
+                            <p class="yanyu_pingjia">评价：</p>
+                            <p class="yanyu_pj"><span id="comment">如果艳遇是星辰，那你的生活真是满天繁星。。。</span></p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        
+        
+        
+        <include file="common:rightSideInc" />
+         <include file="common:relatedTools" />
+		 <include file="common:footer" />

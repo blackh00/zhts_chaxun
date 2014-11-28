@@ -1,0 +1,835 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+            <div class="tz">
+                <h1>
+                    标准体重测试
+                </h1>
+                <div class="line2"></div>
+                <div class="txt_tz">BMI指数（英文为Body Mass Index，简称BMI），是用体重公斤数除以身高米数平方得出的数字，是目前国际
+上常用的衡量人体胖瘦程度以及是否健康的一个标准。当我们需要比较及分析一个人的体重对于不同高度的
+人所带来的健康影响时，BMI值是一个中立而可靠的指标。</div> 
+				<div class="cel">
+					<form name=form>
+                	<div class="cexx">
+                    	<h2>请填写以下信息：</h2>
+                       	<span>您的身高</span>
+                        <span><input type="text" class="tz_box" name="height" /></span>
+                        <span>厘米（cm）</span>
+                        <span>您的体重</span>
+                      	<span><input type="text" class="tz_box" name="weight"/></span>
+                        <span>公斤（kg）</span>
+                        <span style="padding-left:25px;" class="sex">性　　别：</span>
+                        <span class="sex"><input type="radio" value="0" class="radio" name="sex" checked/></span>
+                        <span class="sex">男</span>
+                        <span class="sex"><input type="radio" value="1" class="radio" name="sex"/></span>
+                        <span class="sex">女</span>
+                        <span style="padding-left:35px;"><input class="button" type="button" onclick="lookme(this.form);" /></span>
+                    </div>
+                    <div class="jieguo_tz">
+                    	<h2>测试结果：</h2>
+                        <span>您的理想体重</span>
+                        <span><input type="text" class="tz_box" name="legendweight"/></span>
+                        <span>公斤（kg）</span>
+                        <span>您的体质指数</span>
+                      	<span><input type="text" class="tz_box" name="bmi"/></span>
+                      	<h2 style="height:20px;">您的身体状况：</h2>
+                      	<p class="resultTxt" id="nowstat"></p>
+                    </div>
+                    </form>
+                </div>   
+                <div class="line2"></div>
+  				<div class="bmi">
+                	<h2>BMI的判定标准</h2>
+                    <div class="bmicon">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="center" class="td_bd">BMI 分类</td>
+                          <td align="center" class="td_hd">WHO 标准</td>
+                          <td align="center" class="td_hd">亚洲标准</td>
+                          <td align="center" class="td_hd">中国参考标准</td>
+                          <td align="center" class="td_hd">相关疾病发病的危险性</td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="td_bd">体重过低</td>
+                          <td align="center">&lt;18.5</td>
+                          <td align="center">&lt;18.5</td>
+                          <td align="center">&lt;18.5</td>
+                          <td align="center">低（但其它疾病危险性增加）</td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="td_bd">正常范围</td>
+                          <td align="center">18.5～24.9</td>
+                          <td align="center">18.5～22.9</td>
+                          <td align="center">18.5～23.9</td>
+                          <td align="center">平均水平</td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="td_bd">超重</td>
+                          <td align="center">≥25</td>
+                          <td align="center">≥23</td>
+                          <td align="center">≥24</td>
+                          <td align="center">增加</td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="td_bd">肥胖前期</td>
+                          <td align="center">25.0～29.9</td>
+                          <td align="center">23～24.9</td>
+                          <td align="center">24～26.9</td>
+                          <td align="center">增加</td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="td_bd">I度肥胖</td>
+                          <td align="center">30.0～34.9</td>
+                          <td align="center">25～29.9</td>
+                          <td align="center">27～29.9</td>
+                          <td align="center">中度增加</td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="td_bd">II度肥胖</td>
+                          <td align="center">35.0～39.9</td>
+                          <td align="center">≥30</td>
+                          <td align="center">≥30</td>
+                          <td align="center">严重增加</td>
+                        </tr>
+                        <tr>
+                          <td align="center" class="td_bd">Ⅲ度肥胖</td>
+                          <td align="center">≥40.0</td>
+                          <td align="center">≥40.0</td>
+                          <td align="center">≥40.0</td>
+                          <td align="center">非常严重增加</td>
+                        </tr>
+                      </table>
+  </div>
+  					<div class="duizhao">
+                    	<div class="tab">
+                            <ul class="tab-hd">
+                                <li>女子标准体重对照表</li>
+                                <li>男子标准体重对照表</li>
+                            </ul>
+                            <div class="tab-bd">
+                          <div class="dztab">
+                                	<table cellspacing="0" cellpadding="0" border="0" class="centerTable">
+                                   <tbody>
+                                   <tr class="trTit">
+                                     <td colspan="11">女子标准体重对照表</td>
+                                   </tr>
+                                   <tr>
+                                     <td class="ns"><span class="nanl">身高</span><span class="sheng">年龄</span></td>
+                                     <td>152cm</td>
+                                     <td>156cm</td>
+                                     <td>160cm</td>
+                                     <td>162cm</td>
+                                     <td>164cm</td>
+                                     <td>166cm</td>
+                                     <td>168cm</td>
+                                     <td>170cm</td>
+                                     <td>172cm</td>
+                                     <td>176cm</td>
+                                   </tr>
+                                   <tr>
+                                     <td>19</td>
+                                     <td>46</td>
+                                     <td>47</td>
+                                     <td>49</td>
+                                     <td>50</td>
+                                     <td>51</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>60</td>
+                                   </tr>
+                                   <tr>
+                                     <td>21</td>
+                                     <td>46</td>
+                                     <td>47</td>
+                                     <td>49</td>
+                                     <td>50</td>
+                                     <td>51</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>60</td>
+                                   </tr>
+                                   <tr>
+                                     <td>23</td>
+                                     <td>46</td>
+                                     <td>47</td>
+                                     <td>49</td>
+                                     <td>50</td>
+                                     <td>51</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>60</td>
+                                   </tr>
+                                   <tr>
+                                     <td>25</td>
+                                     <td>46</td>
+                                     <td>48</td>
+                                     <td>49</td>
+                                     <td>50</td>
+                                     <td>51</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>61</td>
+                                   </tr>
+                                   <tr>
+                                     <td>27</td>
+                                     <td>47</td>
+                                     <td>48</td>
+                                     <td>50</td>
+                                     <td>51</td>
+                                     <td>52</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>61</td>
+                                   </tr>
+                                   <tr>
+                                     <td>29</td>
+                                     <td>47</td>
+                                     <td>49</td>
+                                     <td>51</td>
+                                     <td>52</td>
+                                     <td>53</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>59</td>
+                                     <td>62</td>
+                                   </tr>
+                                   <tr>
+                                     <td>31</td>
+                                     <td>48</td>
+                                     <td>49</td>
+                                     <td>51</td>
+                                     <td>52</td>
+                                     <td>53</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>59</td>
+                                     <td>62</td>
+                                   </tr>
+                                   <tr>
+                                     <td>33</td>
+                                     <td>48</td>
+                                     <td>50</td>
+                                     <td>51</td>
+                                     <td>52</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>59</td>
+                                     <td>63</td>
+                                   </tr>
+                                   <tr>
+                                     <td>35</td>
+                                     <td>49</td>
+                                     <td>50</td>
+                                     <td>52</td>
+                                     <td>52</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>60</td>
+                                     <td>63</td>
+                                   </tr>
+                                   <tr>
+                                     <td>37</td>
+                                     <td>49</td>
+                                     <td>51</td>
+                                     <td>53</td>
+                                     <td>53</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>59</td>
+                                     <td>60</td>
+                                     <td>61</td>
+                                     <td>64</td>
+                                   </tr>
+                                   <tr>
+                                     <td>39</td>
+                                     <td>50</td>
+                                     <td>52</td>
+                                     <td>53</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>60</td>
+                                     <td>61</td>
+                                     <td>65</td>
+                                   </tr>
+                                   <tr>
+                                     <td>41</td>
+                                     <td>51</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>54</td>
+                                     <td>55</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>62</td>
+                                     <td>65</td>
+                                   </tr>
+                                   <tr>
+                                     <td>43</td>
+                                     <td>51</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>63</td>
+                                     <td>66</td>
+                                   </tr>
+                                   <tr>
+                                     <td>45</td>
+                                     <td>52</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>55</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>63</td>
+                                     <td>66</td>
+                                   </tr>
+                                   <tr>
+                                     <td>47</td>
+                                     <td>52</td>
+                                     <td>53</td>
+                                     <td>57</td>
+                                     <td>57</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>63</td>
+                                     <td>67</td>
+                                   </tr>
+                                   <tr>
+                                     <td>49</td>
+                                     <td>52</td>
+                                     <td>53</td>
+                                     <td>56</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>63</td>
+                                     <td>67</td>
+                                   </tr>
+                                   <tr>
+                                     <td>51</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>62</td>
+                                     <td>63</td>
+                                     <td>67</td>
+                                   </tr>
+                                   <tr>
+                                     <td>53</td>
+                                     <td>53</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>62</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                   </tr>
+                                   <tr>
+                                     <td>55</td>
+                                     <td>53</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                   </tr>
+                                   <tr>
+                                     <td>57</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>64</td>
+                                     <td>68</td>
+                                   </tr>
+                                   <tr>
+                                     <td>59</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>64</td>
+                                     <td>68</td>
+                                   </tr>
+                                   <tr>
+                                     <td>61</td>
+                                     <td>53</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                   </tr>
+                                   <tr>
+                                     <td>63</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>62</td>
+                                     <td>63</td>
+                                     <td>67</td>
+                                   </tr>
+                                   <tr>
+                                     <td>65</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>62</td>
+                                     <td>63</td>
+                                     <td>66</td>
+                                   </tr>
+                                   <tr>
+                                     <td>67</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>62</td>
+                                     <td>63</td>
+                                     <td>66</td>
+                                   </tr>
+                                   <tr>
+                                     <td>69</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>62</td>
+                                     <td>63</td>
+                                     <td>66</td>
+                                   </tr>
+                                </tbody></table>
+                                </div>
+                                <div class="dztab">
+                                <table cellspacing="0" cellpadding="0" border="0" class="centerTable">
+                                   <tbody><tr class="trTit">
+                                     <td colspan="11">男子标准体重对照表</td></tr>
+                                   <tr>
+                                     <td class="ns"><span class="nanl">身高</span><span class="sheng">年龄</span></td>
+                                     <td>152cm</td>
+                                     <td>156cm</td>
+                                     <td>160cm</td>
+                                     <td>164cm</td>
+                                     <td>168cm</td>
+                                     <td>172cm</td>
+                                     <td>176cm</td>
+                                     <td>180cm</td>
+                                     <td>184cm</td>
+                                     <td>188cm</td>
+                                   </tr>
+                                   <tr>
+                                     <td>19</td>
+                                     <td>50</td>
+                                     <td>52</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>61</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>70</td>
+                                   </tr>
+                                   <tr>
+                                     <td>21</td>
+                                     <td>51</td>
+                                     <td>53</td>
+                                     <td>54</td>
+                                     <td>55</td>
+                                     <td>57</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>65</td>
+                                     <td>69</td>
+                                     <td>72</td>
+                                   </tr>
+                                   <tr>
+                                     <td>23</td>
+                                     <td>52</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>63</td>
+                                     <td>66</td>
+                                     <td>70</td>
+                                     <td>73</td>
+                                   </tr>
+                                   <tr>
+                                     <td>25</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>55</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>67</td>
+                                     <td>71</td>
+                                     <td>74</td>
+                                   </tr>
+                                   <tr>
+                                     <td>27</td>
+                                     <td>52</td>
+                                     <td>54</td>
+                                     <td>55</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>71</td>
+                                     <td>74</td>
+                                   </tr>
+                                   <tr>
+                                     <td>29</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>71</td>
+                                     <td>74</td>
+                                   </tr>
+                                   <tr>
+                                     <td>31</td>
+                                     <td>53</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>65</td>
+                                     <td>68</td>
+                                     <td>72</td>
+                                     <td>75</td>
+                                   </tr>
+                                   <tr>
+                                     <td>33</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>63</td>
+                                     <td>65</td>
+                                     <td>68</td>
+                                     <td>72</td>
+                                     <td>75</td>
+                                   </tr>
+                                   <tr>
+                                     <td>35</td>
+                                     <td>54</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>66</td>
+                                     <td>69</td>
+                                     <td>73</td>
+                                     <td>76</td>
+                                   </tr>
+                                   <tr>
+                                     <td>37</td>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>66</td>
+                                     <td>69</td>
+                                     <td>73</td>
+                                     <td>76</td>
+                                   </tr>
+                                   <tr>
+                                     <td>39</td>
+                                     <td>55</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>61</td>
+                                     <td>64</td>
+                                     <td>66</td>
+                                     <td>70</td>
+                                     <td>74</td>
+                                     <td>77</td>
+                                   </tr>
+                                   <tr>
+                                     <td>41</td>
+                                     <td>55</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>70</td>
+                                     <td>74</td>
+                                     <td>77</td>
+                                   </tr>
+                                   <tr>
+                                     <td>43</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>70</td>
+                                     <td>74</td>
+                                     <td>77</td>
+                                   </tr>
+                                   <tr>
+                                     <td>45</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>70</td>
+                                     <td>74</td>
+                                     <td>77</td>
+                                   </tr>
+                                   <tr>
+                                     <td>47</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>65</td>
+                                     <td>67</td>
+                                     <td>71</td>
+                                     <td>75</td>
+                                     <td>78</td>
+                                   </tr>
+                                   <tr>
+                                     <td>49</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>65</td>
+                                     <td>68</td>
+                                     <td>71</td>
+                                     <td>75</td>
+                                     <td>78</td>
+                                   </tr>
+                                   <tr>
+                                     <td>51</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>65</td>
+                                     <td>68</td>
+                                     <td>71</td>
+                                     <td>75</td>
+                                     <td>78</td>
+                                   </tr>
+                                   <tr>
+                                     <td>53</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>65</td>
+                                     <td>68</td>
+                                     <td>71</td>
+                                     <td>75</td>
+                                     <td>78</td>
+                                   </tr>
+                                   <tr>
+                                     <td>55</td>
+                                     <td>56</td>
+                                     <td>58</td>
+                                     <td>59</td>
+                                     <td>61</td>
+                                     <td>63</td>
+                                     <td>65</td>
+                                     <td>68</td>
+                                     <td>71</td>
+                                     <td>75</td>
+                                     <td>78</td>
+                                   </tr>
+                                   <tr>
+                                     <td>57</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>59</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>65</td>
+                                     <td>67</td>
+                                     <td>70</td>
+                                     <td>74</td>
+                                     <td>77</td>
+                                   </tr>
+                                   <tr>
+                                     <td>59</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>70</td>
+                                     <td>74</td>
+                                     <td>77</td>
+                                   </tr>
+                                   <tr>
+                                     <td>61</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>70</td>
+                                     <td>74</td>
+                                     <td>77</td>
+                                   </tr>
+                                   <tr>
+                                     <td>63</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>70</td>
+                                     <td>74</td>
+                                     <td>77</td>
+                                   </tr>
+                                   <tr>
+                                     <td>65</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>70</td>
+                                     <td>74</td>
+                                     <td>77</td>
+                                   </tr>
+                                   <tr>
+                                     <td>67</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>70</td>
+                                     <td>74</td>
+                                     <td>77</td>
+                                   </tr>
+                                   <tr>
+                                     <td>69</td>
+                                     <td>56</td>
+                                     <td>57</td>
+                                     <td>58</td>
+                                     <td>60</td>
+                                     <td>62</td>
+                                     <td>64</td>
+                                     <td>67</td>
+                                     <td>70</td>
+                                     <td>74</td>
+                                     <td>77</td>
+                                   </tr>
+                                </tbody></table>
+                                </div>
+                            </div>
+        				</div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

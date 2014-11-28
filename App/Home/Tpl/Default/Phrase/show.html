@@ -1,0 +1,43 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+           <div class="cy_bor">
+               <include file='Phrase:phraseSearch' />
+               <div class="cy_c2">
+               	<div class="cy_share">
+                   	<!-- Baidu Button BEGIN -->
+                       <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+                       <span class="bds_more">分享到：</span>
+                       <a class="bds_qzone"></a>
+                       <a class="bds_tsina"></a>
+                       <a class="bds_tqq"></a>
+                       <a class="bds_renren"></a>
+                       <a class="shareCount"></a>
+                       </div>
+					<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6572336" ></script>
+					<script type="text/javascript" id="bdshell_js"></script>
+					<script type="text/javascript">
+					document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+					</script>
+					<!-- Baidu Button END -->
+                   </div>
+                   <h3>【成语】{$search}</h3>
+                   <div class="ancient_detail">
+                   		<volist name="result" id="vo">
+						<p>读音<br />{$vo.spell}<br />释义：<br />{$vo.content}<br />出自：<br />{$vo.derivation}</p>
+						</volist>
+				   </div>
+                   <h3>相关成语</h3>
+                   <ul class="cate_list cate_list_nobt clearfix">
+                   		<volist name="resultInfo" id="list" mod="3">
+                   			<li>·<a title="{$list.name}" href="SITE_DYNAMIC_URL/{$Think.config.Phrase}/show/?id={$list.id}">{$list.name}</a></li>
+                   			<eq name="mod" value="2"><li class="ts">·<a title="{$list.name}" href="SITE_DYNAMIC_URL/{$Think.config.Phrase}/show/?id={$list.id}">{$list.name}</a></li></eq>
+                   		</volist>
+					</ul>
+                   <div style="clear:both; height:0; overflow:hidden;"></div>								
+               </div>
+           </div>
+       </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

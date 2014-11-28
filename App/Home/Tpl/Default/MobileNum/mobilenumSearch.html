@@ -1,0 +1,44 @@
+﻿	<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="numJx_bor numJx_bor2">
+                <h1>
+                    手机号码吉凶
+                </h1>
+                <div class="numJx_p1">揭开手机号码里的秘密</div>
+              <form name="form1" action="SITE_DYNAMIC_URL/mobilenum/mobilenumSearch/" method="post" onsubmit="return checkNumber()">
+                <div class="numJx_shur">
+                   <input type="text" value="请输入您的电话号码" id="text_search" name="mobile" onfocus="if(this.value=='请输入您的电话号码') {this.value='';this.style.color='#343235';}"
+                        onblur="if(this.value=='') {this.value='请输入您的电话号码';this.style.color='#343235';}"
+                        class="numJx_sousuotxt" />
+                    <input type="submit" value="" class="numJx_but" />
+                </div>
+                 <input type="hidden" name="checkform" id="checkform" value="submit" />
+                </form>
+                <span id="checkNumber" class="numJx_p2" style="color:red;display:none;">
+                	手机号码不能为空或者手机号码的格式不正确,请正确填写手机号码，例如:13415764179
+                </span>
+                <br />
+                <div class="numJx2">
+                	<strong>所查号码：</strong>{$data.number}<a target="_blank" href="SITE_URL/shouji/?phoneNum={$data.number}" class="guishu">查询归属地</a><br />
+                    <strong>吉凶分析：</strong>{$data.fenxi}<span class="<if condition='($jx eq "凶")or($jx eq "凶带吉")'>xiong<else />ji</if>">({$data.jx})</span><br />
+                    <strong>主人个性：</strong>{$data.gexing}<br />
+                    <strong>具体表现：</strong>{$data.biaoxian}
+                </div>
+            </div>
+        </div>
+         <include file="common:rightSideInc" />	
+      <include file="common:relatedTools" />
+      <script type="text/javascript">
+       		function checkNumber(){
+       			var isMobile=/^(?:13\d|15\d|18\d)\d{5}(\d{3}|\*{3})$/; 
+       			var str=document.getElementById('text_search').value
+       			 if(!isMobile.test(str)){
+			           // alert("请正确填写电话号码，例如:13415764179或0321-4816048");
+			            $('#checkNumber').css({'display':'block'});
+			            return false;
+       			 }  			
+       		}
+      		enterSubmit('text_search', 'form1');  
+     	</script>	
+<include file="common:footer" />

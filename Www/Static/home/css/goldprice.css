@@ -1,0 +1,286 @@
+/*base styles*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+ margin:0;
+ padding:0;
+}
+li {list-style:none;}
+img,a img {border:0;}
+h1,h2,h3,h4,h5,h6 { 
+font-weight:normal;
+font-size:12px;
+}
+table,th,td {font-weight:normal;}
+a {
+color:#000;
+text-decoration:none;
+}
+a:hover {
+text-decoration:underline;
+color:#990000;
+}
+.clear {clear:both;}
+
+/*page styles*/
+body {font-size:12px; background-color:#FFF; color:#000; font-family:"ËÎÌå";}
+#warp {width:960px; margin:5px auto 0 auto; background:#FFF;}
+
+#mainer {width:958px; border:1px solid #BEBEBE;}
+.head_info .head_top .wh_name,
+.head_info .head_top .wh_search,
+.head_info .head_top .wh_search .btn,
+.head_info .head_bottom dl,
+.head_info .scroll_info .kx_opt a
+{ background:url(http://img.hexun.com/gold/bhy/img/head_info_bg.gif); background-repeat:no-repeat;}
+
+.page_nav { border-bottom:1px solid #CBCBCB; height:24px; line-height:25px; padding-left:10px;}
+.head_info { width:926px; height:90px; overflow:hidden; margin:10px auto 0 auto; border:1px solid #CBCBCB;}
+.head_info .head_top {width:926px; height:62px; border-bottom:1px solid #CBCBCB; overflow:hidden;}
+.head_info .head_top .wh_name {float:left; height:47px; border-right:1px solid #CBCBCB; background-position:0 -138px; background-repeat:repeat-x; text-align:center; padding:15px 12px 0 12px;}
+.head_info .head_top .wh_name span { font-size:18px; font-family:"ºÚÌå"; text-decoration:underline;}
+.head_info .head_top .wh_data {float:left; padding-left:15px; text-align:center; padding-top:16px; padding-right:15px;}
+.head_info .head_top .wh_data1 { padding:12px 0 0 10px;}
+.head_info .head_top .wh_data span.current_red {font-size:32px; color:#DC0000; font-weight:bold;}
+.head_info .head_top .wh_data span.current_green {font-size:32px; color:#006600; font-weight:bold;}
+.head_info .head_top .wh_data span.red {color:#DC0000;}
+.head_info .head_top .wh_data span.green {color:#006600;}
+.head_info .head_top .wh_data table td {text-align:left; padding-bottom:7px;}
+.head_info .head_top .more{ padding:12px 0 0 10px;}
+.head_info .head_top .more span { padding-left:6px; padding-right:17px;}
+.head_info .head_top .wh_search {float:right; width:260px; background-position:0 0; height:41px; padding:21px 0 0 14px; background:url(http://img.hexun.com/gold/bhy/img/new_sel_bg.gif) no-repeat;}
+.head_info .head_top .wh_search select,.head_info .head_top .wh_search input {vertical-align:middle;}
+.head_info .head_top .wh_search .btn {background-position:0 -109px; background-repeat:no-repeat; width:59px; height:21px; border:none;}
+.head_info .head_bottom {background:#F0F0F0; overflow:hidden; width:926px; height:27px;}
+.head_info .head_bottom dl {float:left; padding:8px 0 0 30px; width:470px;background-position:-104px -107px;}
+.head_info .head_bottom dl dt {float:left; padding-right:5px;}
+.head_info .head_bottom dl dd {float:left; padding-right:15px;}
+.head_info .scroll_info {float:right; width:407px;}
+.head_info .scroll_info .kx_title {float:left; background-position:-117px -74px; padding-left:14px; font-weight:bold; width:40px; padding-top:8px;}
+.head_info .scroll_info .kx_con {float:left; width:335px; height:22px; line-height:22px; overflow:hidden; margin-top:4px;}
+.head_info .scroll_info .kx_opt {float:left; width:17px; padding-top:1px;}
+.head_info .scroll_info .kx_opt a { display:block; cursor:pointer; width:17px; height:13px; overflow:hidden;}
+.head_info .scroll_info .kx_opt a.up { background-position:0 -74px;}
+.head_info .scroll_info .kx_opt a.up:hover {background-position:-17px -74px;}
+.head_info .scroll_info .kx_opt a.down {background-position:0 -87px;}
+.head_info .scroll_info .kx_opt a.down:hover {background-position:-17px -87px;}
+
+.flash_data {border-bottom:1px solid #CBCBCB; margin-top:10px;}
+
+.page_block {width:928px; padding:10px 15px 28px 15px; overflow:hidden; background:url(http://img.hexun.com/gold/bhy/img/line_bg1.gif) repeat-y 712px 0;}
+.page_block .block_L {float:left; width:677px;}
+.page_block .block_R {float:right; width:211px; border:1px solid #CBCBCB;}
+
+h4.column1,
+h4.column1 .col_name,
+h4.column1 b,
+h5.column2,
+h5.column2 ul li,
+h5.column2 ul li b,
+h4.column_right,
+h4.column_right b,
+h4.column_right .col_name,
+h4.column_right ul li
+{ background-image:url(http://img.hexun.com/gold/bhy/img/tab_bg.gif); background-repeat:no-repeat;}
+
+h4.column1 { background-position:0 -28px; background-repeat:repeat-x; width:100%; height:25px; overflow:hidden;}
+h4.column1 .col_name {float:left; background-position:0 0; height:25px; padding-left:20px; padding-right:6px; line-height:27px; font-weight:bold; font-size:14px;}
+h4.column1 b {float:left; background-position:-196px 0; width:4px; height:25px; overflow:hidden;}
+h4.column1 .col_link {float:right; padding-right:6px; color:#999; padding-top:5px;}
+h4.column1 .col_link a.more {color:#666;}
+
+h5.column2 {margin-top:10px; width:100%; height:21px; overflow:hidden; background-repeat:repeat-x; background-position:0 -276px;}
+h5.column2 ul { float:left; padding-left:8px;}
+h5.column2 ul li {float:left; background-position:0 -168px; height:21px; line-height:21px; cursor:pointer;}
+h5.column2 ul li span { float:left; padding:0 5px 0 10px; height:21px; font-weight:bold;}
+h5.column2 ul li b {float:left; width:3px; height:21px; background-position:-197px -168px;}
+h5.column2 ul li.end b { background-position:-197px -194px;}
+h5.column2 ul li.beg { background-position:0 -219px;}
+
+h5.column2 ul li.begon { background-position:0 -142px;}
+h5.column2 ul li.begon b {background-position:-197px -248px;}
+
+h5.column2 ul li.endon { background-position:0 -248px;}
+h5.column2 ul li.endon b {background-position:-197px -142px;}
+
+h5.column2 ul li.on {background-position:0 -248px;}
+h5.column2 ul li.on b {background-position:-197px -248px;}
+
+h5.column2 .more {float:right; padding-right:10px; color:#666; margin-top:4px;}
+h5.column2 .more a {color:#666;}
+
+.table_data1 {margin-top:10px;}
+.has_border {border-bottom:1px solid #CBCBCB;}
+.table_data1 table {background:url(http://img.hexun.com/gold/bhy/img/table_line2.gif) repeat-x 0 18px;}
+.table_data1 table th {height:22px; line-height:22px; background:url(http://img.hexun.com/gold/bhy/img/table_line1.gif) no-repeat right 2px;}
+.table_data1 table th.end {background:none;}
+.table_data1 table tr.even {background:#F0F0F0;}
+.table_data1 table td {height:22px; line-height:22px; text-align:center;}
+.table_data1 table td.aleft,.table_data1 table th.aleft {text-align:left; padding-left:25px}
+.table_data1 table.db td {border-bottom:1px dashed #CBCBCB;}
+.table_data1 table.db tr.end td {border-bottom:none;}
+
+.zxq {width:100%; overflow:hidden;}
+.zxq .zxq_L {float:left; width:330px;}
+.zxq .zxq_R {float:right; width:330px;}
+.zxq .zxq_con { padding-left:17px; padding-top:8px;}
+.zxq .zxq_con .more {text-align:right; padding-top:2px;}
+.zxq .zxq_con .more a {color:#666;}
+ul.nul01 li{ font-size:14px; background:url(http://img.hexun.com/gold/bhy/img/dot.gif) no-repeat 0 9px; height:24px; line-height:24px; padding-left:10px; width:295px; overflow:hidden;}
+
+.paste {width:100%; overflow:hidden; margin-top:8px;}
+.paste .paste_L {float:left; padding-left:8px; width:324px;}
+.paste .paste_R {float:right; width:330px;}
+.paste .paste_con { padding-left:17px;}
+.paste h4 {background:#EFEFEF; border-left:1px solid #CCC; height:21px; padding-left:10px; padding-right:13px; line-height:21px; font-weight:bold; color:#990000;}
+.paste h4 a.more {float:right; color:#666; font-weight:normal;}
+ul.nul02 li{ width:324px;height:24px; overflow:hidden; float:left}
+ul.nul02 li div { height:24px; line-height:24px; overflow:hidden;}
+ul.nul02 li .name {float:left; width:206px; font-size:14px; background:url(http://img.hexun.com/gold/bhy/img/dot.gif) no-repeat 0 9px;padding-left:10px; margin-right:5px;}
+ul.nul02 li .author {float:left; width:62px; margin-right:5px}
+ul.nul02 li .time {float:left; width:36px;}
+ul.nul02 li .author a,ul.nul02 li .time a {color:#666;}
+
+h4.column_right { background-position:0 -110px; background-repeat:repeat-x; width:100%; height:22px; overflow:hidden;}
+h4.column_right b {float:left; background-position:0 -59px; width:22px; height:22px; overflow:hidden;}
+h4.column_right .col_name {float:left; background-position:0 -85px; background-repeat:repeat-x; color:#FFF; padding:0 16px 0 6px; height:22px; line-height:22px;}
+.tool_link {padding:7px 0 18px 5px; overflow:hidden; width:206px;}
+.tool_link a { float:left; width:94px; height:20px; background:url(http://img.hexun.com/gold/bhy/img/link_btn_bg.gif) no-repeat; text-align:center; overflow:hidden; line-height:22px; margin:4px 9px 0 0;}
+.tool_link a:hover { background-position:0 -20px; color:#FFF; text-decoration:none;}
+h4.column_right ul {float:left;}
+h4.column_right ul li {float:left;padding:0 16px 0 6px; height:22px; line-height:22px; background-position:right -59px; cursor:pointer;}
+h4.column_right ul li.on{background-position:0 -85px; background-repeat:repeat-x;color:#FFF;}
+h4.column_right span.more {float:right; padding:4px 2px 0 0;}
+h4.column_right span.more a {color:#666;}
+
+.hbzl { padding:5px 0 16px 7px; width:204px; overflow:hidden;}
+.hbzl li {
+border:1px solid #CCCCCC;
+float:left;
+height:15px;
+line-height:15px;
+margin:3px 4px 0 0;
+overflow:hidden;
+padding:5px 3px 5px 1px;
+width:52px;
+}
+.hbzl li.la {
+margin-right:0;
+padding:5px 0 5px 1px;
+width:73px;
+}
+.hbzl li img {
+float:left;
+height:15px;
+width:22px;
+}
+.hbzl li p {
+float:left;
+height:15px;
+line-height:15px;
+padding:0 0 0 2px;
+}
+
+ul.yhll { padding:5px 0 16px 7px; width:204px; overflow:hidden;}
+.yhll li {
+border:1px solid #CCCCCC;
+float:left;
+height:15px;
+line-height:15px;
+margin:3px 4px 0 0;
+overflow:hidden;
+padding:2px 3px 2px 13px;
+width:78px;
+}
+.yhll li img {
+float:left;
+height:15px;
+width:22px;
+}
+.yhll li p {
+float:left;
+height:15px;
+line-height:15px;
+padding:0 0 0 6px;
+}
+
+dl.zjzx {
+height:75px;
+margin-bottom:3px;
+overflow:hidden;
+width:100%;
+padding-top:11px;
+}
+dl.zjzx dt {
+float:left;
+padding-left:8px;
+}
+dl.zjzx dt img {
+border:1px solid #CCCCCC;
+height:73px;
+width:73px;
+}
+dl.zjzx dd {
+float:left;
+line-height:21px;
+overflow:hidden;
+padding:0 0 0 9px;
+width:98px;
+}
+.jjzl {
+line-height:20px;
+padding:6px 0 18px 8px;
+}
+.jjzl p {
+height:20px;
+overflow:hidden;
+}
+.jjzl span {padding:0 5px 0 5px;}
+
+/*second pages*/
+.market_box {width:928px; margin:0 auto;}
+.market_nav { width:888px;overflow:hidden; background:url(http://img.hexun.com/gold/bhy/img/tab_bg1.gif) repeat-x 0 0; height:25px; padding-right:40px;}
+.market_nav a.pz_btn {float:right; margin-top:1px;}
+.market_nav ul li {float:left; background:url(http://img.hexun.com/gold/bhy/img/tab_bg1.gif) no-repeat right -56px; padding-right:14px; height:25px; line-height:25px; cursor:pointer;}
+.market_nav ul li b { float:left; width:10px; height:25px;overflow:hidden;}
+.market_nav ul li.on { background-position:right -28px; font-size:14px; font-weight:bold; line-height:28px;}
+.market_nav ul li.on b { background:url(http://img.hexun.com/gold/bhy/img/tab_bg1.gif) no-repeat 0 -28px; width:18px;}
+.market_con { width:928px; margin-top:8px; overflow:hidden;}
+.market_con .market_L {float:left; width:699px;}
+.market_con .market_R {float:right; width:211px; border:1px solid #CBCBCB;}
+.market_box dl.zsdb { margin-top:8px; padding-right:20px;}
+.market_box dl.zsdb dt{ background:#EFEFEF; border-left:1px solid #CCC; color:#802C31; height:22px; line-height:24px; font-weight:bold; padding-left:15px; overflow:hidden;}
+.market_box dl.zsdb dd { margin-top:6px; padding-left:12px;}
+.market_box .db_btn {background:url(http://img.hexun.com/gold/bhy/img/db_btn.gif) no-repeat; width:68px; height:21px; border:none;}
+.market_box .hy_btn {background:url(http://img.hexun.com/gold/bhy/img/hy_btn.gif) no-repeat; width:68px; height:21px; border:none;}
+.market_box .mr_btn {background:url(http://img.hexun.com/gold/bhy/img/mr_btn.gif) no-repeat; width:84px; height:21px; border:none;}
+.market_box .detail_title  {background:#F0F0F0; border-top:1px solid #CBCBCB; border-bottom:1px solid #CBCBCB; font-weight:bold; padding:5px 0 3px 13px;}
+.market_box table.right_data td { border-bottom:1px dashed #CBCBCB; height:23px; line-height:23px;}
+.market_box table.right_data td.pad24 {padding-left:24px; width:105px;}
+.market_box table.right_data tr.end td {border-bottom:none;}
+.market_box table.right_data tr.end2 td {border-bottom:1px solid #CBCBCB;}
+.market_box table.right_data td .red {color:#D30000;}
+.market_box table.right_data td .green{ color:#006600}
+
+.low{ color:#6c0;}
+.mid{ color:#f90;}
+.high{ color:#f00;}
+
+.fb{ font-weight:bold}
+.red{ color:#df0101;}
+.green{color:Green}
+.c900{ color:#900;}
+.c666{ color:#666;}
+.c9e{ color:#9e9e9e}
+
+.tabData{ width:660px;margin-top:10px; background-color:#fff; border-bottom:1px solid #666; border-collapse:separate; border-spacing:0; }
+.tabData{ border-bottom:0px; border-collapse:collapse}
+.tabData td{ border-bottom:2px solid #ccc}
+.tabData table td{ border-bottom-width:1px; height:24px;}
+.tabData td.fb{ font-size:14px;}
+.tabData td{ line-height:24px; border-bottom:1px solid #ccc}
+.tabData th{ border-top:2px solid #666; line-height:26px; background:#b5b5b5 url(http://calendar.hexun.com/images/thline.jpg) no-repeat right 0px; color:#fff;font-weight:bold}
+.tabData th.none{ background-image:none;}
+.tabData  table{ margin-bottom:-1px;}
+.tabData .pdl12{ padding-left:12px;}
+.tabData .pdl05{ padding-left:5px;}
+.tabData .pdl05B{ padding-left:5px; font-weight:bold;}
+.tabData .ct{ text-align:center;}

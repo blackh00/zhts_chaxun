@@ -1,0 +1,79 @@
+<include file="common:header" />
+<div class="main">
+        <div class="phone_left">
+            <div class="quhao_bor">
+                <h1>
+                    全国电话区号查询
+                </h1>
+                <p class="quhao_p1">收集整理了全国各地的国内长途电话区号，可用省份名称列表进入查询。</p>
+                <div class="quhao_shur">
+                   <input type="text" value="请输入您要查询的地名（如：上海）或区号（如：010）" onfocus="if(this.value=='请输入您要查询的地名（如：上海）或区号（如：010）') {this.value=''; this.style.color='#343235';}"
+                        onblur="if(this.value=='') {this.value='请输入您要查询的地名（如：上海）或区号（如：010）';this.style.color='#343235';}"
+                        class="quhao_sousuotxt" id="search"/>
+                    <input type="button" value="" class="quhao_but" onclick='check()'/>
+                </div>
+                <div class="quhao_c" style="display:none;" id="jieguo">
+                	
+                </div>
+                {$kefu}
+                <div class="mod_lifebig_table">
+									<table width="100%" cellspacing="0" cellpadding="0">
+										<tbody><tr>
+											<th colspan="5">全国各县、市、区长途电话区号和邮政编码表</th>
+										</tr>								
+										<tr>
+											<td width="20%"><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=bj">北京市</a></td>
+											<td width="20%"><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=tj">天津市</a></td>
+											<td width="20%"><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=sh">上海市</a></td>
+											<td width="20%"><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=cq">重庆市</a></td>
+											<td width="20%">&nbsp;</td>
+										</tr>
+										<tr>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=ah">安徽省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=fj">福建省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=gs">甘肃省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=gd">广东省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=gx">广西省</a></td>
+										</tr>
+										<tr>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=gz">贵州省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=hn">海南省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=hb">河北省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=hn2">河南省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=hlj">黑龙江省</a></td>
+										</tr>
+										<tr>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=hb">湖北省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=hn3">湖南省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=jl">吉林省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=js">江苏省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=jx">江西省</a></td>
+										</tr>
+										<tr>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=ln">辽宁省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=nmg">内蒙古</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=nx">宁夏</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=qh">青海省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=sc">四川省</a></td>
+										</tr>
+										<tr>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=sd">山东省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=sx">陕西省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=sx2">山西省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=xj">新疆</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=xz">西藏</a></td>
+										</tr>
+										<tr>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=yn">云南省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=zj">浙江省</a></td>
+											<td><a target="_blank" href="SITE_URL/{$Think.config.PostcodeSearch}/?province=tw">台湾省</a></td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+										</tr>
+									</tbody></table>
+								</div>
+            </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

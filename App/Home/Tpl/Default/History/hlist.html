@@ -1,0 +1,46 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="lishi">
+	<h1>历史上的今天</h1>
+	<div class="cp_ts">以史为鉴，可以知兴衰。回顾历史是的今天，了解历史的这一天发生的事件</div>
+		<div class="lishi_box">
+			<div class="shiri">
+           		<select id="year7" name="year7"></select><select id="month7" name="month7"></select><select id="day7" name="day7"></select><label>{$sedate}年{$ndate}</label>
+           	</div>
+           	<div id="box">
+			    <pre class="prev"><img src="STATIC_URL/images/jieqi/lishi_05.jpg" /></pre>
+			    <pre class="next"><img src="STATIC_URL/images/jieqi/lishi_06.jpg" /></pre>
+			    <ul>
+			    	<volist name="image" id="img">
+			    		<li><img src="ATTACHMENT_URL/history/{$img.image}" /><div><a href="SITE_DYNAMIC_URL/history/content/?id={$img.id}" target="_blank">{$img.title}</a></div></li>
+			    	</volist>
+			    </ul>
+			</div>
+			<div class="shijian">
+				<div class="shijian_hd"><h2>{$today}<span>(癸巳年六月初九)</span>大事记</h2></div>
+					<div class="shijian_bd">
+						<volist name="resultInfo" id="vo" key="k">
+							<div class="dashiji">
+                       			<h2>{$k} <a href="SITE_DYNAMIC_URL/history/content/?id={$vo.id}" <if condition="$vo.image neq ''">class="nameInfo" </if>
+        rel="{$vo.image}" title="{$vo.title}">{$vo.title}</a></h2>
+        						<p>{$desc[$k-1]}...</p>
+                       		</div>
+						</volist>
+                    </div>
+				</div>
+				<div class="shijian_nav">
+                	<h2>目录</h2>
+                    <ul>
+	                    <li id="ds5" <if condition="$category eq '1'">class="def"</if>><a href="SITE_DYNAMIC_URL/history/hlist/?cid=1">大事记</a></li>
+	                    <li id="ds4" <if condition="$category eq '2'">class="def"</if>><a href="SITE_DYNAMIC_URL/history/hlist/?cid=2">出&nbsp;&nbsp;生</a></li>
+	                    <li id="ds3" <if condition="$category eq '3'">class="def"</if>><a href="SITE_DYNAMIC_URL/history/hlist/?cid=3">逝&nbsp;&nbsp;世</a></li>
+                    </ul>
+               </div>
+               <div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

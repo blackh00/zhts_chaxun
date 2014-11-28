@@ -1,0 +1,13 @@
+  <script src="STATIC_URL/js/weatherArea.js" type="text/javascript"></script>
+  <script src="STATIC_URL/js/weather.js" type="text/javascript"></script>
+    <script type="text/javascript">
+							_init_area();
+							$('#change-city').click(function(){
+								$('.weather-setting').show();
+								$('.weatheropt,#J-city-name').hide();
+								})
+							$('#cancel-change').click(function(){
+								$('.weather-setting').hide();
+								$('.weatheropt,#J-city-name').show();
+								})
+    </script>

@@ -1,0 +1,15 @@
+<h1>食物热量查询</h1>
+<div class="txt">提供食物热量查询服务，提供单位数量（如100克）食物中所含热量的查询</div>
+<form action='SITE_DYNAMIC_URL/food/search/' name='form' method='get'>
+	<div class="shuru_box">
+		<input name="search" type="text" value="请输入您要找的食物名称" onfocus="if(this.value=='请输入您要找的食物名称') {this.value='';this.style.color='#343235';}" onblur="if(this.value=='') {this.value='请输入您要找的食物名称';this.style.color='#343235';}" class="ip_sousuotxt" />
+		<input name="submit" type="submit" value="" class="ip_but" />
+	</div>
+</form>
+<!--<div class="hot_search" style="border-bottom:none;"><span>热门食物：</span><a href="SITE_DYNAMIC_URL/food/detail/id/2345/">米饭</a> <a href="SITE_DYNAMIC_URL/food/detail/id/1505/">苹果</a> <a href="SITE_DYNAMIC_URL/food/detail/id/456/">鸡蛋</a> <a href="SITE_DYNAMIC_URL/food/detail/id/4834/">蜂蜜</a> <a href="SITE_DYNAMIC_URL/food/detail/id/650/">酸奶</a> <a href="SITE_DYNAMIC_URL/food/detail/id/840/">牛奶</a> <a href="SITE_DYNAMIC_URL/food/detail/id/1845/">番茄</a> <a href="SITE_DYNAMIC_URL/food/detail/id/1898/">豆浆</a> <a href="SITE_DYNAMIC_URL/food/detail/id/1847/">黄瓜</a> <a href="SITE_DYNAMIC_URL/food/detail/id/1362/">香蕉</a></div>-->
+<div class="hot_search" style="border-bottom:none;">
+	<span>热门食物：</span>
+	<volist name='foodSearch' id='foodSearch' offset='0' length='10'>
+		<a href="SITE_DYNAMIC_URL/food/detail/id/{$foodSearch.id}/">{$foodSearch.food}</a><span>&nbsp;</span> 
+	</volist>
+</div>

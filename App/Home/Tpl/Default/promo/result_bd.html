@@ -1,0 +1,145 @@
+<include file="common:header" />
+<div class="main">
+<div class="clearfix"></div>
+<div class="mod_2d clearfix">
+		<div class="tv_h1">电视节目预告</div>
+    	<div class="description clearfix">提供全国各大电视台节目预告，为您提供便捷的生活方式。</div>
+    	<div class="tv_nav">
+        	<div class="tv_navl">
+            	<div class="tv_navr">
+                	<ul>
+                    	<li><a href="SITE_DYNAMIC_URL/promo/result/">央视</a></li>
+                        <li><a href="SITE_DYNAMIC_URL/promo/result_ws/">卫视</a></li>
+                        <li><a href="SITE_DYNAMIC_URL/promo/result_sz/">数字</a></li>
+                        <li><a href="SITE_DYNAMIC_URL/promo/result_jw/">境外</a></li>
+                        <li class="def"><a href="SITE_DYNAMIC_URL/promo/result_bd/">本地</a></li>
+                        <li><a href="SITE_DYNAMIC_URL/promo/result_gqds/">高清电视</a></li>
+                       	<li><a href="SITE_DYNAMIC_URL/promo/result_flds/">分类导视</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tv_space">
+        	<span>{$time}</span><em>Local</em>本地
+        </div>
+        <div class="tv">
+        	<div class="tv_left">
+            	<div class="pindao clearfix">
+                	<div class="pd_tit">本地频道列表</div>
+                    <ul>
+                    	<li <if condition="$id eq 1">class="def"</if>><a href="javascript:void(0);" onclick="select(1);showInfo(5,1,'广东卫视','');">广东电视台</a></li>
+                    	<li <if condition="$id eq 2">class="def"</if>><a href="javascript:void(0);" onclick="select(2);showInfo(5,2,'深圳卫视','');">深圳电视台</a></li>
+                    	<li <if condition="$id eq 3">class="def"</if>><a href="javascript:void(0);" onclick="select(3);showInfo(5,3,'广州综合频道','');">广州电视台</a></li>
+                    	<li <if condition="$id eq 4">class="def"</if>><a href="javascript:void(0);" onclick="select(4);showInfo(5,4,'珠海第一频道','');">珠海电视台</a></li>
+                    	<li <if condition="$id eq 5">class="def"</if>><a href="javascript:void(0);" onclick="select(5);showInfo(5,5,'潮州公共频道','');">潮州电视台</a></li>
+                    	<li <if condition="$id eq 6">class="def"</if>><a href="javascript:void(0);" onclick="select(6);showInfo(5,6,'湛江综合频道','');">湛江电视台</a></li>
+                    	<li <if condition="$id eq 7">class="def"</if>><a href="javascript:void(0);" onclick="select(7);showInfo(5,7,'佛山新闻综合频道','');">佛山电视台</a></li>
+                    	<li <if condition="$id eq 8">class="def"</if>><a href="javascript:void(0);" onclick="select(8);showInfo(5,8,'肇庆新闻综合频道','');">肇庆电视台</a></li>
+                    	<li <if condition="$id eq 9">class="def"</if>><a href="javascript:void(0);" onclick="select(9);showInfo(5,9,'惠州一套','');">惠州电视台</a></li>
+                    	<li <if condition="$id eq 10">class="def"</if>><a href="javascript:void(0);" onclick="select(10);showInfo(5,10,'中山综合频道','');">中山电视台</a></li>
+                    	<li <if condition="$id eq 11">class="def"</if>><a href="javascript:void(0);" onclick="select(11);showInfo(5,11,'汕头经济生活','');">汕头电视台</a></li>
+                    	<li <if condition="$id eq 12">class="def"</if>><a href="javascript:void(0);" onclick="select(12);showInfo(5,12,'茂名公共频道','');">茂名电视台</a></li>
+                    </ul>
+                   	<div class="clearfix"></div>
+              </div>
+              <div class="tv_sou clearfix">
+                	<div class="tvsou_tit">本地电视台<img src="STATIC_URL/images/TV/tv_02.gif" width="89" height="22" /></div>
+                	<div class="tvsou_con">
+                    	<input type="text" class="tvsoubox" />
+                        <input type="submit" value="搜 索" class="tvsoubut" />
+                    </div>
+              </div>
+              <div class="pd_list">
+           		<ul id="zhongyang" <if condition="$id eq 1">style="display:block;"<else/>style="display:none;"</if>>
+					<li <if condition="$program eq '广东卫视'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,1,'广东卫视','')">广东卫视</a></li>
+                    <li <if condition="$program eq '广东珠江频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,1,'广东珠江频道','')">广东珠江频道</a></li>
+                    <li <if condition="$program eq '广东体育频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,1,'广东体育频道','')">广东体育频道</a></li>
+                    <li <if condition="$program eq '广东公共频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,1,'广东公共频道','')">广东公共频道</a></li>
+                    <li <if condition="$program eq '广东新闻频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,1,'广东新闻频道','')">广东新闻频道</a></li>
+                    <li <if condition="$program eq '嘉佳卡通频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,1,'嘉佳卡通频道','')">嘉佳卡通频道</a></li>
+                </ul>
+                <ul id="jiaoyu" <if condition="$id eq 2">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq '深圳卫视'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,2,'深圳卫视','')">深圳卫视</a></li>
+                    <li <if condition="$program eq '深视都市频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,2,'深视都市频道','')">深视都市频道</a></li>
+                    <li <if condition="$program eq '深视电视剧频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,2,'深视电视剧频道','')">深视电视剧频道</a></li>
+                    <li <if condition="$program eq '深视财经生活'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,2,'深视财经生活','')">深视财经生活</a></li>
+                    <li <if condition="$program eq '深视娱乐频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,2,'深视娱乐频道','')">深视娱乐频道</a></li>
+                    <li <if condition="$program eq '深视体育健康'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,2,'深视体育健康','')">深视体育健康</a></li>
+                    <li <if condition="$program eq '深视少儿频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,2,'深视少儿频道','')">深视少儿频道</a></li>
+                    <li <if condition="$program eq '深视公共频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,2,'深视公共频道','')">深视公共频道</a></li>
+                </ul>
+                <ul id="zhongshu" <if condition="$id eq 3">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq '广州综合频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,3,'广州综合频道','')">广州综合频道</a></li>
+                    <li <if condition="$program eq '广州新闻频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,3,'广州新闻频道','')">广州新闻频道</a></li>
+                    <li <if condition="$program eq '广州竞赛频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,3,'广州竞赛频道','')">广州竞赛频道</a></li>
+                    <li <if condition="$program eq '广州影视频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,3,'广州影视频道','')">广州影视频道</a></li>
+                    <li <if condition="$program eq '广州英语频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,3,'广州英语频道','')">广州英语频道</a></li>
+                    <li <if condition="$program eq '广州经济频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,3,'广州经济频道','')">广州经济频道</a></li>
+                    <li <if condition="$program eq '广州少儿频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,3,'广州少儿频道','')">广州少儿频道</a></li>
+                </ul>
+                <ul id="yangshi" <if condition="$id eq 4">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq '珠海第一频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,4,'珠海第一频道','')">珠海第一频道</a></li>
+                    <li <if condition="$program eq '珠海第二频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,4,'珠海第二频道','')">珠海第二频道</a></li>
+                </ul>
+                <ul id="beiguang" <if condition="$id eq 5">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq '潮州公共频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,5,'潮州公共频道','')">潮州公共频道</a></li>
+                    <li <if condition="$program eq '潮州新闻综合频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,5,'潮州新闻综合频道','')">潮州新闻综合频道</a></li>
+                </ul>
+                <ul id="shuzi" <if condition="$id eq 6">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq '湛江综合频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,6,'湛江综合频道','')">湛江综合频道</a></li>
+                    <li <if condition="$program eq '湛江公共频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,6,'湛江公共频道','')">湛江公共频道</a></li>
+                </ul>
+                <ul id="foshan" <if condition="$id eq 7">style="display:block;"<else/>style="display:none;"</if>>
+					<li <if condition="$program eq '佛山新闻综合频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,7,'佛山新闻综合频道','')">佛山新闻综合频道</a></li>
+                    <li <if condition="$program eq '佛山电视影视频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,7,'佛山电视影视频道','')">佛山电视影视频道</a></li>
+                    <li <if condition="$program eq '佛山公共频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,7,'佛山公共频道','')">佛山公共频道</a></li>
+                    <li <if condition="$program eq '佛山电视南海频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,7,'佛山电视南海频道','')">佛山电视南海频道</a></li>
+                    <li <if condition="$program eq '佛山电视顺德频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,7,'佛山电视顺德频道','')">佛山电视顺德频道</a></li>
+                </ul>
+                <ul id="zhaoqing" <if condition="$id eq 8">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq '肇庆新闻综合频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,8,'肇庆新闻综合频道','')">肇庆新闻综合频道</a></li>
+                    <li <if condition="$program eq '肇庆公共频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,8,'肇庆公共频道','')">肇庆公共频道</a></li>
+                </ul>
+                <ul id="huizhou" <if condition="$id eq 9">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq '惠州一套'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,9,'惠州一套','')">惠州一套</a></li>
+                    <li <if condition="$program eq '惠州二套'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,9,'惠州二套','')">惠州二套</a></li>
+                </ul>
+                <ul id="zhongshan" <if condition="$id eq 10">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq '中山综合频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,10,'中山综合频道','')">中山综合频道</a></li>
+                    <li <if condition="$program eq '中山公共频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,10,'中山公共频道','')">中山公共频道</a></li>
+                </ul>
+                <ul id="shantou" <if condition="$id eq 11">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq '汕头经济生活'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,11,'汕头经济生活','')">汕头经济生活</a></li>
+                    <li <if condition="$program eq '汕头新闻综合频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,11,'汕头新闻综合频道','')">汕头新闻综合频道</a></li>
+                	<li <if condition="$program eq '汕头影视文艺频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,11,'汕头影视文艺频道','')">汕头影视文艺频道</a></li>
+                </ul>
+                <ul id="maoming" <if condition="$id eq 12">style="display:block;"<else/>style="display:none;"</if>>
+                    <li <if condition="$program eq '茂名公共频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,12,'茂名公共频道','')">茂名公共频道</a></li>
+                    <li <if condition="$program eq '茂名综合频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(5,12,'茂名综合频道','')">茂名综合频道</a></li>
+                </ul>
+               
+              </div>
+            </div>
+            <div class="tv_right">
+            	<div class="week_nav">
+                	<a href="javascript:void(0);" onclick="showInfo(5,'','','周一')" <if condition="$wk eq 1">class="def"</if>>星期一</a>
+                    <a href="javascript:void(0);" onclick="showInfo(5,'','','周二')" <if condition="$wk eq 2">class="def"</if>>星期二</a>
+                    <a href="javascript:void(0);" onclick="showInfo(5,'','','周三')" <if condition="$wk eq 3">class="def"</if>>星期三</a>
+                    <a href="javascript:void(0);" onclick="showInfo(5,'','','周四')" <if condition="$wk eq 4">class="def"</if>>星期四</a>
+                    <a href="javascript:void(0);" onclick="showInfo(5,'','','周五')" <if condition="$wk eq 5">class="def"</if>>星期五</a>
+                    <a href="javascript:void(0);" onclick="showInfo(5,'','','周六')" <if condition="$wk eq 6">class="def"</if>>星期六</a>
+                    <a href="javascript:void(0);" onclick="showInfo(5,'','','周日')" <if condition="$wk eq 0">class="def"</if>>星期日</a>
+                </div>
+                <div class="jiemu">
+                <volist name="resultInfo" id="vo" key="k">
+                	<div class="jm_list <if condition='$k%2 eq 0'>jm_bg</if>">
+                	{$vo}
+                	</div>
+                </volist>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+<include file="common:relatedTools" />
+<include file="common:footer" />

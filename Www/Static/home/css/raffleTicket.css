@@ -1,0 +1,70 @@
+/************彩票查询**************/
+.caipiao{border:1px solid #E6E6E6; margin-top:10px; padding:34px 0px;}
+.caipiao h1{  height:60px; font-size:30px; font-family:微软雅黑; text-indent:290px; color:#338ace; line-height:43px; background-image: url(../images/caipiao/cp1.gif); background-repeat: no-repeat; background-position: 226px 0px; }
+.cp_ts{ color:#333333; text-align:center; background: url(../images/kuaidi_all.png) no-repeat 38px -824px; height:50px; margin-bottom:30px;}
+.cpbut{height:113px; width:360px; margin:0 auto;}
+
+
+.cp_select_box ,.cp_select_box1{width:135px; height:38px; border:2px solid #ff9d15;position:relative; margin:0px;font-size:12px; float:left;}
+.cp_select_box1{ width:241px;}
+.cp_select_box input,.cp_select_box1 input { cursor:pointer; display:block; line-height:38px; width:130px; height:38px; border-color:#FFF; border: none; overflow:hidden; display:block; color:#a8a8a8; padding-left:5px; font-family:"宋体";float:left; background-image: url(../images/bg_all2.gif); background-position: 123px -256px; font-size:14px;}
+.cp_select_box1 input{ width:236px; background-position: 230px -256px;}
+.cp_select_box ul ,.cp_select_box1 ul{width:133px; position:absolute; left:-2px; top:38px; border:2px solid #ff9d15; background:#fff; overflow: hidden;display:none; background:#fff; z-index:99999; padding:1px; margin:0px;
+}
+.cp_select_box1 ul{ width:239px;}
+.cp_select_box1 ul{}
+.cp_select_box ul li,.cp_select_box1 ul li {display:block;height:18px;overflow:hidden;line-height:18px;padding:0px 0px 0px 5px; margin:0px;width:100%;cursor:pointer; color:#a8a8a8;}
+
+
+.cp_select_box ul li.hover,.cp_select_box1 ul li.hover{ background:#ff8b00; color:#fff;}
+
+
+.tab{ width:588px; margin:0 auto;}
+.tab-hd {overflow:hidden; zoom:1; padding-left:28px;} 
+.tab-hd li{ float:left; width:108px; height:28px; color:#444; text-align:center; cursor:pointer; background:#efefef; margin-left:1px; display:inline; line-height:28px;}
+.tab-hd li a{color:#444;}
+.tab-hd li.active{ background:#ffa01a; color:#fff;}
+.tab-hd li.active a{color:#fff;}
+
+.tab-bd{ width:586px;}
+.tab-bd div.tici{ padding:0px 18px;}
+
+.fc_tit{ height:18px; padding-top:19px; border-bottom:1px solid #add3ef; font-size:14px; font-weight:bold; color:#348bcf; margin-bottom:15px;}
+.fc_tit li{ float:left;}
+li.cz{ width:88px; text-align:center;}
+li.qihao{width:82px; text-align:center;}
+li.jieguo{width:230px;}
+li.guncun{width:96px;}
+li.day{width:54px;}
+.kjlist{ height:22px; line-height:22px;  padding:12px 0px 20px 0px; zoom:1;}
+.kjlist li{ float:left;  color:#888888;}
+.kjlist li.cz{ font-size:14px; font-weight:bold;}
+.kjlist li.cz a{color:#888888;}
+.kjlist li.cz a:hover{color:#348bcf;}
+.kjlist li.jieguo span,.kjxx span{margin:0px; padding:0px; height:22px; width:21px; float:left; margin-left:4px; background:url(../images/bg_all2.gif) -456px -399px; text-align:center; line-height:23px; color:#fff; cursor:auto;}
+.kjlist li.jieguo span.blue,.kjxx span.blue{background:url(../images/bg_all2.gif) -479px -399px;}
+.kjlist li.jieguo i{ float:left; padding:0px 3px 0px 5px; font-style: normal; }
+.shuom{ width:588px; margin:0px auto;}
+.shuom h2{ background: url(../images/kuaidi_all.png) no-repeat 0px -806px; height:30px; font-size:18px; font-family:"微软雅黑"; padding:38px 0px 0px 0px;color:#6999cf; margin-bottom:15px;}
+.shuom h3,.shuom h5{font-size:14px; font-family:"微软雅黑"; color:#6999cf; padding-top:10px;}
+.shuom h4{color:#6999cf; padding-left:23px;}
+.shuom h5{padding-left:23px;}
+.shuom p{ line-height:24px; color:#888888;}
+
+.seqiu{ width:588px; margin:0px auto;}
+.qiubiao{ margin-bottom:20px;}
+.seqiu td{ border:1px solid #efefef; border-collapse:collapse;}
+.qiulei{ background:#f9feff; width:202px; height:37px; line-height:37px; font-family:"微软雅黑"; font-size:16px;  color:#5c92cc;}
+.qiulei i{ font-size:22px;font-weight:normal; font-style:normal;}
+.qiulei b{font-weight:normal; font-style:normal; color:#F00}
+.kjgg{ background:url(../images/bg_all2.gif) no-repeat 30px -334px; padding-left:55px; color:#8b8786;}
+.kjxx { line-height:30px; padding:10px 0px 10px 30px; color:#8b8786; }
+.kjxx b{font-weight:normal; float:left; font-size:14px; color:#4579b2;}
+.kjxx span{ margin-top:3px;}
+.kjxx i{ font-style:normal; font-weight:bold;}
+.jc{ padding-left:30px; font-size:14px; color:#4579b2; height:30px;}
+.txtred{ color:#ff0018;}
+.kjxq{ line-height:30px; font-size:14px; color:#888;}
+.textblue{ color:#4579b2;}
+.kjtit{ font-size:18px; font-family: "微软雅黑"; padding-left:38px;}
+.ssp{ padding-left:23px; padding-right:10px;}

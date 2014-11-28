@@ -1,0 +1,58 @@
+<include file="common:header" />
+<div class="main">
+<div class="phone_left">
+	<div class="jielong">
+    	<h1>成语接龙</h1>
+        <div class="cp_ts">成语接龙有着悠久的历史，也有广泛的社会基础，是老少皆宜的民间文化娱乐活动.</div>
+    	<div class="jl_bg">
+          	<div class="jlcon">
+          	<form action="SITE_DYNAMIC_URL/idiom/result/" method="get" id="form" name="form">
+            	<dl>
+              		<dt>接龙选项：</dt>
+					<dd>
+                  	<input type="text" maxlength="4" value="请输入成语" onfocus="if(this.value=='请输入成语') {this.value='';this.style.color='#343235';}"
+	onblur="if(this.value=='') {this.value='请输入成语';this.style.color='#999999';}" name="start" class="cytxt" id="start"/>
+                    <div class="cy_select">
+                    	<select id="idiom_length" name="idiom_length">
+							<option value="0" selected="selected">不限字数</option>
+							<option value="1" <if condition="$idiom_length eq 1">selected="selected"</if>>四字成语</option>
+							<option value="2" <if condition="$idiom_length eq 2">selected="selected"</if>>四字以外</option>
+						</select>
+                   	</div>	
+                   	<div class="cy_select cy_select1">
+                   		<select id="idiom_count" name="idiom_count">
+							<option value="0" selected="selected">每次接一组成语</option>
+							<option value="1" <if condition="$idiom_count eq 1">selected="selected"</if>>每次接二组成语</option>
+							<option value="2" <if condition="$idiom_count eq 2">selected="selected"</if>>每次接三组成语</option>
+							<option value="3" <if condition="$idiom_count eq 3">selected="selected"</if>>每次接十组成语</option>
+						</select>
+                   	</div>
+                   	<div class="cy_select cy_select2">
+                    	<select id="idiom_hot_rand" name="idiom_hot_rand">
+							<option value="0" selected="selected">最热门成语</option>
+							<option value="1" <if condition="$idiom_hot_rand eq 1">selected="selected"</if>>随即成语</option>
+						</select>
+                    </div>											
+					</dd>
+				</dl>
+             	<div class="dl">
+          			<div class="jlms left">接龙模式：</div>
+          			<div class="jlms left">
+          				<input type="radio" value="0" name="mod" checked="checked" /><lable title="下一个成语的字头接上一个成语的字尾">顺接</lable>
+          			</div>
+          			<div class="jlms left">
+          				<input type="radio" value="1" name="mod" <if condition="$mod eq 1">checked="checked" </if>/><lable title="下一个成语的字尾接上一个成语的字头">逆接</lable>
+          			</div>
+          			<div class="clear"></div>
+          		</div>
+				<div class="jl_but">
+					<input class="cy_but" type="submit" value="" id="submit" onclick="idiom_check('index');return false;"/>
+				</div>
+			</form>
+			</div>
+		</div>
+	</div>
+</div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

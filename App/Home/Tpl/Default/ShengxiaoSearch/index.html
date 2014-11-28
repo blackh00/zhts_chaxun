@@ -1,0 +1,36 @@
+<include file="common:header" />
+    <div class="main">
+        <div class="phone_left">
+            <div class="shengxiao_bor">
+                <h1>
+                    生肖属相
+                </h1>
+                <div class="shengxiao_p1">「生肖性格」乃是利用人类出生时，因受到黄道12宫太阳磁场与24节气的影响，并藉由烙印在人体内的特殊基因，而来影响人生。</div>
+                <div class="shengxiao_shur">
+                   	<div class="name_s">
+                   	<form id="shengxiao" action="SITE_DYNAMIC_URL/{$Think.config.ShengxiaoSearch}/index" method="post">
+                   		<input type="text" name="year" value="请输入出生年份:列如：1990" onfocus="if(this.value=='请输入出生年份:列如：1990') {this.value='';}this.style.color='#343235';" onblur="if(this.value=='') {this.value='请输入出生年份:列如：1990';this.style.color='#999999';}" class="shengxiao_sousuotxt" />
+                   		<input type="hidden" name="sub_btn" value="1">
+                   		<a class="shengxiao_but"></a>
+                    </form>	
+                    	<div class="shengxiao_a" <if condition="$sub_post eq 1"> style="display:block;" <else/>style="display:none;"</if>>
+                        	您的属相是：<span>{$animal}</span>
+                             <a href="SITE_DYNAMIC_URL/{$Think.config.ShengxiaoSearch}/show/animal/{$link}" target="_blank">属{$animal}的人的性格特点</a>
+                        </div>
+                   	</div>
+                    <div class="shengxiao_bg bg1"></div>
+                    <div class="shengxiao_bg bg2"></div>
+                    <div class="shengxiao_bg bg3"></div>
+                    <div class="shengxiao_bg bg4"></div>
+                </div>
+                <h2 class="shengxiao_h">十二生肖性格特点</h2>
+                <div class="shengxiao_c">
+                	<volist name="linklist" id="vo">
+                		<a href="SITE_DYNAMIC_URL/{$Think.config.ShengxiaoSearch}/show/animal/{$vo}" target="_blank"><img src="STATIC_URL/images/shengxiao/{$vo}.gif" alt="{$vo}" /></a>
+                	</volist>
+                </div>
+            </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

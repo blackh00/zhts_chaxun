@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>单位换算器</title>
+<link type="text/css" rel="stylesheet" href="STATIC_URL/css/converterPublic.css" />
+<link type="text/css" rel="stylesheet" href="STATIC_URL/css/converter.css" />
+<script type='text/javascript' src='STATIC_URL/js/converter_yali.js' ></script>
+</head>
+<body>
+<div class="wrapper">
+  <!-- main -->
+  <div class="main">
+    <div class="container">
+      <div class="htitle">
+        <h1 class="yali">压力单位换算</h1>
+      </div>
+      <div class="col_a">
+        <div class="navbar">
+          <ul>
+            <li class="nav1"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/index/">长度</a></li>
+            <li class="nav8"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/wendu/">温度</a></li>
+            <li class="nav6"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/reliang/">热量</a></li>
+            <li class="nav7"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/gonglv/">功率</a></li>
+            <li class="nav5"><a class="current" href="SITE_DYNAMIC_URL/{$Think.config.Converter}/yali/">压力</a></li>
+            <li class="nav3"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/zhongliang/">重量</a></li>
+            <li class="nav2"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/mianji/">面积</a></li>
+            <li class="nav4"><a href="SITE_DYNAMIC_URL/{$Think.config.Converter}/tiji/">体积</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col_b">
+        <div class="mod_a">
+          <div class="td_a bdtop">
+            <div class="td120">巴(bar)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mBar" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">千帕(kPa)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mKilopascal" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">百帕(hPa)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mHectopascal" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">毫巴(mbar)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mMillibar" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">帕斯卡</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mPascal" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">标准大气压</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mAtm" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">毫米汞柱(托)</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mMillimeter_Hg" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">磅力/英尺2</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="engPound_sq_foot" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">磅力/英寸2</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="engPound_sq_inch" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">英吋汞柱</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="engInch_Hg" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">公斤力/厘米2</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA"  id="xpressKg_sq_cm"/>
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">公斤力/米2</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="xpressKg_sq_m" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+            <div class="td120">毫米水柱</div>
+            <div class="td262">
+              <input type="text" class="inputTxtA" id="mmmH2O" />
+              <input type="submit" class="submitA" value="转 换" />
+            </div>
+          </div>
+        </div>
+        
+        <input type="button" class="submitB" value="数据重置" onclick="data_reset()"/>
+        <p class="gray">可实现巴(bar)、华氏度千帕(kPa)、百帕(hPa)、毫巴(mbar)、帕斯卡、标准大气压(atm)、毫米汞柱(mmHg)、磅力平米英尺英寸、毫米水柱、公斤力平方厘米等压力计量单位间的互转互换。</p>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!-- main end --> 
+  <!-- footer -->
+  <script type='text/javascript' src='js/footer201208_easy.js' ></script>
+  <!-- footer end --> 
+   <script type='text/javascript'>
+		var inputs = document.getElementsByTagName("input");
+		for(var i=0;i<inputs.length;i++) {
+			if(inputs[i].nodeType== 1 &&  inputs[i].className=='submitA' && inputs[i].nodeName.toUpperCase() == 'INPUT') {
+				inputs[i].onclick = function() {
+					//验证数字是否正确
+					var parent = this.parentNode;
+					var childs = parent.childNodes;
+					var id;
+					var value ;
+			
+					for(var i=0;i<childs.length;i++) {
+						if(childs[i].nodeType==1 &&  childs[i].className=='inputTxtA' && childs[i].nodeName.toUpperCase() == 'INPUT') {
+							var val = childs[i].value;
+							val = val.replace(/(^\s+)|(\s+$)/g,'');
+
+							if(!checkNum(val)) {
+								return false;
+							}
+							id = childs[i].id;
+							value = val;
+							break;
+						}
+					}
+					conv_length(id,value);
+
+				}
+			}
+		}
+  </script>
+</div>
+</body>
+</html>

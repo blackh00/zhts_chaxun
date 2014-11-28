@@ -1,0 +1,119 @@
+<include file="common:header" />
+<div class="main">
+<div class="clearfix"></div>
+<div class="mod_2d clearfix">
+		<div class="tv_h1">电视节目预告</div>
+    	<div class="description clearfix">提供全国各大电视台节目预告，为您提供便捷的生活方式。</div>
+    	<div class="tv_nav">
+        	<div class="tv_navl">
+            	<div class="tv_navr">
+                	<ul>
+                    	<li><a href="SITE_DYNAMIC_URL/promo/result/">央视</a></li>
+                        <li><a href="SITE_DYNAMIC_URL/promo/result_ws/">卫视</a></li>
+                        <li><a href="SITE_DYNAMIC_URL/promo/result_sz/">数字</a></li>
+                        <li class="def"><a href="SITE_DYNAMIC_URL/promo/result_jw/">境外</a></li>
+                        <li><a href="SITE_DYNAMIC_URL/promo/result_bd/">本地</a></li>
+                        <li><a href="SITE_DYNAMIC_URL/promo/result_gqds/">高清电视</a></li>
+                       	<li><a href="SITE_DYNAMIC_URL/promo/result_flds/">分类导视</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tv_space">
+        	<span>{$time}</span><em>Offshore</em>境外
+        </div>
+        <div class="tv">
+        	<div class="tv_left">
+            	<div class="pindao clearfix">
+                	<div class="pd_tit">境外频道列表</div>
+                    <ul>
+                    	<li <if condition="$id eq 1">class="def"</if>><a href="javascript:void(0);" onclick="select(1);showInfo(4,1,'凤凰卫视','');">数字/收费频道</a></li>
+                        <li <if condition="$id eq 2">class="def"</if>><a href="javascript:void(0);" onclick="select(2);showInfo(4,2,'ESPN','')">体育频道</a></li>
+                        <li <if condition="$id eq 3">class="def"</if>><a href="javascript:void(0);" onclick="select(3);showInfo(4,3,'MTV','')">音乐频道</a></li>
+                        <li <if condition="$id eq 4">class="def"</if>><a href="javascript:void(0);" onclick="select(4);showInfo(4,4,'国家地理频道(NGC)','')">科教频道</a></li>
+                        <li <if condition="$id eq 5">class="def"</if>><a href="javascript:void(0);" onclick="select(5);showInfo(4,5,'HBO家庭影院','')">影视频道</a></li>
+                        <li <if condition="$id eq 6">class="def"</if>><a href="javascript:void(0);" onclick="select(6);showInfo(4,6,'CNN','')">国际资讯/财经频道</a></li>
+                    </ul>
+                   	<div class="clearfix"></div>
+              </div>
+              <div class="tv_sou clearfix">
+                	<div class="tvsou_tit">综合<img src="STATIC_URL/images/TV/tv_02.gif" width="89" height="22" /></div>
+					<div class="tvsou_con">
+                    	<input type="text" class="tvsoubox" />
+                        <input type="submit" value="搜 索" class="tvsoubut" />
+                    </div>
+              </div>
+              <div class="pd_list">
+           		<ul id="zhongyang" <if condition="$id eq 1">style="display:block;"<else/>style="display:none;"</if>>
+					<li <if condition="$program eq '凤凰卫视'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,1,'凤凰卫视','')">凤凰卫视</a></li>
+                    <li <if condition="$program eq '星空卫视'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,1,'星空卫视','')">星空卫视</a></li>
+                    <li <if condition="$program eq '华娱卫视'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,1,'华娱卫视','')">华娱卫视</a></li>
+                    <li <if condition="$program eq 'TVB-翡翠台'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,1,'TVB-翡翠台','')">TVB-翡翠台</a></li>
+                    <li <if condition="$program eq 'TVB-明珠台'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,1,'TVB-明珠台','')">TVB-明珠台</a></li>
+                    <li <if condition="$program eq '亚视-本港台'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,1,'亚视-本港台','')">亚视-本港台）</a></li>
+                    <li <if condition="$program eq '亚视-国际台'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,1,'亚视-国际台','')">亚视-国际台</a></li>
+                    <li <if condition="$program eq '澳亚卫视'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,1,'澳亚卫视','')">澳亚卫视</a></li>
+                    <li <if condition="$program eq '东风卫视'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,1,'东风卫视','')">东风卫视</a></li>
+                    <li <if condition="$program eq '阳光卫视'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,1,'阳光卫视','')">阳光卫视</a></li>
+                </ul>
+                <ul id="jiaoyu" <if condition="$id eq 2">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq 'ESPN'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,2,'ESPN','')">ESPN</a></li>
+                    <li <if condition="$program eq '卫视体育台'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,2,'卫视体育台','')">卫视体育台</a></li>
+                </ul>
+                <ul id="zhongshu" <if condition="$id eq 3">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq 'MTV'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,3,'MTV','')">MTV</a></li>
+                    <li <if condition="$program eq 'Channel[V] 音乐台'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,3,'Channel[V] 音乐台','')">Channel[V] 音乐台</a></li>
+                </ul>
+                <ul id="yangshi" <if condition="$id eq 4">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq '国家地理频道(NGC)'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,4,'国家地理频道(NGC)','')">国家地理频道(NGC)</a></li>
+                    <li <if condition="$program eq '探索频道(Discovery)'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,4,'探索频道(Discovery)','')">探索频道(Discovery)</a></li>
+                </ul>
+                <ul id="beiguang" <if condition="$id eq 5">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq 'HBO家庭影院'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'HBO家庭影院','')">HBO家庭影院</a></li>
+                    <li <if condition="$program eq 'CINEMAX'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'CINEMAX','')">CINEMAX</a></li>
+                    <li <if condition="$program eq '贺曼影视(Hallmark)'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'贺曼影视(Hallmark)','')">贺曼影视(Hallmark)</a></li>
+                    <li <if condition="$program eq 'AXN动作频道(亚洲)'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'AXN动作频道(亚洲)','')">AXN动作频道(亚洲)</a></li>
+                    <li <if condition="$program eq 'AXN动作频道(台湾)'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'AXN动作频道(台湾)','')">AXN动作频道(台湾)</a></li>
+                    <li <if condition="$program eq 'TVB-星河频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'TVB-星河频道','')">TVB-星河频道</a></li>
+                    <li <if condition="$program eq 'TVB-8'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'TVB-8','')">TVB-8</a></li>
+                    <li <if condition="$program eq '天映电影频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'天映电影频道','')">天映电影频道</a></li>
+                    <li <if condition="$program eq 'CHC华诚影院'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'CHC华诚影院','')">CHC华诚影院</a></li>
+                    <li <if condition="$program eq 'CHC高清电影'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'CHC高清电影','')">CHC高清电影</a></li>
+                    <li <if condition="$program eq 'CHC动作电影'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'CHC动作电影','')">CHC动作电影</a></li>
+                    <li <if condition="$program eq '凤凰电影台'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'凤凰电影台','')">凤凰电影台</a></li>
+                    <li <if condition="$program eq 'ANIMAX(亚洲)'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'ANIMAX(亚洲)','')">ANIMAX(亚洲)</a></li>
+                    <li <if condition="$program eq 'ANIMAX(台湾)'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,5,'ANIMAX(台湾)','')">ANIMAX(台湾)</a></li>
+                </ul>
+                <ul id="shuzi" <if condition="$id eq 6">style="display:block;"<else/>style="display:none;"</if>>
+                	<li <if condition="$program eq 'CNN'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,6,'CNN','')">CNN</a></li>
+                    <li <if condition="$program eq 'BBC WORLD'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,6,'BBC WORLD','')">BBC WORLD</a></li>
+                    <li <if condition="$program eq 'CNBC亚太财经频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,6,'CNBC亚太财经频道','')">CNBC亚太财经频道</a></li>
+                    <li <if condition="$program eq '彭博财经频道'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,6,'彭博财经频道','')">彭博财经频道</a></li>
+                    <li <if condition="$program eq '凤凰资讯台'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,6,'凤凰资讯台','')">凤凰资讯台</a></li>
+                    <li <if condition="$program eq 'NHK WORLD'">class="def"</if>><a href="javascript:void(0);" onclick="showInfo(4,6,'NHK WORLD','')">NHK WORLD</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tv_right">
+            	<div class="week_nav">
+                	<a href="javascript:void(0);" onclick="showInfo(4,'','','周一')" <if condition="$wk eq 1">class="def"</if>>星期一</a>
+                    <a href="javascript:void(0);" onclick="showInfo(4,'','','周二')" <if condition="$wk eq 2">class="def"</if>>星期二</a>
+                    <a href="javascript:void(0);" onclick="showInfo(4,'','','周三')" <if condition="$wk eq 3">class="def"</if>>星期三</a>
+                    <a href="javascript:void(0);" onclick="showInfo(4,'','','周四')" <if condition="$wk eq 4">class="def"</if>>星期四</a>
+                    <a href="javascript:void(0);" onclick="showInfo(4,'','','周五')" <if condition="$wk eq 5">class="def"</if>>星期五</a>
+                    <a href="javascript:void(0);" onclick="showInfo(4,'','','周六')" <if condition="$wk eq 6">class="def"</if>>星期六</a>
+                    <a href="javascript:void(0);" onclick="showInfo(4,'','','周日')" <if condition="$wk eq 0">class="def"</if>>星期日</a>
+                </div>
+                <div class="jiemu">
+                <volist name="resultInfo" id="vo" key="k">
+                	<div class="jm_list <if condition='$k%2 eq 0'>jm_bg</if>">
+                	{$vo}
+                	</div>
+                </volist>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+<include file="common:relatedTools" />
+<include file="common:footer" />

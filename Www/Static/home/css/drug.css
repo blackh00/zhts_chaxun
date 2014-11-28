@@ -1,0 +1,48 @@
+@CHARSET "UTF-8";
+/*药品查询*/
+.yaopin{border:1px solid #E6E6E6; margin-top:10px; padding-top:34px;padding-bottom:34px;}
+.yaopin h1{  height:60px; font-size:30px; font-family:微软雅黑; text-indent:270px; color:#338ace; line-height:43px; background-image: url(../images/yaopin/yaopin_h1.gif); background-repeat: no-repeat; background-position: 206px 3px; }
+.yaopin_con{ width:616px; margin:0px auto;}
+.yaopin_nav_gj{ background:url(../images/yaopin/nav_bg_gj.gif) no-repeat; height:28px; margin-bottom:-1px;}
+.yaopin_nav_ks{ background:url(../images/yaopin/nav_bg_ks.gif) no-repeat; height:28px; margin-bottom:-1px;}
+.yaopin_nav_gj a{ width:228px; height:28px; display:inline-block;}
+.yaopin_nav_ks a{ width:228px; height:28px; display:inline-block;}
+.yp_gaoji{ background:url(../images/yaopin/bg1.jpg) no-repeat; height:372px; padding:85px 0px 0px 247px;}
+.yp_gaoji td{ padding-bottom:14px; line-height:20px;}
+.yp_box{ border:1px solid #c8d5e1; width:155px; height:18px;}
+.yp_kuaisu{ background:url(../images/yaopin/bg2.jpg) no-repeat; height:352px; padding:120px 0px 0px 288px;}
+.w70{ width:70px;}
+.yp_tit{ background:url(../images/yaopin/tit.gif) no-repeat; height:28px; line-height:28px; font-size:14px; color:#fff; padding-left:50px; margin-bottom:-1px;}
+.yp_tit span{ float:right; padding-right:15px;font-size:12px; }
+.yp_tit span a{ color:#6f9713;}
+.yp_list{ background:url(../images/yaopin/bg_3.gif) repeat-y; border:1px solid #dadada; border-top:1px solid #86a745; width:613px;}
+.yp_list li{ height:31px; line-height:31px; border-bottom:1px solid #92b849;color:#686868;overflow:hidden;}
+.yp_list li span{ width:39px; height:31px; text-align:center; display:inline-block;border-right:1px solid #92b849; margin-right:10px;}
+.yp_list li a{ color:#686868}
+.yp_page{ text-align:center; padding:25px 0px 20px;}
+.yp_page a{ background:url(../images/yaopin/bg_5.gif) no-repeat; width:59px; height:24px; line-height:24px; color:#fff; display:inline-block;}
+.yp_page a.go{background:url(../images/yaopin/bg_5.gif) no-repeat left -24px; width:43px; }
+.gobox{ width:34px; height:20px; border:1px solid #becddc; line-height:20px;}
+.yp_con{ border:1px solid #eaeaea; border-top:none 0px; line-height:20px;}
+.yp_con td{ border:2px solid #fff; border-collapse:collapse;}
+.p25{ padding-left:25px;}
+.drug_sub_ks{border:none;background:url(../images/yaopin/an_2.gif)no-repeat top center;margin-left:25px;width:102px;height:33px;cursor:pointer;}
+.drug_sub_gj{border:none;background:url(../images/yaopin/an_1.gif)no-repeat top center;width:102px;height:33px;cursor:pointer;}
+.red{ color:#ff0000;}
+
+.page .txt{ 
+	border: 1px solid #DCE0E6;
+    color: #4F4F4F;
+    font-size: 12px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    vertical-align: top;
+    width: 40px;
+	
+}
+.page {color: #505050; margin:25px auto 20px;text-align: center;}
+.page a {background-color: #FFFFFF;border: 1px solid #D2D2D2;color: #505050;display: inline-block;font-size: 14px;height: 29px;line-height: 29px;margin: 0 2px;padding: 0 3px;}
+.page a.current {background-color: #6C9312;border-color: #006EC4;color: #FFFFFF !important;font-weight: bold;}
+.page .go {width:42px; height:29px;line-height:29px; background-color:#6C9312;color:#FFFFFF;cursor:pointer;display:inline-block;margin-left:2px;*margin-left:-12px !important;font-size:14px;}
+.back_drug{width:102px;height:33px;margin:25px auto 0px;}

@@ -1,0 +1,41 @@
+<include file="common:header" />
+<div class="main">
+	<div class="phone_left">
+            <div class="cy_bor">
+                <include file='Phrase:phraseSearch' />
+                <div class="cy_c2">
+                	<div class="cy_share">
+                    	<!-- Baidu Button BEGIN -->
+                        <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+                        <span class="bds_more">分享到：</span>
+                        <a class="bds_qzone"></a>
+                        <a class="bds_tsina"></a>
+                        <a class="bds_tqq"></a>
+                        <a class="bds_renren"></a>
+                        <a class="shareCount"></a>
+                        </div>
+						<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6572336" ></script>
+						<script type="text/javascript" id="bdshell_js"></script>
+						<script type="text/javascript">
+						document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+						</script>
+						<!-- Baidu Button END -->
+                    </div>
+                    <h3 style="margin-bottom:13px;">找到与“{$search}”有关的成语 <span>{$count}</span> 个</h3>
+                    <ul class="ancient_result">
+                    	<input type='hidden' id='chengyukey' name='chengyukey' value="{$search}" />
+                    	<volist name="result" id="vo">
+							<li>
+								<h6><span class="chenyukey" style="margin-left:0px;">{$vo.name}</span><span>{$vo.spell}</span></h6>
+								<p>{$vo.content}</p>
+								<a href="SITE_DYNAMIC_URL/{$Think.config.Phrase}/show/?id={$vo.id}">[查看]</a>
+							</li>
+						</volist>
+					</ul>
+                    <div class="page">{$page}</div>
+                </div>
+            </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />

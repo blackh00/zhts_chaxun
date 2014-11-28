@@ -1,0 +1,27 @@
+<h1>免费起名</h1>
+<div class="name_online_p1">姓名，蕴涵了人的精、气、神，传达着天地之玄机。</div>
+<div class="mod_form">
+<form action="SITE_DYNAMIC_URL/freename/show/" method="get" id="form">
+    <div class="form_item">
+        您的姓氏:
+        <input type="text" id="type" name="type" value="请输入您的姓氏，如“王”" onfocus="if(this.value=='请输入您的姓氏，如“王”'){this.value='';this.className='ipt_text'}"
+		onblur="if(this.value==''){this.value='请输入您的姓氏，如“王”';this.className='ipt_text init'}" class="ipt_text init">
+            性别:
+        <label>
+        	<input type="radio" value="0" name="sex" id="all" class="sex" checked="checked">
+                不限
+        </label>
+        <label>
+            <input type="radio" value="1" name="sex" id="boy" class="sex">
+                男孩
+        </label>
+        <label>
+            <input type="radio" value="2" name="sex" id="girl" class="sex">
+                女孩
+        </label>
+     </div>
+     <div class="name_online_but">
+     	<input type="submit" id="btn_begincs" class="btn_orange" value="" onclick="checkForm();return false;"/>
+     </div>
+</form>
+</div>

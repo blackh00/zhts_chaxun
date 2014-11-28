@@ -1,0 +1,84 @@
+@charset "utf-8";
+/*世界时间*/
+.shijian{border:1px solid #E6E6E6; margin-top:10px; padding:34px 0px;}
+.shijian h1{  height:60px; font-size:30px; font-family:微软雅黑; text-indent:270px; color:#338ace; line-height:43px; background: url(../images/jieqi/shijian_1.gif) no-repeat 200px top; }
+.worldtime{ clear:both; width:522px; margin:0px auto; padding-top:35px;}
+.tab-hd{ height:23px; float:right; padding-top:25px;}
+.tab-hd li{ float:left; width:101px; height:23px; line-height:23px; padding-left:32px; color:#656565; cursor:pointer;}
+.tab-hd li.hd-shiqu{ background:url(../images/shijian/nav_01.gif) no-repeat left top;}
+.tab-hd li.hd-dazhou{ background:url(../images/shijian/nav_01.gif) no-repeat -134px top;}
+.biao{ background:url(../images/shijian/shijian_bg1.gif) no-repeat; height:190px; border:1px solid #ededed;}
+.biao_tit{ font-size:24px;font-family:微软雅黑; text-align:center; color:#333333; height:37px; padding-top:3px;}
+.biao_tit span{ font-size:18px;}
+.biao_con{ font-size:50px; font-family:微软雅黑; padding:40px 0px 0px 103px;}
+.biao_con span{ padding-right:54px; color:#fff; position:relative; }
+.biao_con span em{ position:absolute; width:80px; background: url(../images/shijian/icon_02.png) no-repeat; height:10px; left:-12px; top:31px}
+.slideTxtBox { height:38px; background:url(../images/shijian/shijian_bg2.gif) no-repeat; line-height:38px; overflow:hidden;}
+.slideTxtBox .prev , .carousel-01 .next {height:6px;width:11px;overflow:hidden;display:block;text-decoration:none;cursor:pointer; margin-top:9px;}
+.bd {height:38px;width:460px;overflow:hidden;/*必要元素*/ float:left; padding-left:40px; font-size:14px; font-family:微软雅黑;}
+.jCarouselLite-01 ul{ }
+.bd li{height:38px;width:460px; color:#FFF;}
+.bd li img{ vertical-align:middle;}
+.bd li span{ font-size:16px;}
+.hd{ width:17px; float:left; padding-top:9px; }
+.hd a{ }
+.shiqu_nav{ height:141px; border:1px solid #717171; clear:both;}
+.shiqu_nav li{ float:left;  z-index:0; position:relative; background-position:left bottom; height:141px; cursor:pointer;}
+.shiqu_nav li.shiqu_1{ background-image:url(../images/shijian/shiqu_1.gif); width:21px;}
+.shiqu_nav li.shiqu_2{ background-image:url(../images/shijian/shiqu_2.gif); width:22px;}
+.shiqu_nav li.shiqu_3{ background-image:url(../images/shijian/shiqu_3.gif); width:22px;}
+.shiqu_nav li.shiqu_4{  background-image:url(../images/shijian/shiqu_4.gif); width:23px;}
+.shiqu_nav li.shiqu_5{  background-image:url(../images/shijian/shiqu_5.gif); width:20px;}
+.shiqu_nav li.shiqu_6{  background-image:url(../images/shijian/shiqu_6.gif); width:23px;}
+.shiqu_nav li.shiqu_7{  background-image:url(../images/shijian/shiqu_7.gif); width:22px;}
+.shiqu_nav li.shiqu_8{  background-image:url(../images/shijian/shiqu_8.gif); width:21px;}
+.shiqu_nav li.shiqu_9{  background-image:url(../images/shijian/shiqu_9.gif); width:21px;}
+.shiqu_nav li.shiqu_10{  background-image:url(../images/shijian/shiqu_10.gif); width:22px;}
+.shiqu_nav li.shiqu_11{  background-image:url(../images/shijian/shiqu_11.gif); width:21px;}
+.shiqu_nav li.shiqu_12{  background-image:url(../images/shijian/shiqu_12.gif); width:22px;}
+.shiqu_nav li.shiqu_13{  background-image:url(../images/shijian/shiqu_13.gif); width:23px;}
+.shiqu_nav li.shiqu_14{  background-image:url(../images/shijian/shiqu_14.gif); width:21px;}
+.shiqu_nav li.shiqu_15{  background-image:url(../images/shijian/shiqu_15.gif); width:21px;}
+.shiqu_nav li.shiqu_16{  background-image:url(../images/shijian/shiqu_16.gif); width:22px;}
+.shiqu_nav li.shiqu_17{  background-image:url(../images/shijian/shiqu_17.gif); width:23px;}
+.shiqu_nav li.shiqu_18{  background-image:url(../images/shijian/shiqu_18.gif); width:22px;}
+.shiqu_nav li.shiqu_19{  background-image:url(../images/shijian/shiqu_19.gif); width:21px;}
+.shiqu_nav li.shiqu_20{  background-image:url(../images/shijian/shiqu_20.gif); width:24px;}
+.shiqu_nav li.shiqu_21{  background-image:url(../images/shijian/shiqu_21.gif); width:22px;}
+.shiqu_nav li.shiqu_22{  background-image:url(../images/shijian/shiqu_22.gif); width:21px;}
+.shiqu_nav li.shiqu_23{  background-image:url(../images/shijian/shiqu_23.gif); width:20px;}
+.shiqu_nav li.shiqu_24{  background-image:url(../images/shijian/shiqu_24.gif); width:20px;}
+.shiqu_nav li.active{background-position:left top; z-index:1;}
+.shiqu_nav li.on{z-index:1; background-position:left top;}
+.shiqu_nav li.on .sq_con{ display:block;}
+.shiqu_neirong{ display:none;}
+.shiqu_nav li .sq_con{ width:232px; height:134px; border:2px solid #fff; position:absolute; background:#939596;filter: Alpha(Opacity=90);Opacity:0.9; left:30px; display:none;}
+.shiqu_nav li.zuo .sq_con{ left:-245px;}
+.shiqu_nav li .sq_con h3{ padding-left:15px; font-size:14px; height:23px; padding-top:10px;}
+.shiqu_nav li .sq_con .cs_name{ text-align:center;  color:#fff21a;}
+.shiqu_nav li .sq_con .cs_name img{ vertical-align:middle;}
+.shiqu_nav li .sq_con .quming{ height:18px; line-height:18px; padding-left:35px; color:#fff; background:#505152; margin-top:5px;}
+.shiqu_nav li .sq_con .jtou{ position:absolute; background: url(../images/shijian/icon_1.png) no-repeat; width:37px; height:21px; bottom:-1px; left:-20px;}
+.shiqu_nav li.zuo .sq_con .jtou{left:220px;background: url(../images/shijian/icon_01.png) no-repeat; }
+.dazhou{ display:none;}
+.dazhou_bg{ background: url(../images/shijian/shijian_bg3.gif) no-repeat; width:520px; height:277px; border:1px solid #b2b2b2; position:relative;}
+.dazhou_nav{position: absolute; background:url(../images/shijian/icon_06.png) no-repeat center bottom; width:17px; height:24px;  cursor:pointer;}
+.dz1{  left:388px; top:57px;}
+.dz2{  left:288px; top:30px;}
+.dz3{  left:300px; top:70px;}
+.dz4{ left:44px; top:21px; }
+.dz5{  left:42px; top:113px;}
+.dz6{  left:143px; top:204px;}
+.dz7{  left:275px; top:190px;}
+.dz8{  left:490px; top:215px;}
+.dz9{  left:212px; top:114px;}
+.dz10{ left:179px; top:8px; }
+.dz11{  left:245px; top:130px;}
+.dz12{  left:462px; top:180px;}
+.guoj{ left:2px; top:-37px; line-height:30px; display:none; height:35px; width:200px; position:absolute; color:#d60000;}
+.guoj span{ font-size:14px; padding-right:10px;}
+.guoj_l{ background:url(../images/shijian/shijian_bg4.gif) left top no-repeat; height:35px; width:13px; float:left;}
+.guoj_c{ background:url(../images/shijian/shijian_bg6.gif) repeat-x; float:left;}
+.guoj_r{ background:url(../images/shijian/shijian_bg5.gif) right top no-repeat; height:35px;width:13px; float:left;}
+.dazhou_bg .on{background:url(../images/shijian/icon_05.png) no-repeat center bottom;}
+.dazhou_bg .on .guoj{ display:block;}

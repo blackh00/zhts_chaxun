@@ -1,0 +1,21 @@
+<table border=1>
+<tr >
+<td>编号</td><td>频道</td><td>分类</td>
+</tr>
+<volist name="resultInfo" id="list">
+<tr>
+<td>{$list.id}</td><td>{$list.program}</td><td>{$list.type}</td>
+</tr>
+</volist>
+</table>
+
+<table border=1>
+<tr >
+<td>编号</td><td>频道</td><td>节目内容</td><td>简介</td>
+</tr>
+<volist name="result" id="vo">
+<tr>
+<td>{$vo.id}</td><td>{$vo.program}</td><td>{$vo.content}</td><td>{$vo.introduce}</td>
+</tr>
+</volist>
+</table>

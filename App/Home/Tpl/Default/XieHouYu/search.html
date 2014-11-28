@@ -1,0 +1,30 @@
+<include file="common:header" />
+<div class="main">
+	<div class="phone_left">
+            <div class="xiehouyu_bor">
+                <h1>
+                    歇后语大全
+                </h1>
+                <include file="XieHouYu:sousuo" />
+                <div class="xiehouyu_box box2">
+                	<h4>关于<span>“{$search}”</span>的歇后语</span></h4>
+                	<ul>
+                	<volist name="result" id="vo">
+		            	<li>{$vo.question}——<span>{$vo.answer}</span></li>
+		            </volist> 
+                    </ul>
+                    <div class="xiehouyu_fenye miyu_fenye" style="margin:27px 0 41px;border-radius:15px;">{$page}</div>
+                    <div class="xiehouyu_fanhui"><a href="SITE_URL">返回首页</a></div>
+                </div>
+                <script type="text/javascript">
+					$('.xiehouyu_box.box2>ul>li').hover(function(){
+						$(this).addClass('on');
+						},function(){
+						$(this).removeClass('on');
+						})
+				</script>
+            </div>
+        </div>
+<include file="common:rightSideInc" />
+<include file="common:relatedTools" />
+<include file="common:footer" />
